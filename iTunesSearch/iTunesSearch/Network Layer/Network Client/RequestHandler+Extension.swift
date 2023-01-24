@@ -6,7 +6,13 @@
 //
 
 import Foundation
+
 // MARK: Request Handler Supporting methods
+
+enum NetworkRequestsState {
+    case InProgress
+    case Completed
+}
 
 extension RequestHandler {
     

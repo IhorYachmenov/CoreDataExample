@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CC629802E6200D6E038 /* AppDelegate.swift */; };
 		CE266CC929802E6200D6E038 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CC829802E6200D6E038 /* SceneDelegate.swift */; };
-		CE266CCB29802E6200D6E038 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CCA29802E6200D6E038 /* TrackListViewController.swift */; };
+		CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */; };
 		CE266CD029802E6300D6E038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE266CCF29802E6300D6E038 /* Assets.xcassets */; };
 		CE266CD329802E6300D6E038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE266CD129802E6300D6E038 /* LaunchScreen.storyboard */; };
 		CE266CDE29802E6400D6E038 /* iTunesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CDD29802E6400D6E038 /* iTunesSearchTests.swift */; };
@@ -22,12 +22,15 @@
 		CE266D04298031F600D6E038 /* ResponseHandler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D03298031F600D6E038 /* ResponseHandler+Extension.swift */; };
 		CE266D062980320100D6E038 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D052980320100D6E038 /* APIHandler.swift */; };
 		CE266D0A2980335800D6E038 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D092980335800D6E038 /* Constants.swift */; };
-		CE266D0D2980346500D6E038 /* TrackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D0C2980346500D6E038 /* TrackListViewModel.swift */; };
-		CE266D102980358E00D6E038 /* SearchArtistTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D0F2980358E00D6E038 /* SearchArtistTracksUseCase.swift */; };
+		CE266D0D2980346500D6E038 /* SingerTracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D0C2980346500D6E038 /* SingerTracksViewModel.swift */; };
+		CE266D102980358E00D6E038 /* SearchSingerTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D0F2980358E00D6E038 /* SearchSingerTracksUseCase.swift */; };
 		CE266D132980368600D6E038 /* SearchArtistTrackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D122980368600D6E038 /* SearchArtistTrackAPI.swift */; };
-		CE266D1A29803E8D00D6E038 /* ArtistTracksDomainEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D1929803E8D00D6E038 /* ArtistTracksDomainEntity.swift */; };
-		CE266D1D298042E100D6E038 /* ArtistsTrackViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D1C298042E100D6E038 /* ArtistsTrackViewEntity.swift */; };
+		CE266D1A29803E8D00D6E038 /* SingerTracksDomainEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D1929803E8D00D6E038 /* SingerTracksDomainEntity.swift */; };
+		CE266D1D298042E100D6E038 /* SingerTrackViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D1C298042E100D6E038 /* SingerTrackViewEntity.swift */; };
 		CE266D212980459600D6E038 /* ArtistTracksDomainEntityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D202980459600D6E038 /* ArtistTracksDomainEntityExtensions.swift */; };
+		CE266D2929807DFF00D6E038 /* TrackListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D2829807DFF00D6E038 /* TrackListContentView.swift */; };
+		CE266D2B29807E4000D6E038 /* TrackListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D2A29807E4000D6E038 /* TrackListConfigurator.swift */; };
+		CE266D2D29807E8E00D6E038 /* TrackListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D2C29807E8E00D6E038 /* TrackListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +54,7 @@
 		CE266CC329802E6200D6E038 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE266CC629802E6200D6E038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE266CC829802E6200D6E038 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE266CCA29802E6200D6E038 /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
+		CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewController.swift; sourceTree = "<group>"; };
 		CE266CCF29802E6300D6E038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE266CD229802E6300D6E038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE266CD429802E6300D6E038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,12 +70,15 @@
 		CE266D03298031F600D6E038 /* ResponseHandler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseHandler+Extension.swift"; sourceTree = "<group>"; };
 		CE266D052980320100D6E038 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		CE266D092980335800D6E038 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CE266D0C2980346500D6E038 /* TrackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewModel.swift; sourceTree = "<group>"; };
-		CE266D0F2980358E00D6E038 /* SearchArtistTracksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchArtistTracksUseCase.swift; sourceTree = "<group>"; };
+		CE266D0C2980346500D6E038 /* SingerTracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModel.swift; sourceTree = "<group>"; };
+		CE266D0F2980358E00D6E038 /* SearchSingerTracksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSingerTracksUseCase.swift; sourceTree = "<group>"; };
 		CE266D122980368600D6E038 /* SearchArtistTrackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchArtistTrackAPI.swift; sourceTree = "<group>"; };
-		CE266D1929803E8D00D6E038 /* ArtistTracksDomainEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTracksDomainEntity.swift; sourceTree = "<group>"; };
-		CE266D1C298042E100D6E038 /* ArtistsTrackViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsTrackViewEntity.swift; sourceTree = "<group>"; };
+		CE266D1929803E8D00D6E038 /* SingerTracksDomainEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksDomainEntity.swift; sourceTree = "<group>"; };
+		CE266D1C298042E100D6E038 /* SingerTrackViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackViewEntity.swift; sourceTree = "<group>"; };
 		CE266D202980459600D6E038 /* ArtistTracksDomainEntityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTracksDomainEntityExtensions.swift; sourceTree = "<group>"; };
+		CE266D2829807DFF00D6E038 /* TrackListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListContentView.swift; sourceTree = "<group>"; };
+		CE266D2A29807E4000D6E038 /* TrackListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListConfigurator.swift; sourceTree = "<group>"; };
+		CE266D2C29807E8E00D6E038 /* TrackListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,7 @@
 		CE266CF72980308E00D6E038 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
+				CE266D2529807D3C00D6E038 /* Views */,
 				CE266D242980481E00D6E038 /* View Controllers */,
 				CE266D232980481000D6E038 /* View Models */,
 				CE266D1B2980429100D6E038 /* Entities */,
@@ -180,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				CE266D22298047AF00D6E038 /* Use Cases */,
-				CE266D112980362D00D6E038 /* API Services */,
 				CE266D182980388400D6E038 /* Entities */,
 			);
 			path = "Domain Layer";
@@ -189,6 +195,7 @@
 		CE266CFA2980310800D6E038 /* Network Layer */ = {
 			isa = PBXGroup;
 			children = (
+				CE266D112980362D00D6E038 /* API Services */,
 				CE266D17298037B700D6E038 /* Network Client */,
 			);
 			path = "Network Layer";
@@ -238,7 +245,7 @@
 		CE266D182980388400D6E038 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				CE266D1929803E8D00D6E038 /* ArtistTracksDomainEntity.swift */,
+				CE266D1929803E8D00D6E038 /* SingerTracksDomainEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -246,7 +253,7 @@
 		CE266D1B2980429100D6E038 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				CE266D1C298042E100D6E038 /* ArtistsTrackViewEntity.swift */,
+				CE266D1C298042E100D6E038 /* SingerTrackViewEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -254,7 +261,7 @@
 		CE266D22298047AF00D6E038 /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
-				CE266D0F2980358E00D6E038 /* SearchArtistTracksUseCase.swift */,
+				CE266D0F2980358E00D6E038 /* SearchSingerTracksUseCase.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -262,7 +269,7 @@
 		CE266D232980481000D6E038 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				CE266D0C2980346500D6E038 /* TrackListViewModel.swift */,
+				CE266D0C2980346500D6E038 /* SingerTracksViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -270,9 +277,35 @@
 		CE266D242980481E00D6E038 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE266CCA29802E6200D6E038 /* TrackListViewController.swift */,
+				CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CE266D2529807D3C00D6E038 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE266D2629807DB400D6E038 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE266D2629807DB400D6E038 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE266D2729807DC500D6E038 /* Track List Cell Component */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CE266D2729807DC500D6E038 /* Track List Cell Component */ = {
+			isa = PBXGroup;
+			children = (
+				CE266D2829807DFF00D6E038 /* TrackListContentView.swift */,
+				CE266D2A29807E4000D6E038 /* TrackListConfigurator.swift */,
+				CE266D2C29807E8E00D6E038 /* TrackListCell.swift */,
+			);
+			path = "Track List Cell Component";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,21 +439,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE266D04298031F600D6E038 /* ResponseHandler+Extension.swift in Sources */,
-				CE266CCB29802E6200D6E038 /* TrackListViewController.swift in Sources */,
+				CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */,
 				CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */,
+				CE266D2929807DFF00D6E038 /* TrackListContentView.swift in Sources */,
 				CE266CC929802E6200D6E038 /* SceneDelegate.swift in Sources */,
-				CE266D1D298042E100D6E038 /* ArtistsTrackViewEntity.swift in Sources */,
+				CE266D1D298042E100D6E038 /* SingerTrackViewEntity.swift in Sources */,
 				CE266D212980459600D6E038 /* ArtistTracksDomainEntityExtensions.swift in Sources */,
-				CE266D102980358E00D6E038 /* SearchArtistTracksUseCase.swift in Sources */,
+				CE266D102980358E00D6E038 /* SearchSingerTracksUseCase.swift in Sources */,
 				CE266D132980368600D6E038 /* SearchArtistTrackAPI.swift in Sources */,
 				CE266CFE298031C600D6E038 /* APIEnvironment.swift in Sources */,
 				CE266D0A2980335800D6E038 /* Constants.swift in Sources */,
 				CE266CFC298031AD00D6E038 /* APIPath.swift in Sources */,
+				CE266D2B29807E4000D6E038 /* TrackListConfigurator.swift in Sources */,
 				CE266D062980320100D6E038 /* APIHandler.swift in Sources */,
-				CE266D0D2980346500D6E038 /* TrackListViewModel.swift in Sources */,
+				CE266D0D2980346500D6E038 /* SingerTracksViewModel.swift in Sources */,
+				CE266D2D29807E8E00D6E038 /* TrackListCell.swift in Sources */,
 				CE266D02298031EA00D6E038 /* RequestHandler+Extension.swift in Sources */,
 				CE266D00298031DA00D6E038 /* APILoader.swift in Sources */,
-				CE266D1A29803E8D00D6E038 /* ArtistTracksDomainEntity.swift in Sources */,
+				CE266D1A29803E8D00D6E038 /* SingerTracksDomainEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

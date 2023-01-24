@@ -17,6 +17,7 @@ struct APILoader<T: APIHandler> {
     }
     
     func loadAPIRequest(requestData: T.RequestDataType, completionHandler: @escaping (T.ResponseDataType?, ServiceError?) -> ()) {
+        
         if let urlRequest = apiHandler.makeRequest(from: requestData) {
             urlSession.dataTask(with: urlRequest) { (data, response, error) in
                 
@@ -39,11 +40,12 @@ struct APILoader<T: APIHandler> {
                          completionHandler(nil, ServiceError(httpStatus:  httpResponse.statusCode, message: "ServiceError : \(error.localizedDescription)"))
                     }
                     
+                } else {
+                    
+                    completionHandler(nil, ServiceError(httpStatus: 0, message: "ServiceError : \(error?.localizedDescription ?? "Unknown Error")"))
                 }
                 
-                
             }.resume()
-            
             
         }
     }

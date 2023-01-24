@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let vc = TrackListViewController()
+        let vc = SingerTracksViewController()
         
         let navigatioContoller = UINavigationController(rootViewController: vc)
         window.rootViewController = navigatioContoller

@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension ArtistTracksDomainEntity {
-    func toDomain() -> [ArtistsTrackViewEntity] {
-        return self.results.map({ ArtistsTrackViewEntity(trackName: $0.trackName, artistName: $0.artistName, trackPrice: String($0.trackPrice), country: $0.country)})
+extension SingerTracksDomainEntity {
+    func toDomain() -> [SingerTrackViewEntity] {
+        return self.results?.map({ SingerTrackViewEntity(trackName: $0.trackName ?? "", singerName: $0.artistName ?? "", trackPrice: String($0.trackPrice ?? 0), country: $0.country ?? "")}) ?? []
     }
 }

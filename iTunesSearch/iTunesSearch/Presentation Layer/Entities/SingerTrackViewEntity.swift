@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct ArtistsTrackViewEntity {
+struct SingerTrackViewEntity {
     let trackName: String
-    let artistName: String
+    let singerName: String
     let trackPrice: String
     let country: String
 }

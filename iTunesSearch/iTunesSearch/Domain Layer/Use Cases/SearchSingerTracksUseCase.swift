@@ -7,19 +7,16 @@
 
 import Foundation
 
-class SearchArtistTracksUseCase {
+class SearchSingerTracksUseCase {
     
     init() {}
     
-    func searchArtistTracks(artistName: String, completion: @escaping (Result<[ArtistsTrackViewEntity], ServiceError>) -> ()) {
+    func searchSingerTracks(singerName: String, completion: @escaping (Result<[SingerTrackViewEntity], ServiceError>) -> ()) {
         let request = SearchArtistTrackAPI()
-        
-        var param: Dictionary<String, Any> = [:]
-        param.updateValue("100", forKey: "limit")
-        param.updateValue("media", forKey: "music")
-        param.updateValue(artistName, forKey: "term")
-        
         let apiLoader = APILoader(apiHandler: request)
+        
+        let param: Dictionary<String, Any> = ["limit" : "100", "music" : "media", "term" : singerName]
+    
         apiLoader.loadAPIRequest(requestData: param) { (model, error) in
             if let _ = error {
                 completion(.failure(error!))

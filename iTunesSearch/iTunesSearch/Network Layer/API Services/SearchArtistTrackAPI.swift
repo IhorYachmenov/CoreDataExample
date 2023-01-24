@@ -19,14 +19,14 @@ struct SearchArtistTrackAPI: APIHandler {
             var urlRequest = URLRequest(url: url)
             setDefaultHeaders(request: &urlRequest)
             urlRequest.httpMethod = HTTPMethod.get.rawValue
-            urlRequest.httpBody = try! JSONSerialization.data(withJSONObject: param, options: .init())
+//            urlRequest.httpBody = try! JSONSerialization.data(withJSONObject: param, options: .init())
             return urlRequest
         }
         return nil
     }
     
-    func parseResponse(data: Data, response: HTTPURLResponse) throws -> ArtistTracksDomainEntity {
-        return try defaultParseResponse(data: data,response: response)
+    func parseResponse(data: Data, response: HTTPURLResponse) throws -> SingerTracksDomainEntity {
+        return try defaultParseResponse(data: data, response: response)
     }
     
 }
