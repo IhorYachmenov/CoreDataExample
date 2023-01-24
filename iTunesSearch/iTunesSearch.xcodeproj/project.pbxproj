@@ -18,10 +18,16 @@
 		CE266CFC298031AD00D6E038 /* APIPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CFB298031AD00D6E038 /* APIPath.swift */; };
 		CE266CFE298031C600D6E038 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CFD298031C600D6E038 /* APIEnvironment.swift */; };
 		CE266D00298031DA00D6E038 /* APILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CFF298031DA00D6E038 /* APILoader.swift */; };
-		CE266D02298031EA00D6E038 /* ResponseHandler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D01298031EA00D6E038 /* ResponseHandler+Extension.swift */; };
-		CE266D04298031F600D6E038 /* RequestHandler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D03298031F600D6E038 /* RequestHandler+Extension.swift */; };
+		CE266D02298031EA00D6E038 /* RequestHandler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D01298031EA00D6E038 /* RequestHandler+Extension.swift */; };
+		CE266D04298031F600D6E038 /* ResponseHandler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D03298031F600D6E038 /* ResponseHandler+Extension.swift */; };
 		CE266D062980320100D6E038 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D052980320100D6E038 /* APIHandler.swift */; };
 		CE266D0A2980335800D6E038 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D092980335800D6E038 /* Constants.swift */; };
+		CE266D0D2980346500D6E038 /* TrackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D0C2980346500D6E038 /* TrackListViewModel.swift */; };
+		CE266D102980358E00D6E038 /* SearchArtistTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D0F2980358E00D6E038 /* SearchArtistTracksUseCase.swift */; };
+		CE266D132980368600D6E038 /* SearchArtistTrackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D122980368600D6E038 /* SearchArtistTrackAPI.swift */; };
+		CE266D1A29803E8D00D6E038 /* ArtistTracksDomainEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D1929803E8D00D6E038 /* ArtistTracksDomainEntity.swift */; };
+		CE266D1D298042E100D6E038 /* ArtistsTrackViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D1C298042E100D6E038 /* ArtistsTrackViewEntity.swift */; };
+		CE266D212980459600D6E038 /* ArtistTracksDomainEntityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D202980459600D6E038 /* ArtistTracksDomainEntityExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +63,16 @@
 		CE266CFB298031AD00D6E038 /* APIPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPath.swift; sourceTree = "<group>"; };
 		CE266CFD298031C600D6E038 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
 		CE266CFF298031DA00D6E038 /* APILoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILoader.swift; sourceTree = "<group>"; };
-		CE266D01298031EA00D6E038 /* ResponseHandler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseHandler+Extension.swift"; sourceTree = "<group>"; };
-		CE266D03298031F600D6E038 /* RequestHandler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestHandler+Extension.swift"; sourceTree = "<group>"; };
+		CE266D01298031EA00D6E038 /* RequestHandler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestHandler+Extension.swift"; sourceTree = "<group>"; };
+		CE266D03298031F600D6E038 /* ResponseHandler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseHandler+Extension.swift"; sourceTree = "<group>"; };
 		CE266D052980320100D6E038 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		CE266D092980335800D6E038 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE266D0C2980346500D6E038 /* TrackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewModel.swift; sourceTree = "<group>"; };
+		CE266D0F2980358E00D6E038 /* SearchArtistTracksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchArtistTracksUseCase.swift; sourceTree = "<group>"; };
+		CE266D122980368600D6E038 /* SearchArtistTrackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchArtistTrackAPI.swift; sourceTree = "<group>"; };
+		CE266D1929803E8D00D6E038 /* ArtistTracksDomainEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTracksDomainEntity.swift; sourceTree = "<group>"; };
+		CE266D1C298042E100D6E038 /* ArtistsTrackViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsTrackViewEntity.swift; sourceTree = "<group>"; };
+		CE266D202980459600D6E038 /* ArtistTracksDomainEntityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTracksDomainEntityExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +162,9 @@
 		CE266CF72980308E00D6E038 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
-				CE266CCA29802E6200D6E038 /* TrackListViewController.swift */,
+				CE266D242980481E00D6E038 /* View Controllers */,
+				CE266D232980481000D6E038 /* View Models */,
+				CE266D1B2980429100D6E038 /* Entities */,
 			);
 			path = "Presentation Layer";
 			sourceTree = "<group>";
@@ -165,6 +179,9 @@
 		CE266CF92980310000D6E038 /* Domain Layer */ = {
 			isa = PBXGroup;
 			children = (
+				CE266D22298047AF00D6E038 /* Use Cases */,
+				CE266D112980362D00D6E038 /* API Services */,
+				CE266D182980388400D6E038 /* Entities */,
 			);
 			path = "Domain Layer";
 			sourceTree = "<group>";
@@ -172,12 +189,7 @@
 		CE266CFA2980310800D6E038 /* Network Layer */ = {
 			isa = PBXGroup;
 			children = (
-				CE266D052980320100D6E038 /* APIHandler.swift */,
-				CE266D01298031EA00D6E038 /* ResponseHandler+Extension.swift */,
-				CE266D03298031F600D6E038 /* RequestHandler+Extension.swift */,
-				CE266CFF298031DA00D6E038 /* APILoader.swift */,
-				CE266CFD298031C600D6E038 /* APIEnvironment.swift */,
-				CE266CFB298031AD00D6E038 /* APIPath.swift */,
+				CE266D17298037B700D6E038 /* Network Client */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -189,8 +201,78 @@
 				CE266CCF29802E6300D6E038 /* Assets.xcassets */,
 				CE266CD129802E6300D6E038 /* LaunchScreen.storyboard */,
 				CE266D092980335800D6E038 /* Constants.swift */,
+				CE266D0E298034E500D6E038 /* Extensions */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE266D0E298034E500D6E038 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE266D202980459600D6E038 /* ArtistTracksDomainEntityExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE266D112980362D00D6E038 /* API Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE266D122980368600D6E038 /* SearchArtistTrackAPI.swift */,
+			);
+			path = "API Services";
+			sourceTree = "<group>";
+		};
+		CE266D17298037B700D6E038 /* Network Client */ = {
+			isa = PBXGroup;
+			children = (
+				CE266D052980320100D6E038 /* APIHandler.swift */,
+				CE266D01298031EA00D6E038 /* RequestHandler+Extension.swift */,
+				CE266D03298031F600D6E038 /* ResponseHandler+Extension.swift */,
+				CE266CFF298031DA00D6E038 /* APILoader.swift */,
+				CE266CFD298031C600D6E038 /* APIEnvironment.swift */,
+				CE266CFB298031AD00D6E038 /* APIPath.swift */,
+			);
+			path = "Network Client";
+			sourceTree = "<group>";
+		};
+		CE266D182980388400D6E038 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CE266D1929803E8D00D6E038 /* ArtistTracksDomainEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CE266D1B2980429100D6E038 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CE266D1C298042E100D6E038 /* ArtistsTrackViewEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CE266D22298047AF00D6E038 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				CE266D0F2980358E00D6E038 /* SearchArtistTracksUseCase.swift */,
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		CE266D232980481000D6E038 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE266D0C2980346500D6E038 /* TrackListViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		CE266D242980481E00D6E038 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE266CCA29802E6200D6E038 /* TrackListViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,16 +405,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE266D04298031F600D6E038 /* RequestHandler+Extension.swift in Sources */,
+				CE266D04298031F600D6E038 /* ResponseHandler+Extension.swift in Sources */,
 				CE266CCB29802E6200D6E038 /* TrackListViewController.swift in Sources */,
 				CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */,
 				CE266CC929802E6200D6E038 /* SceneDelegate.swift in Sources */,
+				CE266D1D298042E100D6E038 /* ArtistsTrackViewEntity.swift in Sources */,
+				CE266D212980459600D6E038 /* ArtistTracksDomainEntityExtensions.swift in Sources */,
+				CE266D102980358E00D6E038 /* SearchArtistTracksUseCase.swift in Sources */,
+				CE266D132980368600D6E038 /* SearchArtistTrackAPI.swift in Sources */,
 				CE266CFE298031C600D6E038 /* APIEnvironment.swift in Sources */,
 				CE266D0A2980335800D6E038 /* Constants.swift in Sources */,
 				CE266CFC298031AD00D6E038 /* APIPath.swift in Sources */,
 				CE266D062980320100D6E038 /* APIHandler.swift in Sources */,
-				CE266D02298031EA00D6E038 /* ResponseHandler+Extension.swift in Sources */,
+				CE266D0D2980346500D6E038 /* TrackListViewModel.swift in Sources */,
+				CE266D02298031EA00D6E038 /* RequestHandler+Extension.swift in Sources */,
 				CE266D00298031DA00D6E038 /* APILoader.swift in Sources */,
+				CE266D1A29803E8D00D6E038 /* ArtistTracksDomainEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,7 @@ public enum HTTPMethod: String {
 
 protocol RequestHandler {
     associatedtype RequestDataType
-    func makeRequest(from data:RequestDataType) -> URLRequest?
+    func makeRequest(from data: RequestDataType) -> URLRequest?
 }
 
 protocol ResponseHandler {
