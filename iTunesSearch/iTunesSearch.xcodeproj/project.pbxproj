@@ -43,6 +43,8 @@
 		CE266D4E29814FE300D6E038 /* StorageSingerTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D4D29814FE300D6E038 /* StorageSingerTracksUseCase.swift */; };
 		CE266D522981543000D6E038 /* SingerTrackViewEntityEntensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D512981543000D6E038 /* SingerTrackViewEntityEntensions.swift */; };
 		CE266D5429815A3300D6E038 /* SingerTrackEntityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D5329815A3300D6E038 /* SingerTrackEntityExtensions.swift */; };
+		CE266D57298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE266D55298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld */; };
+		CE266D5A2981679400D6E038 /* SingerTrackMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D592981679400D6E038 /* SingerTrackMO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		CE266D4D29814FE300D6E038 /* StorageSingerTracksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageSingerTracksUseCase.swift; sourceTree = "<group>"; };
 		CE266D512981543000D6E038 /* SingerTrackViewEntityEntensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackViewEntityEntensions.swift; sourceTree = "<group>"; };
 		CE266D5329815A3300D6E038 /* SingerTrackEntityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackEntityExtensions.swift; sourceTree = "<group>"; };
+		CE266D56298162A900D6E038 /* SingerTrackDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SingerTrackDataModel.xcdatamodel; sourceTree = "<group>"; };
+		CE266D592981679400D6E038 /* SingerTrackMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackMO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				CE266D4729814C0400D6E038 /* CoreDataStorage.swift */,
+				CE266D55298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld */,
 			);
 			path = CoreDataStorage;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				CE266D4929814C5E00D6E038 /* SingerTracksQueryStorageInterface.swift */,
 				CE266D4629814BC300D6E038 /* SingerTracksQueryStorage */,
 				CE266D4129814A0F00D6E038 /* CoreDataStorage */,
+				CE266D582981677500D6E038 /* Mapping */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -422,6 +428,14 @@
 				CE266D4429814AF800D6E038 /* SingerTracksQueryStorage.swift */,
 			);
 			path = SingerTracksQueryStorage;
+			sourceTree = "<group>";
+		};
+		CE266D582981677500D6E038 /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				CE266D592981679400D6E038 /* SingerTrackMO.swift */,
+			);
+			path = Mapping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -554,9 +568,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE266D5A2981679400D6E038 /* SingerTrackMO.swift in Sources */,
 				CE266D522981543000D6E038 /* SingerTrackViewEntityEntensions.swift in Sources */,
 				CE266D04298031F600D6E038 /* ResponseHandler+Extension.swift in Sources */,
 				CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */,
+				CE266D57298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld in Sources */,
 				CE266D4529814AF800D6E038 /* SingerTracksQueryStorage.swift in Sources */,
 				CE266D4029812EB600D6E038 /* OptionalExtension.swift in Sources */,
 				CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */,
@@ -916,6 +932,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE266D55298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE266D56298162A900D6E038 /* SingerTrackDataModel.xcdatamodel */,
+			);
+			currentVersion = CE266D56298162A900D6E038 /* SingerTrackDataModel.xcdatamodel */;
+			path = SingerTrackDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CE266CBB29802E6200D6E038 /* Project object */;
 }

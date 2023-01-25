@@ -43,6 +43,7 @@ class SingerTracksViewModel {
         storageSingerTracksUseCase.saveSingerTracks(singerTracks: entities, completition: { [weak self] result in
             switch result {
             case .success(let success):
+                self?.data += success
                 self?.storageDataSource?(nil)
             case .failure(let failure):
                 self?.storageDataSource?(failure)
