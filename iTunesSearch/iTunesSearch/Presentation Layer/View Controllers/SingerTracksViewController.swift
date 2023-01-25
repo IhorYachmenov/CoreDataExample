@@ -35,8 +35,6 @@ class SingerTracksViewController: UIViewController {
         
         initUIComponents()
         
-        viewModel.findRandomArtistTracks()
-        
         viewModel.networkDataSource = { [weak self] networkState, result in
             switch networkState {
             case .InProgress:
@@ -53,6 +51,9 @@ class SingerTracksViewController: UIViewController {
                 self?.storageDataSouceAction(failure)
             }
         }
+        
+        viewModel.findRandomArtistTracks()
+        viewModel.fetchSingerTracks()
         
     }
     
@@ -75,7 +76,7 @@ class SingerTracksViewController: UIViewController {
     }
     
     @objc func refreshControlAction() {
-        refreshControll.endRefreshing()
+        viewModel.fetchSingerTracks()
     }
     
     private func presentAlertController(msg: String, title: String) {
@@ -110,7 +111,7 @@ class SingerTracksViewController: UIViewController {
             presentAlertController(msg: failure!.localizedDescription, title: "Error")
             return
         }
-        
+        refreshControll.endRefreshing()
         tableView.reloadData()
     }
 }

@@ -13,8 +13,8 @@ final class StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
     
     private lazy var persistentStorage: PersistentStorageRepositoryInterface = PersistentStorageRepository()
     
-    func fetchSingerTracks(fetchLimit: Int, offset: Int, completition: @escaping (Result<[SingerTrackViewEntity], StorageError>) -> ()) {
-        persistentStorage.fetchSingerTracks(fetchLimit: fetchLimit, offset: offset, completition: { result in
+    func fetchSingerTracks(fetchLimit: Int, completition: @escaping (Result<[SingerTrackViewEntity], StorageError>) -> ()) {
+        persistentStorage.fetchSingerTracks(fetchLimit: fetchLimit, completition: { result in
             switch result {
             case .success(let success):
                 completition(.success(success.toView()))

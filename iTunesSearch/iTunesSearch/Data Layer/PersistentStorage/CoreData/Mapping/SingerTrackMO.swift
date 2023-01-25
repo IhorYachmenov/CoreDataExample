@@ -25,3 +25,9 @@ extension SingerTrackMO {
         return .init(trackName: trackName.isNil(), singerName: singerName.isNil(), trackPrice: trackPrice.isNil(), country: country.isNil())
     }
 }
+
+extension Array where Element == SingerTrackMO {
+    func toData() -> [SingerTrackEntity] {
+        return self.map({ $0.toData()})
+    }
+}

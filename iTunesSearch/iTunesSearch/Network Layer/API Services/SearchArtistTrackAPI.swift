@@ -13,7 +13,7 @@ struct SearchArtistTrackAPI: APIHandler {
         let urlString = APIPath().artistTrackSearchPath
         if var url = URL(string: urlString) {
             if param.count > 0 {
-                print(param.description)
+//                print(param.description)
                 url = setQueryParams(parameters: param, url: url)
             }
             var urlRequest = URLRequest(url: url)

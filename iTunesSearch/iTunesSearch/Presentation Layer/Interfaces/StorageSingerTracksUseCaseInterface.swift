@@ -8,6 +8,6 @@
 import Foundation
 
 protocol StorageSingerTracksUseCaseInterface {
-    func fetchSingerTracks(fetchLimit: Int, offset: Int, completition: @escaping (Result<[SingerTrackViewEntity], StorageError>) -> ())
+    func fetchSingerTracks(fetchLimit: Int, completition: @escaping (Result<[SingerTrackViewEntity], StorageError>) -> ())
     func saveSingerTracks(singerTracks: [SingerTrackViewEntity], completition: @escaping (Result<[SingerTrackViewEntity], StorageError>) -> ())
 }
