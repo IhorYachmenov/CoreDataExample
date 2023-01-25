@@ -37,15 +37,22 @@ class SingerTracksViewController: UIViewController {
         
         viewModel.findRandomArtistTracks()
         
-        viewModel.viewModelDataSource = { [weak self] dataSouceType, networkState, result in
-            switch dataSouceType {
-            case .NetworkDataSource:
-                self?.networkDataSourceAction(networkState, result)
-            case .PersistentStorageDataSource:
-                break
+        viewModel.networkDataSource = { [weak self] networkState, result in
+            switch networkState {
+            case .InProgress:
+                DispatchQueue.main.async { [weak self] in
+                    self?.loader.startAnimating()
+                }
+            case .Completed:
+                self?.networkDataSourceAction(result!)
             }
         }
-        
+ 
+        viewModel.storageDataSource = { [weak self] failure in
+            DispatchQueue.main.async {
+                self?.storageDataSouceAction(failure)
+            }
+        }
         
     }
     
@@ -80,34 +87,32 @@ class SingerTracksViewController: UIViewController {
         
     }
     
-    private func networkDataSourceAction(_ state: NetworkRequestsState?, _ result: Result<String, ServiceError>?) {
-        switch state {
-            
-        case .InProgress:
+    private func networkDataSourceAction(_ result: Result<String, ServiceError>) {
+        switch result {
+        case .success(let success):
             DispatchQueue.main.async { [weak self] in
-                self?.loader.startAnimating()
+                self?.loader.stopAnimating()
+                self?.presentAlertController(msg: success, title: "Alert")
             }
-        case .Completed:
-            switch result {
-            case .success(let success):
-                DispatchQueue.main.async { [weak self] in
-                    self?.loader.stopAnimating()
-                    self?.presentAlertController(msg: success, title: "Alert")
-                }
             
-            case .failure(let failure):
-                DispatchQueue.main.async { [weak self] in
-                    self?.loader.stopAnimating()
-                    self?.presentAlertController(msg: failure.localizedDescription, title: "Error")
-                }
-            case .none:
-                break
+        case .failure(let failure):
+            DispatchQueue.main.async { [weak self] in
+                self?.loader.stopAnimating()
+                self?.presentAlertController(msg: failure.localizedDescription, title: "Error")
             }
-        case .none:
-            break
         }
+        
     }
     
+    private func storageDataSouceAction(_ failure: StorageError?) {
+        
+        guard failure == nil else {
+            presentAlertController(msg: failure!.localizedDescription, title: "Error")
+            return
+        }
+        
+        tableView.reloadData()
+    }
 }
 
 // MARK: Data Source

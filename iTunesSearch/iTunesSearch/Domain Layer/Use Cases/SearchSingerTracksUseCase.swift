@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SearchSingerTracksUseCase {
+final class SearchSingerTracksUseCase: SearchSingerTracksUseCaseInterface {
     
     init() {}
     

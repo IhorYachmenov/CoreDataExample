@@ -7,34 +7,47 @@
 
 import Foundation
 
-enum ViewModelDataSourceType {
-    case NetworkDataSource
-    case PersistentStorageDataSource
-}
-
 class SingerTracksViewModel {
     
     init() {}
     
-    var data: Array<SingerTrackViewEntity> = Array()
-    var viewModelDataSource: ((ViewModelDataSourceType, NetworkRequestsState, Result<String, ServiceError>?) -> ())?
+    private(set) var data: Array<SingerTrackViewEntity> = Array()
     
-    private lazy var searchSingerTracksUseCase = SearchSingerTracksUseCase()
+    var networkDataSource: ((NetworkRequestsState, Result<String, ServiceError>?) ->())?
+    var storageDataSource: ((StorageError?) ->())?
+    
+    private lazy var searchSingerTracksUseCase: SearchSingerTracksUseCaseInterface = SearchSingerTracksUseCase()
+    private lazy var storageSingerTracksUseCase: StorageSingerTracksUseCaseInterface = StorageSingerTracksUseCase()
     
     private let listOfSingers = ["Janet Jackson", "Eminem", "Katy Perry", "Lady Gaga", "Snoop Dogg", "Elvis Presley"]
     
     func findRandomArtistTracks() {
-        viewModelDataSource?(.NetworkDataSource, .InProgress, nil)
+        networkDataSource?(.InProgress, nil)
+        
         searchSingerTracksUseCase.searchSingerTracks(singerName: listOfSingers.randomElement()!) { [weak self] result in
             switch result {
             case .success(let success):
                 print(success.count)
-                self?.viewModelDataSource?(.NetworkDataSource, .Completed, .success("Singers tracks loaded 🤩"))
-
+                
+                self?.networkDataSource?(.Completed, .success("Singers tracks loaded 🤩"))
+                
+                self?.saveSingersTrackToStorage(success)
+                
             case .failure(let failure):
-                self?.viewModelDataSource?(.NetworkDataSource, .Completed, .failure(failure))
+                self?.networkDataSource?(.Completed, .failure(failure))
             }
         }
+    }
+    
+    private func saveSingersTrackToStorage(_ entities: [SingerTrackViewEntity]) {
+        storageSingerTracksUseCase.saveSingerTracks(singerTracks: entities, completition: { [weak self] result in
+            switch result {
+            case .success(let success):
+                self?.storageDataSource?(nil)
+            case .failure(let failure):
+                self?.storageDataSource?(failure)
+            }
+        })
     }
     
     
