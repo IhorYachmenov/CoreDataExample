@@ -18,7 +18,7 @@ class SingerTracksViewModel {
     // MARK: - View Model API
     var networkDataSource: ((NetworkRequestsState, Result<String, ServiceError>?) ->())?
     var storageDataSource: ((StorageError?) ->())?
-    
+
     // MARK: - Use Case
     private lazy var searchSingerTracksUseCase: SearchSingerTracksUseCaseInterface = SearchSingerTracksUseCase()
     private lazy var storageSingerTracksUseCase: StorageSingerTracksUseCaseInterface = StorageSingerTracksUseCase()
@@ -26,18 +26,18 @@ class SingerTracksViewModel {
     
     
     func findRandomArtistTracks() {
-        networkDataSource?(.InProgress, nil)
+        networkDataSource?(.inProgress, nil)
         
         searchSingerTracksUseCase.searchSingerTracks(singerName: listOfSingers.randomElement()!) { [weak self] result in
             switch result {
             case .success(let success):
             
-                self?.networkDataSource?(.Completed, .success("Singers tracks loaded 🤩"))
+                self?.networkDataSource?(.completed, .success("Singers tracks loaded 🤩"))
                 
                 self?.saveSingersTrackToStorage(success)
                 
             case .failure(let failure):
-                self?.networkDataSource?(.Completed, .failure(failure))
+                self?.networkDataSource?(.completed, .failure(failure))
             }
         }
     }

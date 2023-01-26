@@ -9,11 +9,26 @@ import UIKit
 
 class SingerTracksViewController: UIViewController {
     
-    #warning("add check duplication")
+    #warning("add check dublication")
+    #warning(" <Notification about changes>, synchronization between UI layer and Data model ")
+    
+    #warning("clean architecture, use case position")
     
     
-    #warning("synchronization between UI layer and Data model")
-    #warning(" <Notification about changes> ")
+    #warning("change contexts")
+    #warning("1 - Big save, small fetch, which core data stack")
+    #warning("2 - Big save, big fetch, which core data stack, +-, one persistem, or gew temporary, create or not")
+    
+    #warning("user space vs kernel space")
+    
+#warning("data provider")
+#warning("interface in correct layer")
+#warning("swift naming convention")
+#warning("moc whole layers, where it need")
+
+#warning("create notes during reading")
+    
+#warning("add abstractions")
     
     private lazy var viewModel = SingerTracksViewModel()
     
@@ -43,11 +58,11 @@ class SingerTracksViewController: UIViewController {
         
         viewModel.networkDataSource = { [weak self] networkState, result in
             switch networkState {
-            case .InProgress:
+            case .inProgress:
                 DispatchQueue.main.async { [weak self] in
                     self?.loader.startAnimating()
                 }
-            case .Completed:
+            case .completed:
                 self?.networkDataSourceAction(result!)
             }
         }

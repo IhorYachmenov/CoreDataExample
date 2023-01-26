@@ -34,40 +34,29 @@ final class SingerTrackStorage {
     
     lazy var saveManageObjectContext: NSManagedObjectContext = {
         let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-        context.parent = fetchManageObjectContext
-        return context
-    }()
-    
-    lazy var fetchManageObjectContext: NSManagedObjectContext = {
-        let context = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         context.persistentStoreCoordinator = persistentContainer.persistentStoreCoordinator
         return context
     }()
     
-    func saveContext(completition: @escaping ((StorageError?) -> ())) {
-        guard saveManageObjectContext.hasChanges else { return }
-        
-        do {
-            try self.saveManageObjectContext.save()
-            
-            self.fetchManageObjectContext.performAndWait {
-                do {
-                    try self.fetchManageObjectContext.save()
-                    print("Data saved successfully 🥳")
-                    completition(nil)
-                } catch {
-                    print("Can't save singer tracks 😶‍🌫️")
-                    completition(.saveError(error))
-                }
-            }
-
-        } catch {
-            print("Can't save singer tracks 😶‍🌫️")
-            completition(.saveError(error))
-        }
-        
-        
-    }
+    lazy var fetchManageObjectContext: NSManagedObjectContext = {
+        return persistentContainer.viewContext
+    }()
     
+    func saveContext(completition: @escaping ((StorageError?) -> ())) {
+        
+        guard saveManageObjectContext.hasChanges else { return }
+  
+        saveManageObjectContext.perform {
+            do {
+                try self.saveManageObjectContext.save()
+                print("Data saved successfully 🥳")
+                completition(nil)
+
+            } catch {
+                print("Can't save singer tracks 😶‍🌫️")
+                completition(.saveError(error))
+            }
+        }
+    }
 }
 
