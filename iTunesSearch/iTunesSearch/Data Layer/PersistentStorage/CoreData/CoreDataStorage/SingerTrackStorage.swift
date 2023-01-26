@@ -71,28 +71,3 @@ final class SingerTrackStorage {
     
 }
 
-
-
-
-
-/// Temporary here
-/// 
-//    func saveContext() {
-//        guard saveManageObjectContext.hasChanges || fetchManageObjectContext.hasChanges else { return }
-//
-//        fetchManageObjectContext.performAndWait {
-//            do {
-//                try fetchManageObjectContext.save()
-//            } catch {
-//                print("Can't save main queue \(error)")
-//            }
-//        }
-//
-//        saveManageObjectContext.perform {
-//            do {
-//                try self.saveManageObjectContext.save()
-//            } catch {
-//                print("Can't save private queue \(error)")
-//            }
-//        }
-//    }

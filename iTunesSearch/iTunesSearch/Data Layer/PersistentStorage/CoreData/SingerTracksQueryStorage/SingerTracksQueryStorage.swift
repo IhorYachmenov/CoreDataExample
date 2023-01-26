@@ -74,6 +74,39 @@ extension SingerTracksQueryStorage: SingerTracksQueryStorageInterface {
     
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // MARK: private
 
 extension SingerTracksQueryStorage {
