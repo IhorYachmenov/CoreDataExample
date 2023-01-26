@@ -54,7 +54,7 @@ extension SingerTracksQueryStorage: SingerTracksQueryStorageInterface {
         completition(.success([]))
         
         guard !singerTracks.isEmpty else { return }
-        print("DB save", singerTracks.count)
+        
         singerTracks.forEach({ track in
             let _ = SingerTrackMO(query: track, insertInto: storage.saveManageObjectContext)
         })

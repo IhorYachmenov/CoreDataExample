@@ -45,23 +45,31 @@ final class SingerTrackStorage {
     }()
     
     func saveContext(completition: @escaping ((StorageError?) -> ())) {
-        guard saveManageObjectContext.hasChanges else { return }
+        guard saveManageObjectContext.hasChanges || fetchManageObjectContext.hasChanges else { return }
         
-        saveManageObjectContext.performAndWait {
+        saveManageObjectContext.perform {
             do {
-                try saveManageObjectContext.save()
-                print("Data saved successfully 🥳")
-                completition(nil)
+                try self.saveManageObjectContext.save()
+                
+                self.fetchManageObjectContext.performAndWait {
+                    do {
+                        try self.fetchManageObjectContext.save()
+                        print("Data saved successfully 🥳")
+                        completition(nil)
+                    } catch {
+                        print("Can't save singer tracks 😶‍🌫️")
+                        completition(.saveError(error))
+                    }
+                }
+
             } catch {
                 print("Can't save singer tracks 😶‍🌫️")
-                completition(StorageError.saveError(error))
+                completition(.saveError(error))
             }
         }
         
+        
     }
-    
-
-    
     
 }
 

@@ -8,7 +8,13 @@
 import UIKit
 
 class SingerTracksViewController: UIViewController {
-
+    
+    #warning("add check duplication")
+    
+    
+    #warning("synchronization between UI layer and Data model")
+    #warning(" <Notification about changes> ")
+    
     private lazy var viewModel = SingerTracksViewModel()
     
     private lazy var refreshControll = UIRefreshControl()
