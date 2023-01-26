@@ -21,8 +21,6 @@ final class SingerTracksQueryStorage {
 extension SingerTracksQueryStorage: SingerTracksQueryStorageInterface {
     
     func fetchSingerTracks(fetchLimit: Int, completition: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
-        completition(.success([]))
-        
 
         do {
             
@@ -51,21 +49,24 @@ extension SingerTracksQueryStorage: SingerTracksQueryStorageInterface {
     }
     
     func saveSingerTracks(singerTracks: [SingerTrackEntity], completition: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
-        completition(.success([]))
         
         guard !singerTracks.isEmpty else { return }
-        
-        singerTracks.forEach({ track in
-            let _ = SingerTrackMO(query: track, insertInto: storage.saveManageObjectContext)
-        })
-        
-        storage.saveContext { error in
-            guard error != nil else {
-                completition(.success(singerTracks))
-                return
+ 
+        storage.saveManageObjectContext.perform {
+            
+            singerTracks.forEach({ track in
+                let _ = SingerTrackMO(query: track, insertInto: self.storage.saveManageObjectContext)
+            })
+            
+            self.storage.saveContext { error in
+                guard error != nil else {
+                    completition(.success(singerTracks))
+                    return
+                }
+                completition(.failure(error!))
             }
-            completition(.failure(error!))
         }
+        
 
     }
     
