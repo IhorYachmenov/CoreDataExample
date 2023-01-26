@@ -14,7 +14,7 @@ final class SearchSingerTracksUseCase: SearchSingerTracksUseCaseInterface {
     func searchSingerTracks(singerName: String, completion: @escaping (Result<[SingerTrackViewEntity], ServiceError>) -> ()) {
         let request = SearchArtistTrackAPI()
         let apiLoader = APILoader(apiHandler: request)
-        
+        print("Singer Name Donloading ->", singerName)
         let param: Dictionary<String, Any> = ["limit" : "100", "music" : "media", "term" : singerName]
     
         apiLoader.loadAPIRequest(requestData: param) { (model, error) in
