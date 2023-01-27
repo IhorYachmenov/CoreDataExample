@@ -52,7 +52,7 @@ class SingerTracksViewController: UIViewController {
         view.layer.borderColor = UIColor.red.cgColor
         
         view.addAction(UIAction(handler: { [weak self] _ in
-            self?.viewModel.findRandomArtistTracks()
+//            self?.viewModel.findRandomArtistTracks()
         }), for: .touchUpInside)
         
         return view

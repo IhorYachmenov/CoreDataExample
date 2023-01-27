@@ -29,11 +29,11 @@ final class SingerTracksQueryStorage: NSObject, NSFetchedResultsControllerDelega
     private let storage: SingerTrackStorage
     private var offsetNumber: Int = 0
     
-    private lazy var fetchedResultsController: NSFetchedResultsController<SingerTrackMO> = {
+    private lazy var fetchedResultsController: NSFetchedResultsController<SingerTrack> = {
         
         let context = storage.fetchManageObjectContext
         
-        let request: NSFetchRequest<SingerTrackMO> = SingerTrackMO.fetchRequest()
+        let request: NSFetchRequest<SingerTrack> = SingerTrack.fetchRequest()
         request.sortDescriptors = [
             NSSortDescriptor(key: "singerName", ascending: true)
         ]
@@ -63,48 +63,48 @@ extension SingerTracksQueryStorage: SingerTracksQueryStorageInterface {
     
     func fetchSingerTracks(fetchLimit: Int, completition: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
 
-//        do {
-//
-//            let request: NSFetchRequest = SingerTrackMO.fetchRequest()
-//
-//            let count = try storage.fetchManageObjectContext.count(for: request)
-//            request.fetchLimit = fetchLimit
-//
-//            let offset = (offsetNumber * fetchLimit)
-//            request.fetchOffset = offset
-//
-//            let data = try storage.fetchManageObjectContext.fetch(request)
-//
-//            if (offset < count) {
-//                self.offsetNumber += 1
-//            }
-//
-//            print( "Fetch number", self.offsetNumber, "Offset number", offset, "DB count", count)
-//            completition(.success(data.toData()))
-//        } catch {
-//
-//            if (self.offsetNumber != 0) {
-//                self.offsetNumber -= 1
-//            }
-//
-//            completition(.failure(.readError(error)))
-//        }
-        
-        if (fetchedResultsController.fetchedObjects == nil) {
-            let error: Error = NSError(domain: "", code: 400, userInfo: [ NSLocalizedDescriptionKey : "Fetched objects nil"])
+        do {
+
+            let request: NSFetchRequest = SingerTrack.fetchRequest()
+
+            let count = try storage.fetchManageObjectContext.count(for: request)
+            request.fetchLimit = fetchLimit
+
+            let offset = (offsetNumber * fetchLimit)
+            request.fetchOffset = offset
+
+            let data = try storage.fetchManageObjectContext.fetch(request)
+
+            if (offset < count) {
+                self.offsetNumber += 1
+            }
+
+            print( "Fetch number", self.offsetNumber, "Offset number", offset, "DB count", count)
+            completition(.success(data.toData()))
+        } catch {
+
+            if (self.offsetNumber != 0) {
+                self.offsetNumber -= 1
+            }
+
             completition(.failure(.readError(error)))
-            
-        } else {
-            let data = fetchedResultsController.fetchedObjects!.map({ $0.toData() })
-            completition(.success(data))
         }
+        
+//        if (fetchedResultsController.fetchedObjects == nil) {
+//            let error: Error = NSError(domain: "", code: 400, userInfo: [ NSLocalizedDescriptionKey : "Fetched objects nil"])
+//            completition(.failure(.readError(error)))
+//
+//        } else {
+//            let data = fetchedResultsController.fetchedObjects!.map({ $0.toData() })
+//            completition(.success(data))
+//        }
     }
     
     func saveSingerTracks(singerTracks: [SingerTrackEntity], completition: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
         
         guard !singerTracks.isEmpty else { return }
  
-        singerTracks.forEach({ let _ = SingerTrackMO(query: $0, insertInto: storage.saveManageObjectContext) })
+        singerTracks.forEach({ let _ = SingerTrack(query: $0, insertInto: storage.saveManageObjectContext) })
         
         storage.saveContext { error in
             guard error != nil else {

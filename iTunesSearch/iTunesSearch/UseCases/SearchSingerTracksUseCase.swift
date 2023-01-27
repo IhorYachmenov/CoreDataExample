@@ -15,7 +15,7 @@ final class SearchSingerTracksUseCase: SearchSingerTracksUseCaseInterface {
         let request = SearchSingerTrackAPI()
         let apiLoader = APILoader(apiHandler: request)
         print("Singer Name Donloading ->", singerName)
-        let param: Dictionary<String, Any> = ["limit" : "1", "music" : "media", "term" : singerName]
+        let param: Dictionary<String, Any> = ["limit" : "100", "music" : "media", "term" : singerName]
     
         apiLoader.loadAPIRequest(requestData: param) { (model, error) in
             if let _ = error {
