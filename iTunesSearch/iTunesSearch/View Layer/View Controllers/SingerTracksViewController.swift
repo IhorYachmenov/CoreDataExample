@@ -15,12 +15,13 @@ class SingerTracksViewController: UIViewController {
 #warning("clean architecture, use case position")
     
 #warning("data provider")
-#warning("interface in correct layer")
+
 #warning("swift naming convention")
 #warning("moc whole layers, where it need")
     
 #warning("add abstractions")
     
+    /// My theoretical home task
 #warning("1 - Big save, small fetch, which core data stack")
 #warning("2 - Big save, big fetch, which core data stack, +-, one persistem, or gew temporary, create or not")
     
