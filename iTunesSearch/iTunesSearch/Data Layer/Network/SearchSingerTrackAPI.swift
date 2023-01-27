@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct SearchArtistTrackAPI: APIHandler {
+struct SearchSingerTrackAPI: APIHandler {
     
     func makeRequest(from param: [String: Any]) -> URLRequest? {
-        let urlString = APIPath().artistTrackSearchPath
+        let urlString = APIPath().singerTrackSearchPath
         if var url = URL(string: urlString) {
             if param.count > 0 {
 //                print(param.description)

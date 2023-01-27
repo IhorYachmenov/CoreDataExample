@@ -41,6 +41,23 @@ class SingerTracksViewController: UIViewController {
         return view
     }()
     
+    private lazy var button: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.setTitle("Download 1 Song", for: .normal)
+        view.backgroundColor = .white
+        view.setTitleColor(.black, for: .normal)
+        view.layer.cornerRadius = 10
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor.red.cgColor
+        
+        view.addAction(UIAction(handler: { [weak self] _ in
+            self?.viewModel.findRandomArtistTracks()
+        }), for: .touchUpInside)
+        
+        return view
+    }()
+    
     private lazy var loader: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView(style: .medium)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -80,13 +97,19 @@ class SingerTracksViewController: UIViewController {
     private func initUIComponents(){
         view.backgroundColor = .white
         
+        view.addSubview(button)
         view.addSubview(loader)
         view.addSubview(tableView)
+        
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+        button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+        button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         
         loader.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loader.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 10).isActive = true
         tableView.bottomAnchor.constraint(equalTo: loader.topAnchor, constant: -10).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true

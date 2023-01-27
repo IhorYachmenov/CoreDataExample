@@ -16,5 +16,5 @@ let environment = APIEnvironment.production
 let baseURL = environment.baseURL()
 
 struct APIPath {
-    var artistTrackSearchPath: String { return "\(baseURL)" }
+    var singerTrackSearchPath: String { return "\(baseURL)" }
 }

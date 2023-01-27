@@ -8,45 +8,95 @@
 import Foundation
 import CoreData
 
-final class SingerTracksQueryStorage {
+final class SingerTracksQueryStorage: NSObject, NSFetchedResultsControllerDelegate {
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        print("controllerWillChangeContent")
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+        print("didChange atSectionIndex", type)
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        print("didChange for newIndexPath", newIndexPath ?? 9999)
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        print("controllerDidChangeContent")
+    }
     
     private let storage: SingerTrackStorage
     private var offsetNumber: Int = 0
     
+    private lazy var fetchedResultsController: NSFetchedResultsController<SingerTrackMO> = {
+        
+        let context = storage.fetchManageObjectContext
+        
+        let request: NSFetchRequest<SingerTrackMO> = SingerTrackMO.fetchRequest()
+        request.sortDescriptors = [
+            NSSortDescriptor(key: "singerName", ascending: true)
+        ]
+        
+        let frc = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        frc.delegate = self
+        
+        do {
+            try frc.performFetch()
+            print("NSFetchRC Success")
+        } catch let err {
+            print(err)
+            print("NSFetchRC Failure", err)
+        }
+        
+        return frc
+    }()
+    
     init(persistentStorage: SingerTrackStorage = SingerTrackStorage.shared) {
         storage = persistentStorage
     }
+    
 }
 
 extension SingerTracksQueryStorage: SingerTracksQueryStorageInterface {
     
     func fetchSingerTracks(fetchLimit: Int, completition: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
 
-        do {
-            
-            let request: NSFetchRequest = SingerTrackMO.fetchRequest()
-            
-            let count = try storage.fetchManageObjectContext.count(for: request)
-            request.fetchLimit = fetchLimit
-
-            let offset = (offsetNumber * fetchLimit)
-            request.fetchOffset = offset
-            
-            let data = try storage.fetchManageObjectContext.fetch(request)
-            
-            if (offset < count) {
-                self.offsetNumber += 1
-            }
-            
-            print( "Fetch number", self.offsetNumber, "Offset number", offset, "DB count", count)
-            completition(.success(data.toData()))
-        } catch {
-            
-            if (self.offsetNumber != 0) {
-                self.offsetNumber -= 1
-            }
-            
+//        do {
+//
+//            let request: NSFetchRequest = SingerTrackMO.fetchRequest()
+//
+//            let count = try storage.fetchManageObjectContext.count(for: request)
+//            request.fetchLimit = fetchLimit
+//
+//            let offset = (offsetNumber * fetchLimit)
+//            request.fetchOffset = offset
+//
+//            let data = try storage.fetchManageObjectContext.fetch(request)
+//
+//            if (offset < count) {
+//                self.offsetNumber += 1
+//            }
+//
+//            print( "Fetch number", self.offsetNumber, "Offset number", offset, "DB count", count)
+//            completition(.success(data.toData()))
+//        } catch {
+//
+//            if (self.offsetNumber != 0) {
+//                self.offsetNumber -= 1
+//            }
+//
+//            completition(.failure(.readError(error)))
+//        }
+        
+        if (fetchedResultsController.fetchedObjects == nil) {
+            let error: Error = NSError(domain: "", code: 400, userInfo: [ NSLocalizedDescriptionKey : "Fetched objects nil"])
             completition(.failure(.readError(error)))
+            
+        } else {
+            let data = fetchedResultsController.fetchedObjects!.map({ $0.toData() })
+            completition(.success(data))
         }
     }
     
@@ -70,7 +120,24 @@ extension SingerTracksQueryStorage: SingerTracksQueryStorageInterface {
 }
 
 
-
+//extension SingerTracksQueryStorage: NSFetchedResultsControllerDelegate {
+//    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+//        print("controllerWillChangeContent")
+//    }
+//    
+//    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+//        print("controllerDidChangeContent")
+//    }
+//    
+//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+//        print("didChange for newIndexPath")
+//    }
+//    
+//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+//        print("didChange atSectionIndex for")
+//    }
+//
+//}
 
 
 
