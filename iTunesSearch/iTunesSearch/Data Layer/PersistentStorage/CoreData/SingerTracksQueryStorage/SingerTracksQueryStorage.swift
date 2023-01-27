@@ -25,9 +25,10 @@ extension SingerTracksQueryStorage: SingerTracksQueryStorageInterface {
         do {
             
             let request: NSFetchRequest = SingerTrackMO.fetchRequest()
+            
             let count = try storage.fetchManageObjectContext.count(for: request)
             request.fetchLimit = fetchLimit
-            
+
             let offset = (offsetNumber * fetchLimit)
             request.fetchOffset = offset
             
@@ -62,8 +63,6 @@ extension SingerTracksQueryStorage: SingerTracksQueryStorageInterface {
             }
             completition(.failure(error!))
         }
-        
-
     }
     
     

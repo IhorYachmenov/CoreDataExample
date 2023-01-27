@@ -9,26 +9,23 @@ import UIKit
 
 class SingerTracksViewController: UIViewController {
     
-    #warning("add check dublication")
-    #warning(" <Notification about changes>, synchronization between UI layer and Data model ")
+#warning("add check dublication")
+#warning(" <Notification about changes>, synchronization between UI layer and Data model ")
     
-    #warning("clean architecture, use case position")
-    
-    
-    #warning("change contexts")
-    #warning("1 - Big save, small fetch, which core data stack")
-    #warning("2 - Big save, big fetch, which core data stack, +-, one persistem, or gew temporary, create or not")
-    
-    #warning("user space vs kernel space")
+#warning("clean architecture, use case position")
     
 #warning("data provider")
 #warning("interface in correct layer")
 #warning("swift naming convention")
 #warning("moc whole layers, where it need")
-
-#warning("create notes during reading")
     
 #warning("add abstractions")
+    
+#warning("1 - Big save, small fetch, which core data stack")
+#warning("2 - Big save, big fetch, which core data stack, +-, one persistem, or gew temporary, create or not")
+    
+#warning("create notes during reading")
+#warning("user space vs kernel space")
     
     private lazy var viewModel = SingerTracksViewModel()
     
@@ -66,7 +63,7 @@ class SingerTracksViewController: UIViewController {
                 self?.networkDataSourceAction(result!)
             }
         }
- 
+        
         viewModel.storageDataSource = { [weak self] failure in
             DispatchQueue.main.async {
                 self?.storageDataSouceAction(failure)
@@ -78,7 +75,7 @@ class SingerTracksViewController: UIViewController {
         
     }
     
-  
+    
     
     private func initUIComponents(){
         view.backgroundColor = .white
@@ -147,7 +144,7 @@ extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: TrackListCell.identifier, for: indexPath)
-    
+        
         var configurator = TrackListConfigurator()
         configurator.singerName = viewModel.data[indexPath.row].singerName
         configurator.trackName = viewModel.data[indexPath.row].trackName
