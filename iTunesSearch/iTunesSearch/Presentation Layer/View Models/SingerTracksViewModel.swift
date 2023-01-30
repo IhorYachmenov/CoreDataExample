@@ -7,63 +7,54 @@
 
 import Foundation
 
+enum ViewModelActionState {
+    case inProgress
+    case completed
+    case failure(Error)
+}
+
 class SingerTracksViewModel {
     
-    init() {}
-    // MARK: - View Model data
+    /// MARK: - View Model data
     private(set) var data: Array<SingerTrackViewEntity> = Array()
-    private let fetchLimit = 15
-    private let listOfSingers = ["Janet Jackson", "Eminem", "Katy Perry", "Lady Gaga", "Snoop Dogg", "Elvis Presley"]
+    private lazy var listOfSingers = ["Janet Jackson", "Eminem", "Katy Perry", "Lady Gaga", "Snoop Dogg", "Elvis Presley"]
     
-    // MARK: - View Model API
-    var networkDataSource: ((NetworkRequestsState, Result<String, ServiceError>?) ->())?
-    var storageDataSource: ((StorageError?) ->())?
-
-    // MARK: - Use Case
-    private lazy var searchSingerTracksUseCase: SearchSingerTracksUseCaseInterface = SearchSingerTracksUseCase()
-    private lazy var storageSingerTracksUseCase: StorageSingerTracksUseCaseInterface = StorageSingerTracksUseCase()
+    /// MARK: - Data Source
+    var dataSource: ((ViewModelActionState) ->())?
     
+    /// MARK: - Data Provider
+    private var singerTrackDataProvider: SingerTrackDataProviderInterface
     
-    
-    func findRandomArtistTracks() {
-        networkDataSource?(.inProgress, nil)
-        
-        searchSingerTracksUseCase.searchSingerTracks(singerName: listOfSingers.randomElement()!) { [weak self] result in
-            switch result {
-            case .success(let success):
-            
-                self?.networkDataSource?(.completed, .success("Singers tracks loaded 🤩"))
-                
-                self?.saveSingersTrackToStorage(success)
-                
-            case .failure(let failure):
-                self?.networkDataSource?(.completed, .failure(failure))
-            }
-        }
+    // MARK: - Init
+    init(_ dataProvider: SingerTrackDataProviderInterface =
+         SingerTrackDataProvider(UseCase: SearchSingerTracksUseCase(), UseCase: StorageSingerTracksUseCase(storageRepository: PersistentStorageRepository()))) {
+        singerTrackDataProvider = dataProvider
     }
     
-    func fetchSingerTracks() {
-        storageSingerTracksUseCase.fetchSingerTracks(fetchLimit: fetchLimit) { [weak self] result in
+    func downloadRandomSingerTrack() {
+        dataSource?(.inProgress)
+        
+        singerTrackDataProvider.downloadSingerTrack(singerName: listOfSingers.randomElement()!) { [weak self] result in
             switch result {
             case .success(let success):
                 self?.data += success
-                self?.storageDataSource?(nil)
+                self?.dataSource?(.completed)
             case .failure(let failure):
-                
-                self?.storageDataSource?(.readError(failure))
+                self?.dataSource?(.failure(failure))
             }
         }
     }
     
-    private func saveSingersTrackToStorage(_ entities: [SingerTrackViewEntity]) {
-        storageSingerTracksUseCase.saveSingerTracks(singerTracks: entities, completition: { [weak self] result in
+    func fetchListOfSongsFromStorage() {
+        singerTrackDataProvider.fetchFromStorage { [weak self] result in
             switch result {
-            case .success(_):
-                self?.storageDataSource?(nil)
+            case .success(let success):
+                self?.data = success
+                self?.dataSource?(.completed)
             case .failure(let failure):
-                self?.storageDataSource?(failure)
+                self?.dataSource?(.failure(failure))
             }
-        })
+        }
     }
     
 }

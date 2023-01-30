@@ -9,11 +9,6 @@ import Foundation
 
 // MARK: Request Handler Supporting methods
 
-enum NetworkRequestsState {
-    case inProgress
-    case completed
-}
-
 extension RequestHandler {
     
     func setQueryParams(parameters:[String: Any], url: URL) -> URL {

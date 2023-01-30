@@ -44,7 +44,9 @@
 		CE266D522981543000D6E038 /* SingerTrackViewEntityEntensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D512981543000D6E038 /* SingerTrackViewEntityEntensions.swift */; };
 		CE266D5429815A3300D6E038 /* SingerTrackEntityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D5329815A3300D6E038 /* SingerTrackEntityExtensions.swift */; };
 		CE266D57298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE266D55298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld */; };
-		CE266D5A2981679400D6E038 /* SingerTrackMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D592981679400D6E038 /* SingerTrackMO.swift */; };
+		CE266D5A2981679400D6E038 /* SingerTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D592981679400D6E038 /* SingerTrack.swift */; };
+		CE266D6D2987DED900D6E038 /* SingerTrackDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D6C2987DED900D6E038 /* SingerTrackDataProvider.swift */; };
+		CE266D6F2987DEF500D6E038 /* SingerTrackDataProviderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D6E2987DEF500D6E038 /* SingerTrackDataProviderInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +108,9 @@
 		CE266D512981543000D6E038 /* SingerTrackViewEntityEntensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackViewEntityEntensions.swift; sourceTree = "<group>"; };
 		CE266D5329815A3300D6E038 /* SingerTrackEntityExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackEntityExtensions.swift; sourceTree = "<group>"; };
 		CE266D56298162A900D6E038 /* SingerTrackDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SingerTrackDataModel.xcdatamodel; sourceTree = "<group>"; };
-		CE266D592981679400D6E038 /* SingerTrackMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackMO.swift; sourceTree = "<group>"; };
+		CE266D592981679400D6E038 /* SingerTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrack.swift; sourceTree = "<group>"; };
+		CE266D6C2987DED900D6E038 /* SingerTrackDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDataProvider.swift; sourceTree = "<group>"; };
+		CE266D6E2987DEF500D6E038 /* SingerTrackDataProviderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDataProviderInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 			children = (
 				CE266D5B2984009C00D6E038 /* View Layer */,
 				CE266CF72980308E00D6E038 /* Presentation Layer */,
+				CE266D6B2987DE5C00D6E038 /* DataProviders */,
 				CE266D5C298400AE00D6E038 /* UseCases */,
 				CE266CF8298030E800D6E038 /* Data Layer */,
 				CE266CF92980310000D6E038 /* Domain Layer */,
@@ -198,8 +203,8 @@
 		CE266CF72980308E00D6E038 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
-				CE266D232980481000D6E038 /* View Models */,
 				CE266D1B2980429100D6E038 /* Entities */,
+				CE266D232980481000D6E038 /* View Models */,
 			);
 			path = "Presentation Layer";
 			sourceTree = "<group>";
@@ -207,8 +212,8 @@
 		CE266CF8298030E800D6E038 /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
-				CE266D5F2984040F00D6E038 /* Network */,
 				CE266D3029812B8300D6E038 /* Entities */,
+				CE266D5F2984040F00D6E038 /* Network */,
 				CE266D3129812B8D00D6E038 /* Repositories */,
 				CE266D4229814A5200D6E038 /* PersistentStorage */,
 			);
@@ -381,7 +386,7 @@
 		CE266D582981677500D6E038 /* Mapping */ = {
 			isa = PBXGroup;
 			children = (
-				CE266D592981679400D6E038 /* SingerTrackMO.swift */,
+				CE266D592981679400D6E038 /* SingerTrack.swift */,
 			);
 			path = Mapping;
 			sourceTree = "<group>";
@@ -428,6 +433,23 @@
 				CE266D122980368600D6E038 /* SearchSingerTrackAPI.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		CE266D6B2987DE5C00D6E038 /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				CE266D702987DEF800D6E038 /* Interfaces */,
+				CE266D6C2987DED900D6E038 /* SingerTrackDataProvider.swift */,
+			);
+			path = DataProviders;
+			sourceTree = "<group>";
+		};
+		CE266D702987DEF800D6E038 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				CE266D6E2987DEF500D6E038 /* SingerTrackDataProviderInterface.swift */,
+			);
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -560,7 +582,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE266D5A2981679400D6E038 /* SingerTrackMO.swift in Sources */,
+				CE266D5A2981679400D6E038 /* SingerTrack.swift in Sources */,
+				CE266D6F2987DEF500D6E038 /* SingerTrackDataProviderInterface.swift in Sources */,
 				CE266D522981543000D6E038 /* SingerTrackViewEntityEntensions.swift in Sources */,
 				CE266D04298031F600D6E038 /* ResponseHandler+Extension.swift in Sources */,
 				CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */,
@@ -580,6 +603,7 @@
 				CE266CFE298031C600D6E038 /* APIEnvironment.swift in Sources */,
 				CE266D3329812BEB00D6E038 /* PersistentStorageRepository.swift in Sources */,
 				CE266D5429815A3300D6E038 /* SingerTrackEntityExtensions.swift in Sources */,
+				CE266D6D2987DED900D6E038 /* SingerTrackDataProvider.swift in Sources */,
 				CE266D0A2980335800D6E038 /* Constants.swift in Sources */,
 				CE266D3629812C5700D6E038 /* PersistentStorageRepositoryInterface.swift in Sources */,
 				CE266D4829814C0400D6E038 /* SingerTrackStorage.swift in Sources */,

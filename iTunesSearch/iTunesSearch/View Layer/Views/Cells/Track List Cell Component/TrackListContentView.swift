@@ -81,6 +81,7 @@ class TrackListContentView: UIView, UIContentView {
         
         trackPrice.centerYAnchor.constraint(equalTo: trackName.centerYAnchor).isActive = true
         trackPrice.leadingAnchor.constraint(equalTo: trackName.trailingAnchor, constant: 20).isActive = true
+        trackPrice.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: -10).isActive = true
         trackPrice.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
         trackPrice.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 751), for: .horizontal)
         trackPrice.setContentHuggingPriority(UILayoutPriority(rawValue: 751), for: .horizontal)

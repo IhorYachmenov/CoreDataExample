@@ -7,16 +7,16 @@
 
 import Foundation
 
-
-
 final class StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
     
-    init() {}
+    private var repository: PersistentStorageRepositoryInterface
     
-    private lazy var persistentStorage: PersistentStorageRepositoryInterface = PersistentStorageRepository()
+    init(storageRepository: PersistentStorageRepositoryInterface) {
+        repository = storageRepository
+    }
     
     func fetchSingerTracks(fetchLimit: Int, completition: @escaping (Result<[SingerTrackViewEntity], StorageError>) -> ()) {
-        persistentStorage.fetchSingerTracks(fetchLimit: fetchLimit, completition: { result in
+        repository.fetchSingerTracks(fetchLimit: fetchLimit, completition: { result in
             switch result {
             case .success(let success):
                 completition(.success(success.toView()))
@@ -28,7 +28,7 @@ final class StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
     }
     
     func saveSingerTracks(singerTracks: [SingerTrackViewEntity], completition: @escaping (Result<[SingerTrackViewEntity], StorageError>) -> ()) {
-        persistentStorage.saveSingerTracks(singerTracks: singerTracks.toData(), completition: { result in
+        repository.saveSingerTracks(singerTracks: singerTracks.toData(), completition: { result in
             switch result {
             case .success(let success):
                 completition(.success(success.toView()))

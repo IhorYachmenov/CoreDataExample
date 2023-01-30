@@ -12,21 +12,14 @@ class SingerTracksViewController: UIViewController {
 #warning("add check dublication")
 #warning(" <Notification about changes>, synchronization between UI layer and Data model ")
     
-#warning("clean architecture, use case position")
-    
-#warning("data provider")
-
 #warning("swift naming convention")
-#warning("moc whole layers, where it need")
-    
-#warning("add abstractions")
     
     /// My theoretical home task
 #warning("1 - Big save, small fetch, which core data stack")
-#warning("2 - Big save, big fetch, which core data stack, +-, one persistem, or gew temporary, create or not")
+#warning("2 - Big save, big fetch, which core data stack, +-, one persistent context, or few temporary, create or not")
     
 #warning("create notes during reading")
-#warning("user space vs kernel space")
+
     
     private lazy var viewModel = SingerTracksViewModel()
     
@@ -46,6 +39,7 @@ class SingerTracksViewController: UIViewController {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setTitle("Download 1 Song", for: .normal)
+        view.tintColor = .gray
         view.backgroundColor = .white
         view.setTitleColor(.black, for: .normal)
         view.layer.cornerRadius = 10
@@ -53,7 +47,7 @@ class SingerTracksViewController: UIViewController {
         view.layer.borderColor = UIColor.red.cgColor
         
         view.addAction(UIAction(handler: { [weak self] _ in
-//            self?.viewModel.findRandomArtistTracks()
+            self?.viewModel.downloadRandomSingerTrack()
         }), for: .touchUpInside)
         
         return view
@@ -71,25 +65,28 @@ class SingerTracksViewController: UIViewController {
         
         initUIComponents()
         
-        viewModel.networkDataSource = { [weak self] networkState, result in
-            switch networkState {
+        viewModel.dataSource = { state in
+            switch state {
             case .inProgress:
                 DispatchQueue.main.async { [weak self] in
                     self?.loader.startAnimating()
                 }
             case .completed:
-                self?.networkDataSourceAction(result!)
+                DispatchQueue.main.async { [weak self] in
+                    self?.loader.stopAnimating()
+                    self?.refreshControll.endRefreshing()
+                    self?.tableView.reloadData()
+                }
+            case .failure(let failure):
+                DispatchQueue.main.async { [weak self] in
+                    self?.loader.stopAnimating()
+                    self?.refreshControll.endRefreshing()
+                    self?.presentAlertController(msg: failure.localizedDescription, title: "Error")
+                }
             }
         }
         
-        viewModel.storageDataSource = { [weak self] failure in
-            DispatchQueue.main.async {
-                self?.storageDataSouceAction(failure)
-            }
-        }
-        
-        viewModel.findRandomArtistTracks()
-        viewModel.fetchSingerTracks()
+        viewModel.fetchListOfSongsFromStorage()
         
     }
     
@@ -118,7 +115,7 @@ class SingerTracksViewController: UIViewController {
     }
     
     @objc func refreshControlAction() {
-        viewModel.fetchSingerTracks()
+        viewModel.fetchListOfSongsFromStorage()
     }
     
     private func presentAlertController(msg: String, title: String) {
@@ -130,32 +127,6 @@ class SingerTracksViewController: UIViewController {
         
     }
     
-    private func networkDataSourceAction(_ result: Result<String, ServiceError>) {
-        switch result {
-        case .success(let success):
-            DispatchQueue.main.async { [weak self] in
-                self?.loader.stopAnimating()
-                self?.presentAlertController(msg: success, title: "Alert")
-            }
-            
-        case .failure(let failure):
-            DispatchQueue.main.async { [weak self] in
-                self?.loader.stopAnimating()
-                self?.presentAlertController(msg: failure.localizedDescription, title: "Error")
-            }
-        }
-        
-    }
-    
-    private func storageDataSouceAction(_ failure: StorageError?) {
-        
-        guard failure == nil else {
-            presentAlertController(msg: failure!.localizedDescription, title: "Error")
-            return
-        }
-        refreshControll.endRefreshing()
-        tableView.reloadData()
-    }
 }
 
 // MARK: Data Source
