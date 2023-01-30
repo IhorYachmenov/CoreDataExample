@@ -12,16 +12,28 @@ class SingerTracksViewController: UIViewController {
 #warning("add check dublication")
 #warning(" <Notification about changes>, synchronization between UI layer and Data model ")
     
-#warning("swift naming convention")
-    
-    /// My theoretical home task
-#warning("1 - Big save, small fetch, which core data stack")
-#warning("2 - Big save, big fetch, which core data stack, +-, one persistent context, or few temporary, create or not")
-    
-#warning("create notes during reading")
+///    Which CoreData Stack I should select in this cases:
+//    1 case:
+///    We have Big Save, and Small Fetch
+///
+//    2 case:
+///    We have Big Save, and Big Fetch
+///
+///    Describe + and - each of the approach
+///    Have many contexts need depend of the approach
+///    Need temporary or live contexts
+///    Parent and Child Contexts or not
 
     
-    private lazy var viewModel = SingerTracksViewModel()
+    private lazy var viewModel: SingerTracksViewModel = {
+        let search = SearchSingerTracksUseCase()
+        let storage = StorageSingerTracksUseCase(storageRepository: PersistentStorageRepository())
+        let dataProvider = SingerTrackDataProvider(UseCase: search, UseCase: storage)
+        
+        let view = SingerTracksViewModel(dataProvider)
+        
+        return view
+    }()
     
     private lazy var refreshControll = UIRefreshControl()
     private lazy var tableView: UITableView = {

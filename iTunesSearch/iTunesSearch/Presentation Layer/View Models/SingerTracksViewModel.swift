@@ -26,8 +26,7 @@ class SingerTracksViewModel {
     private var singerTrackDataProvider: SingerTrackDataProviderInterface
     
     // MARK: - Init
-    init(_ dataProvider: SingerTrackDataProviderInterface =
-         SingerTrackDataProvider(UseCase: SearchSingerTracksUseCase(), UseCase: StorageSingerTracksUseCase(storageRepository: PersistentStorageRepository()))) {
+    init(_ dataProvider: SingerTrackDataProviderInterface) {
         singerTrackDataProvider = dataProvider
     }
     
