@@ -28,7 +28,7 @@ class SingerTracksViewController: UIViewController {
     private lazy var viewModel: SingerTracksViewModel = {
         let search = SearchSingerTracksUseCase()
         let storage = StorageSingerTracksUseCase(storageRepository: PersistentStorageRepository())
-        let dataProvider = SingerTrackDataProvider(UseCase: search, UseCase: storage)
+        let dataProvider = SingerTrackDataProvider(useCase: search, useCase: storage)
         
         let view = SingerTracksViewModel(dataProvider)
         

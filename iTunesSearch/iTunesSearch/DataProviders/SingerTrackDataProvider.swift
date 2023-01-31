@@ -12,7 +12,7 @@ class SingerTrackDataProvider {
     private var search: SearchSingerTracksUseCaseInterface
     private var storage: StorageSingerTracksUseCaseInterface
     
-    init(UseCase search:SearchSingerTracksUseCaseInterface, UseCase storage: StorageSingerTracksUseCaseInterface) {
+    init(useCase search:SearchSingerTracksUseCaseInterface, useCase storage: StorageSingerTracksUseCaseInterface) {
         self.search = search
         self.storage = storage
     }
