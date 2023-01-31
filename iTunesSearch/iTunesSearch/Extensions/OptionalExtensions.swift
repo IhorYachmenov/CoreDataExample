@@ -36,15 +36,5 @@ extension Optional where Wrapped == Float {
     }
 }
 
-extension Optional where Wrapped == Array<SingerTrackNetworkEntity> {
-    
-    func isNil() -> [SingerTrackNetworkEntity] {
-        if (self == nil) {
-            return []
-        } else {
-            return self!
-        }
-    }
-}
 
 

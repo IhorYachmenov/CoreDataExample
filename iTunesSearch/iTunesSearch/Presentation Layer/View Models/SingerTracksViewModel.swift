@@ -20,7 +20,7 @@ enum ViewModelActionState {
     case failure(Error)
 }
 
-#warning("rewrite interface")
+#warning("rewrite interface of view model")
 
 #warning("add check dublication")
 
