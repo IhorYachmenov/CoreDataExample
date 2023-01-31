@@ -25,7 +25,7 @@ struct SearchSingerTrackAPI: APIHandler {
         return nil
     }
     
-    func parseResponse(data: Data, response: HTTPURLResponse) throws -> SingerTracksDomainEntity {
+    func parseResponse(data: Data, response: HTTPURLResponse) throws -> SingerTracksNetworkEntity {
         return try defaultParseResponse(data: data, response: response)
     }
     

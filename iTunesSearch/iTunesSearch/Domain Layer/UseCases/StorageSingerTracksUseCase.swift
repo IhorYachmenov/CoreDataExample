@@ -15,25 +15,25 @@ final class StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
         repository = storageRepository
     }
     
-    func fetchSingerTracks(fetchLimit: Int, completition: @escaping (Result<[SingerTrackViewEntity], StorageError>) -> ()) {
-        repository.fetchSingerTracks(fetchLimit: fetchLimit, completition: { result in
+    func fetchSingerTracks(completion: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
+        repository.fetchSingerTracks(completion: { result in
             switch result {
             case .success(let success):
-                completition(.success(success.toView()))
+                completion(.success(success))
             case .failure(let failure):
-                completition(.failure(failure))
+                completion(.failure(failure))
             }
         })
         
     }
     
-    func saveSingerTracks(singerTracks: [SingerTrackViewEntity], completition: @escaping (Result<[SingerTrackViewEntity], StorageError>) -> ()) {
-        repository.saveSingerTracks(singerTracks: singerTracks.toData(), completition: { result in
+    func saveSingerTrack(track: SingerTrackEntity, completion: @escaping (Result<SingerTrackEntity, StorageError>) -> ()) {
+        repository.saveSingerTrack(singerTrack: track, completion: { result in
             switch result {
             case .success(let success):
-                completition(.success(success.toView()))
+                completion(.success(success))
             case .failure(let failure):
-                completition(.failure(failure))
+                completion(.failure(failure))
             }
         })
     }

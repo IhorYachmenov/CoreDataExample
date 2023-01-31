@@ -8,6 +8,6 @@
 import Foundation
 
 protocol SingerTracksQueryStorageInterface {
-    func fetchSingerTracks(fetchLimit: Int, completition: @escaping (Result<[SingerTrackEntity], StorageError>) -> ())
-    func saveSingerTracks(singerTracks: [SingerTrackEntity], completition: @escaping (Result<[SingerTrackEntity], StorageError>) -> ())
+    func fetchSingerTracks(completion: @escaping (Result<[SingerTrackEntity], StorageError>) -> ())
+    func saveSingerTrack(singerTrack: SingerTrackEntity, completion: @escaping (Result<SingerTrackEntity, StorageError>) -> ())
 }

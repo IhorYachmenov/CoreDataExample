@@ -7,11 +7,26 @@
 
 import Foundation
 
+//protocol ViewModel {
+//    associatedtype Model: Equatable
+//    var model: Observable<Model>? { get }
+//    //func observeModel(completion: (Model) -> Void)
+//    func updateData()
+//}
+
 enum ViewModelActionState {
     case inProgress
     case completed
     case failure(Error)
 }
+
+#warning("rewrite interface")
+
+#warning("add check dublication")
+
+#warning("Name Space")
+
+#warning("merge data from one moc to another")
 
 class SingerTracksViewModel {
     
@@ -23,32 +38,39 @@ class SingerTracksViewModel {
     var dataSource: ((ViewModelActionState) ->())?
     
     /// MARK: - Data Provider
-    private var singerTrackDataProvider: SingerTrackDataProviderInterface
+    private var singerTracksWorker: SingerTracksWorkerUseCaseInterface
     
     // MARK: - Init
-    init(_ dataProvider: SingerTrackDataProviderInterface) {
-        singerTrackDataProvider = dataProvider
+    init(_ useCase: SingerTracksWorkerUseCaseInterface) {
+        singerTracksWorker = useCase
     }
     
     func downloadRandomSingerTrack() {
         dataSource?(.inProgress)
         
-        singerTrackDataProvider.downloadSingerTrack(singerName: listOfSingers.randomElement()!) { [weak self] result in
+        singerTracksWorker.downloadAndSaveSingerTrack(name: listOfSingers.randomElement()!) { [weak self] result in
             switch result {
-            case .success(let success):
-                self?.data += success
+            case .success(_):
                 self?.dataSource?(.completed)
             case .failure(let failure):
                 self?.dataSource?(.failure(failure))
             }
         }
     }
-    
+
     func fetchListOfSongsFromStorage() {
-        singerTrackDataProvider.fetchFromStorage { [weak self] result in
+       
+        singerTracksWorker.fetchTracksFromStorage { [weak self] result in
             switch result {
             case .success(let success):
-                self?.data = success
+                
+                self?.data = success.map{ SingerTrackViewEntity(
+                    trackName: $0.trackName,
+                    singerName: $0.singerName,
+                    trackPrice: $0.trackPrice,
+                    country: $0.country)
+                }
+                
                 self?.dataSource?(.completed)
             case .failure(let failure):
                 self?.dataSource?(.failure(failure))

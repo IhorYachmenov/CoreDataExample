@@ -5,10 +5,5 @@
         <attribute name="singerName" optional="YES" attributeType="String"/>
         <attribute name="trackName" optional="YES" attributeType="String"/>
         <attribute name="trackPrice" optional="YES" attributeType="String"/>
-        <uniquenessConstraints>
-            <uniquenessConstraint>
-                <constraint value="trackName"/>
-            </uniquenessConstraint>
-        </uniquenessConstraints>
     </entity>
 </model>

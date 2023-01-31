@@ -6,8 +6,6 @@
 //
 
 
-#warning("add check dublication")
-#warning(" <Notification about changes>, synchronization between UI layer and Data model ")
 
 ///    Which CoreData Stack I should select in this cases:
 //    1 case:
@@ -27,11 +25,11 @@ import UIKit
 class SingerTracksViewController: UIViewController {
     
     private lazy var viewModel: SingerTracksViewModel = {
-        let search = SearchSingerTracksUseCase()
+        let search = DownloadSingerTrackUseCase()
         let storage = StorageSingerTracksUseCase(storageRepository: PersistentStorageRepository())
-        let dataProvider = SingerTrackDataProvider(useCase: search, useCase: storage)
+        let singerTrackWorkerUseCase = SingerTracksWorkerUseCase(useCase: search, useCase: storage)
         
-        let view = SingerTracksViewModel(dataProvider)
+        let view = SingerTracksViewModel(singerTrackWorkerUseCase)
         
         return view
     }()

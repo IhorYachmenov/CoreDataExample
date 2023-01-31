@@ -11,48 +11,40 @@ import CoreData
 final class SingerTracksQueryStorage: NSObject {
     
     private let storage: SingerTrackStorage
-    private var offsetNumber: Int = 0
     
     init(persistentStorage: SingerTrackStorage = SingerTrackStorage.shared) {
         storage = persistentStorage
     }
-    
 }
 
 extension SingerTracksQueryStorage: SingerTracksQueryStorageInterface {
     
-    func fetchSingerTracks(fetchLimit: Int, completition: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
+    func fetchSingerTracks(completion: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
 
         do {
-
             let request: NSFetchRequest = SingerTrack.fetchRequest()
 
             let count = try storage.fetchManageObjectContext.count(for: request)
             let data = try storage.fetchManageObjectContext.fetch(request)
             
             print( "DB count", count)
-            completition(.success(data.toData()))
+            completion(.success(data.toDataEntity()))
         } catch {
-
-            completition(.failure(.readError(error)))
+            completion(.failure(.readError(error)))
         }
         
     }
     
-    func saveSingerTracks(singerTracks: [SingerTrackEntity], completition: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
+    func saveSingerTrack(singerTrack: SingerTrackEntity, completion: @escaping (Result<SingerTrackEntity, StorageError>) -> ()) {
         
-        guard !singerTracks.isEmpty else { return }
- 
-        singerTracks.forEach { let _ = SingerTrack(query: $0, insertInto: storage.saveManageObjectContext) }
+        let _ = SingerTrack(query: singerTrack, insertInto: storage.saveManageObjectContext)
         
         storage.saveContext { error in
             guard error != nil else {
-                completition(.success(singerTracks))
+                completion(.success(singerTrack))
                 return
             }
-            completition(.failure(error!))
+            completion(.failure(error!))
         }
     }
-    
-    
 }

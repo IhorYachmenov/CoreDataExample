@@ -16,12 +16,12 @@ final class PersistentStorageRepository {
 
 extension PersistentStorageRepository: PersistentStorageRepositoryInterface {
     
-    func fetchSingerTracks(fetchLimit: Int, completition: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
-        singerTracksQueryStorage.fetchSingerTracks(fetchLimit: fetchLimit, completition: completition)
+    func fetchSingerTracks(completion: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
+        singerTracksQueryStorage.fetchSingerTracks(completion: completion)
     }
     
-    func saveSingerTracks(singerTracks: [SingerTrackEntity], completition: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
-        singerTracksQueryStorage.saveSingerTracks(singerTracks: singerTracks, completition: completition)
+    func saveSingerTrack(singerTrack: SingerTrackEntity, completion: @escaping (Result<SingerTrackEntity, StorageError>) -> ()) {
+        singerTracksQueryStorage.saveSingerTrack(singerTrack: singerTrack, completion: completion)
     }
     
     

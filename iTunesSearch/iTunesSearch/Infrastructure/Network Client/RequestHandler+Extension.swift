@@ -18,6 +18,6 @@ extension RequestHandler {
     }
     
     func setDefaultHeaders(request: inout URLRequest) {
-        request.setValue(Constants.APIHeaders.contentTypeValue, forHTTPHeaderField: Constants.APIHeaders.kContentType)
+        request.setValue(APIHeaders.contentTypeValue, forHTTPHeaderField: APIHeaders.kContentType)
     }
 }

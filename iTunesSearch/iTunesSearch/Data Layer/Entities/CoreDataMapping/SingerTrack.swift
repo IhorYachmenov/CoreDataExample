@@ -21,13 +21,13 @@ extension SingerTrack {
 }
 
 extension SingerTrack {
-    func toData() -> SingerTrackEntity {
+    func toDataEntity() -> SingerTrackEntity {
         return .init(trackName: trackName.isNil(), singerName: singerName.isNil(), trackPrice: trackPrice.isNil(), country: country.isNil())
     }
 }
 
 extension Array where Element == SingerTrack {
-    func toData() -> [SingerTrackEntity] {
-        return self.map({ $0.toData()})
+    func toDataEntity() -> [SingerTrackEntity] {
+        return self.map{ $0.toDataEntity() }
     }
 }
