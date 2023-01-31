@@ -5,13 +5,10 @@
 //  Created by user on 24.01.2023.
 //
 
-import UIKit
 
-class SingerTracksViewController: UIViewController {
-    
 #warning("add check dublication")
 #warning(" <Notification about changes>, synchronization between UI layer and Data model ")
-    
+
 ///    Which CoreData Stack I should select in this cases:
 //    1 case:
 ///    We have Big Save, and Small Fetch
@@ -24,6 +21,10 @@ class SingerTracksViewController: UIViewController {
 ///    Need temporary or live contexts
 ///    Parent and Child Contexts or not
 
+
+import UIKit
+
+class SingerTracksViewController: UIViewController {
     
     private lazy var viewModel: SingerTracksViewModel = {
         let search = SearchSingerTracksUseCase()
