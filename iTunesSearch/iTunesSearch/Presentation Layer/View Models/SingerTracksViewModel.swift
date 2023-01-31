@@ -24,14 +24,12 @@ enum ViewModelActionState {
 
 #warning("add check dublication")
 
-#warning("Name Space")
-
 #warning("merge data from one moc to another")
 
 class SingerTracksViewModel {
     
     /// MARK: - View Model data
-    private(set) var data: Array<SingerTrackViewEntity> = Array()
+    private(set) var data: Array<PresentationModel.SingerTrack> = Array()
     private lazy var listOfSingers = ["Janet Jackson", "Eminem", "Katy Perry", "Lady Gaga", "Snoop Dogg", "Elvis Presley"]
     
     /// MARK: - Data Source
@@ -64,7 +62,7 @@ class SingerTracksViewModel {
             switch result {
             case .success(let success):
                 
-                self?.data = success.map{ SingerTrackViewEntity(
+                self?.data = success.map{ PresentationModel.SingerTrack(
                     trackName: $0.trackName,
                     singerName: $0.singerName,
                     trackPrice: $0.trackPrice,
