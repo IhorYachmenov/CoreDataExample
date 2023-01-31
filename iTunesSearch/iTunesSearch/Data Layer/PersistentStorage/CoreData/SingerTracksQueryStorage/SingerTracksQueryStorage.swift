@@ -57,7 +57,7 @@ extension SingerTracksQueryStorage: SingerTracksQueryStorageInterface {
         
         guard !singerTracks.isEmpty else { return }
  
-        singerTracks.forEach({ let _ = SingerTrack(query: $0, insertInto: storage.saveManageObjectContext) })
+        singerTracks.forEach { let _ = SingerTrack(query: $0, insertInto: storage.saveManageObjectContext) }
         
         storage.saveContext { error in
             guard error != nil else {
