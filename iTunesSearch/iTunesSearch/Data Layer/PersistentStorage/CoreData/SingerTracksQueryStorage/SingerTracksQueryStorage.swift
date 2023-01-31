@@ -19,23 +19,23 @@ final class SingerTracksQueryStorage: NSObject {
 
 extension SingerTracksQueryStorage: SingerTracksQueryStorageInterface {
     
-    func fetchSingerTracks(completion: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
+    func fetchSingerTracks(completion: @escaping (Result<[DataModel.SingerTrack], StorageError>) -> ()) {
 
         do {
             let request: NSFetchRequest = SingerTrack.fetchRequest()
 
             let count = try storage.fetchManageObjectContext.count(for: request)
-            let data = try storage.fetchManageObjectContext.fetch(request)
+            let data = try storage.fetchManageObjectContext.fetch(request).map{ $0.toDataEntity() }
             
             print( "DB count", count)
-            completion(.success(data.toDataEntity()))
+            completion(.success(data))
         } catch {
             completion(.failure(.readError(error)))
         }
         
     }
     
-    func saveSingerTrack(singerTrack: SingerTrackEntity, completion: @escaping (Result<SingerTrackEntity, StorageError>) -> ()) {
+    func saveSingerTrack(singerTrack: DataModel.SingerTrack, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
         
         let _ = SingerTrack(query: singerTrack, insertInto: storage.saveManageObjectContext)
         

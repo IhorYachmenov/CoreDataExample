@@ -50,8 +50,8 @@ enum NetworkModel {
 }
 
 extension NetworkModel.SingerTracks {
-    func toDataEntity() -> [SingerTrackEntity] {
+    func toDataEntity() -> [DataModel.SingerTrack] {
         let data = self.results ?? []
-        return data.map{ SingerTrackEntity(trackName: $0.trackName.isNil(), singerName: $0.artistName.isNil(), trackPrice: $0.trackPrice.isNilToString(), country: $0.country.isNil()) }
+        return data.map{ DataModel.SingerTrack(trackName: $0.trackName.isNil(), singerName: $0.artistName.isNil(), trackPrice: $0.trackPrice.isNilToString(), country: $0.country.isNil()) }
     }
 }

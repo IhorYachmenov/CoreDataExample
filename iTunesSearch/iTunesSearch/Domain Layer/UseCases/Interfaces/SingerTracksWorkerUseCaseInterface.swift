@@ -8,6 +8,6 @@
 import Foundation
 
 protocol SingerTracksWorkerUseCaseInterface {
-    func downloadAndSaveSingerTrack(name: String, completion: @escaping (Result<SingerTrackEntity, Error>) -> ())
-    func fetchTracksFromStorage(completion: @escaping (Result<[SingerTrackEntity], StorageError>) -> ())
+    func downloadAndSaveSingerTrack(name: String, completion: @escaping (Result<DataModel.SingerTrack, Error>) -> ())
+    func fetchTracksFromStorage(completion: @escaping (Result<[DataModel.SingerTrack], StorageError>) -> ())
 }

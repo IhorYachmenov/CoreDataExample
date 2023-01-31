@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 extension SingerTrack {
-    convenience init(query: SingerTrackEntity, insertInto context: NSManagedObjectContext) {
+    convenience init(query: DataModel.SingerTrack, insertInto context: NSManagedObjectContext) {
         self.init(context: context)
         
         trackName = query.trackName
@@ -21,13 +21,8 @@ extension SingerTrack {
 }
 
 extension SingerTrack {
-    func toDataEntity() -> SingerTrackEntity {
+    func toDataEntity() -> DataModel.SingerTrack {
         return .init(trackName: trackName.isNil(), singerName: singerName.isNil(), trackPrice: trackPrice.isNil(), country: country.isNil())
     }
 }
 
-extension Array where Element == SingerTrack {
-    func toDataEntity() -> [SingerTrackEntity] {
-        return self.map{ $0.toDataEntity() }
-    }
-}

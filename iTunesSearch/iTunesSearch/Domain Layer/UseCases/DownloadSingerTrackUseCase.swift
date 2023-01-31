@@ -11,7 +11,7 @@ final class DownloadSingerTrackUseCase: DownloadSingerTrackUseCaseInterface {
     
     init() {}
     
-    func downloadSingerTrack(name: String, completion: @escaping (Result<SingerTrackEntity, ServiceError>) -> ()) {
+    func downloadSingerTrack(name: String, completion: @escaping (Result<DataModel.SingerTrack, ServiceError>) -> ()) {
         let request = SearchSingerTrackAPI()
         let apiLoader = APILoader(apiHandler: request)
         print("Singer Name Downloading ->", name)

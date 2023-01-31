@@ -19,7 +19,7 @@ class SingerTracksWorkerUseCase {
 }
 
 extension SingerTracksWorkerUseCase: SingerTracksWorkerUseCaseInterface {
-    func downloadAndSaveSingerTrack(name: String, completion: @escaping (Result<SingerTrackEntity, Error>) -> ()) {
+    func downloadAndSaveSingerTrack(name: String, completion: @escaping (Result<DataModel.SingerTrack, Error>) -> ()) {
         
         download.downloadSingerTrack(name: name) { [weak self] result in
             switch result {
@@ -40,7 +40,7 @@ extension SingerTracksWorkerUseCase: SingerTracksWorkerUseCaseInterface {
         }
     }
     
-    func fetchTracksFromStorage(completion: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
+    func fetchTracksFromStorage(completion: @escaping (Result<[DataModel.SingerTrack], StorageError>) -> ()) {
         storage.fetchSingerTracks(completion: completion)
     }
     

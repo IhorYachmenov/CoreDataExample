@@ -15,7 +15,7 @@ final class StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
         repository = storageRepository
     }
     
-    func fetchSingerTracks(completion: @escaping (Result<[SingerTrackEntity], StorageError>) -> ()) {
+    func fetchSingerTracks(completion: @escaping (Result<[DataModel.SingerTrack], StorageError>) -> ()) {
         repository.fetchSingerTracks(completion: { result in
             switch result {
             case .success(let success):
@@ -27,7 +27,7 @@ final class StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
         
     }
     
-    func saveSingerTrack(track: SingerTrackEntity, completion: @escaping (Result<SingerTrackEntity, StorageError>) -> ()) {
+    func saveSingerTrack(track: DataModel.SingerTrack, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
         repository.saveSingerTrack(singerTrack: track, completion: { result in
             switch result {
             case .success(let success):

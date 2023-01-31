@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DownloadSingerTrackUseCaseInterface {
-    func downloadSingerTrack(name: String, completion: @escaping (Result<SingerTrackEntity, ServiceError>) -> ())
+    func downloadSingerTrack(name: String, completion: @escaping (Result<DataModel.SingerTrack, ServiceError>) -> ())
 }
