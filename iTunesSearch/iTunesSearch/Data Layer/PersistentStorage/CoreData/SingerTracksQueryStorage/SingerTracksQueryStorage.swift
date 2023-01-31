@@ -28,25 +28,11 @@ extension SingerTracksQueryStorage: SingerTracksQueryStorageInterface {
             let request: NSFetchRequest = SingerTrack.fetchRequest()
 
             let count = try storage.fetchManageObjectContext.count(for: request)
-//            request.fetchLimit = fetchLimit
-//
-//            let offset = (offsetNumber * fetchLimit)
-//            request.fetchOffset = offset
-
             let data = try storage.fetchManageObjectContext.fetch(request)
-
-//            if (offset < count) {
-//                self.offsetNumber += 1
-//            }
-
-//            print( "Fetch number", self.offsetNumber, "Offset number", offset, "DB count", count)
+            
             print( "DB count", count)
             completition(.success(data.toData()))
         } catch {
-
-//            if (self.offsetNumber != 0) {
-//                self.offsetNumber -= 1
-//            }
 
             completition(.failure(.readError(error)))
         }

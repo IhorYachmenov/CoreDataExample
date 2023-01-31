@@ -35,6 +35,7 @@ final class SingerTrackStorage {
     lazy var saveManageObjectContext: NSManagedObjectContext = {
         let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
         context.persistentStoreCoordinator = persistentContainer.persistentStoreCoordinator
+        context.mergePolicy = NSMergePolicy(merge: .mergeByPropertyStoreTrumpMergePolicyType)
         return context
     }()
     
