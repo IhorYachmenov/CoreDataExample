@@ -10,7 +10,7 @@ import CoreData
 
 final class SingerTracksQueryStorage: NSObject, SingerTracksQueryStorageInterface {
     
-    var subscribeOfData: (([DataModel.SingerTrack]) -> ())?
+    var publisherOfData: (([DataModel.SingerTrack]) -> ())?
     
     private var fetchedResultsController: NSFetchedResultsController<SingerTrack>!
     private var storage: SingerTrackStorage!
@@ -66,6 +66,9 @@ final class SingerTracksQueryStorage: NSObject, SingerTracksQueryStorageInterfac
         //            }
         //            completion(.failure(error!))
         //        }
+        let obj = NSManagedObject(entity: SingerTrack.entity(), insertInto: storage.mainQueueManageObjectContext)
+        let id = obj.objectID
+        
         storage.saveMainContext { error in
             guard error != nil else {
                 completion(.success(singerTrack))
@@ -87,6 +90,6 @@ extension SingerTracksQueryStorage: NSFetchedResultsControllerDelegate {
         }
         
         let converted = data.map { $0.toDataEntity() }
-        subscribeOfData?(converted)
+        publisherOfData?(converted)
     }
 }

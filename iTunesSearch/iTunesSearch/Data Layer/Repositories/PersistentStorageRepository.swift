@@ -27,7 +27,7 @@ extension PersistentStorageRepository: PersistentStorageRepositoryInterface {
     
     /// **NSFetchResultController API
     func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
-        singerTracksQueryStorage.subscribeOfData = completion
+        singerTracksQueryStorage.publisherOfData = completion
     }
     
 }
