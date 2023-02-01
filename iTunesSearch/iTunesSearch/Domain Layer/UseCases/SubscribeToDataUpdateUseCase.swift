@@ -17,9 +17,8 @@ final class SubscribeToDataUpdateUseCase {
 }
 
 extension SubscribeToDataUpdateUseCase: SubscribeToDataUpdateUseCaseInterface {
+    
     func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
         repository.subscribeOfData(completion: completion)
     }
-    
-    
 }
