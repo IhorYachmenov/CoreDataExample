@@ -49,7 +49,7 @@ final class SingerTracksQueryStorage: NSObject, SingerTracksQueryStorageInterfac
             let count = try storage.fetchManageObjectContext.count(for: request)
             let data = try storage.fetchManageObjectContext.fetch(request).map{ $0.toDataEntity() }
             
-            print( "DB count", count)
+            print("DB count", count)
             completion(.success(data))
         } catch {
             completion(.failure(.readError(error)))
@@ -58,7 +58,6 @@ final class SingerTracksQueryStorage: NSObject, SingerTracksQueryStorageInterfac
     }
     
     func saveSingerTrack(singerTrack: DataModel.SingerTrack, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
-        print("Try to save song wiht name ", singerTrack.trackName)
         let _ = SingerTrack(query: singerTrack, insertInto: storage.fetchManageObjectContext)
         //        storage.saveContext { error in
         //            guard error != nil else {

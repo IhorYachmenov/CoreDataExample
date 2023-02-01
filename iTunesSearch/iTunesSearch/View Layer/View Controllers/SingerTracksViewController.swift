@@ -159,11 +159,9 @@ extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: TrackListCell.identifier, for: indexPath)
         
         let data = data[indexPath.row]
-        var configurator = TrackListConfigurator()
-        configurator.singerName = data.singerName
-        configurator.trackName = data.trackName
-        configurator.country = data.country
-        configurator.trackPrice = data.trackPrice
+        
+        let configurator = TrackListConfigurator(model: data)
+        
         cell.contentConfiguration = configurator
         
         return cell

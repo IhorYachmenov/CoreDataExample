@@ -13,10 +13,7 @@ import UIKit
 
 struct TrackListConfigurator : UIContentConfiguration {
     
-    var trackName: String = "Track Name"
-    var singerName: String = "Singer Name"
-    var trackPrice: String = "9.99"
-    var country: String = "USA"
+    var model: PresentationModel.SingerTrack
     
 //    weak var delegate: TrackListConfiguratorProtocol?
     

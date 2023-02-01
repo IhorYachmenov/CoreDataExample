@@ -93,10 +93,10 @@ class TrackListContentView: UIView, UIContentView {
     }
     
     func initViewsData(configurator: TrackListConfigurator) {
-        self.singerName.text = configurator.singerName
-        self.trackName.text = configurator.trackName
-        self.country.text = configurator.country
-        self.trackPrice.text = configurator.trackPrice
+        self.singerName.text = configurator.model.singerName
+        self.trackName.text = configurator.model.trackName
+        self.country.text = configurator.model.country
+        self.trackPrice.text = configurator.model.trackPrice
     }
 }
 
