@@ -23,7 +23,7 @@ final class SingerTracksQueryStorage: NSObject, SingerTracksQueryStorageInterfac
         let sort = NSSortDescriptor(key: #keyPath(SingerTrack.trackName), ascending: true)
         fetchRequest.sortDescriptors = [sort]
         self.fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
-                                                                   managedObjectContext: persistentStorage.fetchManageObjectContext,
+                                                                   managedObjectContext: persistentStorage.mainQueueManageObjectContext,
                                                                    sectionNameKeyPath: nil,
                                                                    cacheName: nil)
         
@@ -46,8 +46,8 @@ final class SingerTracksQueryStorage: NSObject, SingerTracksQueryStorageInterfac
         do {
             let request: NSFetchRequest = SingerTrack.fetchRequest()
             
-            let count = try storage.fetchManageObjectContext.count(for: request)
-            let data = try storage.fetchManageObjectContext.fetch(request).map{ $0.toDataEntity() }
+            let count = try storage.mainQueueManageObjectContext.count(for: request)
+            let data = try storage.mainQueueManageObjectContext.fetch(request).map{ $0.toDataEntity() }
             
             print("DB count", count)
             completion(.success(data))
@@ -58,7 +58,7 @@ final class SingerTracksQueryStorage: NSObject, SingerTracksQueryStorageInterfac
     }
     
     func saveSingerTrack(singerTrack: DataModel.SingerTrack, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
-        let _ = SingerTrack(query: singerTrack, insertInto: storage.fetchManageObjectContext)
+        let _ = SingerTrack(query: singerTrack, insertInto: storage.mainQueueManageObjectContext)
         //        storage.saveContext { error in
         //            guard error != nil else {
         //                completion(.success(singerTrack))

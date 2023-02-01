@@ -32,28 +32,28 @@ final class SingerTrackStorage {
         return container
     }()
     
-    private(set) lazy var saveManageObjectContext: NSManagedObjectContext = {
+    private(set) lazy var privateQueueManageObjectContext: NSManagedObjectContext = {
         let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
         context.persistentStoreCoordinator = persistentContainer.persistentStoreCoordinator
         return context
     }()
     
-    private(set) lazy var fetchManageObjectContext: NSManagedObjectContext = {
+    private(set) lazy var mainQueueManageObjectContext: NSManagedObjectContext = {
         return persistentContainer.viewContext
     }()
     
     func saveContext(completition: @escaping ((StorageError?) -> ())) {
         
-        guard saveManageObjectContext.hasChanges else { return }
+        guard privateQueueManageObjectContext.hasChanges else { return }
   
-        saveManageObjectContext.perform {
+        privateQueueManageObjectContext.perform {
             do {
-                try self.saveManageObjectContext.save()
-                print("Data saved successfully 🥳")
+                try self.privateQueueManageObjectContext.save()
+                print("Data saved successfully private Q🥳")
                 completition(nil)
 
             } catch {
-                print("Can't save singer tracks 😶‍🌫️")
+                print("Can't save singer tracks privateQ 😶‍🌫️")
                 completition(.saveError(error))
             }
         }
@@ -61,20 +61,25 @@ final class SingerTrackStorage {
     
     func saveMainContext(completition: @escaping ((StorageError?) -> ())) {
         
-        guard fetchManageObjectContext.hasChanges else { return }
+        guard mainQueueManageObjectContext.hasChanges else { return }
   
-        fetchManageObjectContext.perform {
+        mainQueueManageObjectContext.perform {
             do {
-                try self.fetchManageObjectContext.save()
-                print("Data saved successfully main 🥳")
+                try self.mainQueueManageObjectContext.save()
+                print("Data saved successfully main Q🥳")
                 completition(nil)
                 
 
             } catch {
-                print("Can't save singer tracks main 😶‍🌫️")
+                print("Can't save singer tracks main Q😶‍🌫️")
                 completition(.saveError(error))
             }
         }
     }
+    
+    private func mergePrivateMocToMain() {
+        
+    }
+    
 }
 
