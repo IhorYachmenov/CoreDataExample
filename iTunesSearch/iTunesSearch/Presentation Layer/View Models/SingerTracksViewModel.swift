@@ -14,62 +14,63 @@ import Foundation
 //    func updateData()
 //}
 
-enum ViewModelActionState {
-    case inProgress
-    case completed
-    case failure(Error)
-}
-
-#warning("rewrite interface of view model")
+#warning("merge data from one moc to another")
 
 #warning("add check dublication")
 
-#warning("merge data from one moc to another")
 
-class SingerTracksViewModel {
+
+
+protocol ViewModelInterface {
+    func downloadSong()
+    func fetchSongs()
+    var dataSource: ((Result<[PresentationModel.SingerTrack], Error>) -> ())? { get set }
+}
+
+final class SingerTracksViewModel: ViewModelInterface {
     
-    /// MARK: - View Model data
-    private(set) var data: Array<PresentationModel.SingerTrack> = Array()
+   /// MARK - Data Source
+    var dataSource: ((Result<[PresentationModel.SingerTrack], Error>) -> ())?
+    
+    /// MARK: - View Model properties
     private lazy var listOfSingers = ["Janet Jackson", "Eminem", "Katy Perry", "Lady Gaga", "Snoop Dogg", "Elvis Presley"]
+
+    /// MARK: - Use Cases
+    private var singerTracksWorker: SingerTracksWorkerUseCaseInterface!
+    private var nsfrcUseCase: SubscribeToDataUpdateUseCaseInterface!
     
-    /// MARK: - Data Source
-    var dataSource: ((ViewModelActionState) ->())?
-    
-    /// MARK: - Data Provider
-    private var singerTracksWorker: SingerTracksWorkerUseCaseInterface
-    
-    // MARK: - Init
-    init(_ useCase: SingerTracksWorkerUseCaseInterface) {
+    init(_ useCase: SingerTracksWorkerUseCaseInterface, _ nsfrc: SubscribeToDataUpdateUseCaseInterface) {
         singerTracksWorker = useCase
+        nsfrcUseCase = nsfrc
+        
+        nsfrcUseCase.subscribeOfData { [weak self] data in
+            self?.dataSource?(.success(data.toViewEntity()))
+        }
     }
     
-    func downloadRandomSingerTrack() {
-        dataSource?(.inProgress)
-        
+    func downloadSong() {
         singerTracksWorker.downloadAndSaveSingerTrack(name: listOfSingers.randomElement()!) { [weak self] result in
             switch result {
             case .success(_):
-                self?.dataSource?(.completed)
+                break
             case .failure(let failure):
                 self?.dataSource?(.failure(failure))
             }
         }
     }
-
-    func fetchListOfSongsFromStorage() {
-       
+    
+    func fetchSongs() {
         singerTracksWorker.fetchTracksFromStorage { [weak self] result in
             switch result {
             case .success(let success):
                 
-                self?.data = success.map{ PresentationModel.SingerTrack(
+                let data = success.map{ PresentationModel.SingerTrack(
                     trackName: $0.trackName,
                     singerName: $0.singerName,
                     trackPrice: $0.trackPrice,
                     country: $0.country)
                 }
-                
-                self?.dataSource?(.completed)
+                self?.dataSource?(.success(data))
             case .failure(let failure):
                 self?.dataSource?(.failure(failure))
             }

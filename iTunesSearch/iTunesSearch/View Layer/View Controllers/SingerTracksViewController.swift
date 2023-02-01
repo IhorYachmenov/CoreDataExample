@@ -24,12 +24,26 @@ import UIKit
 
 class SingerTracksViewController: UIViewController {
     
-    private lazy var viewModel: SingerTracksViewModel = {
+    private var data: Array<PresentationModel.SingerTrack> = Array() {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                self?.loader.stopAnimating()
+                self?.refreshControll.endRefreshing()
+                self?.tableView.reloadData()
+            }
+        }
+    }
+    
+    private lazy var viewModel: ViewModelInterface = {
+        let repository = PersistentStorageRepository()
+        
         let search = DownloadSingerTrackUseCase()
-        let storage = StorageSingerTracksUseCase(storageRepository: PersistentStorageRepository())
+        let storage = StorageSingerTracksUseCase(storageRepository: repository)
         let singerTrackWorkerUseCase = SingerTracksWorkerUseCase(useCase: search, useCase: storage)
         
-        let view = SingerTracksViewModel(singerTrackWorkerUseCase)
+        let nsfrc = SubscribeToDataUpdateUseCase(repository)
+        
+        let view = SingerTracksViewModel(singerTrackWorkerUseCase, nsfrc)
         
         return view
     }()
@@ -58,7 +72,11 @@ class SingerTracksViewController: UIViewController {
         view.layer.borderColor = UIColor.red.cgColor
         
         view.addAction(UIAction(handler: { [weak self] _ in
-            self?.viewModel.downloadRandomSingerTrack()
+            self?.viewModel.downloadSong()
+            
+            DispatchQueue.main.async {
+                self?.loader.startAnimating()
+            }
         }), for: .touchUpInside)
         
         return view
@@ -76,31 +94,20 @@ class SingerTracksViewController: UIViewController {
         
         initUIComponents()
         
-        viewModel.dataSource = { state in
-            switch state {
-            case .inProgress:
-                DispatchQueue.main.async { [weak self] in
-                    self?.loader.startAnimating()
-                }
-            case .completed:
-                DispatchQueue.main.async { [weak self] in
-                    self?.loader.stopAnimating()
-                    self?.refreshControll.endRefreshing()
-                    self?.tableView.reloadData()
-                }
+        viewModel.dataSource = { [weak self] result in
+            switch result {
+            case .success(let success):
+                self?.data = success
             case .failure(let failure):
-                DispatchQueue.main.async { [weak self] in
-                    self?.loader.stopAnimating()
-                    self?.refreshControll.endRefreshing()
+                DispatchQueue.main.async {
                     self?.presentAlertController(msg: failure.localizedDescription, title: "Error")
                 }
             }
         }
         
-        viewModel.fetchListOfSongsFromStorage()
+        viewModel.fetchSongs()
         
     }
-    
     
     
     private func initUIComponents(){
@@ -126,7 +133,7 @@ class SingerTracksViewController: UIViewController {
     }
     
     @objc func refreshControlAction() {
-        viewModel.fetchListOfSongsFromStorage()
+        viewModel.fetchSongs()
     }
     
     private func presentAlertController(msg: String, title: String) {
@@ -144,18 +151,19 @@ class SingerTracksViewController: UIViewController {
 extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.data.count
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: TrackListCell.identifier, for: indexPath)
         
+        let data = data[indexPath.row]
         var configurator = TrackListConfigurator()
-        configurator.singerName = viewModel.data[indexPath.row].singerName
-        configurator.trackName = viewModel.data[indexPath.row].trackName
-        configurator.country = viewModel.data[indexPath.row].country
-        configurator.trackPrice = viewModel.data[indexPath.row].trackPrice
+        configurator.singerName = data.singerName
+        configurator.trackName = data.trackName
+        configurator.country = data.country
+        configurator.trackPrice = data.trackPrice
         cell.contentConfiguration = configurator
         
         return cell

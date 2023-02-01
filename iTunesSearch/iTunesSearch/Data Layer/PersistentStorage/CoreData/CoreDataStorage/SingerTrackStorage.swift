@@ -32,14 +32,13 @@ final class SingerTrackStorage {
         return container
     }()
     
-    lazy var saveManageObjectContext: NSManagedObjectContext = {
+    private(set) lazy var saveManageObjectContext: NSManagedObjectContext = {
         let context = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
         context.persistentStoreCoordinator = persistentContainer.persistentStoreCoordinator
-        context.mergePolicy = NSMergePolicy(merge: .mergeByPropertyStoreTrumpMergePolicyType)
         return context
     }()
     
-    lazy var fetchManageObjectContext: NSManagedObjectContext = {
+    private(set) lazy var fetchManageObjectContext: NSManagedObjectContext = {
         return persistentContainer.viewContext
     }()
     
@@ -55,6 +54,24 @@ final class SingerTrackStorage {
 
             } catch {
                 print("Can't save singer tracks 😶‍🌫️")
+                completition(.saveError(error))
+            }
+        }
+    }
+    
+    func saveMainContext(completition: @escaping ((StorageError?) -> ())) {
+        
+        guard fetchManageObjectContext.hasChanges else { return }
+  
+        fetchManageObjectContext.perform {
+            do {
+                try self.fetchManageObjectContext.save()
+                print("Data saved successfully main 🥳")
+                completition(nil)
+                
+
+            } catch {
+                print("Can't save singer tracks main 😶‍🌫️")
                 completition(.saveError(error))
             }
         }

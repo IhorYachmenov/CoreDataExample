@@ -10,4 +10,7 @@ import Foundation
 protocol PersistentStorageRepositoryInterface {
     func fetchSingerTracks(completion: @escaping (Result<[DataModel.SingerTrack], StorageError>) -> ())
     func saveSingerTrack(singerTrack: DataModel.SingerTrack, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ())
+    
+    /// **NSFetchResultController API
+    func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ())
 }
