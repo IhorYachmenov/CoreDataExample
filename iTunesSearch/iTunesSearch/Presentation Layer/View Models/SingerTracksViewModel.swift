@@ -18,16 +18,7 @@ import Foundation
 
 #warning("add check dublication")
 
-
-
-
-protocol ViewModelInterface {
-    func downloadSong()
-    func fetchSongs()
-    var dataSource: ((Result<[PresentationModel.SingerTrack], Error>) -> ())? { get set }
-}
-
-final class SingerTracksViewModel: ViewModelInterface {
+final class SingerTracksViewModel: SingerTracksViewModelInterface {
     
    /// MARK - Data Source
     var dataSource: ((Result<[PresentationModel.SingerTrack], Error>) -> ())?

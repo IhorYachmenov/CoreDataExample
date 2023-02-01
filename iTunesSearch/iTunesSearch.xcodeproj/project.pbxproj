@@ -48,6 +48,7 @@
 		CE266D7529897CC700D6E038 /* APIHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D7429897CC700D6E038 /* APIHeaders.swift */; };
 		CE266D78298A698B00D6E038 /* SubscribeToDataUpdateUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D77298A698B00D6E038 /* SubscribeToDataUpdateUseCaseInterface.swift */; };
 		CE266D7A298A69AD00D6E038 /* SubscribeToDataUpdateUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D79298A69AD00D6E038 /* SubscribeToDataUpdateUseCase.swift */; };
+		CE266D7D298A994000D6E038 /* SingerTracksViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D7C298A994000D6E038 /* SingerTracksViewModelInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		CE266D7429897CC700D6E038 /* APIHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeaders.swift; sourceTree = "<group>"; };
 		CE266D77298A698B00D6E038 /* SubscribeToDataUpdateUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeToDataUpdateUseCaseInterface.swift; sourceTree = "<group>"; };
 		CE266D79298A69AD00D6E038 /* SubscribeToDataUpdateUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeToDataUpdateUseCase.swift; sourceTree = "<group>"; };
+		CE266D7C298A994000D6E038 /* SingerTracksViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModelInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 		CE266D232980481000D6E038 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE266D7B298A990800D6E038 /* Interfaces */,
 				CE266D0C2980346500D6E038 /* SingerTracksViewModel.swift */,
 			);
 			path = "View Models";
@@ -447,6 +450,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		CE266D7B298A990800D6E038 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				CE266D7C298A994000D6E038 /* SingerTracksViewModelInterface.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -589,6 +600,7 @@
 				CE266D4029812EB600D6E038 /* OptionalExtensions.swift in Sources */,
 				CE266D78298A698B00D6E038 /* SubscribeToDataUpdateUseCaseInterface.swift in Sources */,
 				CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */,
+				CE266D7D298A994000D6E038 /* SingerTracksViewModelInterface.swift in Sources */,
 				CE266D2929807DFF00D6E038 /* TrackListContentView.swift in Sources */,
 				CE266CC929802E6200D6E038 /* SceneDelegate.swift in Sources */,
 				CE266D4C29814FB100D6E038 /* StorageSingerTracksUseCaseInterface.swift in Sources */,

@@ -5,21 +5,6 @@
 //  Created by user on 24.01.2023.
 //
 
-
-
-///    Which CoreData Stack I should select in this cases:
-//    1 case:
-///    We have Big Save, and Small Fetch
-///
-//    2 case:
-///    We have Big Save, and Big Fetch
-///
-///    Describe + and - each of the approach
-///    Have many contexts need depend of the approach
-///    Need temporary or live contexts
-///    Parent and Child Contexts or not
-
-
 import UIKit
 
 class SingerTracksViewController: UIViewController {
@@ -34,7 +19,7 @@ class SingerTracksViewController: UIViewController {
         }
     }
     
-    private lazy var viewModel: ViewModelInterface = {
+    private lazy var viewModel: SingerTracksViewModelInterface = {
         let repository = PersistentStorageRepository()
         
         let search = DownloadSingerTrackUseCase()
