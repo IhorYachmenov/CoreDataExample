@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class SubscribeToDataUpdateUseCase {
+final class DataSubscriberUseCase {
     
     private var repository: PersistentStorageRepositoryInterface
     
@@ -16,7 +16,7 @@ final class SubscribeToDataUpdateUseCase {
     }
 }
 
-extension SubscribeToDataUpdateUseCase: SubscribeToDataUpdateUseCaseInterface {
+extension DataSubscriberUseCase: DataSubscriberUseCaseInterface {
     
     func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
         repository.subscribeOfData(completion: completion)

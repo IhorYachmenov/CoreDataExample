@@ -8,7 +8,7 @@
 import UIKit
 
 class SingerTracksViewController: UIViewController {
-    
+    /// Data Properties
     private var data: Array<PresentationModel.SingerTrack> = Array() {
         didSet {
             DispatchQueue.main.async { [weak self] in
@@ -19,6 +19,7 @@ class SingerTracksViewController: UIViewController {
         }
     }
     
+    /// View Models
     private lazy var viewModel: SingerTracksViewModelInterface = {
         let repository = PersistentStorageRepository()
         
@@ -26,13 +27,14 @@ class SingerTracksViewController: UIViewController {
         let storage = StorageSingerTracksUseCase(storageRepository: repository)
         let singerTrackWorkerUseCase = SingerTracksWorkerUseCase(useCase: search, useCase: storage)
         
-        let nsfrc = SubscribeToDataUpdateUseCase(repository)
+        let dataSubscriber = DataSubscriberUseCase(repository)
         
-        let view = SingerTracksViewModel(singerTrackWorkerUseCase, nsfrc)
+        let view = SingerTracksViewModel(singerTrackWorkerUseCase, dataSubscriber)
         
         return view
     }()
     
+    /// UI Properties
     private lazy var refreshControll = UIRefreshControl()
     private lazy var tableView: UITableView = {
         let view = UITableView()
@@ -122,6 +124,7 @@ class SingerTracksViewController: UIViewController {
     }
     
     private func presentAlertController(msg: String, title: String) {
+        
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         
         let action = UIAlertAction(title: "OK", style: .destructive)

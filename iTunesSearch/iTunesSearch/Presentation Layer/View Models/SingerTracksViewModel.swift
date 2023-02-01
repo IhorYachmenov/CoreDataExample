@@ -14,8 +14,6 @@ import Foundation
 //    func updateData()
 //}
 
-#warning("merge data from one moc to another")
-
 #warning("add check dublication")
 
 final class SingerTracksViewModel: SingerTracksViewModelInterface {
@@ -28,13 +26,11 @@ final class SingerTracksViewModel: SingerTracksViewModelInterface {
 
     /// MARK: - Use Cases
     private var singerTracksWorker: SingerTracksWorkerUseCaseInterface!
-    private var nsfrcUseCase: SubscribeToDataUpdateUseCaseInterface!
     
-    init(_ useCase: SingerTracksWorkerUseCaseInterface, _ nsfrc: SubscribeToDataUpdateUseCaseInterface) {
+    init(_ useCase: SingerTracksWorkerUseCaseInterface, _ dataSubscriber: DataSubscriberUseCaseInterface) {
         singerTracksWorker = useCase
-        nsfrcUseCase = nsfrc
         
-        nsfrcUseCase.subscribeOfData { [weak self] data in
+        dataSubscriber.subscribeOfData { [weak self] data in
             self?.dataSource?(.success(data.toViewEntity()))
         }
     }

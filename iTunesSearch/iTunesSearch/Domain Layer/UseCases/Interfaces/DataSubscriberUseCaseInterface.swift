@@ -8,6 +8,6 @@
 import Foundation
 
 /// **NSFetchResultController API
-protocol SubscribeToDataUpdateUseCaseInterface {
+protocol DataSubscriberUseCaseInterface {
     func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ())
 }

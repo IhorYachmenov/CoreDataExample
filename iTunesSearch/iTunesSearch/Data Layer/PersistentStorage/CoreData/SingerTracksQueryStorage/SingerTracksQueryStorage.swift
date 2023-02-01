@@ -30,6 +30,7 @@ final class SingerTracksQueryStorage: NSObject, SingerTracksQueryStorageInterfac
         super.init()
         
         setupFetchResultsController()
+
     }
     
     private func setupFetchResultsController() {
@@ -39,7 +40,7 @@ final class SingerTracksQueryStorage: NSObject, SingerTracksQueryStorageInterfac
     
     
     
- 
+    
     // MARK: - SingerTracksQueryStorageInterface
     func fetchSingerTracks(completion: @escaping (Result<[DataModel.SingerTrack], StorageError>) -> ()) {
         
@@ -58,25 +59,16 @@ final class SingerTracksQueryStorage: NSObject, SingerTracksQueryStorageInterfac
     }
     
     func saveSingerTrack(singerTrack: DataModel.SingerTrack, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
-        let _ = SingerTrack(query: singerTrack, insertInto: storage.mainQueueManageObjectContext)
-        //        storage.saveContext { error in
-        //            guard error != nil else {
-        //                completion(.success(singerTrack))
-        //                return
-        //            }
-        //            completion(.failure(error!))
-        //        }
-        let obj = NSManagedObject(entity: SingerTrack.entity(), insertInto: storage.mainQueueManageObjectContext)
-        let id = obj.objectID
-        
-        storage.saveMainContext { error in
-            guard error != nil else {
+        let _ = SingerTrack(query: singerTrack, insertInto: storage.privateQueueManageObjectContext)
+        storage.saveContext { error in
+            
+            if (error == nil) {
+                
                 completion(.success(singerTrack))
-                return
+            } else {
+                completion(.failure(error!))
             }
-            completion(.failure(error!))
         }
-        
     }
 }
 

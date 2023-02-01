@@ -46,8 +46,8 @@
 		CE266D6D2987DED900D6E038 /* SingerTracksWorkerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D6C2987DED900D6E038 /* SingerTracksWorkerUseCase.swift */; };
 		CE266D6F2987DEF500D6E038 /* SingerTracksWorkerUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D6E2987DEF500D6E038 /* SingerTracksWorkerUseCaseInterface.swift */; };
 		CE266D7529897CC700D6E038 /* APIHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D7429897CC700D6E038 /* APIHeaders.swift */; };
-		CE266D78298A698B00D6E038 /* SubscribeToDataUpdateUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D77298A698B00D6E038 /* SubscribeToDataUpdateUseCaseInterface.swift */; };
-		CE266D7A298A69AD00D6E038 /* SubscribeToDataUpdateUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D79298A69AD00D6E038 /* SubscribeToDataUpdateUseCase.swift */; };
+		CE266D78298A698B00D6E038 /* DataSubscriberUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D77298A698B00D6E038 /* DataSubscriberUseCaseInterface.swift */; };
+		CE266D7A298A69AD00D6E038 /* DataSubscriberUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D79298A69AD00D6E038 /* DataSubscriberUseCase.swift */; };
 		CE266D7D298A994000D6E038 /* SingerTracksViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D7C298A994000D6E038 /* SingerTracksViewModelInterface.swift */; };
 /* End PBXBuildFile section */
 
@@ -112,8 +112,8 @@
 		CE266D6C2987DED900D6E038 /* SingerTracksWorkerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksWorkerUseCase.swift; sourceTree = "<group>"; };
 		CE266D6E2987DEF500D6E038 /* SingerTracksWorkerUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksWorkerUseCaseInterface.swift; sourceTree = "<group>"; };
 		CE266D7429897CC700D6E038 /* APIHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeaders.swift; sourceTree = "<group>"; };
-		CE266D77298A698B00D6E038 /* SubscribeToDataUpdateUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeToDataUpdateUseCaseInterface.swift; sourceTree = "<group>"; };
-		CE266D79298A69AD00D6E038 /* SubscribeToDataUpdateUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeToDataUpdateUseCase.swift; sourceTree = "<group>"; };
+		CE266D77298A698B00D6E038 /* DataSubscriberUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSubscriberUseCaseInterface.swift; sourceTree = "<group>"; };
+		CE266D79298A69AD00D6E038 /* DataSubscriberUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSubscriberUseCase.swift; sourceTree = "<group>"; };
 		CE266D7C298A994000D6E038 /* SingerTracksViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModelInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -402,7 +402,7 @@
 				CE266D0F2980358E00D6E038 /* DownloadSingerTrackUseCase.swift */,
 				CE266D4D29814FE300D6E038 /* StorageSingerTracksUseCase.swift */,
 				CE266D6C2987DED900D6E038 /* SingerTracksWorkerUseCase.swift */,
-				CE266D79298A69AD00D6E038 /* SubscribeToDataUpdateUseCase.swift */,
+				CE266D79298A69AD00D6E038 /* DataSubscriberUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -413,7 +413,7 @@
 				CE266D3A29812D1F00D6E038 /* DownloadSingerTrackUseCaseInterface.swift */,
 				CE266D4B29814FB100D6E038 /* StorageSingerTracksUseCaseInterface.swift */,
 				CE266D6E2987DEF500D6E038 /* SingerTracksWorkerUseCaseInterface.swift */,
-				CE266D77298A698B00D6E038 /* SubscribeToDataUpdateUseCaseInterface.swift */,
+				CE266D77298A698B00D6E038 /* DataSubscriberUseCaseInterface.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -588,7 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE266D7A298A69AD00D6E038 /* SubscribeToDataUpdateUseCase.swift in Sources */,
+				CE266D7A298A69AD00D6E038 /* DataSubscriberUseCase.swift in Sources */,
 				CE266D5A2981679400D6E038 /* SingerTrack.swift in Sources */,
 				CE266D6F2987DEF500D6E038 /* SingerTracksWorkerUseCaseInterface.swift in Sources */,
 				CE266D522981543000D6E038 /* ArrayExtensions.swift in Sources */,
@@ -598,7 +598,7 @@
 				CE266D57298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld in Sources */,
 				CE266D4529814AF800D6E038 /* SingerTracksQueryStorage.swift in Sources */,
 				CE266D4029812EB600D6E038 /* OptionalExtensions.swift in Sources */,
-				CE266D78298A698B00D6E038 /* SubscribeToDataUpdateUseCaseInterface.swift in Sources */,
+				CE266D78298A698B00D6E038 /* DataSubscriberUseCaseInterface.swift in Sources */,
 				CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */,
 				CE266D7D298A994000D6E038 /* SingerTracksViewModelInterface.swift in Sources */,
 				CE266D2929807DFF00D6E038 /* TrackListContentView.swift in Sources */,

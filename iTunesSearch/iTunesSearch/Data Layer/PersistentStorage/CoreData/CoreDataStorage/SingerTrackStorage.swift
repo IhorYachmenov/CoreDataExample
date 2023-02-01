@@ -29,6 +29,7 @@ final class SingerTrackStorage {
                 assertionFailure("CoreData Unresolved error \(error), \(error.userInfo)")
             }
         }
+        container.viewContext.automaticallyMergesChangesFromParent = true
         return container
     }()
     
@@ -59,27 +60,6 @@ final class SingerTrackStorage {
         }
     }
     
-    func saveMainContext(completition: @escaping ((StorageError?) -> ())) {
-        
-        guard mainQueueManageObjectContext.hasChanges else { return }
-  
-        mainQueueManageObjectContext.perform {
-            do {
-                try self.mainQueueManageObjectContext.save()
-                print("Data saved successfully main Q🥳")
-                completition(nil)
-                
-
-            } catch {
-                print("Can't save singer tracks main Q😶‍🌫️")
-                completition(.saveError(error))
-            }
-        }
-    }
-    
-    private func mergePrivateMocToMain() {
-        
-    }
     
 }
 
