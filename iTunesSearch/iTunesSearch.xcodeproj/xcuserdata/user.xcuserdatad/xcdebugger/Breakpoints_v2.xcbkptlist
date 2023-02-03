@@ -350,8 +350,8 @@
             filePath = "iTunesSearch/Data Layer/PersistentStorage/CoreData/CoreDataStorage/SingerTrackStorage.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "saveContext(completition:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -370,54 +370,6 @@
             endingLineNumber = "29"
             landmarkName = "downloadSingerTrack(singerName:completition:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D2371492-2583-4486-BF62-C9C0CAAF2129"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iTunesSearch/Data Layer/PersistentStorage/CoreData/SingerTracksQueryStorage/SingerTracksQueryStorage.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "controllerDidChangeContent(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D2371492-2583-4486-BF62-C9C0CAAF2129 - 98562582fa6135dc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iTunesSearch.SingerTracksQueryStorage.controllerDidChangeContent(__C.NSFetchedResultsController&lt;__C.NSFetchRequestResult&gt;) -&gt; ()"
-                  moduleName = "iTunesSearch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Data%20Layer/PersistentStorage/CoreData/SingerTracksQueryStorage/SingerTracksQueryStorage.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "880">
-               </Location>
-               <Location
-                  uuid = "D2371492-2583-4486-BF62-C9C0CAAF2129 - f6bf1ff20c9a9d14"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (iTunesSearch.SingerTrack) -&gt; iTunesSearch.DataModel.SingerTrack in iTunesSearch.SingerTracksQueryStorage.controllerDidChangeContent(__C.NSFetchedResultsController&lt;__C.NSFetchRequestResult&gt;) -&gt; ()"
-                  moduleName = "iTunesSearch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Data%20Layer/PersistentStorage/CoreData/SingerTracksQueryStorage/SingerTracksQueryStorage.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

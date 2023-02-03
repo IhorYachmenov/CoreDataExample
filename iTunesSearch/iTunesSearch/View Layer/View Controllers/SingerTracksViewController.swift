@@ -7,13 +7,23 @@
 
 import UIKit
 
+#warning("generic query")
+#warning("remove use case")
+#warning("reset")
+
+
+#warning("dependency in some another place, that in VC")
+// Level 2
+
+#warning("add check dublication")
+#warning("detail screen with more data, observe data, navigation")
+
 class SingerTracksViewController: UIViewController {
     /// Data Properties
     private var data: Array<PresentationModel.SingerTrack> = Array() {
         didSet {
             DispatchQueue.main.async { [weak self] in
                 self?.loader.stopAnimating()
-                self?.refreshControll.endRefreshing()
                 self?.tableView.reloadData()
             }
         }
@@ -29,21 +39,18 @@ class SingerTracksViewController: UIViewController {
         
         let dataSubscriber = DataSubscriberUseCase(repository)
         
-        let view = SingerTracksViewModel(singerTrackWorkerUseCase, dataSubscriber)
+        let viewModel = SingerTracksViewModel(singerTrackWorkerUseCase, dataSubscriber)
         
-        return view
+        return viewModel
     }()
     
     /// UI Properties
-    private lazy var refreshControll = UIRefreshControl()
     private lazy var tableView: UITableView = {
         let view = UITableView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.delegate = self
         view.dataSource = self
         view.register(TrackListCell.self, forCellReuseIdentifier: TrackListCell.identifier)
-        view.refreshControl = refreshControll
-        refreshControll.addTarget(self, action: #selector(refreshControlAction), for: .valueChanged)
         return view
     }()
     
@@ -60,10 +67,7 @@ class SingerTracksViewController: UIViewController {
         
         view.addAction(UIAction(handler: { [weak self] _ in
             self?.viewModel.downloadSong()
-            
-            DispatchQueue.main.async {
-                self?.loader.startAnimating()
-            }
+            self?.loader.startAnimating()
         }), for: .touchUpInside)
         
         return view
@@ -72,7 +76,6 @@ class SingerTracksViewController: UIViewController {
     private lazy var loader: UIActivityIndicatorView = {
         let view = UIActivityIndicatorView(style: .medium)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.startAnimating()
         return view
     }()
     
@@ -86,13 +89,9 @@ class SingerTracksViewController: UIViewController {
             case .success(let success):
                 self?.data = success
             case .failure(let failure):
-                DispatchQueue.main.async {
-                    self?.presentAlertController(msg: failure.localizedDescription, title: "Error")
-                }
+                self?.presentAlertController(msg: failure.localizedDescription, title: "Error")
             }
         }
-        
-        viewModel.fetchSongs()
         
     }
     
@@ -119,12 +118,7 @@ class SingerTracksViewController: UIViewController {
         
     }
     
-    @objc func refreshControlAction() {
-        viewModel.fetchSongs()
-    }
-    
     private func presentAlertController(msg: String, title: String) {
-        
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         
         let action = UIAlertAction(title: "OK", style: .destructive)
@@ -143,7 +137,6 @@ extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: TrackListCell.identifier, for: indexPath)
         
         let data = data[indexPath.row]

@@ -14,7 +14,6 @@ import Foundation
 //    func updateData()
 //}
 
-#warning("add check dublication")
 
 final class SingerTracksViewModel: SingerTracksViewModelInterface {
     
@@ -31,7 +30,9 @@ final class SingerTracksViewModel: SingerTracksViewModelInterface {
         singerTracksWorker = useCase
         
         dataSubscriber.subscribeOfData { [weak self] data in
-            self?.dataSource?(.success(data.toViewEntity()))
+            DispatchQueue.main.async {
+                self?.dataSource?(.success(data.toViewEntity()))
+            }
         }
     }
     
@@ -41,7 +42,9 @@ final class SingerTracksViewModel: SingerTracksViewModelInterface {
             case .success(_):
                 break
             case .failure(let failure):
-                self?.dataSource?(.failure(failure))
+                DispatchQueue.main.async {
+                    self?.dataSource?(.failure(failure))
+                }
             }
         }
     }

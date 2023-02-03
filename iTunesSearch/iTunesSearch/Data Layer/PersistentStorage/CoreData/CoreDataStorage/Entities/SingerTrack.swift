@@ -20,9 +20,3 @@ extension SingerTrack {
     
 }
 
-extension SingerTrack {
-    func toDataEntity() -> DataModel.SingerTrack {
-        return .init(trackName: trackName.isNil(), singerName: singerName.isNil(), trackPrice: trackPrice.isNil(), country: country.isNil())
-    }
-}
-

@@ -9,7 +9,7 @@ import Foundation
 
 final class PersistentStorageRepository {
     
-    private lazy var singerTracksQueryStorage: SingerTracksQueryStorageInterface = SingerTracksQueryStorage()
+    private lazy var singerTracksQueryStorage: QueryWorkerStorageInterface = QueryWorkerStorage()
     
     init() {}
 }
@@ -27,7 +27,7 @@ extension PersistentStorageRepository: PersistentStorageRepositoryInterface {
     
     /// **NSFetchResultController API
     func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
-        singerTracksQueryStorage.publisherOfData = completion
+        singerTracksQueryStorage.dataPublisher = completion
     }
     
 }

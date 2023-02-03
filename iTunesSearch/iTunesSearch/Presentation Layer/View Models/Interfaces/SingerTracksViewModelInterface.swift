@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SingerTracksViewModelInterface {
+    var dataSource: ((Result<[PresentationModel.SingerTrack], Error>) -> ())? { get set }
     func downloadSong()
     func fetchSongs()
-    var dataSource: ((Result<[PresentationModel.SingerTrack], Error>) -> ())? { get set }
 }

@@ -7,10 +7,10 @@
 
 import Foundation
 
-protocol SingerTracksQueryStorageInterface {
+protocol QueryWorkerStorageInterface {
+    /// **NSFetchResultController API
+    var dataPublisher: (([DataModel.SingerTrack]) -> ())? { get set }
+    
     func fetchSingerTracks(completion: @escaping (Result<[DataModel.SingerTrack], StorageError>) -> ())
     func saveSingerTrack(singerTrack: DataModel.SingerTrack, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ())
-    
-    /// **NSFetchResultController API
-    var publisherOfData: (([DataModel.SingerTrack]) -> ())? { get set }
 }

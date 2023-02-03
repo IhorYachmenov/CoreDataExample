@@ -14,9 +14,9 @@ enum StorageError: Error {
     case deleteError(Error)
 }
 
-final class SingerTrackStorage {
+final class CoreDataStorageManager {
 
-    static let shared = SingerTrackStorage()
+    static let shared = CoreDataStorageManager()
     
     private init() {}
 
@@ -39,27 +39,9 @@ final class SingerTrackStorage {
         return context
     }()
     
-    private(set) lazy var mainQueueManageObjectContext: NSManagedObjectContext = {
-        return persistentContainer.viewContext
-    }()
-    
-    func saveContext(completition: @escaping ((StorageError?) -> ())) {
-        
-        guard privateQueueManageObjectContext.hasChanges else { return }
-  
-        privateQueueManageObjectContext.perform {
-            do {
-                try self.privateQueueManageObjectContext.save()
-                print("Data saved successfully private Q🥳")
-                completition(nil)
-
-            } catch {
-                print("Can't save singer tracks privateQ 😶‍🌫️")
-                completition(.saveError(error))
-            }
-        }
+    var mainQueueManageObjectContext: NSManagedObjectContext {
+        persistentContainer.viewContext
     }
-    
-    
+
 }
 
