@@ -9,11 +9,12 @@ import UIKit
 
 #warning("generic query")
 
-#warning("dependency in some another place, that in VC")
 // Level 2
 
-#warning("add check dublication")
 #warning("detail screen with more data, observe data, navigation")
+
+// Level N
+#warning("add check dublication")
 
 class SingerTracksViewController: UIViewController {
     /// Data Properties
