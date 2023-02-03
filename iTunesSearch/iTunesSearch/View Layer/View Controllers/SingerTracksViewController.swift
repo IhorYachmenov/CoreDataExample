@@ -27,18 +27,8 @@ class SingerTracksViewController: UIViewController {
     }
     
     /// View Models
-    private lazy var viewModel: SingerTracksViewModelInterface = {
-        let repository = PersistentStorageRepository()
-        
-        let search = DownloadSingerTrackUseCase()
-        let storage = StorageSingerTracksUseCase(storageRepository: repository)
-        let singerTrackWorkerUseCase = SingerTracksWorkerUseCase(useCase: search, useCase: storage)
-        
-        
-        let viewModel = SingerTracksViewModel(useCase: singerTrackWorkerUseCase)
-        
-        return viewModel
-    }()
+    var viewModel: SingerTracksViewModelInterface!
+//    var viewModel: SingerTracksViewModelInterface = DependencyFactory.SingerTrackViewModel.make() as! SingerTracksViewModelInterface
     
     /// UI Properties
     private lazy var tableView: UITableView = {

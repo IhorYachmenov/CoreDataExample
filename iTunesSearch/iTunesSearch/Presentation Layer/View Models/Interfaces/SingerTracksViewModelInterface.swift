@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SingerTracksViewModelInterface {
+protocol SingerTracksViewModelInterface: BaseViewModel {
     var dataSource: ((Result<[PresentationModel.SingerTrack], Error>) -> ())? { get set }
     func downloadSong()
 }
