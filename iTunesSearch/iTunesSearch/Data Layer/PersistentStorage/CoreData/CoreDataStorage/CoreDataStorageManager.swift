@@ -42,6 +42,5 @@ final class CoreDataStorageManager {
     var mainQueueManageObjectContext: NSManagedObjectContext {
         persistentContainer.viewContext
     }
-
 }
 

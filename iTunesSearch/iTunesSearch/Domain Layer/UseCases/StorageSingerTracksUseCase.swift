@@ -7,26 +7,16 @@
 
 import Foundation
 
-final class StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
+final class StorageSingerTracksUseCase {
     
     private var repository: PersistentStorageRepositoryInterface
     
     init(storageRepository: PersistentStorageRepositoryInterface) {
         repository = storageRepository
     }
-    
-    func fetchSingerTracks(completion: @escaping (Result<[DataModel.SingerTrack], StorageError>) -> ()) {
-        repository.fetchSingerTracks(completion: { result in
-            switch result {
-            case .success(let success):
-                completion(.success(success))
-            case .failure(let failure):
-                completion(.failure(failure))
-            }
-        })
-        
-    }
-    
+}
+
+extension StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
     func saveSingerTrack(track: DataModel.SingerTrack, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
         repository.saveSingerTrack(singerTrack: track, completion: { result in
             switch result {
@@ -38,5 +28,7 @@ final class StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
         })
     }
     
-    
+    func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
+        repository.subscribeOfData(completion: completion)
+    }
 }

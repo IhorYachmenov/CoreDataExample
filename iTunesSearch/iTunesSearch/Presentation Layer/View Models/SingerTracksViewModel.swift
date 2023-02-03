@@ -7,14 +7,6 @@
 
 import Foundation
 
-//protocol ViewModel {
-//    associatedtype Model: Equatable
-//    var model: Observable<Model>? { get }
-//    //func observeModel(completion: (Model) -> Void)
-//    func updateData()
-//}
-
-
 final class SingerTracksViewModel: SingerTracksViewModelInterface {
     
    /// MARK - Data Source
@@ -26,10 +18,10 @@ final class SingerTracksViewModel: SingerTracksViewModelInterface {
     /// MARK: - Use Cases
     private var singerTracksWorker: SingerTracksWorkerUseCaseInterface!
     
-    init(_ useCase: SingerTracksWorkerUseCaseInterface, _ dataSubscriber: DataSubscriberUseCaseInterface) {
+    init(useCase: SingerTracksWorkerUseCaseInterface) {
         singerTracksWorker = useCase
         
-        dataSubscriber.subscribeOfData { [weak self] data in
+        useCase.subscribeOfData { [weak self] data in
             DispatchQueue.main.async {
                 self?.dataSource?(.success(data.toViewEntity()))
             }
@@ -48,23 +40,4 @@ final class SingerTracksViewModel: SingerTracksViewModelInterface {
             }
         }
     }
-    
-    func fetchSongs() {
-        singerTracksWorker.fetchTracksFromStorage { [weak self] result in
-            switch result {
-            case .success(let success):
-                
-                let data = success.map{ PresentationModel.SingerTrack(
-                    trackName: $0.trackName,
-                    singerName: $0.singerName,
-                    trackPrice: $0.trackPrice,
-                    country: $0.country)
-                }
-                self?.dataSource?(.success(data))
-            case .failure(let failure):
-                self?.dataSource?(.failure(failure))
-            }
-        }
-    }
-    
 }

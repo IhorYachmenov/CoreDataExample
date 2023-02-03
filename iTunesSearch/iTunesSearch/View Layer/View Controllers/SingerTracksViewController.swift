@@ -8,9 +8,6 @@
 import UIKit
 
 #warning("generic query")
-#warning("remove use case")
-#warning("reset")
-
 
 #warning("dependency in some another place, that in VC")
 // Level 2
@@ -37,9 +34,8 @@ class SingerTracksViewController: UIViewController {
         let storage = StorageSingerTracksUseCase(storageRepository: repository)
         let singerTrackWorkerUseCase = SingerTracksWorkerUseCase(useCase: search, useCase: storage)
         
-        let dataSubscriber = DataSubscriberUseCase(repository)
         
-        let viewModel = SingerTracksViewModel(singerTrackWorkerUseCase, dataSubscriber)
+        let viewModel = SingerTracksViewModel(useCase: singerTrackWorkerUseCase)
         
         return viewModel
     }()
@@ -92,7 +88,6 @@ class SingerTracksViewController: UIViewController {
                 self?.presentAlertController(msg: failure.localizedDescription, title: "Error")
             }
         }
-        
     }
     
     
@@ -115,7 +110,6 @@ class SingerTracksViewController: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: loader.topAnchor, constant: -10).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        
     }
     
     private func presentAlertController(msg: String, title: String) {
@@ -124,14 +118,11 @@ class SingerTracksViewController: UIViewController {
         let action = UIAlertAction(title: "OK", style: .destructive)
         alert.addAction(action)
         present(alert, animated: true)
-        
     }
-    
 }
 
 // MARK: Data Source
 extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -147,6 +138,5 @@ extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource
         
         return cell
     }
-    
 }
 

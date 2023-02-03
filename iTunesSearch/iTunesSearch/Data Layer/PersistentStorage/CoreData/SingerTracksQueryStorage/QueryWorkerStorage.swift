@@ -54,22 +54,6 @@ final class QueryWorkerStorage: NSObject, QueryWorkerStorageInterface {
     
     // MARK: - SingerTracksQueryStorageInterface
     
-    func fetchSingerTracks(completion: @escaping (Result<[DataModel.SingerTrack], StorageError>) -> ()) {
-        coreDataManager.mainQueueManageObjectContext.perform { [unowned self] in
-            let request: NSFetchRequest = SingerTrack.fetchRequest()
-            
-            do {
-                let count = try coreDataManager.mainQueueManageObjectContext.count(for: request)
-                let data = try coreDataManager.mainQueueManageObjectContext.fetch(request).map { $0.toDataEntity() }
-                
-                print("DB count", count)
-                completion(.success(data))
-            } catch {
-                completion(.failure(.readError(error)))
-            }
-        }
-    }
-    
     func saveSingerTrack(singerTrack: DataModel.SingerTrack, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
         coreDataManager.privateQueueManageObjectContext.perform { [unowned self] in
             let _ = SingerTrack(query: singerTrack, insertInto: coreDataManager.privateQueueManageObjectContext)
@@ -89,6 +73,7 @@ final class QueryWorkerStorage: NSObject, QueryWorkerStorageInterface {
 
 
 // MARK: - NSFetchedResultsControllerDelegate
+
 extension QueryWorkerStorage: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         print("NSFRC count -> ", fetchedResultsController.fetchedObjects?.count ?? 0)

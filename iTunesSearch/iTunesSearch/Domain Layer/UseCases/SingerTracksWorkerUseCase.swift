@@ -39,9 +39,8 @@ extension SingerTracksWorkerUseCase: SingerTracksWorkerUseCaseInterface {
         }
     }
     
-    func fetchTracksFromStorage(completion: @escaping (Result<[DataModel.SingerTrack], StorageError>) -> ()) {
-        storage.fetchSingerTracks(completion: completion)
+    func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
+        storage.subscribeOfData(completion: completion)
     }
-    
 }
 

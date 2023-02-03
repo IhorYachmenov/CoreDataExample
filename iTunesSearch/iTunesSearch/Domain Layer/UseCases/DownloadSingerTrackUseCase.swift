@@ -7,10 +7,12 @@
 
 import Foundation
 
-final class DownloadSingerTrackUseCase: DownloadSingerTrackUseCaseInterface {
+final class DownloadSingerTrackUseCase {
     
     init() {}
-    
+}
+
+extension DownloadSingerTrackUseCase: DownloadSingerTrackUseCaseInterface {
     func downloadSingerTrack(name: String, completion: @escaping (Result<DataModel.SingerTrack, ServiceError>) -> ()) {
         let request = SearchSingerTrackAPI()
         let apiLoader = APILoader(apiHandler: request)
