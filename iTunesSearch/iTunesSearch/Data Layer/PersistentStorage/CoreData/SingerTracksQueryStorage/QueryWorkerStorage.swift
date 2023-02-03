@@ -77,6 +77,7 @@ final class QueryWorkerStorage: NSObject, QueryWorkerStorageInterface {
             do {
                 try coreDataManager.privateQueueManageObjectContext.save()
                 print("Data saved successfully private Q🥳")
+                coreDataManager.privateQueueManageObjectContext.reset()
                 completion(.success(singerTrack))
             } catch {
                 print("Can't save singer tracks privateQ 😶‍🌫️")
