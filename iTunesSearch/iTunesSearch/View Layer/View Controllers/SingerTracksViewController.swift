@@ -7,7 +7,7 @@
 
 import UIKit
 
-#warning("generic query")
+#warning("Navigation, as coordinator or something else")
 
 // Level 2
 

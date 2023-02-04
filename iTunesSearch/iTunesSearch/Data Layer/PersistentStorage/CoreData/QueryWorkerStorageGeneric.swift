@@ -21,9 +21,6 @@ final class QueryWorkerStorageGeneric<DataType, Entity: NSFetchRequestResult>: N
     }
     
     private func setupFetchResultsController(persistentStorage: CoreDataStorageManager, fetchRequest: NSFetchRequest<Entity>) {
-        
-//        let fetchRequest: NSFetchRequest = SingerTrack.fetchRequest()
-        
         let sort = NSSortDescriptor(key: #keyPath(SingerTrack.trackName), ascending: true)
         fetchRequest.sortDescriptors = [sort]
         fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
@@ -57,8 +54,11 @@ final class QueryWorkerStorageGeneric<DataType, Entity: NSFetchRequestResult>: N
     
     func saveSingerTrack(singerTrack: DataType, entityDescription: NSEntityDescription, completion: @escaping (Result<DataType, StorageError>) -> ()) {
         coreDataManager.privateQueueManageObjectContext.perform { [unowned self] in
-            let test = NSManagedObject(entity: entityDescription, insertInto: coreDataManager.privateQueueManageObjectContext)
-            Mapper.mapToDB(from: singerTrack, target: test)
+            
+            let manageObject = NSManagedObject(entity: entityDescription, insertInto: coreDataManager.privateQueueManageObjectContext)
+            
+            Mapper.mapToDB(from: singerTrack, target: manageObject)
+            
             do {
                 try coreDataManager.privateQueueManageObjectContext.save()
                 print("Data saved successfully private Q🥳")
@@ -70,6 +70,8 @@ final class QueryWorkerStorageGeneric<DataType, Entity: NSFetchRequestResult>: N
             }
         }
     }
+    
+    // MARK: - NSFetchedResultsControllerDelegate
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         print("NSFRC count -> ", fetchedResultsController.fetchedObjects?.count ?? 0)
