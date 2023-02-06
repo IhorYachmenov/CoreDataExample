@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CC629802E6200D6E038 /* AppDelegate.swift */; };
-		CE266CC929802E6200D6E038 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CC829802E6200D6E038 /* SceneDelegate.swift */; };
 		CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */; };
 		CE266CD029802E6300D6E038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE266CCF29802E6300D6E038 /* Assets.xcassets */; };
 		CE266CD329802E6300D6E038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE266CD129802E6300D6E038 /* LaunchScreen.storyboard */; };
@@ -47,7 +46,6 @@
 		CE266D7529897CC700D6E038 /* APIHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D7429897CC700D6E038 /* APIHeaders.swift */; };
 		CE266D7D298A994000D6E038 /* SingerTracksViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D7C298A994000D6E038 /* SingerTracksViewModelInterface.swift */; };
 		CE4FC547298D3FF0004F281C /* SingerTracksViewControllerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC546298D3FF0004F281C /* SingerTracksViewControllerConfigurator.swift */; };
-		CE4FC54A298D4C92004F281C /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC549298D4C92004F281C /* DependencyFactory.swift */; };
 		CE4FC54C298D6647004F281C /* QueryWorkerStorageGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54B298D6647004F281C /* QueryWorkerStorageGeneric.swift */; };
 		CE4FC54E298D66CA004F281C /* QueryWorkerStorageInterfaceGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54D298D66CA004F281C /* QueryWorkerStorageInterfaceGeneric.swift */; };
 		CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC550298DBDE1004F281C /* Mapper.swift */; };
@@ -78,7 +76,6 @@
 /* Begin PBXFileReference section */
 		CE266CC329802E6200D6E038 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE266CC629802E6200D6E038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE266CC829802E6200D6E038 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewController.swift; sourceTree = "<group>"; };
 		CE266CCF29802E6300D6E038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE266CD229802E6300D6E038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,7 +117,6 @@
 		CE266D7429897CC700D6E038 /* APIHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeaders.swift; sourceTree = "<group>"; };
 		CE266D7C298A994000D6E038 /* SingerTracksViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModelInterface.swift; sourceTree = "<group>"; };
 		CE4FC546298D3FF0004F281C /* SingerTracksViewControllerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewControllerConfigurator.swift; sourceTree = "<group>"; };
-		CE4FC549298D4C92004F281C /* DependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyFactory.swift; sourceTree = "<group>"; };
 		CE4FC54B298D6647004F281C /* QueryWorkerStorageGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorageGeneric.swift; sourceTree = "<group>"; };
 		CE4FC54D298D66CA004F281C /* QueryWorkerStorageInterfaceGeneric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorageInterfaceGeneric.swift; sourceTree = "<group>"; };
 		CE4FC550298DBDE1004F281C /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -489,14 +485,6 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
-		CE4FC548298D4C7A004F281C /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				CE4FC549298D4C92004F281C /* DependencyFactory.swift */,
-			);
-			path = Factory;
-			sourceTree = "<group>";
-		};
 		CE4FC54F298DBDD5004F281C /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,7 +496,6 @@
 		CE4FC55229911651004F281C /* Navigations */ = {
 			isa = PBXGroup;
 			children = (
-				CE266CC829802E6200D6E038 /* SceneDelegate.swift */,
 				CE4FC55329911681004F281C /* Coordinator.swift */,
 				CE4FC55529911745004F281C /* AppCoordinator.swift */,
 				CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */,
@@ -520,7 +507,6 @@
 		CE4FC559299119E0004F281C /* SingerTracks */ = {
 			isa = PBXGroup;
 			children = (
-				CE4FC548298D4C7A004F281C /* Factory */,
 				CE4FC545298D3FD7004F281C /* Configurator */,
 				CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */,
 			);
@@ -666,7 +652,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE266D5A2981679400D6E038 /* SingerTrack.swift in Sources */,
-				CE4FC54A298D4C92004F281C /* DependencyFactory.swift in Sources */,
 				CE266D6F2987DEF500D6E038 /* SingerTracksWorkerUseCaseInterface.swift in Sources */,
 				CE266D04298031F600D6E038 /* ResponseHandler+Extension.swift in Sources */,
 				CE4FC55C29911A45004F281C /* TrackDetailsViewController.swift in Sources */,
@@ -679,7 +664,6 @@
 				CE266D7D298A994000D6E038 /* SingerTracksViewModelInterface.swift in Sources */,
 				CE266D2929807DFF00D6E038 /* TrackListContentView.swift in Sources */,
 				CE4FC54E298D66CA004F281C /* QueryWorkerStorageInterfaceGeneric.swift in Sources */,
-				CE266CC929802E6200D6E038 /* SceneDelegate.swift in Sources */,
 				CE4FC54C298D6647004F281C /* QueryWorkerStorageGeneric.swift in Sources */,
 				CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */,
 				CE266D4C29814FB100D6E038 /* StorageSingerTracksUseCaseInterface.swift in Sources */,
