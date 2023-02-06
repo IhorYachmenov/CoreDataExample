@@ -8,7 +8,7 @@
 import Foundation
 
 class SingerTracksViewControllerConfigurator {
-    class func configure() -> SingerTracksViewController {
+    class func configure(coordinator: SingerTracksCoordinator) -> SingerTracksViewController {
         let repository = PersistentStorageRepository()
         
         let search = DownloadSingerTrackUseCase()
@@ -19,6 +19,7 @@ class SingerTracksViewControllerConfigurator {
         
         let viewController = SingerTracksViewController()
         viewController.viewModel = viewModel
+        viewController.coordinator = coordinator
         
         return viewController
     }

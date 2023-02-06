@@ -8,7 +8,7 @@
 import UIKit
 
 #warning("Navigation, as coordinator or something else")
-
+#warning("Service locator vs DI")
 // Level 2
 
 #warning("detail screen with more data, observe data, navigation")
@@ -17,6 +17,10 @@ import UIKit
 #warning("add check dublication")
 
 class SingerTracksViewController: UIViewController {
+    
+    /// Navigation
+    weak var coordinator: SingerTracksCoordinator!
+    
     /// Data Properties
     private var data: Array<PresentationModel.SingerTrack> = Array() {
         didSet {
@@ -114,6 +118,12 @@ class SingerTracksViewController: UIViewController {
 
 // MARK: Data Source
 extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        coordinator.showDetailPage()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
