@@ -11,7 +11,7 @@ import CoreData
 final class PersistentStorageRepository {
     
     private lazy var singerTracksQueryStorage: QueryWorkerStorageInterface = QueryWorkerStorage()
-    private lazy var singerTracksQueryStorageGeneric = QueryWorkerStorageGeneric<DataModel.SingerTrack, SingerTrack>(fetchRequest: SingerTrack.fetchRequest())
+    private lazy var singerTracksQueryStorageGeneric = QueryWorkerStorageGeneric<DataModel.SingerTrack, SingerTrack>(entityName: SingerTrack.description(), sortDescription: #keyPath(SingerTrack.trackName))
     
     init() {}
 }
@@ -19,11 +19,13 @@ final class PersistentStorageRepository {
 extension PersistentStorageRepository: PersistentStorageRepositoryInterface {
     func saveSingerTrack(singerTrack: DataModel.SingerTrack, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
 //        singerTracksQueryStorage.saveSingerTrack(singerTrack: singerTrack, completion: completion)
-        singerTracksQueryStorageGeneric.saveSingerTrack(singerTrack: singerTrack, entityDescription: SingerTrack.entity(), completion: completion)
+        
+        singerTracksQueryStorageGeneric.saveSingerTrack(singerTrack: singerTrack, completion: completion)
     }
     
     func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
 //        singerTracksQueryStorage.dataPublisher = completion
+        
         singerTracksQueryStorageGeneric.dataPublisher = { data in
             let dataModels = data.map{ $0.toDataEntity() }
             completion(dataModels)

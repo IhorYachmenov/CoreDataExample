@@ -12,5 +12,5 @@ protocol QueryWorkerStorageInterfaceGeneric {
     associatedtype DataType
     associatedtype Entity: NSFetchRequestResult
     var dataPublisher: (([Entity]) -> ())? { get set }
-    func saveSingerTrack(singerTrack: DataType, entityDescription: NSEntityDescription, completion: @escaping (Result<DataType, StorageError>) -> ())
+    func saveSingerTrack(singerTrack: DataType, completion: @escaping (Result<DataType, StorageError>) -> ())
 }

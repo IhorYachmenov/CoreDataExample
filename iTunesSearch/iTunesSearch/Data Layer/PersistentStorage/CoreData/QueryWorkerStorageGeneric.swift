@@ -9,19 +9,22 @@ import Foundation
 import CoreData
 
 final class QueryWorkerStorageGeneric<DataType, Entity: NSFetchRequestResult>: NSObject, NSFetchedResultsControllerDelegate, QueryWorkerStorageInterfaceGeneric {
-   
+    
     var dataPublisher: (([Entity]) -> ())?
     
     private var fetchedResultsController: NSFetchedResultsController<Entity>!
     private var coreDataManager: CoreDataStorageManager = CoreDataStorageManager.shared
+    private var entityName: String!
     
-    init(fetchRequest: NSFetchRequest<Entity>) {
+    init(entityName: String, sortDescription: String) {
         super.init()
-        setupFetchResultsController(persistentStorage: coreDataManager, fetchRequest: fetchRequest)
+        self.entityName = entityName
+        setupFetchResultsController(persistentStorage: coreDataManager, entityName: entityName, sortDescription: sortDescription)
     }
     
-    private func setupFetchResultsController(persistentStorage: CoreDataStorageManager, fetchRequest: NSFetchRequest<Entity>) {
-        let sort = NSSortDescriptor(key: #keyPath(SingerTrack.trackName), ascending: true)
+    private func setupFetchResultsController(persistentStorage: CoreDataStorageManager, entityName: String, sortDescription: String) {
+        let fetchRequest = NSFetchRequest<Entity>.init(entityName: entityName)
+        let sort = NSSortDescriptor(key: sortDescription, ascending: true)
         fetchRequest.sortDescriptors = [sort]
         fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
                                                               managedObjectContext: persistentStorage.mainQueueManageObjectContext,
@@ -52,10 +55,18 @@ final class QueryWorkerStorageGeneric<DataType, Entity: NSFetchRequestResult>: N
     
     // MARK: - QueryWorkerStorageInterfaceGeneric
     
-    func saveSingerTrack(singerTrack: DataType, entityDescription: NSEntityDescription, completion: @escaping (Result<DataType, StorageError>) -> ()) {
+    func saveSingerTrack(singerTrack: DataType, completion: @escaping (Result<DataType, StorageError>) -> ()) {
         coreDataManager.privateQueueManageObjectContext.perform { [unowned self] in
             
-            let manageObject = NSManagedObject(entity: entityDescription, insertInto: coreDataManager.privateQueueManageObjectContext)
+            let entityDescription = NSEntityDescription.entity(forEntityName: entityName, in: coreDataManager.privateQueueManageObjectContext)
+            
+            guard entityDescription != nil else {
+                let failure = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Wrong Entity name 😱"])
+                completion(.failure(.saveError(failure)))
+                return
+            }
+            
+            let manageObject = NSManagedObject(entity: entityDescription!, insertInto: coreDataManager.privateQueueManageObjectContext)
             
             Mapper().mapToEntity(from: singerTrack, target: manageObject) { [unowned self] result in
                 switch result {
@@ -66,11 +77,11 @@ final class QueryWorkerStorageGeneric<DataType, Entity: NSFetchRequestResult>: N
                         self.coreDataManager.privateQueueManageObjectContext.reset()
                         completion(.success(singerTrack))
                     } catch {
-                        print("Can't save singer tracks privateQ 😶‍🌫️")
+                        print("Can't save singer track privateQ 😶‍🌫️")
                         completion(.failure(.saveError(error)))
                     }
                 case .failure(let failure):
-                    print("Can't map singer tracks to Entity 😶‍🌫️")
+                    print("Can't map singer track to Entity 😶‍🌫️")
                     completion(.failure(failure))
                 }
             }
