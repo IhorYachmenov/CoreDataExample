@@ -57,17 +57,25 @@ final class QueryWorkerStorageGeneric<DataType, Entity: NSFetchRequestResult>: N
             
             let manageObject = NSManagedObject(entity: entityDescription, insertInto: coreDataManager.privateQueueManageObjectContext)
             
-            Mapper.mapToDB(from: singerTrack, target: manageObject)
-            
-            do {
-                try coreDataManager.privateQueueManageObjectContext.save()
-                print("Data saved successfully private Q🥳")
-                coreDataManager.privateQueueManageObjectContext.reset()
-                completion(.success(singerTrack))
-            } catch {
-                print("Can't save singer tracks privateQ 😶‍🌫️")
-                completion(.failure(.saveError(error)))
+            Mapper().mapToEntity(from: singerTrack, target: manageObject) { [unowned self] result in
+                switch result {
+                case .success(_):
+                    do {
+                        try self.coreDataManager.privateQueueManageObjectContext.save()
+                        print("Data saved successfully private Q🥳")
+                        self.coreDataManager.privateQueueManageObjectContext.reset()
+                        completion(.success(singerTrack))
+                    } catch {
+                        print("Can't save singer tracks privateQ 😶‍🌫️")
+                        completion(.failure(.saveError(error)))
+                    }
+                case .failure(let failure):
+                    print("Can't map singer tracks to Entity 😶‍🌫️")
+                    completion(.failure(failure))
+                }
             }
+            
+            
         }
     }
     
