@@ -13,7 +13,6 @@ class Mapper {
     init(){}
     
     func mapToEntity<DataEntity, Entity>(from data: DataEntity, target dbEntity: Entity, completion: @escaping (Result<DataEntity, StorageError>)->()) {
-
         let managedObject: NSManagedObject? = dbEntity as? NSManagedObject
         let keys = managedObject?.entity.attributesByName.keys
 
@@ -33,6 +32,5 @@ class Mapper {
             let failure = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Wrong mapping keys"])
             completion(.failure(.saveError(failure)))
         }
-        
     }
 }

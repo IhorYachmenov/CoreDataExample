@@ -11,7 +11,9 @@ import CoreData
 final class PersistentStorageRepository {
     
     private lazy var singerTracksQueryStorage: QueryWorkerStorageInterface = QueryWorkerStorage()
-    private lazy var singerTracksQueryStorageGeneric = QueryWorkerStorageGeneric<DataModel.SingerTrack, SingerTrack>(entityName: SingerTrack.description(), sortDescription: #keyPath(SingerTrack.trackName))
+    private lazy var singerTracksQueryStorageGeneric = QueryWorkerStorageGeneric<DataModel.SingerTrack, SingerTrack>(
+        entityName: SingerTrack.description(),
+        sortDescription: #keyPath(SingerTrack.trackName))
     
     init() {}
 }

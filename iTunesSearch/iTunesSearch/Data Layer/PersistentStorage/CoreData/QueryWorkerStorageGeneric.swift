@@ -44,7 +44,7 @@ final class QueryWorkerStorageGeneric<DataType, Entity: NSFetchRequestResult>: N
             
         }
     }
-    
+        
     private var fetchedObjects: [Entity] {
         guard let data = fetchedResultsController.fetchedObjects else {
             return []
