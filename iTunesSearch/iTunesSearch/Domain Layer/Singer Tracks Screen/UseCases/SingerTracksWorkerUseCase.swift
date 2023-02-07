@@ -8,7 +8,6 @@
 import Foundation
 
 class SingerTracksWorkerUseCase {
-    
     private var download: DownloadSingerTrackUseCaseInterface
     private var storage: StorageSingerTracksUseCaseInterface
     

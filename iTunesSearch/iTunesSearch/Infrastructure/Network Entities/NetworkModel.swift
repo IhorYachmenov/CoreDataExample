@@ -45,7 +45,6 @@ enum NetworkModel {
         let currency: String?
         let primaryGenreName: String?
         let isStreamable: Bool?
-        
     }
 }
 

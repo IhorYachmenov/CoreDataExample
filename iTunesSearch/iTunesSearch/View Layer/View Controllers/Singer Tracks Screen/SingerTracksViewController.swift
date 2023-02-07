@@ -21,7 +21,6 @@ import UIKit
 #warning("add check dublication")
 
 class SingerTracksViewController: UIViewController {
-
     /// Navigation
     weak var coordinator: SingerTracksCoordinator!
     

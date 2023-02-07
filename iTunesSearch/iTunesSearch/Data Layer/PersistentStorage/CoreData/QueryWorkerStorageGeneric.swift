@@ -9,7 +9,6 @@ import Foundation
 import CoreData
 
 final class QueryWorkerStorageGeneric<DataType, Entity: NSFetchRequestResult>: NSObject, NSFetchedResultsControllerDelegate, QueryWorkerStorageInterfaceGeneric {
-    
     var dataPublisher: (([Entity]) -> ())?
     
     private var fetchedResultsController: NSFetchedResultsController<Entity>!

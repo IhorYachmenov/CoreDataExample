@@ -9,7 +9,6 @@ import Foundation
 import CoreData
 
 class Mapper {
-    
     init(){}
     
     func mapToEntity<DataEntity, Entity>(from data: DataEntity, target dbEntity: Entity, completion: @escaping (Result<DataEntity, StorageError>)->()) {

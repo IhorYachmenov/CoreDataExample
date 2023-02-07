@@ -8,7 +8,6 @@
 import UIKit
 
 class SingerTrackListContentView: UIView, UIContentView {
-
     var configuration: UIContentConfiguration {
         didSet {
             initViewsData(configurator: configuration as! SingerTrackListConfigurator)

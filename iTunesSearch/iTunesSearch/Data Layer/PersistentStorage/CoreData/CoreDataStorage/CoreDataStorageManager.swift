@@ -15,7 +15,6 @@ enum StorageError: Error {
 }
 
 final class CoreDataStorageManager {
-
     static let shared = CoreDataStorageManager()
     
     private init() {}

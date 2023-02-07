@@ -8,7 +8,6 @@
 import Foundation
 
 final class DownloadSingerTrackUseCase {
-    
     init() {}
 }
 

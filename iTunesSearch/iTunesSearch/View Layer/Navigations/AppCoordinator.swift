@@ -8,7 +8,6 @@
 import UIKit
 
 class AppCoordinator: Coordinator {
-    
     var parentCoordinator: Coordinator?
     var children: [Coordinator] = []
     var navigationController: UINavigationController

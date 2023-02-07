@@ -12,7 +12,6 @@ import UIKit
 //}
 
 struct SingerTrackListConfigurator : UIContentConfiguration {
-    
     var model: PresentationModel.SingerTrack
     
 //    weak var delegate: TrackListConfiguratorProtocol?

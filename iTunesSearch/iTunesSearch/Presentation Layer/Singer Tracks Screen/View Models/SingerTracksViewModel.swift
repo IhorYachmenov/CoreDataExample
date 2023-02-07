@@ -8,7 +8,6 @@
 import Foundation
 
 final class SingerTracksViewModel: SingerTracksViewModelInterface {
-    
    /// MARK - Data Source
     var dataSource: ((Result<[PresentationModel.SingerTrack], Error>) -> ())?
     

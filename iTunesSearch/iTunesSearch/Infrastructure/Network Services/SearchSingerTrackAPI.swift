@@ -8,7 +8,6 @@
 import Foundation
 
 struct SearchSingerTrackAPI: APIHandler {
-    
     func makeRequest(from param: [String: Any]) -> URLRequest? {
         let urlString = APIPath().singerTrackSearchPath
         if var url = URL(string: urlString) {
@@ -28,5 +27,4 @@ struct SearchSingerTrackAPI: APIHandler {
     func parseResponse(data: Data, response: HTTPURLResponse) throws -> NetworkModel.SingerTracks {
         return try defaultParseResponse(data: data, response: response)
     }
-    
 }

@@ -8,7 +8,6 @@
 import Foundation
 
 final class StorageSingerTracksUseCase {
-    
     private var repository: PersistentStorageRepositoryInterface
     
     init(storageRepository: PersistentStorageRepositoryInterface) {

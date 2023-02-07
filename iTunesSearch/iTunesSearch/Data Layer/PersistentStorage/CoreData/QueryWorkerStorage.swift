@@ -9,7 +9,6 @@ import Foundation
 import CoreData
 
 final class QueryWorkerStorage: NSObject, QueryWorkerStorageInterface {
-    
     var dataPublisher: (([DataModel.SingerTrack]) -> ())?
     
     private var fetchedResultsController: NSFetchedResultsController<SingerTrack>!
