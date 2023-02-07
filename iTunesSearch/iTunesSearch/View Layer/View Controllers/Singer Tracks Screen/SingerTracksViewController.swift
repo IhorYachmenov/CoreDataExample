@@ -14,8 +14,6 @@ import UIKit
 /// Generic Worker
 
 
-
-
 /// **In Progress
 #warning("detail screen with more data, observe data, navigation")
 
@@ -39,7 +37,6 @@ class SingerTracksViewController: UIViewController {
     
     /// View Models
     var viewModel: SingerTracksViewModelInterface!
-//    var viewModel: SingerTracksViewModelInterface = DependencyFactory.SingerTrackViewModel.make() as! SingerTracksViewModelInterface
     
     /// UI Properties
     private lazy var tableView: UITableView = {
