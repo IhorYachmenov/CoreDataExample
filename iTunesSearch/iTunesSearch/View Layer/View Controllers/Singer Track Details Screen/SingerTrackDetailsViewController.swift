@@ -7,7 +7,9 @@
 
 import UIKit
 
-class TrackDetailsViewController: UIViewController {
+class SingerTrackDetailsViewController: UIViewController {
+    var coordinator: SingerTrackDetailsCoordinator!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view?.backgroundColor = .cyan

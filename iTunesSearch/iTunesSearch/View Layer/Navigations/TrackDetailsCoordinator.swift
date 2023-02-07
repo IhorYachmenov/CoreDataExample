@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TrackDetailsCoordinator: Coordinator {
+class SingerTrackDetailsCoordinator: Coordinator {
     weak var parentCoordinator: Coordinator?
     var children: [Coordinator] = []
     var navigationController: UINavigationController
@@ -17,7 +17,7 @@ class TrackDetailsCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = TrackDetailsViewController()
+        let vc = SingerTrackDetailsViewControllerConfigurator.configure(coordinator: self)
         navigationController.pushViewController(vc, animated: true)
     }
 }

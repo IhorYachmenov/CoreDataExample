@@ -120,7 +120,6 @@ class SingerTracksViewController: UIViewController {
 // MARK: Data Source
 extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
         coordinator.showDetailPage()
     }
     

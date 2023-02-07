@@ -52,8 +52,9 @@
 		CE4FC55429911681004F281C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55329911681004F281C /* Coordinator.swift */; };
 		CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55529911745004F281C /* AppCoordinator.swift */; };
 		CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */; };
-		CE4FC55C29911A45004F281C /* TrackDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55B29911A45004F281C /* TrackDetailsViewController.swift */; };
+		CE4FC55C29911A45004F281C /* SingerTrackDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55B29911A45004F281C /* SingerTrackDetailsViewController.swift */; };
 		CE4FC55E2991280D004F281C /* TrackDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55D2991280D004F281C /* TrackDetailsCoordinator.swift */; };
+		CE4FC56529926525004F281C /* SingerTrackDetailsViewControllerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC56429926525004F281C /* SingerTrackDetailsViewControllerConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,8 +124,9 @@
 		CE4FC55329911681004F281C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CE4FC55529911745004F281C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksCoordinator.swift; sourceTree = "<group>"; };
-		CE4FC55B29911A45004F281C /* TrackDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailsViewController.swift; sourceTree = "<group>"; };
+		CE4FC55B29911A45004F281C /* SingerTrackDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsViewController.swift; sourceTree = "<group>"; };
 		CE4FC55D2991280D004F281C /* TrackDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailsCoordinator.swift; sourceTree = "<group>"; };
+		CE4FC56429926525004F281C /* SingerTrackDetailsViewControllerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsViewControllerConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -510,7 +512,8 @@
 		CE4FC55A29911A1F004F281C /* Singer Track Details Screen */ = {
 			isa = PBXGroup;
 			children = (
-				CE4FC55B29911A45004F281C /* TrackDetailsViewController.swift */,
+				CE4FC563299264E8004F281C /* Configurator */,
+				CE4FC55B29911A45004F281C /* SingerTrackDetailsViewController.swift */,
 			);
 			path = "Singer Track Details Screen";
 			sourceTree = "<group>";
@@ -543,6 +546,14 @@
 			children = (
 			);
 			path = "Singer Track Details Screen";
+			sourceTree = "<group>";
+		};
+		CE4FC563299264E8004F281C /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				CE4FC56429926525004F281C /* SingerTrackDetailsViewControllerConfigurator.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -678,7 +689,8 @@
 				CE266D5A2981679400D6E038 /* SingerTrack.swift in Sources */,
 				CE266D6F2987DEF500D6E038 /* SingerTracksWorkerUseCaseInterface.swift in Sources */,
 				CE266D04298031F600D6E038 /* ResponseHandler+Extension.swift in Sources */,
-				CE4FC55C29911A45004F281C /* TrackDetailsViewController.swift in Sources */,
+				CE4FC55C29911A45004F281C /* SingerTrackDetailsViewController.swift in Sources */,
+				CE4FC56529926525004F281C /* SingerTrackDetailsViewControllerConfigurator.swift in Sources */,
 				CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */,
 				CE266D7529897CC700D6E038 /* APIHeaders.swift in Sources */,
 				CE266D57298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld in Sources */,

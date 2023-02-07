@@ -22,9 +22,9 @@ class SingerTracksCoordinator : Coordinator {
     }
     
     func showDetailPage(){
-        let trackDetailsCoordinator = TrackDetailsCoordinator(navigationController: navigationController)
-        trackDetailsCoordinator.parentCoordinator = self
-        children.append(trackDetailsCoordinator)
-        trackDetailsCoordinator.start()
+        let singerTrackDetailsCoordinator = SingerTrackDetailsCoordinator(navigationController: navigationController)
+        singerTrackDetailsCoordinator.parentCoordinator = self
+        children.append(singerTrackDetailsCoordinator)
+        singerTrackDetailsCoordinator.start()
     }
 }
