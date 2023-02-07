@@ -8,6 +8,7 @@
 import UIKit
 
 class TrackDetailsCoordinator: Coordinator {
+    
     weak var parentCoordinator: Coordinator?
     var children: [Coordinator] = []
     var navigationController: UINavigationController

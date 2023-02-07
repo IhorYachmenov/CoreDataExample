@@ -85,8 +85,6 @@ final class QueryWorkerStorageGeneric<DataType, Entity: NSFetchRequestResult>: N
                     completion(.failure(failure))
                 }
             }
-            
-            
         }
     }
     

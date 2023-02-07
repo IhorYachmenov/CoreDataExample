@@ -32,7 +32,6 @@ extension PersistentStorageRepository: PersistentStorageRepositoryInterface {
             let dataModels = data.map{ $0.toDataEntity() }
             completion(dataModels)
         }
-        
     }
 }
 

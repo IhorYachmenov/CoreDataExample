@@ -339,7 +339,6 @@
 		CE266D3029812B8300D6E038 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				CE266D582981677500D6E038 /* CoreDataMapping */,
 				CE266D3C29812E0500D6E038 /* DataModel.swift */,
 			);
 			path = Entities;
@@ -391,13 +390,6 @@
 				CE4FC54D298D66CA004F281C /* QueryWorkerStorageInterfaceGeneric.swift */,
 			);
 			path = Interfaces;
-			sourceTree = "<group>";
-		};
-		CE266D582981677500D6E038 /* CoreDataMapping */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CoreDataMapping;
 			sourceTree = "<group>";
 		};
 		CE266D5B2984009C00D6E038 /* View Layer */ = {

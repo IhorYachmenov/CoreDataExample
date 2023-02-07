@@ -8,6 +8,7 @@
 import UIKit
 
 class SingerTracksCoordinator : Coordinator {
+    
     weak var parentCoordinator: Coordinator?
     var children: [Coordinator] = []
     var navigationController: UINavigationController

@@ -21,7 +21,7 @@ import UIKit
 #warning("add check dublication")
 
 class SingerTracksViewController: UIViewController {
-    
+
     /// Navigation
     weak var coordinator: SingerTracksCoordinator!
     
@@ -88,7 +88,6 @@ class SingerTracksViewController: UIViewController {
         }
     }
     
-    
     private func initUIComponents(){
         view.backgroundColor = .white
         
@@ -121,7 +120,6 @@ class SingerTracksViewController: UIViewController {
 
 // MARK: Data Source
 extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
         coordinator.showDetailPage()

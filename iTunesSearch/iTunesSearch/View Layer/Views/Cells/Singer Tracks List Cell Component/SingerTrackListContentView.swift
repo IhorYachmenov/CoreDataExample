@@ -8,7 +8,7 @@
 import UIKit
 
 class SingerTrackListContentView: UIView, UIContentView {
-    
+
     var configuration: UIContentConfiguration {
         didSet {
             initViewsData(configurator: configuration as! SingerTrackListConfigurator)
@@ -88,6 +88,7 @@ class SingerTrackListContentView: UIView, UIContentView {
         
 
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
