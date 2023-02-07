@@ -7,10 +7,16 @@
 
 import UIKit
 
-#warning("Navigation, as coordinator or something else")
-#warning("Service locator vs DI")
-// Level 2
+/// **Completed
+///
+/// Configurator for Dependency
+/// Navigation
+/// Generic Worker
 
+
+
+
+/// **In Progress
 #warning("detail screen with more data, observe data, navigation")
 
 // Level N
@@ -41,7 +47,7 @@ class SingerTracksViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.delegate = self
         view.dataSource = self
-        view.register(TrackListCell.self, forCellReuseIdentifier: TrackListCell.identifier)
+        view.register(SingerTrackListCell.self, forCellReuseIdentifier: SingerTrackListCell.identifier)
         return view
     }()
     
@@ -129,11 +135,11 @@ extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TrackListCell.identifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: SingerTrackListCell.identifier, for: indexPath)
         
         let data = data[indexPath.row]
         
-        let configurator = TrackListConfigurator(model: data)
+        let configurator = SingerTrackListConfigurator(model: data)
         
         cell.contentConfiguration = configurator
         

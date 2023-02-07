@@ -11,16 +11,16 @@ import UIKit
 //    func userPressButton(state: ButtonState, index: Int)
 //}
 
-struct TrackListConfigurator : UIContentConfiguration {
+struct SingerTrackListConfigurator : UIContentConfiguration {
     
     var model: PresentationModel.SingerTrack
     
 //    weak var delegate: TrackListConfiguratorProtocol?
     
     func makeContentView() -> UIView & UIContentView {
-        return TrackListContentView(configuration:self)
+        return SingerTrackListContentView(configuration:self)
     }
-    func updated(for state: UIConfigurationState) -> TrackListConfigurator {
+    func updated(for state: UIConfigurationState) -> SingerTrackListConfigurator {
         return self
     }
 }

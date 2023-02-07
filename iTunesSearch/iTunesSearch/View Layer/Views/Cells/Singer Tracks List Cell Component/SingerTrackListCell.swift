@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TrackListCell: UITableViewCell {
+class SingerTrackListCell: UITableViewCell {
     
     static let identifier = "TrackListCell"
     

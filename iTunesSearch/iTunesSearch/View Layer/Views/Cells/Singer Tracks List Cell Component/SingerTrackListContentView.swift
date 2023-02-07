@@ -7,11 +7,11 @@
 
 import UIKit
 
-class TrackListContentView: UIView, UIContentView {
+class SingerTrackListContentView: UIView, UIContentView {
     
     var configuration: UIContentConfiguration {
         didSet {
-            initViewsData(configurator: configuration as! TrackListConfigurator)
+            initViewsData(configurator: configuration as! SingerTrackListConfigurator)
         }
     }
         
@@ -92,7 +92,7 @@ class TrackListContentView: UIView, UIContentView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func initViewsData(configurator: TrackListConfigurator) {
+    func initViewsData(configurator: SingerTrackListConfigurator) {
         self.singerName.text = configurator.model.singerName
         self.trackName.text = configurator.model.trackName
         self.country.text = configurator.model.country
