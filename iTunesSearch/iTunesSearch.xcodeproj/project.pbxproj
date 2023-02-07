@@ -53,8 +53,11 @@
 		CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55529911745004F281C /* AppCoordinator.swift */; };
 		CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */; };
 		CE4FC55C29911A45004F281C /* SingerTrackDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55B29911A45004F281C /* SingerTrackDetailsViewController.swift */; };
-		CE4FC55E2991280D004F281C /* TrackDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55D2991280D004F281C /* TrackDetailsCoordinator.swift */; };
+		CE4FC55E2991280D004F281C /* SingerTrackDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55D2991280D004F281C /* SingerTrackDetailsCoordinator.swift */; };
 		CE4FC56529926525004F281C /* SingerTrackDetailsViewControllerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC56429926525004F281C /* SingerTrackDetailsViewControllerConfigurator.swift */; };
+		CE4FC56729926F6C004F281C /* ConstantsSingerTracksScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC56629926F6C004F281C /* ConstantsSingerTracksScreen.swift */; };
+		CE4FC5692992703F004F281C /* ConstantsSingerTrackDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC5682992703F004F281C /* ConstantsSingerTrackDetailsScreen.swift */; };
+		CE4FC56F299290D2004F281C /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC56E299290D2004F281C /* ProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,8 +128,11 @@
 		CE4FC55529911745004F281C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksCoordinator.swift; sourceTree = "<group>"; };
 		CE4FC55B29911A45004F281C /* SingerTrackDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsViewController.swift; sourceTree = "<group>"; };
-		CE4FC55D2991280D004F281C /* TrackDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailsCoordinator.swift; sourceTree = "<group>"; };
+		CE4FC55D2991280D004F281C /* SingerTrackDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsCoordinator.swift; sourceTree = "<group>"; };
 		CE4FC56429926525004F281C /* SingerTrackDetailsViewControllerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsViewControllerConfigurator.swift; sourceTree = "<group>"; };
+		CE4FC56629926F6C004F281C /* ConstantsSingerTracksScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsSingerTracksScreen.swift; sourceTree = "<group>"; };
+		CE4FC5682992703F004F281C /* ConstantsSingerTrackDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsSingerTrackDetailsScreen.swift; sourceTree = "<group>"; };
+		CE4FC56E299290D2004F281C /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				CE266D2629807DB400D6E038 /* Cells */,
+				CE4FC56E299290D2004F281C /* ProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -453,6 +460,8 @@
 			isa = PBXGroup;
 			children = (
 				CE266D092980335800D6E038 /* Constants.swift */,
+				CE4FC56629926F6C004F281C /* ConstantsSingerTracksScreen.swift */,
+				CE4FC5682992703F004F281C /* ConstantsSingerTrackDetailsScreen.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -495,7 +504,7 @@
 				CE4FC55329911681004F281C /* Coordinator.swift */,
 				CE4FC55529911745004F281C /* AppCoordinator.swift */,
 				CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */,
-				CE4FC55D2991280D004F281C /* TrackDetailsCoordinator.swift */,
+				CE4FC55D2991280D004F281C /* SingerTrackDetailsCoordinator.swift */,
 			);
 			path = Navigations;
 			sourceTree = "<group>";
@@ -707,6 +716,7 @@
 				CE266D1D298042E100D6E038 /* SingerTrackViewEntity.swift in Sources */,
 				CE266D102980358E00D6E038 /* DownloadSingerTrackUseCase.swift in Sources */,
 				CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */,
+				CE4FC56F299290D2004F281C /* ProgressView.swift in Sources */,
 				CE266D132980368600D6E038 /* SearchSingerTrackAPI.swift in Sources */,
 				CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */,
 				CE266D4A29814C5E00D6E038 /* QueryWorkerStorageInterface.swift in Sources */,
@@ -721,10 +731,12 @@
 				CE266D3B29812D1F00D6E038 /* DownloadSingerTrackUseCaseInterface.swift in Sources */,
 				CE266CFC298031AD00D6E038 /* APIPath.swift in Sources */,
 				CE4FC55429911681004F281C /* Coordinator.swift in Sources */,
+				CE4FC5692992703F004F281C /* ConstantsSingerTrackDetailsScreen.swift in Sources */,
 				CE266D2B29807E4000D6E038 /* SingerTrackListConfigurator.swift in Sources */,
 				CE266D062980320100D6E038 /* APIHandler.swift in Sources */,
 				CE266D0D2980346500D6E038 /* SingerTracksViewModel.swift in Sources */,
-				CE4FC55E2991280D004F281C /* TrackDetailsCoordinator.swift in Sources */,
+				CE4FC55E2991280D004F281C /* SingerTrackDetailsCoordinator.swift in Sources */,
+				CE4FC56729926F6C004F281C /* ConstantsSingerTracksScreen.swift in Sources */,
 				CE266D2D29807E8E00D6E038 /* SingerTrackListCell.swift in Sources */,
 				CE266D02298031EA00D6E038 /* RequestHandler+Extension.swift in Sources */,
 				CE266D00298031DA00D6E038 /* APILoader.swift in Sources */,

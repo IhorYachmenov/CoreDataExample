@@ -8,5 +8,10 @@
 import Foundation
 
 struct Constants {
-
+    struct Alert {
+        static let alertTitle = "Error"
+        static let alertActionButtonTitle = "OK"
+    }
 }
+
+

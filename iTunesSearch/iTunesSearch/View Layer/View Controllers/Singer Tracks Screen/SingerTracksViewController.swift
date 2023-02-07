@@ -50,7 +50,7 @@ class SingerTracksViewController: UIViewController {
     private lazy var button: UIButton = {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.setTitle("Download 1 Song", for: .normal)
+        view.setTitle(Constants.SingerTracksScreen.downloadButtonTitle, for: .normal)
         view.tintColor = .gray
         view.backgroundColor = .white
         view.setTitleColor(.black, for: .normal)
@@ -82,7 +82,7 @@ class SingerTracksViewController: UIViewController {
             case .success(let success):
                 self?.data = success
             case .failure(let failure):
-                self?.presentAlertController(msg: failure.localizedDescription, title: "Error")
+                self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
             }
         }
     }
@@ -111,7 +111,7 @@ class SingerTracksViewController: UIViewController {
     private func presentAlertController(msg: String, title: String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "OK", style: .destructive)
+        let action = UIAlertAction(title: Constants.Alert.alertActionButtonTitle, style: .destructive)
         alert.addAction(action)
         present(alert, animated: true)
     }
