@@ -8,7 +8,6 @@
 import Foundation
 
 extension Optional where Wrapped == String {
-    
     func isNil() -> String {
         guard self != nil else {
             return "-"
