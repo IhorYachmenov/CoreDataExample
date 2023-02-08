@@ -9,7 +9,7 @@ import Foundation
 
 extension Constants {
     struct SingerTracksScreen {
-        static let downloadButtonTitle = "Download 1 Song".localized
+        static let downloadButtonTitle = "Download 1 Track".localized
     }
 }
 
