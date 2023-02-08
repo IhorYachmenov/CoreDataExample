@@ -11,7 +11,6 @@ class SingerTrackDetailsViewControllerConfigurator {
     class func configure(coordinator: SingerTrackDetailsCoordinator) -> SingerTrackDetailsViewController {
         let viewController = SingerTrackDetailsViewController()
         viewController.coordinator = coordinator
-        
         return viewController
     }
 }

@@ -24,6 +24,7 @@ class AppCoordinator: Coordinator {
         let singerTracksCoordinator = SingerTracksCoordinator.init(navigationController: navigationController)
         singerTracksCoordinator.parentCoordinator = self
         children.append(singerTracksCoordinator)
+        
         singerTracksCoordinator.start()
     }
 }

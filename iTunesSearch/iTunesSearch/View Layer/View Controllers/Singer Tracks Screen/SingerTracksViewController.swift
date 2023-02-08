@@ -7,18 +7,16 @@
 
 import UIKit
 
-/// **Completed
-///
-/// Configurator for Dependency
-/// Navigation
-/// Generic Worker
+#warning("Coordinator protocol")
 
+#warning("Mirror, NSNull")
+#warning("Core data mapping")
+#warning("Generic naming and small detail")
 
 /// **In Progress
-#warning("detail screen with more data, observe data, navigation")
-
+#warning("Detail screen with more data, observe data, navigation")
 // Level N
-#warning("add check dublication")
+#warning("Add check dublication")
 
 class SingerTracksViewController: UIViewController {
     /// Navigation
@@ -120,7 +118,7 @@ class SingerTracksViewController: UIViewController {
 // MARK: Data Source
 extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinator.showDetailPage()
+        coordinator.showTrackDetails()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

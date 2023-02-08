@@ -8,23 +8,24 @@
 import Foundation
 import CoreData
 
-final class QueryWorkerStorageGeneric<DataType, Entity: NSFetchRequestResult>: NSObject, NSFetchedResultsControllerDelegate, QueryWorkerStorageInterfaceGeneric {
+final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSFetchedResultsControllerDelegate, QueryWorkerStoragable {
     var dataPublisher: (([Entity]) -> ())?
     
     private var fetchedResultsController: NSFetchedResultsController<Entity>!
-    private var coreDataManager: CoreDataStorageManager = CoreDataStorageManager.shared
-    private var entityName: String!
+    private let coreDataManager: CoreDataStorageManager = CoreDataStorageManager.shared
+    private let entityName = NSStringFromClass(Entity.self)
     
-    init(entityName: String, sortDescription: String) {
+    init(sortDescriptor: KeyPath<Entity, String?>) {
         super.init()
-        self.entityName = entityName
-        setupFetchResultsController(persistentStorage: coreDataManager, entityName: entityName, sortDescription: sortDescription)
+        setupFetchResultsController(persistentStorage: coreDataManager, entityName: entityName, sortDescriptor: sortDescriptor)
     }
     
-    private func setupFetchResultsController(persistentStorage: CoreDataStorageManager, entityName: String, sortDescription: String) {
+    private func setupFetchResultsController(persistentStorage: CoreDataStorageManager, entityName: String, sortDescriptor: KeyPath<Entity, String?>) {
         let fetchRequest = NSFetchRequest<Entity>.init(entityName: entityName)
-        let sort = NSSortDescriptor(key: sortDescription, ascending: true)
+        
+        let sort = NSSortDescriptor(keyPath: sortDescriptor, ascending: true)
         fetchRequest.sortDescriptors = [sort]
+        
         fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
                                                               managedObjectContext: persistentStorage.mainQueueManageObjectContext,
                                                               sectionNameKeyPath: nil,
@@ -32,32 +33,18 @@ final class QueryWorkerStorageGeneric<DataType, Entity: NSFetchRequestResult>: N
         fetchedResultsController.delegate = self
         
         try? fetchedResultsController.performFetch()
-        do {
-            try fetchedResultsController.performFetch()
-            
-            DispatchQueue.main.asyncAfter(deadline: .now(), execute: { [unowned self] in
-                self.dataPublisher?(self.fetchedObjects)
-            })
-            
-        } catch {
-            
-        }
-    }
         
-    private var fetchedObjects: [Entity] {
-        guard let data = fetchedResultsController.fetchedObjects else {
-            return []
+        DispatchQueue.main.async { [weak self] in
+            self?.dataPublisher?(self?.fetchedResultsController.fetchedObjects ?? [])
         }
-        
-        return data
     }
     
     // MARK: - QueryWorkerStorageInterfaceGeneric
     
-    func saveSingerTrack(singerTrack: DataType, completion: @escaping (Result<DataType, StorageError>) -> ()) {
-        coreDataManager.privateQueueManageObjectContext.perform { [unowned self] in
+    func saveDataModel(data: DataType, completion: @escaping (Result<DataType, StorageError>) -> ()) {
+        coreDataManager.privateQueueManageObjectContext.perform { [weak self] in
             
-            let entityDescription = NSEntityDescription.entity(forEntityName: entityName, in: coreDataManager.privateQueueManageObjectContext)
+            let entityDescription = NSEntityDescription.entity(forEntityName: self!.entityName, in: self!.coreDataManager.privateQueueManageObjectContext)
             
             guard entityDescription != nil else {
                 let failure = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Wrong Entity name 😱"])
@@ -65,25 +52,21 @@ final class QueryWorkerStorageGeneric<DataType, Entity: NSFetchRequestResult>: N
                 return
             }
             
-            let manageObject = NSManagedObject(entity: entityDescription!, insertInto: coreDataManager.privateQueueManageObjectContext)
-            
-            Mapper().mapToEntity(from: singerTrack, target: manageObject) { [unowned self] result in
-                switch result {
-                case .success(_):
-                    do {
-                        try self.coreDataManager.privateQueueManageObjectContext.save()
-                        print("Data saved successfully private Q🥳")
-                        self.coreDataManager.privateQueueManageObjectContext.reset()
-                        completion(.success(singerTrack))
-                    } catch {
-                        print("Can't save singer track privateQ 😶‍🌫️")
-                        completion(.failure(.saveError(error)))
-                    }
-                case .failure(let failure):
-                    print("Can't map singer track to Entity 😶‍🌫️")
-                    completion(.failure(failure))
+            let manageObject = NSManagedObject(entity: entityDescription!, insertInto: self?.coreDataManager.privateQueueManageObjectContext)
+            #warning("Need to examine")
+            Mapper().mapToEntity(from: data, target: manageObject, completion: {
+                do {
+                    try self?.coreDataManager.privateQueueManageObjectContext.save()
+                    print("Data saved successfully private Q🥳")
+                    self?.coreDataManager.privateQueueManageObjectContext.reset()
+                    completion(.success(data))
+                } catch {
+                    print("Can't save singer track privateQ 😶‍🌫️")
+                    completion(.failure(.saveError(error)))
                 }
-            }
+            })
+            
+            
         }
     }
     
@@ -92,7 +75,7 @@ final class QueryWorkerStorageGeneric<DataType, Entity: NSFetchRequestResult>: N
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         print("NSFRC count -> ", fetchedResultsController.fetchedObjects?.count ?? 0)
 
-        dataPublisher?(fetchedObjects)
+        dataPublisher?(fetchedResultsController.fetchedObjects ?? [])
     }
 }
 

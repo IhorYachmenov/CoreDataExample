@@ -19,6 +19,7 @@ struct SingerTrackListConfigurator : UIContentConfiguration {
     func makeContentView() -> UIView & UIContentView {
         return SingerTrackListContentView(configuration:self)
     }
+    
     func updated(for state: UIConfigurationState) -> SingerTrackListConfigurator {
         return self
     }
