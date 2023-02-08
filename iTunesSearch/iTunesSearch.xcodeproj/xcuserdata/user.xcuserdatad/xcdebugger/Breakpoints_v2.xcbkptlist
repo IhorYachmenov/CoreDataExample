@@ -765,42 +765,10 @@
             filePath = "iTunesSearch/Data Layer/Repositories/PersistentStorageRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "subscribeOfData(completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "00801BDA-02B2-4902-9196-15E5769F3A65 - 1ed40ccb19b74023"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iTunesSearch.PersistentStorageRepository.subscribeOfData(completion: (Swift.Array&lt;iTunesSearch.DataModel.SingerTrack&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "iTunesSearch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Data%20Layer/Repositories/PersistentStorageRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "00801BDA-02B2-4902-9196-15E5769F3A65 - c8d1d4779839de77"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;iTunesSearch.SingerTrack&gt;) -&gt; () in iTunesSearch.PersistentStorageRepository.subscribeOfData(completion: (Swift.Array&lt;iTunesSearch.DataModel.SingerTrack&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "iTunesSearch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Data%20Layer/Repositories/PersistentStorageRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -813,10 +781,10 @@
             filePath = "iTunesSearch/Data Layer/Repositories/PersistentStorageRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "singerTracksQueryStorageGeneric"
-            landmarkType = "24">
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "PersistentStorageRepository"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
