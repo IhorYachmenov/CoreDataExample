@@ -484,6 +484,13 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		CE39D7D82993DC17009F4202 /* Blank */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Blank;
+			sourceTree = "<group>";
+		};
 		CE4FC544298D1580004F281C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,6 +518,7 @@
 		CE4FC55229911651004F281C /* Navigations */ = {
 			isa = PBXGroup;
 			children = (
+				CE39D7D82993DC17009F4202 /* Blank */,
 				CE4FC55329911681004F281C /* Coordinator.swift */,
 				CE4FC55529911745004F281C /* AppCoordinator.swift */,
 				CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */,

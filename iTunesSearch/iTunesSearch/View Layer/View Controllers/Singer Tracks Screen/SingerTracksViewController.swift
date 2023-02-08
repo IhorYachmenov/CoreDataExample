@@ -18,8 +18,13 @@ import UIKit
 // Level N
 #warning("Add check dublication")
 
+protocol SingerTracksViewControllerDelegate {
+    func userDidPressTrackCell(id: Int)
+}
+
 class SingerTracksViewController: UIViewController {
     /// Navigation
+    var delegate: SingerTracksViewControllerDelegate!
     weak var coordinator: SingerTracksCoordinator!
     
     /// Data Properties
@@ -118,7 +123,8 @@ class SingerTracksViewController: UIViewController {
 // MARK: Data Source
 extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinator.showTrackDetails()
+//        coordinator.showTrackDetails()
+        delegate.userDidPressTrackCell(id: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
