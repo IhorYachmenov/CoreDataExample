@@ -15,15 +15,18 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
     private let coreDataManager: CoreDataStorageManager = CoreDataStorageManager.shared
     private let entityName = NSStringFromClass(Entity.self)
     
-    init(sortDescriptor: KeyPath<Entity, String?>) {
+    init(sortDescriptor: PartialKeyPath<Entity>) {
         super.init()
         setupFetchResultsController(persistentStorage: coreDataManager, entityName: entityName, sortDescriptor: sortDescriptor)
     }
     
-    private func setupFetchResultsController(persistentStorage: CoreDataStorageManager, entityName: String, sortDescriptor: KeyPath<Entity, String?>) {
+    private func setupFetchResultsController(
+        persistentStorage: CoreDataStorageManager,
+        entityName: String,
+        sortDescriptor: PartialKeyPath<Entity>
+    ) {
         let fetchRequest = NSFetchRequest<Entity>.init(entityName: entityName)
-        
-        let sort = NSSortDescriptor(keyPath: sortDescriptor, ascending: true)
+        let sort = NSSortDescriptor(keyPath: sortDescriptor as! KeyPath<Entity, String?>, ascending: true)
         fetchRequest.sortDescriptors = [sort]
         
         fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
@@ -41,7 +44,10 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
     
     // MARK: - QueryWorkerStoragable
     
-    func saveDataModel(data: DataType, completion: @escaping (Result<DataType, StorageError>) -> ()) {
+    func saveDataModel(
+        data: DataType,
+        completion: @escaping (Result<DataType, StorageError>) -> ()
+    ) {
         coreDataManager.privateQueueManageObjectContext.perform { [weak self] in
             
             let entityDescription = NSEntityDescription.entity(forEntityName: self!.entityName, in: self!.coreDataManager.privateQueueManageObjectContext)
