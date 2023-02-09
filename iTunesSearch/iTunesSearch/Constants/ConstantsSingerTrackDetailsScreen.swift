@@ -12,5 +12,11 @@ extension Constants {
         static let defaultTrackImgName = "music.quarternote.3"
         static let playButtonTitle = "Play Demo".localized
         static let playButtonDefaultImgName = "play.fill"
+        static let collectionName = "Collection name:".localized
+        static let collectionPrice = "Collection price:".localized
+        static let trackPrice = "Track price:".localized
+        static let releaseDate = "Release date:".localized
+        static let genre = "Genre:".localized
+        static let country = "Country:".localized
     }
 }

@@ -55,27 +55,29 @@ class SingerTrackDetailsViewController: UIViewController {
         view.textColor = .black
         view.textAlignment = .left
         view.font.withSize(10)
-        view.text = "Collection name:"
+        view.text = Constants.SingerTrackDetailsScreen.collectionName
         return view
     }()
     
     private lazy var collectionPrice: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .red
+        view.textColor = .black
         view.textAlignment = .left
-        view.font = .boldSystemFont(ofSize: 10)
-        view.text = "Collection Price:"
+//        view.font = .boldSystemFont(ofSize: 10)
+        view.font.withSize(10)
+        view.text = Constants.SingerTrackDetailsScreen.collectionPrice
         return view
     }()
     
     private lazy var trackPrice: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .red
+        view.textColor = .black
         view.textAlignment = .left
-        view.font = .boldSystemFont(ofSize: 10)
-        view.text = "Track Price:"
+//        view.font = .boldSystemFont(ofSize: 10)
+        view.font.withSize(10)
+        view.text = Constants.SingerTrackDetailsScreen.trackPrice
         return view
     }()
     
@@ -85,7 +87,7 @@ class SingerTrackDetailsViewController: UIViewController {
         view.textColor = .black
         view.textAlignment = .left
         view.font.withSize(10)
-        view.text = "Release Date:"
+        view.text = Constants.SingerTrackDetailsScreen.releaseDate
         return view
     }()
     
@@ -95,7 +97,7 @@ class SingerTrackDetailsViewController: UIViewController {
         view.textColor = .black
         view.textAlignment = .left
         view.font.withSize(10)
-        view.text = "Genre:"
+        view.text = Constants.SingerTrackDetailsScreen.genre
         return view
     }()
     
@@ -105,14 +107,43 @@ class SingerTrackDetailsViewController: UIViewController {
         view.textColor = .black
         view.textAlignment = .left
         view.font.withSize(10)
-        view.text = "Country:"
+        view.text = Constants.SingerTrackDetailsScreen.country
         return view
     }()
     
     private lazy var stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
+        view.spacing = 5
         view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private lazy var backgroundOfProgressView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .black
+        view.layer.cornerRadius = 4
+        return view
+    }()
+    
+    private lazy var currentTimeOfTrack: UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.textColor = .black
+        view.textAlignment = .left
+        view.font.withSize(5)
+        view.text = "0:00"
+        return view
+    }()
+    
+    private lazy var endTimeOfTrack: UILabel = {
+        let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.textColor = .black
+        view.textAlignment = .right
+        view.font.withSize(5)
+        view.text = "3:00"
         return view
     }()
     
@@ -159,6 +190,9 @@ class SingerTrackDetailsViewController: UIViewController {
         view.addSubview(trackName)
         view.addSubview(singerName)
         view.addSubview(stackView)
+        view.addSubview(backgroundOfProgressView)
+        view.addSubview(currentTimeOfTrack)
+        view.addSubview(endTimeOfTrack)
         view.addSubview(playDemoButton)
         
         
@@ -185,6 +219,17 @@ class SingerTrackDetailsViewController: UIViewController {
         stackView.addArrangedSubview(releaseDate)
         stackView.addArrangedSubview(genre)
         stackView.addArrangedSubview(country)
+        
+        backgroundOfProgressView.heightAnchor.constraint(equalToConstant: 8).isActive = true
+        backgroundOfProgressView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
+        backgroundOfProgressView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
+        backgroundOfProgressView.bottomAnchor.constraint(equalTo: playDemoButton.topAnchor, constant: -50).isActive = true
+        
+        currentTimeOfTrack.topAnchor.constraint(equalTo: backgroundOfProgressView.bottomAnchor, constant: 5).isActive = true
+        currentTimeOfTrack.leadingAnchor.constraint(equalTo: backgroundOfProgressView.leadingAnchor, constant: 0).isActive = true
+        
+        endTimeOfTrack.topAnchor.constraint(equalTo: backgroundOfProgressView.bottomAnchor, constant: 5).isActive = true
+        endTimeOfTrack.trailingAnchor.constraint(equalTo: backgroundOfProgressView.trailingAnchor, constant: 0).isActive = true
         
         playDemoButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50).isActive = true
         playDemoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
