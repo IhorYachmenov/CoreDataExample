@@ -9,23 +9,17 @@ import UIKit
 
 #warning("Coordinator protocol")
 
-#warning("Mirror, NSNull")
+#warning("Mirror")
 #warning("Core data mapping")
-#warning("Generic naming and small detail")
 
 /// **In Progress
 #warning("Detail screen with more data, observe data, navigation")
 // Level N
 #warning("Add check dublication")
 
-protocol SingerTracksViewControllerDelegate {
-    func userDidPressTrackCell(id: Int)
-}
-
 class SingerTracksViewController: UIViewController {
     /// Navigation
-    var delegate: SingerTracksViewControllerDelegate!
-    weak var coordinator: SingerTracksCoordinator!
+    var navigationDelegate: SingerTracksDelegate!
     
     /// Data Properties
     private var data: Array<PresentationModel.SingerTrack> = Array() {
@@ -103,10 +97,10 @@ class SingerTracksViewController: UIViewController {
         button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
         
         loader.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        loader.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        loader.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -10).isActive = true
         
         tableView.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 10).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: loader.topAnchor, constant: -10).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
@@ -123,8 +117,7 @@ class SingerTracksViewController: UIViewController {
 // MARK: Data Source
 extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        coordinator.showTrackDetails()
-        delegate.userDidPressTrackCell(id: indexPath.row)
+        navigationDelegate.userDidPressTrackCell(id: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

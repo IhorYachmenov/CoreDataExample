@@ -7,24 +7,30 @@
 
 import UIKit
 
+protocol SingerTracksDelegate: AnyObject {
+    func userDidPressTrackCell(id: Int)
+}
+
 class SingerTracksCoordinator: Coordinator {
-    weak var parentCoordinator: Coordinator?
-    var children: [Coordinator] = []
     var navigationController: UINavigationController
-    
+
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    func start() {
-        let vc = SingerTracksViewControllerConfigurator.configure(coordinator: self)
+    func start(id: Int?) {
+        let vc = SingerTracksViewControllerConfigurator.configure(delegate: self)
         navigationController.pushViewController(vc, animated: true)
     }
+}
+
+extension SingerTracksCoordinator: SingerTracksDelegate {
+    func userDidPressTrackCell(id: Int) {
+        showTrackDetails(id: id)
+    }
     
-    func showTrackDetails(){
+    private func showTrackDetails(id: Int) {
         let singerTrackDetailsCoordinator = SingerTrackDetailsCoordinator(navigationController: navigationController)
-        singerTrackDetailsCoordinator.parentCoordinator = self
-        children.append(singerTrackDetailsCoordinator)
-        singerTrackDetailsCoordinator.start()
+        singerTrackDetailsCoordinator.start(id: id)
     }
 }

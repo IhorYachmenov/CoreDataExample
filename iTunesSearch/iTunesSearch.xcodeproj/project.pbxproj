@@ -45,6 +45,7 @@
 		CE266D7D298A994000D6E038 /* SingerTracksViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D7C298A994000D6E038 /* SingerTracksViewModelInterface.swift */; };
 		CE39D7CD2993C72A009F4202 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7CC2993C72A009F4202 /* String.swift */; };
 		CE39D7D12993C85F009F4202 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE39D7D32993C85F009F4202 /* Localizable.strings */; };
+		CE39D7E429941ABE009F4202 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7E329941ABE009F4202 /* Router.swift */; };
 		CE4FC547298D3FF0004F281C /* SingerTracksViewControllerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC546298D3FF0004F281C /* SingerTracksViewControllerConfigurator.swift */; };
 		CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */; };
 		CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */; };
@@ -122,6 +123,7 @@
 		CE39D7D22993C85F009F4202 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE39D7D62993C90E009F4202 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CE39D7D72993C90E009F4202 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE39D7E329941ABE009F4202 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CE4FC546298D3FF0004F281C /* SingerTracksViewControllerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewControllerConfigurator.swift; sourceTree = "<group>"; };
 		CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorage.swift; sourceTree = "<group>"; };
 		CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStoragable.swift; sourceTree = "<group>"; };
@@ -484,11 +486,12 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
-		CE39D7D82993DC17009F4202 /* Blank */ = {
+		CE39D7E229941AB3009F4202 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				CE39D7E329941ABE009F4202 /* Router.swift */,
 			);
-			path = Blank;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		CE4FC544298D1580004F281C /* Entities */ = {
@@ -518,7 +521,7 @@
 		CE4FC55229911651004F281C /* Navigations */ = {
 			isa = PBXGroup;
 			children = (
-				CE39D7D82993DC17009F4202 /* Blank */,
+				CE39D7E229941AB3009F4202 /* Router */,
 				CE4FC55329911681004F281C /* Coordinator.swift */,
 				CE4FC55529911745004F281C /* AppCoordinator.swift */,
 				CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */,
@@ -731,6 +734,7 @@
 				CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */,
 				CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */,
 				CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */,
+				CE39D7E429941ABE009F4202 /* Router.swift in Sources */,
 				CE266D4C29814FB100D6E038 /* StorageSingerTracksUseCaseInterface.swift in Sources */,
 				CE266D3D29812E0500D6E038 /* DataModel.swift in Sources */,
 				CE266D1D298042E100D6E038 /* SingerTrackViewEntity.swift in Sources */,

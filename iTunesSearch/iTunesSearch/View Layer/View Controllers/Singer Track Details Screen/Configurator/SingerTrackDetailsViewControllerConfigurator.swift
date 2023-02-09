@@ -8,9 +8,9 @@
 import Foundation
 
 class SingerTrackDetailsViewControllerConfigurator {
-    class func configure(coordinator: SingerTrackDetailsCoordinator) -> SingerTrackDetailsViewController {
+    class func configure(delegate: SingerTrackDetailsViewControllerDelegate) -> SingerTrackDetailsViewController {
         let viewController = SingerTrackDetailsViewController()
-        viewController.coordinator = coordinator
+        viewController.navigationDelegate = delegate
         return viewController
     }
 }

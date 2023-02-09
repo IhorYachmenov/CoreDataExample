@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol SingerTrackDetailsViewControllerDelegate: AnyObject {
+}
+
 class SingerTrackDetailsViewController: UIViewController {
     /// Navigation
-    var coordinator: SingerTrackDetailsCoordinator!
+    var navigationDelegate: SingerTrackDetailsViewControllerDelegate?
+    
+    /// Properties
+    var trackId: Int?
     
     /// UI Properties
     private let leadingAndTrailingConstant: CGFloat = 75

@@ -7,11 +7,8 @@
 
 import UIKit
 
-protocol Coordinator : AnyObject {
-    var parentCoordinator: Coordinator? { get set }
-    var children: [Coordinator] { get set }
-    var navigationController : UINavigationController { get set }
-    
-    func start()
+protocol Coordinator: AnyObject {
+    var navigationController : UINavigationController { get }
+    func start(id: Int?)
 }
 

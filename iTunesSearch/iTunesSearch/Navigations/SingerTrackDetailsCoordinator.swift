@@ -8,16 +8,19 @@
 import UIKit
 
 class SingerTrackDetailsCoordinator: Coordinator {
-    weak var parentCoordinator: Coordinator?
-    var children: [Coordinator] = []
     var navigationController: UINavigationController
     
     init(navigationController : UINavigationController) {
         self.navigationController = navigationController
     }
     
-    func start() {
-        let vc = SingerTrackDetailsViewControllerConfigurator.configure(coordinator: self)
+    func start(id: Int?) {
+        let vc = SingerTrackDetailsViewControllerConfigurator.configure(delegate: self)
+        vc.trackId = id
         navigationController.pushViewController(vc, animated: true)
     }
+}
+
+extension SingerTrackDetailsCoordinator: SingerTrackDetailsViewControllerDelegate {
+    
 }
