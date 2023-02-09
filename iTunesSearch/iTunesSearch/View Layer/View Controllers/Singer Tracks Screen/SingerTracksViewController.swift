@@ -9,9 +9,6 @@ import UIKit
 
 #warning("Coordinator protocol")
 
-#warning("Mirror")
-#warning("Core data mapping")
-
 /// **In Progress
 #warning("Detail screen with more data, observe data, navigation")
 // Level N

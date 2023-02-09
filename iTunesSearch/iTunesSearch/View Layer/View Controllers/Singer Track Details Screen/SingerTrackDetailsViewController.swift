@@ -119,11 +119,14 @@ class SingerTrackDetailsViewController: UIViewController {
         return view
     }()
     
-    private lazy var backgroundOfProgressView: UIView = {
-        let view = UIView()
+    private let progress = Progress(totalUnitCount: 100)
+    
+    private lazy var progressView: UIProgressView = {
+        let view = UIProgressView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .black
-        view.layer.cornerRadius = 4
+        view.progressTintColor = .red
+        view.layer.cornerRadius = 3
         return view
     }()
     
@@ -170,11 +173,11 @@ class SingerTrackDetailsViewController: UIViewController {
         
         view.addAction(UIAction(handler: { [weak self] _ in
             print("Play")
+            self?.animateProgressView()
         }), for: .touchUpInside)
         
         return view
     }()
-    
     
     
     override func viewDidLoad() {
@@ -190,7 +193,7 @@ class SingerTrackDetailsViewController: UIViewController {
         view.addSubview(trackName)
         view.addSubview(singerName)
         view.addSubview(stackView)
-        view.addSubview(backgroundOfProgressView)
+        view.addSubview(progressView)
         view.addSubview(currentTimeOfTrack)
         view.addSubview(endTimeOfTrack)
         view.addSubview(playDemoButton)
@@ -220,20 +223,32 @@ class SingerTrackDetailsViewController: UIViewController {
         stackView.addArrangedSubview(genre)
         stackView.addArrangedSubview(country)
         
-        backgroundOfProgressView.heightAnchor.constraint(equalToConstant: 8).isActive = true
-        backgroundOfProgressView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
-        backgroundOfProgressView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
-        backgroundOfProgressView.bottomAnchor.constraint(equalTo: playDemoButton.topAnchor, constant: -50).isActive = true
+        progressView.heightAnchor.constraint(equalToConstant: 6).isActive = true
+        progressView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
+        progressView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
+        progressView.bottomAnchor.constraint(equalTo: playDemoButton.topAnchor, constant: -50).isActive = true
+
+        currentTimeOfTrack.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 5).isActive = true
+        currentTimeOfTrack.leadingAnchor.constraint(equalTo: progressView.leadingAnchor, constant: 0).isActive = true
         
-        currentTimeOfTrack.topAnchor.constraint(equalTo: backgroundOfProgressView.bottomAnchor, constant: 5).isActive = true
-        currentTimeOfTrack.leadingAnchor.constraint(equalTo: backgroundOfProgressView.leadingAnchor, constant: 0).isActive = true
-        
-        endTimeOfTrack.topAnchor.constraint(equalTo: backgroundOfProgressView.bottomAnchor, constant: 5).isActive = true
-        endTimeOfTrack.trailingAnchor.constraint(equalTo: backgroundOfProgressView.trailingAnchor, constant: 0).isActive = true
+        endTimeOfTrack.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 5).isActive = true
+        endTimeOfTrack.trailingAnchor.constraint(equalTo: progressView.trailingAnchor, constant: 0).isActive = true
         
         playDemoButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50).isActive = true
         playDemoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-        
+    }
+    
+    func animateProgressView() {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            guard self.progress.isFinished == false else {
+                timer.invalidate()
+                return
+            }
+            
+            self.progress.completedUnitCount += 1
+            
+            let progressFloat = Float(self.progress.fractionCompleted)
+            self.progressView.setProgress(progressFloat, animated: true)
+        }
     }
 }
