@@ -239,16 +239,16 @@ class SingerTrackDetailsViewController: UIViewController {
     }
     
     func animateProgressView() {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            guard self.progress.isFinished == false else {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
+            guard self?.progress.isFinished == false else {
                 timer.invalidate()
                 return
             }
             
-            self.progress.completedUnitCount += 1
+            self?.progress.completedUnitCount += 1
             
-            let progressFloat = Float(self.progress.fractionCompleted)
-            self.progressView.setProgress(progressFloat, animated: true)
+            let progressFloat = Float(self?.progress.fractionCompleted ?? 0)
+            self?.progressView.setProgress(progressFloat, animated: true)
         }
     }
 }
