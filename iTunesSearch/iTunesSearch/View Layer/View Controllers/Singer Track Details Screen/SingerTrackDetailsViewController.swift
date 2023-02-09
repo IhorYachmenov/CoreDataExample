@@ -18,7 +18,8 @@ class SingerTrackDetailsViewController: UIViewController {
     var trackId: Int?
     
     /// UI Properties
-    private let leadingAndTrailingConstant: CGFloat = 75
+    private var musicPaused = false
+    private let leadingAndTrailingConstant: CGFloat = 110
     private lazy var trackImg: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -174,6 +175,7 @@ class SingerTrackDetailsViewController: UIViewController {
         view.addAction(UIAction(handler: { [weak self] _ in
             print("Play")
             self?.animateProgressView()
+            self?.animateImage()
         }), for: .touchUpInside)
         
         return view
@@ -199,12 +201,12 @@ class SingerTrackDetailsViewController: UIViewController {
         view.addSubview(playDemoButton)
         
         
-        trackImg.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+        trackImg.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
         trackImg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingAndTrailingConstant).isActive = true
         trackImg.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -leadingAndTrailingConstant).isActive = true
         trackImg.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - (leadingAndTrailingConstant * 2)).isActive = true
         
-        trackName.topAnchor.constraint(equalTo: trackImg.bottomAnchor, constant: 40).isActive = true
+        trackName.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: UIScreen.main.bounds.width - (75 * 2) + 60).isActive = true
         trackName.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
         trackName.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
         
@@ -249,6 +251,13 @@ class SingerTrackDetailsViewController: UIViewController {
             
             let progressFloat = Float(self?.progress.fractionCompleted ?? 0)
             self?.progressView.setProgress(progressFloat, animated: true)
+        }
+    }
+    
+    func animateImage() {
+        musicPaused = !musicPaused
+        UIView.animate(withDuration: 0.3, delay: 0) {
+            self.trackImg.transform = (self.musicPaused == false) ? .identity : CGAffineTransform(scaleX: 1.5, y: 1.5)
         }
     }
 }
