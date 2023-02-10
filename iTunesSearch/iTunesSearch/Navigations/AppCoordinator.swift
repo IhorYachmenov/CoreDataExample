@@ -8,7 +8,7 @@
 import UIKit
 
 class AppCoordinator: Coordinator {
-    var navigationController: UINavigationController
+    weak var navigationController: UINavigationController?
     
     init(navigationController : UINavigationController) {
         self.navigationController = navigationController
@@ -19,7 +19,7 @@ class AppCoordinator: Coordinator {
     }
     
     func showSingerTracksListScreen() {
-        let singerTracksCoordinator = SingerTracksCoordinator.init(navigationController: navigationController)
+        let singerTracksCoordinator = SingerTracksCoordinator(navigationController: navigationController)
         singerTracksCoordinator.start(id: nil)
     }
 }

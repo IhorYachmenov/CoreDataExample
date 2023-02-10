@@ -925,8 +925,8 @@
             filePath = "iTunesSearch/Navigations/SingerTracksCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "userDidPressTrackCell(id:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -944,6 +944,22 @@
             startingLineNumber = "117"
             endingLineNumber = "117"
             landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E33E3089-E25B-4FDF-BCF0-F9412675E88B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iTunesSearch/Navigations/SingerTracksCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "userDidPressTrackCell(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

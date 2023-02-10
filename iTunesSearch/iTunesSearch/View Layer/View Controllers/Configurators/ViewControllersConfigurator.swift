@@ -1,14 +1,15 @@
 //
-//  SingerTracksViewControllerConfigurator.swift
+//  Configurator.swift
 //  iTunesSearch
 //
-//  Created by user on 03.02.2023.
+//  Created by user on 10.02.2023.
 //
 
 import Foundation
 
-class SingerTracksViewControllerConfigurator {
-    class func configure(delegate: SingerTracksDelegate) -> SingerTracksViewController {
+final class ViewControllersConfigurator {
+    
+    class func configureSingerTracks(delegate: SingerTracksDelegate) -> SingerTracksViewController {
         let repository = PersistentStorageRepository()
         
         let search = DownloadSingerTrackUseCase()
@@ -21,6 +22,12 @@ class SingerTracksViewControllerConfigurator {
         viewController.viewModel = viewModel
         viewController.navigationDelegate = delegate
         
+        return viewController
+    }
+    
+    class func configureSingerTrackDetails(delegate: SingerTrackDetailsViewControllerDelegate) -> SingerTrackDetailsViewController {
+        let viewController = SingerTrackDetailsViewController()
+        viewController.navigationDelegate = delegate
         return viewController
     }
 }

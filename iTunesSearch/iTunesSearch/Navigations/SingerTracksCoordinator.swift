@@ -6,21 +6,23 @@
 //
 
 import UIKit
+#warning("Naming delegate")
+#warning("Testing navigation")
 
 protocol SingerTracksDelegate: AnyObject {
     func userDidPressTrackCell(id: Int)
 }
 
 class SingerTracksCoordinator: Coordinator {
-    var navigationController: UINavigationController
+    weak var navigationController: UINavigationController?
 
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController?) {
         self.navigationController = navigationController
     }
     
     func start(id: Int?) {
-        let vc = SingerTracksViewControllerConfigurator.configure(delegate: self)
-        navigationController.pushViewController(vc, animated: true)
+        let vc = ViewControllersConfigurator.configureSingerTracks(delegate: self)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
