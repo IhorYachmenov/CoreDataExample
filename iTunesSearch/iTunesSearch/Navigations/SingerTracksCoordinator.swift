@@ -17,8 +17,8 @@ class SingerTracksCoordinator: Coordinator {
     }
     
     func start() {
-        let singerTracksViewController = ViewControllers.configureSingerTracks(delegate: self)
-        router.push(singerTracksViewController, animated: true)
+        let singerTracks = ViewControllers.configureSingerTracks(delegate: self)
+        router.push(singerTracks, animated: true)
     }
     
     func stop() {
@@ -32,8 +32,9 @@ class SingerTracksCoordinator: Coordinator {
         coordinate(to: detailCoordinator)
         
         detailCoordinator.onDetailCoordinatorFinished = { [weak self] in
-            guard let index = self?.children.firstIndex(where: { $0 === detailCoordinator }) else { return }
-            self?.children.remove(at: index)
+            guard let self = self else { return }
+            guard let index = self.children.firstIndex(where: { $0 === detailCoordinator }) else { return }
+            self.children.remove(at: index)
         }
     }
 }
@@ -44,3 +45,17 @@ extension SingerTracksCoordinator: SingerTracksDelegate {
         showDetailCoordinator(id: didSelectTrackWithId)
     }
 }
+
+//class SingerTracksDelegateImpl: SingerTracksDelegate {
+//
+//    let coordinator: SingerTracksCoordinator
+//
+//    init(coordinator: SingerTracksCoordinator) {
+//        self.coordinator = coordinator
+//    }
+//
+//    func coordinator(didSelectTrackWithId: Int) {
+//        coordinator.showDetailCoordinator(id: id)
+//    }
+//
+//}

@@ -19,8 +19,8 @@ class SingerTrackDetailsCoordinator: Coordinator {
     }
     
     func start() {
-        let detailVC = ViewControllers.configureSingerTrackDetails(delegate: self)
-        router.push(detailVC, animated: true)
+        let singerTrackDetails = ViewControllers.configureSingerTrackDetails(delegate: self)
+        router.push(singerTrackDetails, animated: true)
     }
     
     func stop() {

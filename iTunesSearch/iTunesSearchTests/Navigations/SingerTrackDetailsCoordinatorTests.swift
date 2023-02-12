@@ -8,36 +8,45 @@
 import XCTest
 @testable import iTunesSearch
 
-final class iTunesSearchTests: XCTestCase {
-
-    private var appCoordinator: AppCoordinator!
-    private var navigatioContoller: UINavigationController!
-    private var singerTracksCoordinator: SingerTracksCoordinator!
-    private var singerTrackDetails: SingerTrackDetailsCoordinator!
+class SingerTrackDetailsCoordinatorTests: XCTestCase {
+    
+    var sut: SingerTrackDetailsCoordinator!
+    var router: RouterMock!
     
     override func setUp() {
         super.setUp()
-        navigatioContoller = UINavigationController.init()
-        appCoordinator = AppCoordinator(navigationController: navigatioContoller)
-        singerTracksCoordinator = SingerTracksCoordinator(navigationController: appCoordinator.navigationController)
-        singerTrackDetails = SingerTrackDetailsCoordinator(navigationController: singerTracksCoordinator.navigationController)
-
-
+        
+        router = RouterMock()
+        sut = SingerTrackDetailsCoordinator(router: router, id: 1)
     }
     
     override func tearDown() {
         super.tearDown()
         
-        navigatioContoller = nil
-        appCoordinator = nil
+        router = nil
+        sut = nil
     }
     
-    func testSingerTrackDetailsViewController_PresentViewController() {
-        appCoordinator.start(id: nil)
-        singerTracksCoordinator.start(id: nil)
-        singerTrackDetails.start(id: nil)
-        
-        XCTAssertEqual(singerTrackDetails.children.count, 3)
-        
+    func testStart() {
+        sut.start()
+        XCTAssertTrue(router.pushCalled)
+        XCTAssertTrue(router.pushViewController is SingerTrackDetailsViewController)
     }
+    
+    func testStop() {
+        sut.stop()
+        XCTAssertTrue(router.dismissCalled)
+    }
+    
+    func testDismissCoordinator() {
+        var coordinatorFinished = false
+        sut.onDetailCoordinatorFinished = {
+            coordinatorFinished = true
+        }
+        
+        sut.start()
+        sut.dismissCoordinator()
+        XCTAssertTrue(coordinatorFinished)
+    }
+    
 }
