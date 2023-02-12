@@ -14,6 +14,7 @@ protocol SingerTracksDelegate: AnyObject {
 }
 
 class SingerTracksCoordinator: Coordinator {
+    var children: [Coordinator] = []
     weak var navigationController: UINavigationController?
 
     init(navigationController: UINavigationController?) {

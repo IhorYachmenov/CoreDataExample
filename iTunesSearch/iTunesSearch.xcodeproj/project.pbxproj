@@ -46,7 +46,6 @@
 		CE39D7CD2993C72A009F4202 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7CC2993C72A009F4202 /* String.swift */; };
 		CE39D7D12993C85F009F4202 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE39D7D32993C85F009F4202 /* Localizable.strings */; };
 		CE39D7E429941ABE009F4202 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7E329941ABE009F4202 /* Router.swift */; };
-		CE39D7E629968218009F4202 /* NavigationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7E529968218009F4202 /* NavigationTest.swift */; };
 		CE39D7E929968358009F4202 /* ViewControllersConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7E829968358009F4202 /* ViewControllersConfigurator.swift */; };
 		CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */; };
 		CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */; };
@@ -124,7 +123,6 @@
 		CE39D7D62993C90E009F4202 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CE39D7D72993C90E009F4202 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE39D7E329941ABE009F4202 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		CE39D7E529968218009F4202 /* NavigationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTest.swift; sourceTree = "<group>"; };
 		CE39D7E829968358009F4202 /* ViewControllersConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersConfigurator.swift; sourceTree = "<group>"; };
 		CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorage.swift; sourceTree = "<group>"; };
 		CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStoragable.swift; sourceTree = "<group>"; };
@@ -215,7 +213,6 @@
 			children = (
 				CE266CE729802E6400D6E038 /* iTunesSearchUITests.swift */,
 				CE266CE929802E6400D6E038 /* iTunesSearchUITestsLaunchTests.swift */,
-				CE39D7E529968218009F4202 /* NavigationTest.swift */,
 			);
 			path = iTunesSearchUITests;
 			sourceTree = "<group>";
@@ -771,7 +768,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE266CEA29802E6400D6E038 /* iTunesSearchUITestsLaunchTests.swift in Sources */,
-				CE39D7E629968218009F4202 /* NavigationTest.swift in Sources */,
 				CE266CE829802E6400D6E038 /* iTunesSearchUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -911,6 +907,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

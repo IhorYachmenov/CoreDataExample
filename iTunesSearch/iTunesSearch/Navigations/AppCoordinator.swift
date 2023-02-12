@@ -8,6 +8,7 @@
 import UIKit
 
 class AppCoordinator: Coordinator {
+    var children: [Coordinator] = []
     weak var navigationController: UINavigationController?
     
     init(navigationController : UINavigationController) {

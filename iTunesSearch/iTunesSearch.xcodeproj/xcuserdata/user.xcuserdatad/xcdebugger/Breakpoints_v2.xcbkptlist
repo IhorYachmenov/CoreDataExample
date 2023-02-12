@@ -909,8 +909,8 @@
             filePath = "iTunesSearch/Navigations/SingerTrackDetailsCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "start(id:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -925,8 +925,8 @@
             filePath = "iTunesSearch/Navigations/SingerTracksCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "userDidPressTrackCell(id:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -957,8 +957,8 @@
             filePath = "iTunesSearch/Navigations/SingerTracksCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "userDidPressTrackCell(id:)"
             landmarkType = "7">
          </BreakpointContent>
