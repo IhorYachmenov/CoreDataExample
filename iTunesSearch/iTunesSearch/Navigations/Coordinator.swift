@@ -7,18 +7,6 @@
 
 import UIKit
 
-//protocol Coordinator: AnyObject {
-//    var children: [Coordinator] { get set }
-//    var navigationController : UINavigationController? { get }
-//    func start(id: Int?)
-//}
-//
-//extension Coordinator {
-//    func start(id: Int?) {
-//        children.append(self)
-//    }
-//}
-
 protocol Coordinator: AnyObject {
     var children: [Coordinator] { get set }
     var router: Router { get }
@@ -28,18 +16,16 @@ protocol Coordinator: AnyObject {
     func coordinate(to coordinator: Coordinator)
 }
 
-protocol Router: AnyObject {
-    var navigationController: UINavigationController { get }
-    
-    func present(_ viewController: UIViewController, animated: Bool)
-    func dismiss(animated: Bool)
-    func push(_ viewController: UIViewController, animated: Bool)
-    func pop(animated: Bool)
-}
-
 extension Coordinator {
     func coordinate(to coordinator: Coordinator) {
         children.append(coordinator)
         coordinator.start()
     }
+    
+    func removeChild(_ coordinator: Coordinator) {
+        children.removeAll { $0 === coordinator }
+    }
 }
+
+
+

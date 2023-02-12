@@ -9,19 +9,30 @@ import UIKit
 
 class SingerTrackDetailsCoordinator: Coordinator {
     var children: [Coordinator] = []
-    weak var navigationController: UINavigationController?
+    let router: Router
+    var id: Int
+    var onDetailCoordinatorFinished: (() -> Void)?
     
-    init(navigationController : UINavigationController?) {
-        self.navigationController = navigationController
+    init(router: Router, id: Int) {
+        self.router = router
+        self.id = id
     }
     
-    func start(id: Int?) {
-        let vc = ViewControllersConfigurator.configureSingerTrackDetails(delegate: self)
-        vc.trackId = id
-        navigationController?.pushViewController(vc, animated: true)
+    func start() {
+        let detailVC = ViewControllers.configureSingerTrackDetails(delegate: self)
+        router.push(detailVC, animated: true)
+    }
+    
+    func stop() {
+        router.dismiss(animated: true) {
+            self.removeChild(self)
+            self.onDetailCoordinatorFinished?()
+        }
     }
 }
 
-extension SingerTrackDetailsCoordinator: SingerTrackDetailsViewControllerDelegate {
-    
+extension SingerTrackDetailsCoordinator: SingerTrackDetailsDelegate {
+    func dismissCoordinator() {
+        stop()
+    }
 }

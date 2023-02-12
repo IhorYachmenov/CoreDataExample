@@ -7,12 +7,13 @@
 
 import UIKit
 
-protocol SingerTrackDetailsViewControllerDelegate: AnyObject {
+protocol SingerTrackDetailsDelegate: AnyObject {
+    func dismissCoordinator()
 }
 
 class SingerTrackDetailsViewController: UIViewController {
     /// Navigation
-    var navigationDelegate: SingerTrackDetailsViewControllerDelegate?
+    weak var coodinatorDelegate: SingerTrackDetailsDelegate?
     
     /// Properties
     var trackId: Int?
@@ -65,7 +66,7 @@ class SingerTrackDetailsViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textColor = .black
         view.textAlignment = .left
-//        view.font = .boldSystemFont(ofSize: 10)
+        //        view.font = .boldSystemFont(ofSize: 10)
         view.font.withSize(10)
         view.text = Constants.SingerTrackDetailsScreen.collectionPrice
         return view
@@ -76,7 +77,7 @@ class SingerTrackDetailsViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textColor = .black
         view.textAlignment = .left
-//        view.font = .boldSystemFont(ofSize: 10)
+        //        view.font = .boldSystemFont(ofSize: 10)
         view.font.withSize(10)
         view.text = Constants.SingerTrackDetailsScreen.trackPrice
         return view
@@ -188,6 +189,13 @@ class SingerTrackDetailsViewController: UIViewController {
         initUIComponents()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isMovingFromParent {
+            coodinatorDelegate?.dismissCoordinator()
+        }
+    }
+    
     func initUIComponents() {
         view.backgroundColor = .white
         
@@ -229,7 +237,7 @@ class SingerTrackDetailsViewController: UIViewController {
         progressView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
         progressView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
         progressView.bottomAnchor.constraint(equalTo: playDemoButton.topAnchor, constant: -50).isActive = true
-
+        
         currentTimeOfTrack.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 5).isActive = true
         currentTimeOfTrack.leadingAnchor.constraint(equalTo: progressView.leadingAnchor, constant: 0).isActive = true
         

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ViewControllersConfigurator {
+final class ViewControllers {
     
     class func configureSingerTracks(delegate: SingerTracksDelegate) -> SingerTracksViewController {
         let repository = PersistentStorageRepository()
@@ -20,14 +20,14 @@ final class ViewControllersConfigurator {
         
         let viewController = SingerTracksViewController()
         viewController.viewModel = viewModel
-        viewController.navigationDelegate = delegate
+        viewController.coordinatorDelegate = delegate
         
         return viewController
     }
     
-    class func configureSingerTrackDetails(delegate: SingerTrackDetailsViewControllerDelegate) -> SingerTrackDetailsViewController {
+    class func configureSingerTrackDetails(delegate: SingerTrackDetailsDelegate) -> SingerTrackDetailsViewController {
         let viewController = SingerTrackDetailsViewController()
-        viewController.navigationDelegate = delegate
+        viewController.coodinatorDelegate = delegate
         return viewController
     }
 }

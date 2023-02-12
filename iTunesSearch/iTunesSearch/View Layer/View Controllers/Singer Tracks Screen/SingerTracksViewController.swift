@@ -7,16 +7,16 @@
 
 import UIKit
 
-#warning("Coordinator protocol")
-
 /// **In Progress
 #warning("Detail screen with more data, observe data, navigation")
-// Level N
-#warning("Add check dublication")
+
+protocol SingerTracksDelegate: AnyObject {
+    func coordinator(didSelectTrackWithId: Int)
+}
 
 class SingerTracksViewController: UIViewController {
     /// Navigation
-    var navigationDelegate: SingerTracksDelegate!
+    weak var coordinatorDelegate: SingerTracksDelegate!
     
     /// Data Properties
     private var data: Array<PresentationModel.SingerTrack> = Array() {
@@ -114,7 +114,7 @@ class SingerTracksViewController: UIViewController {
 // MARK: Data Source
 extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationDelegate.userDidPressTrackCell(id: indexPath.row)
+        coordinatorDelegate.coordinator(didSelectTrackWithId: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -125,9 +125,7 @@ extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: SingerTrackListCell.identifier, for: indexPath)
         
         let data = data[indexPath.row]
-        
         let configurator = SingerTrackListConfigurator(model: data)
-        
         cell.contentConfiguration = configurator
         
         return cell

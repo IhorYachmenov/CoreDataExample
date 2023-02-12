@@ -9,20 +9,29 @@ import UIKit
 
 class AppCoordinator: Coordinator {
     var children: [Coordinator] = []
-    weak var navigationController: UINavigationController?
+    private let window: UIWindow
+    let router: Router
     
-    init(navigationController : UINavigationController) {
-        self.navigationController = navigationController
+    init(window: UIWindow, router: Router) {
+        self.window = window
+        self.router = router
     }
     
-    func start(id: Int?) {
-        showSingerTracksListScreen()
+    func start() {
+        let singerTracksCoordinator = SingerTracksCoordinator(router: router)
+        coordinate(to: singerTracksCoordinator)
+        
+        setupWindow()
     }
     
-    func showSingerTracksListScreen() {
-        let singerTracksCoordinator = SingerTracksCoordinator(navigationController: navigationController)
-        singerTracksCoordinator.start(id: nil)
+    func stop() {
+        // -
     }
 }
 
-
+extension AppCoordinator {
+    func setupWindow() {
+        window.rootViewController = router.navigationController
+        window.makeKeyAndVisible()
+    }
+}
