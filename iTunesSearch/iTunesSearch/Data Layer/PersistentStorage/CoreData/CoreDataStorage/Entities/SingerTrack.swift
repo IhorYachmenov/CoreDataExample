@@ -16,12 +16,30 @@ extension SingerTrack {
         singerName = query.singerName
         trackPrice = query.trackPrice
         country = query.country
+        collectionName = query.collectionName
+        collectionPrice = query.collectionPrice
+        releaseDate = query.releaseDate
+        genre = query.genre
+        demoURL = query.demoURL
+        trackImgURL = query.trackImgURL
+        trackID = query.trackID
     }
-    
 }
 
 extension SingerTrack {
     func toDataEntity() -> DataModel.SingerTrack {
-        return .init(trackName: trackName.isNil(), singerName: singerName.isNil(), trackPrice: trackPrice.isNil(), country: country.isNil())
+        return .init(
+            trackName: trackName.isNil(),
+            singerName: singerName.isNil(),
+            trackPrice: trackPrice.isNil(),
+            country: country.isNil(),
+            collectionName: collectionName.isNil(),
+            collectionPrice: collectionPrice.isNil(),
+            releaseDate: releaseDate.isNil(),
+            genre: genre.isNil(),
+            demoURL: demoURL.isNil(),
+            trackImgURL: trackImgURL.isNil(),
+            trackID: trackID.isNil()
+        )
     }
 }

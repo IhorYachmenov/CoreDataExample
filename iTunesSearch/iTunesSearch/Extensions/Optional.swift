@@ -35,5 +35,22 @@ extension Optional where Wrapped == Float {
     }
 }
 
+extension Optional where Wrapped == Int {
+    func isNil() -> Int {
+        guard self != nil else {
+            return 0
+        }
+        
+        return self!
+    }
+    
+    func isNilToString() -> String {
+        guard self != nil else {
+            return "0"
+        }
+        
+        return String(self!)
+    }
+}
 
 

@@ -13,6 +13,13 @@ enum DataModel {
         let singerName: String
         let trackPrice: String
         let country: String
+        let collectionName: String
+        let collectionPrice: String
+        let releaseDate: String
+        let genre: String
+        let demoURL: String
+        let trackImgURL: String
+        let trackID: String
     }
 }
 
@@ -24,7 +31,14 @@ extension DataModel.SingerTrack {
 
 extension Array where Element == DataModel.SingerTrack {
     func toViewEntity() -> [PresentationModel.SingerTrack] {
-        return self.map({ PresentationModel.SingerTrack(trackName: $0.trackName, singerName: $0.singerName, trackPrice: $0.trackPrice, country: $0.country) })
+        return self.map({
+            PresentationModel.SingerTrack(
+                trackName: $0.trackName,
+                singerName: $0.singerName,
+                trackPrice: $0.trackPrice,
+                country: $0.country
+            )
+        })
     }
 }
 
