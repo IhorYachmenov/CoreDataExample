@@ -989,8 +989,8 @@
             filePath = "iTunesSearchTests/Navigations/CoordinatorsTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "testAppCordinators_openTrackDetailScreen()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1005,8 +1005,8 @@
             filePath = "iTunesSearch/Navigations/SingerTrackDetailsCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "dismissCoordinator()"
             landmarkType = "7">
          </BreakpointContent>

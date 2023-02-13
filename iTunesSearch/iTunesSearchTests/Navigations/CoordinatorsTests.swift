@@ -15,7 +15,6 @@ class CoordinatorsTests: XCTestCase {
     var router: AppRouter!
     var appCoordinator: AppCoordinator!
     var singerTracksCoordinator: SingerTracksCoordinator!
-    var sinderTrackDetailsCoordinator: SingerTrackDetailsCoordinator!
     
     override func setUp() {
         super.setUp()
@@ -25,7 +24,6 @@ class CoordinatorsTests: XCTestCase {
         router = AppRouter(navigationController: navigationController)
         appCoordinator = AppCoordinator(window: window, router: router)
         singerTracksCoordinator = SingerTracksCoordinator(router: router)
-        sinderTrackDetailsCoordinator = SingerTrackDetailsCoordinator(router: router, id: 1)
     }
     
     override func tearDown() {
@@ -36,7 +34,6 @@ class CoordinatorsTests: XCTestCase {
         router = nil
         appCoordinator = nil
         singerTracksCoordinator = nil
-        sinderTrackDetailsCoordinator = nil
     }
     
     func testAppCordinators_openTrackDetailScreen() {
@@ -57,21 +54,6 @@ class CoordinatorsTests: XCTestCase {
         wait(for: [detailsViewControllerExpectation], timeout: 1.1)
 
         XCTAssert(router.navigationController.viewControllers.count == 2)
-        XCTAssert(router.navigationController.topViewController is SingerTrackDetailsViewController)
-
-//        // Simulate user dismissing the details screen
-//        sinderTrackDetailsCoordinator.dismissCoordinator()
-//
-//        let tracksListExpectation = XCTestExpectation(description: "Wait for tracks list screen to appear")
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//            tracksListExpectation.fulfill()
-//        }
-//
-//        wait(for: [tracksListExpectation], timeout: 1.1)
-//
-//        XCTAssert(router.navigationController.viewControllers.count == 1)
-//        XCTAssert(router.navigationController.topViewController is SingerTrackDetailsViewController)
-//        
+        XCTAssert(router.navigationController.topViewController is SingerTrackDetailsViewController) 
     }
 }

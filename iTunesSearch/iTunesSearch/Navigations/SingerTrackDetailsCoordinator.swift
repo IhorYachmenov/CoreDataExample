@@ -32,6 +32,7 @@ class SingerTrackDetailsCoordinator: Coordinator {
     }
 }
 
+// MARK: - Delegate
 extension SingerTrackDetailsCoordinator: SingerTrackDetailsDelegate {
     func dismissCoordinator() {
         stop()
