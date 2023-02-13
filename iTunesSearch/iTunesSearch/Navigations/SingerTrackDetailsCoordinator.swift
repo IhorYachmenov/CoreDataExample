@@ -10,16 +10,16 @@ import UIKit
 class SingerTrackDetailsCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router
-    private var id: String
+    private var trackId: String
     var onDetailCoordinatorFinished: (() -> Void)?
     
-    init(router: Router, id: String) {
+    init(router: Router, trackId: String) {
         self.router = router
-        self.id = id
+        self.trackId = trackId
     }
     
     func start() {
-        let singerTrackDetails = ViewControllers.configureSingerTrackDetails(delegate: self, trackId: id)
+        let singerTrackDetails = ViewControllers.configureSingerTrackDetails(delegate: self, trackId: trackId)
         router.push(singerTrackDetails, animated: true)
     }
     

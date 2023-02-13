@@ -198,7 +198,7 @@ class SingerTrackDetailsViewController: UIViewController {
         
         initUIComponents()
         
-        viewModel.fetchTrackDetailsWith(id: trackId) { result in
+        viewModel.fetchTrackDetails(trackId: trackId) { result in
             switch result {
             case .success(let success):
                 print(success)

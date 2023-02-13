@@ -76,7 +76,11 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
         }
     }
         
-    func fetchDataModel<T>(keyPath: KeyPath<Entity, T>, value: T, completion: @escaping (Result<Entity, StorageError>) -> ()) {
+    func fetchEntity<T>(
+        matching keyPath: KeyPath<Entity, T>,
+        equalTo value: T,
+        completion: @escaping (Result<Entity, StorageError>) -> ()
+    ) {
         coreDataManager.mainQueueManageObjectContext.perform { [weak self] in
             print(value)
             let predicate = NSPredicate(format: "%K == %@", keyPath._kvcKeyPathString!, value as! CVarArg)

@@ -13,5 +13,5 @@ protocol QueryWorkerStoragable {
     associatedtype Entity: NSManagedObject
     var dataPublisher: (([Entity]) -> ())? { get set }
     func saveDataModel(data: DataType, completion: @escaping (Result<DataType, StorageError>) -> ())
-    func fetchDataModel<T>(keyPath: KeyPath<Entity, T>, value: T, completion: @escaping (Result<Entity, StorageError>) -> ())
+    func fetchEntity<T>(matching keyPath: KeyPath<Entity, T>, equalTo value: T, completion: @escaping (Result<Entity, StorageError>) -> ())
 }

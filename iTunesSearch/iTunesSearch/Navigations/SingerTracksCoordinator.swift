@@ -31,7 +31,7 @@ class SingerTracksCoordinator: Coordinator {
     #warning("Unit tests dependency")
     private func showDetailCoordinator(id: String) {
         // let router = ...
-        let detailCoordinator = SingerTrackDetailsCoordinator(router: router, id: id)
+        let detailCoordinator = SingerTrackDetailsCoordinator(router: router, trackId: id)
         coordinate(to: detailCoordinator)
         
         detailCoordinator.onDetailCoordinatorFinished = { [weak self, weak detailCoordinator] in
