@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SingerTrackDetailsUseCaseInterface {
-    func fetchTrackDetailsWith(id: Int, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ())
+    func fetchTrackDetailsWith(id: String, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ())
 }

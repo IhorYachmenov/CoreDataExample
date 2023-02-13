@@ -19,7 +19,7 @@ enum DataModel {
         let genre: String
         let demoURL: String
         let trackImgURL: String
-        let trackID: String
+        let trackId: String
     }
 }
 
@@ -36,7 +36,8 @@ extension Array where Element == DataModel.SingerTrack {
                 trackName: $0.trackName,
                 singerName: $0.singerName,
                 trackPrice: $0.trackPrice,
-                country: $0.country
+                country: $0.country,
+                trackId: $0.trackId
             )
         })
     }

@@ -15,7 +15,7 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
         storageUseCase = useCase
     }
     
-    func fetchTrackDetailsWith(id: Int, completion: @escaping (Result<PresentationModel.SingerTrackDetail, StorageError>) -> ()) {
+    func fetchTrackDetailsWith(id: String, completion: @escaping (Result<PresentationModel.SingerTrackDetail, StorageError>) -> ()) {
         storageUseCase.fetchTrackDetailsWith(id: id) { result in
             switch result {
             case .success(let success):

@@ -63,7 +63,7 @@ extension NetworkModel.SingerTracks {
                 genre: $0.primaryGenreName.isNil(),
                 demoURL: $0.previewUrl.isNil(),
                 trackImgURL: $0.artworkUrl100.isNil(),
-                trackID: $0.trackId.isNilToString()
+                trackId: $0.trackId.isNilToString()
             )
         }
     }

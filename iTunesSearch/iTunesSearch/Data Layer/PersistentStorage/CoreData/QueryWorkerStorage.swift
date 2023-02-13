@@ -59,7 +59,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
             }
             
             let manageObject = NSManagedObject(entity: entityDescription!, insertInto: self?.coreDataManager.privateQueueManageObjectContext)
-            #warning("Need to examine")
+#warning("Need to examine")
             Mapper().mapToEntity(from: data, target: manageObject, completion: {
                 do {
                     try self?.coreDataManager.privateQueueManageObjectContext.save()
@@ -76,11 +76,34 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
         }
     }
     
+    func fetchDataModelWith(id: String, completion: @escaping (Result<Entity, StorageError>) -> ()) {
+        coreDataManager.mainQueueManageObjectContext.perform { [weak self] in
+            print(id)
+            let predicate = NSPredicate(format: "trackId == %@", id)
+            self?.fetchedResultsController.fetchRequest.fetchLimit = 1
+            self?.fetchedResultsController.fetchRequest.predicate = predicate
+            
+            do {
+                try self?.fetchedResultsController.performFetch()
+                print(self?.fetchedResultsController.fetchedObjects?.count)
+                if let obj = self?.fetchedResultsController.fetchedObjects?.first {
+                    completion(.success(obj))
+                } else {
+                    let failure = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Element not Fount"])
+                    completion(.failure(.notFoundError(failure)))
+                }
+            } catch {
+                completion(.failure(.readError(error)))
+            }
+        }
+    }
+    
+    
     // MARK: - NSFetchedResultsControllerDelegate
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         print("NSFRC count -> ", fetchedResultsController.fetchedObjects?.count ?? 0)
-
+        
         dataPublisher?(fetchedResultsController.fetchedObjects ?? [])
     }
 }

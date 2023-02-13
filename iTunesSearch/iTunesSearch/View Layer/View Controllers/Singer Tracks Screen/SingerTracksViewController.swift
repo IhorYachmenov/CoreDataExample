@@ -11,7 +11,7 @@ import UIKit
 #warning("Detail screen with more data, observe data, navigation")
 
 protocol SingerTracksDelegate: AnyObject {
-    func coordinator(didSelectTrackWithId: Int)
+    func coordinator(didSelectTrackWithId: String)
 }
 
 class SingerTracksViewController: UIViewController {
@@ -114,7 +114,7 @@ class SingerTracksViewController: UIViewController {
 // MARK: Data Source
 extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinatorDelegate.coordinator(didSelectTrackWithId: indexPath.row)
+        coordinatorDelegate.coordinator(didSelectTrackWithId: data[indexPath.row].trackId)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

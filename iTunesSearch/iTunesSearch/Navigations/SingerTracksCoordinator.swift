@@ -27,7 +27,7 @@ class SingerTracksCoordinator: Coordinator {
         }
     }
     
-    private func showDetailCoordinator(id: Int) {
+    private func showDetailCoordinator(id: String) {
         let detailCoordinator = SingerTrackDetailsCoordinator(router: router, id: id)
         coordinate(to: detailCoordinator)
         
@@ -42,7 +42,7 @@ class SingerTracksCoordinator: Coordinator {
 
 // MARK: - Delegate
 extension SingerTracksCoordinator: SingerTracksDelegate {
-    func coordinator(didSelectTrackWithId: Int) {
+    func coordinator(didSelectTrackWithId: String) {
         showDetailCoordinator(id: didSelectTrackWithId)
     }
 }

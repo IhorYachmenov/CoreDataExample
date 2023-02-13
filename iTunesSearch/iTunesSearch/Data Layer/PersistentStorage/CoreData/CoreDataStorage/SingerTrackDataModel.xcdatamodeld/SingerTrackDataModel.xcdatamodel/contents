@@ -8,7 +8,7 @@
         <attribute name="genre" optional="YES" attributeType="String"/>
         <attribute name="releaseDate" optional="YES" attributeType="String"/>
         <attribute name="singerName" optional="YES" attributeType="String"/>
-        <attribute name="trackID" optional="YES" attributeType="String"/>
+        <attribute name="trackId" optional="YES" attributeType="String"/>
         <attribute name="trackImgURL" optional="YES" attributeType="String"/>
         <attribute name="trackName" optional="YES" attributeType="String"/>
         <attribute name="trackPrice" optional="YES" attributeType="String"/>

@@ -16,7 +16,7 @@ final class SingerTrackDetailsUseCase {
 }
 
 extension SingerTrackDetailsUseCase: SingerTrackDetailsUseCaseInterface {
-    func fetchTrackDetailsWith(id: Int, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
+    func fetchTrackDetailsWith(id: String, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
         repository.fetchTrackDetailsWith(id: id, completion: completion)
     }
 }

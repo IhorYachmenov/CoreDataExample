@@ -22,7 +22,7 @@ extension SingerTrack {
         genre = query.genre
         demoURL = query.demoURL
         trackImgURL = query.trackImgURL
-        trackID = query.trackID
+        trackId = query.trackId
     }
 }
 
@@ -39,7 +39,7 @@ extension SingerTrack {
             genre: genre.isNil(),
             demoURL: demoURL.isNil(),
             trackImgURL: trackImgURL.isNil(),
-            trackID: trackID.isNil()
+            trackId: trackId.isNil()
         )
     }
 }

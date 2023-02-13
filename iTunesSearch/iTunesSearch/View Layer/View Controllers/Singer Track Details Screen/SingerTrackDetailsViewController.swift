@@ -16,7 +16,7 @@ class SingerTrackDetailsViewController: UIViewController {
     weak var coodinatorDelegate: SingerTrackDetailsDelegate?
     
     /// Properties
-    private var trackId: Int
+    private var trackId: String
     var viewModel: SingerTrackDetailsViewModelInterface!
     
     /// UI Properties
@@ -183,7 +183,7 @@ class SingerTrackDetailsViewController: UIViewController {
         return view
     }()
     
-    init(trackId: Int) {
+    init(trackId: String) {
         self.trackId = trackId
         super.init(nibName: nil, bundle: nil)
         
@@ -195,8 +195,17 @@ class SingerTrackDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(trackId)
+        
         initUIComponents()
+        
+        viewModel.fetchTrackDetailsWith(id: trackId) { result in
+            switch result {
+            case .success(let success):
+                print(success)
+            case .failure(let failure):
+                print(failure)
+            }
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

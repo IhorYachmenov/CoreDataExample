@@ -25,7 +25,7 @@ final class ViewControllers {
         return viewController
     }
     
-    class func configureSingerTrackDetails(delegate: SingerTrackDetailsDelegate, trackId: Int) -> SingerTrackDetailsViewController {
+    class func configureSingerTrackDetails(delegate: SingerTrackDetailsDelegate, trackId: String) -> SingerTrackDetailsViewController {
         let repository = PersistentStorageRepository()
         
         let storageUseCase = SingerTrackDetailsUseCase(storageRepository: repository)

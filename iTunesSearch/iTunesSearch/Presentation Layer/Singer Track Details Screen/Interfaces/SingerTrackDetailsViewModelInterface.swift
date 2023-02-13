@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SingerTrackDetailsViewModelInterface {
-    func fetchTrackDetailsWith(id: Int, completion: @escaping (Result<PresentationModel.SingerTrackDetail, StorageError>) -> ())
+    func fetchTrackDetailsWith(id: String, completion: @escaping (Result<PresentationModel.SingerTrackDetail, StorageError>) -> ())
 }

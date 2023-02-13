@@ -28,8 +28,15 @@ extension PersistentStorageRepository: PersistentStorageRepositoryInterface {
         }
     }
     
-    func fetchTrackDetailsWith(id: Int, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
-        //
+    func fetchTrackDetailsWith(id: String, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
+        singerTracksQueryStorageGeneric.fetchDataModelWith(id: id) { result in
+            switch result {
+            case .success(let success):
+                completion(.success(success.toDataEntity()))
+            case .failure(let failure):
+                completion(.failure(failure))
+            }
+        }
     }
 }
 

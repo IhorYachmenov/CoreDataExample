@@ -10,10 +10,10 @@ import UIKit
 class SingerTrackDetailsCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router
-    private var id: Int
+    private var id: String
     var onDetailCoordinatorFinished: (() -> Void)?
     
-    init(router: Router, id: Int) {
+    init(router: Router, id: String) {
         self.router = router
         self.id = id
     }
