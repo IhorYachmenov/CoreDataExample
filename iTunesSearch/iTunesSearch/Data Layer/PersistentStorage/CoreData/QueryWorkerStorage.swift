@@ -75,11 +75,11 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
             
         }
     }
-    
-    func fetchDataModelWith(id: String, completion: @escaping (Result<Entity, StorageError>) -> ()) {
+        
+    func fetchDataModel<T>(keyPath: KeyPath<Entity, T>, value: T, completion: @escaping (Result<Entity, StorageError>) -> ()) {
         coreDataManager.mainQueueManageObjectContext.perform { [weak self] in
-            print(id)
-            let predicate = NSPredicate(format: "trackId == %@", id)
+            print(value)
+            let predicate = NSPredicate(format: "%K == %@", keyPath._kvcKeyPathString!, value as! CVarArg)
             self?.fetchedResultsController.fetchRequest.fetchLimit = 1
             self?.fetchedResultsController.fetchRequest.predicate = predicate
             
@@ -96,8 +96,8 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
                 completion(.failure(.readError(error)))
             }
         }
+
     }
-    
     
     // MARK: - NSFetchedResultsControllerDelegate
     
