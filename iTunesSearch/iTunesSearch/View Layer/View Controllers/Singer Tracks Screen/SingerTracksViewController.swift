@@ -9,9 +9,14 @@ import UIKit
 
 /// **In Progress
 #warning("Detail screen with more data, observe data, navigation")
-
+#warning("_SingerTracksDelegate")
 protocol SingerTracksDelegate: AnyObject {
     func coordinator(didSelectTrackWithId: String)
+}
+
+protocol _SingerTracksDelegate: AnyObject {
+    associatedtype TrackID
+    func coordinator(_ coordinator: SingerTracksCoordinator, didSelect trackId: TrackID)
 }
 
 class SingerTracksViewController: UIViewController {

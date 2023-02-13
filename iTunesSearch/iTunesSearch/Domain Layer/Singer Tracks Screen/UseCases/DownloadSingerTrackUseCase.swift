@@ -22,8 +22,14 @@ extension DownloadSingerTrackUseCase: DownloadSingerTrackUseCaseInterface {
             if let _ = error {
                 completion(.failure(error!))
             } else {
-                let data = model?.toDataEntity().last
-                completion(.success(data!))
+                
+                let data = model?.results.map { $0.map { DataModel.SingerTrack(networkModel: $0) } }
+                
+                if let dataModel = data?.last {
+                    completion(.success(dataModel))
+                } else {
+                    completion(.failure(ServiceError(httpStatus: 0, message: "Server error element a nil")))
+                }
             }
         }
     }

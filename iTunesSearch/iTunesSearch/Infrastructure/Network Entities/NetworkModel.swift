@@ -48,23 +48,3 @@ enum NetworkModel {
     }
 }
 
-extension NetworkModel.SingerTracks {
-    func toDataEntity() -> [DataModel.SingerTrack] {
-        let data = self.results ?? []
-        return data.map {
-            DataModel.SingerTrack(
-                trackName: $0.trackName.isNil(),
-                singerName: $0.artistName.isNil(),
-                trackPrice: $0.trackPrice.isNilToString(),
-                country: $0.country.isNil(),
-                collectionName: $0.collectionName.isNil(),
-                collectionPrice: $0.collectionPrice.isNilToString(),
-                releaseDate: $0.releaseDate.isNil(),
-                genre: $0.primaryGenreName.isNil(),
-                demoURL: $0.previewUrl.isNil(),
-                trackImgURL: $0.artworkUrl100.isNil(),
-                trackId: $0.trackId.isNilToString()
-            )
-        }
-    }
-}

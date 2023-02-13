@@ -19,7 +19,7 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
         storageUseCase.fetchTrackDetailsWith(id: id) { result in
             switch result {
             case .success(let success):
-                completion(.success(success.toViewEntity()))
+                completion(.success(PresentationModel.SingerTrackDetail(dataModel: success)))
             case .failure(let failure):
                 completion(.failure(failure))
             }

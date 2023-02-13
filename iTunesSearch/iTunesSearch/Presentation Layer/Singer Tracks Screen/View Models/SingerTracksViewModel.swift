@@ -22,7 +22,7 @@ final class SingerTracksViewModel: SingerTracksViewModelInterface {
         
         useCase.subscribeOfData { [weak self] data in
             DispatchQueue.main.async {
-                self?.dataSource?(.success(data.toViewEntity()))
+                self?.dataSource?(.success(data.map { PresentationModel.SingerTrack(dataModel: $0) } ))
             }
         }
     }

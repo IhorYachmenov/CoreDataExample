@@ -26,16 +26,18 @@ class SingerTracksCoordinator: Coordinator {
             self.removeChild(self)
         }
     }
-    
+    #warning("track id naming, naming onDetailCoordinatorFinished, on did")
+    #warning("coordinator -> router dependency")
+    #warning("Unit tests dependency")
     private func showDetailCoordinator(id: String) {
+        // let router = ...
         let detailCoordinator = SingerTrackDetailsCoordinator(router: router, id: id)
         coordinate(to: detailCoordinator)
         
-        detailCoordinator.onDetailCoordinatorFinished = { [weak self] in
+        detailCoordinator.onDetailCoordinatorFinished = { [weak self, weak detailCoordinator] in
             guard let self = self else { return }
             guard let index = self.children.firstIndex(where: { $0 === detailCoordinator }) else { return }
             self.children.remove(at: index)
-            detailCoordinator.onDetailCoordinatorFinished = nil
         }
     }
 }

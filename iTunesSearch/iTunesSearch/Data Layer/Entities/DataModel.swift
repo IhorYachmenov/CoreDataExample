@@ -24,22 +24,33 @@ enum DataModel {
 }
 
 extension DataModel.SingerTrack {
-    func toViewEntity() -> PresentationModel.SingerTrackDetail {
-        return PresentationModel.SingerTrackDetail()
+    init(entity: SingerTrack) {
+        trackName = entity.trackName.isNil()
+        singerName = entity.singerName.isNil()
+        trackPrice = entity.trackPrice.isNil()
+        country = entity.country.isNil()
+        collectionName = entity.collectionName.isNil()
+        collectionPrice = entity.collectionPrice.isNil()
+        releaseDate = entity.releaseDate.isNil()
+        genre = entity.genre.isNil()
+        demoURL = entity.demoURL.isNil()
+        trackImgURL = entity.trackImgURL.isNil()
+        trackId = entity.trackId.isNil()
     }
 }
 
-extension Array where Element == DataModel.SingerTrack {
-    func toViewEntity() -> [PresentationModel.SingerTrack] {
-        return self.map({
-            PresentationModel.SingerTrack(
-                trackName: $0.trackName,
-                singerName: $0.singerName,
-                trackPrice: $0.trackPrice,
-                country: $0.country,
-                trackId: $0.trackId
-            )
-        })
+extension DataModel.SingerTrack {
+    init(networkModel: NetworkModel.SingerTrack) {
+        trackName = networkModel.trackName.isNil()
+        singerName = networkModel.artistName.isNil()
+        trackPrice = networkModel.trackPrice.isNilToString()
+        country = networkModel.country.isNil()
+        collectionName = networkModel.collectionName.isNil()
+        collectionPrice = networkModel.collectionPrice.isNilToString()
+        releaseDate = networkModel.releaseDate.isNil()
+        genre = networkModel.primaryGenreName.isNil()
+        demoURL = networkModel.previewUrl.isNil()
+        trackImgURL = networkModel.artworkUrl100.isNil()
+        trackId = networkModel.trackId.isNilToString()
     }
 }
-

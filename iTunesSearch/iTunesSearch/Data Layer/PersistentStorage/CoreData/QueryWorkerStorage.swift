@@ -59,7 +59,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
             }
             
             let manageObject = NSManagedObject(entity: entityDescription!, insertInto: self?.coreDataManager.privateQueueManageObjectContext)
-#warning("Need to examine")
+            #warning("Need to examine")
             Mapper().mapToEntity(from: data, target: manageObject, completion: {
                 do {
                     try self?.coreDataManager.privateQueueManageObjectContext.save()
@@ -85,7 +85,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
             
             do {
                 try self?.fetchedResultsController.performFetch()
-                print(self?.fetchedResultsController.fetchedObjects?.count)
+            
                 if let obj = self?.fetchedResultsController.fetchedObjects?.first {
                     completion(.success(obj))
                 } else {

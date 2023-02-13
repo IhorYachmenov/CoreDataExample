@@ -909,8 +909,8 @@
             filePath = "iTunesSearch/Navigations/SingerTracksCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "coordinator(didSelectTrackWithId:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -925,8 +925,8 @@
             filePath = "iTunesSearch/View Layer/View Controllers/Singer Tracks Screen/SingerTracksViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -941,8 +941,8 @@
             filePath = "iTunesSearch/Navigations/SingerTracksCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "coordinator(didSelectTrackWithId:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1008,22 +1008,6 @@
             startingLineNumber = "38"
             endingLineNumber = "38"
             landmarkName = "dismissCoordinator()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9A67B576-191C-40F5-B871-802E393CEC5D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iTunesSearch/View Layer/View Controllers/Singer Track Details Screen/SingerTrackDetailsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
-            landmarkName = "viewWillDisappear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

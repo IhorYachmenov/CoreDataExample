@@ -23,7 +23,7 @@ extension PersistentStorageRepository: PersistentStorageRepositoryInterface {
     
     func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {    
         singerTracksQueryStorageGeneric.dataPublisher = { data in
-            let dataModels = data.map { $0.toDataEntity() }
+            let dataModels = data.map { DataModel.SingerTrack(entity: $0) }
             completion(dataModels)
         }
     }
@@ -32,7 +32,7 @@ extension PersistentStorageRepository: PersistentStorageRepositoryInterface {
         singerTracksQueryStorageGeneric.fetchDataModelWith(id: id) { result in
             switch result {
             case .success(let success):
-                completion(.success(success.toDataEntity()))
+                completion(.success(DataModel.SingerTrack(entity: success)))
             case .failure(let failure):
                 completion(.failure(failure))
             }
