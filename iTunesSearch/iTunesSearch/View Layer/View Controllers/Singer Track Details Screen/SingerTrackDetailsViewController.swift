@@ -17,6 +17,7 @@ class SingerTrackDetailsViewController: UIViewController {
     
     /// Properties
     private var trackId: Int
+    var viewModel: SingerTrackDetailsViewModelInterface!
     
     /// UI Properties
     private var musicPaused = false

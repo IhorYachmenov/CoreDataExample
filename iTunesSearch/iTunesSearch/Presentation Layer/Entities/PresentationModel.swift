@@ -14,5 +14,9 @@ enum PresentationModel {
         let trackPrice: String
         let country: String
     }
+    
+    struct SingerTrackDetail {
+        
+    }
 }
 
