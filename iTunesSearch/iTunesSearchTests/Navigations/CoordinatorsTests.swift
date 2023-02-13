@@ -79,17 +79,11 @@ class CoordinatorsTests: XCTestCase {
         XCTAssert(router.navigationController.topViewController is SingerTrackDetailsViewController)
 
         // Simulate user dismissing the details screen
-        singerTracksCoordinator.router.navigationController.popToRootViewController(animated: true)
 
-        let tracksListExpectation = XCTestExpectation(description: "Wait for tracks list screen to appear")
+        let trackDetailsCoordinator = singerTracksCoordinator.children.last as! SingerTrackDetailsCoordinator
+        trackDetailsCoordinator.stop()
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            tracksListExpectation.fulfill()
-        }
-
-        wait(for: [tracksListExpectation], timeout: 1.1)
-
-        XCTAssert(router.navigationController.viewControllers.count == 1)
-        XCTAssert(router.navigationController.topViewController is SingerTracksViewController)
+        XCTAssert(singerTracksCoordinator.children.count == 0)
+        
     }
 }
