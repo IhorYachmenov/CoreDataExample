@@ -25,8 +25,8 @@ final class ViewControllers {
         return viewController
     }
     
-    class func configureSingerTrackDetails(delegate: SingerTrackDetailsDelegate) -> SingerTrackDetailsViewController {
-        let viewController = SingerTrackDetailsViewController()
+    class func configureSingerTrackDetails(delegate: SingerTrackDetailsDelegate, trackId: Int) -> SingerTrackDetailsViewController {
+        let viewController = SingerTrackDetailsViewController(trackId: trackId)
         viewController.coodinatorDelegate = delegate
         return viewController
     }

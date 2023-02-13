@@ -10,7 +10,7 @@ import UIKit
 class SingerTrackDetailsCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router
-    var id: Int
+    private var id: Int
     var onDetailCoordinatorFinished: (() -> Void)?
     
     init(router: Router, id: Int) {
@@ -19,7 +19,7 @@ class SingerTrackDetailsCoordinator: Coordinator {
     }
     
     func start() {
-        let singerTrackDetails = ViewControllers.configureSingerTrackDetails(delegate: self)
+        let singerTrackDetails = ViewControllers.configureSingerTrackDetails(delegate: self, trackId: id)
         router.push(singerTrackDetails, animated: true)
     }
     

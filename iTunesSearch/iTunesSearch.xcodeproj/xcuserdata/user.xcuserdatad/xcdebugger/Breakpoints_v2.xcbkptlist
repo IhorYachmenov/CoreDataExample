@@ -1021,8 +1021,8 @@
             filePath = "iTunesSearch/View Layer/View Controllers/Singer Track Details Screen/SingerTrackDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
             landmarkName = "viewWillDisappear(_:)"
             landmarkType = "7">
          </BreakpointContent>
