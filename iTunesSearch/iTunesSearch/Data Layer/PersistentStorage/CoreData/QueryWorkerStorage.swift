@@ -89,8 +89,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
                 if let obj = self?.fetchedResultsController.fetchedObjects?.first {
                     completion(.success(obj))
                 } else {
-                    let failure = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Element not Fount"])
-                    completion(.failure(.notFoundError(failure)))
+                    completion(.failure(StorageError.notFoundError))
                 }
             } catch {
                 completion(.failure(.readError(error)))

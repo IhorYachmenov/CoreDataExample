@@ -12,7 +12,7 @@ enum StorageError: Error {
     case readError(Error)
     case saveError(Error)
     case deleteError(Error)
-    case notFoundError(Error)
+    case notFoundError
 }
 
 final class CoreDataStorageManager {
