@@ -9,8 +9,8 @@ import UIKit
 
 class AppCoordinator: Coordinator {
     var children: [Coordinator] = []
-    private let window: UIWindow
     let router: Router
+    private let window: UIWindow
     
     init(window: UIWindow, router: Router) {
         self.window = window
@@ -30,7 +30,7 @@ class AppCoordinator: Coordinator {
 }
 
 extension AppCoordinator {
-    func setupWindow() {
+    private func setupWindow() {
         window.rootViewController = router.navigationController
         window.makeKeyAndVisible()
     }
