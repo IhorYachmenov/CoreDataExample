@@ -24,7 +24,8 @@ class SingerTrackDetailsCoordinator: Coordinator {
     }
     
     func stop() {
-        router.dismiss(animated: true) {
+        router.dismiss(animated: true) { [weak self] in
+            guard let self = self else { return }
             self.removeChild(self)
             self.onDetailCoordinatorFinished?()
         }

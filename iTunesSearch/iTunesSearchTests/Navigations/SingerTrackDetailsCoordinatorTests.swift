@@ -9,7 +9,6 @@ import XCTest
 @testable import iTunesSearch
 
 class SingerTrackDetailsCoordinatorTests: XCTestCase {
-    
     var sut: SingerTrackDetailsCoordinator!
     var router: RouterMock!
     
@@ -48,5 +47,4 @@ class SingerTrackDetailsCoordinatorTests: XCTestCase {
         sut.dismissCoordinator()
         XCTAssertTrue(coordinatorFinished)
     }
-    
 }

@@ -15,13 +15,13 @@ class AppCoordinator: Coordinator {
     init(window: UIWindow, router: Router) {
         self.window = window
         self.router = router
+        
+        setupWindow()
     }
     
     func start() {
         let singerTracksCoordinator = SingerTracksCoordinator(router: router)
         coordinate(to: singerTracksCoordinator)
-        
-        setupWindow()
     }
     
     func stop() {

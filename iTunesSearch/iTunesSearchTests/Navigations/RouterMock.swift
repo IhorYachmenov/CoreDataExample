@@ -9,7 +9,6 @@ import UIKit
 @testable import iTunesSearch
 
 class RouterMock: Router {
-    
     var navigationController = UINavigationController()
     var pushCalled = false
     var pushViewController: UIViewController?
@@ -24,5 +23,4 @@ class RouterMock: Router {
         dismissCalled = true
         completion?()
     }
-    
 }

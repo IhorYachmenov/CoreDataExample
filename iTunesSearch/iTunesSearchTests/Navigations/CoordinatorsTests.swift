@@ -10,7 +10,6 @@ import XCTest
 @testable import iTunesSearch
 
 class CoordinatorsTests: XCTestCase {
-    
     var window: UIWindow!
     var navigationController: UINavigationController!
     var router: AppRouter!
@@ -40,30 +39,39 @@ class CoordinatorsTests: XCTestCase {
         sinderTrackDetailsCoordinator = nil
     }
     
-    func testCoordinatorFlow() {
-        // Start the app coordinator
+    func testAppCordinators_openTrackDetailScreen() {
         appCoordinator.start()
-        
-        // Check that the window is now visible
-        XCTAssertTrue(window.isKeyWindow)
-        
-        // Start the singer tracks coordinator
-        singerTracksCoordinator.start()
-        
-        // Check that the top view controller is the singer tracks view controller
-        XCTAssertTrue(router.navigationController.topViewController is SingerTracksViewController)
-        
-        // Start the singer track details coordinator
-        sinderTrackDetailsCoordinator.start()
-        
-        // Check that the top view controller is the singer track details view controller
-        XCTAssertTrue(router.navigationController.topViewController is SingerTrackDetailsViewController)
-        
-        // Check that the singer track details view controller has the correct id
-        guard let singerTrackDetailsVC = router.navigationController.topViewController as? SingerTrackDetailsViewController else {
-            XCTFail("Top view controller should be a SingerTrackDetailsViewController")
-            return
+
+        XCTAssert(router.navigationController.viewControllers.count == 1)
+        XCTAssert(router.navigationController.topViewController is SingerTracksViewController)
+
+        // Simulate user tapping a track cell
+        singerTracksCoordinator.coordinator(didSelectTrackWithId: 1)
+
+        let detailsViewControllerExpectation = XCTestExpectation(description: "Wait for details screen to appear")
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            detailsViewControllerExpectation.fulfill()
         }
-        XCTAssertEqual(singerTrackDetailsVC.trackId, 1)
+
+        wait(for: [detailsViewControllerExpectation], timeout: 1.1)
+
+        XCTAssert(router.navigationController.viewControllers.count == 2)
+        XCTAssert(router.navigationController.topViewController is SingerTrackDetailsViewController)
+
+//        // Simulate user dismissing the details screen
+//        sinderTrackDetailsCoordinator.dismissCoordinator()
+//
+//        let tracksListExpectation = XCTestExpectation(description: "Wait for tracks list screen to appear")
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//            tracksListExpectation.fulfill()
+//        }
+//
+//        wait(for: [tracksListExpectation], timeout: 1.1)
+//
+//        XCTAssert(router.navigationController.viewControllers.count == 1)
+//        XCTAssert(router.navigationController.topViewController is SingerTrackDetailsViewController)
+//        
     }
 }

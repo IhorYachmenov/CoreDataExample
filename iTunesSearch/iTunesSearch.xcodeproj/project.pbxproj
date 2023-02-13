@@ -511,8 +511,8 @@
 		CE39D7EE299984BD009F4202 /* Navigations */ = {
 			isa = PBXGroup;
 			children = (
-				CE39D7EF299984CF009F4202 /* RouterMock.swift */,
 				CE39D7F1299989BE009F4202 /* CoordinatorsTests.swift */,
+				CE39D7EF299984CF009F4202 /* RouterMock.swift */,
 				CE266CDD29802E6400D6E038 /* SingerTrackDetailsCoordinatorTests.swift */,
 			);
 			path = Navigations;
