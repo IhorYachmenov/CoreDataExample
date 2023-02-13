@@ -16,7 +16,7 @@ extension DownloadSingerTrackUseCase: DownloadSingerTrackUseCaseInterface {
         let request = SearchSingerTrackAPI()
         let apiLoader = APILoader(apiHandler: request)
         print("Singer Name Downloading ->", name)
-        let param: Dictionary<String, Any> = ["limit" : "1", "music" : "media", "term" : name]
+        let param: Dictionary<String, Any> = ["limit" : "1", "media" : "music", "term" : name]
     
         apiLoader.loadAPIRequest(requestData: param) { (model, error) in
             if let _ = error {
