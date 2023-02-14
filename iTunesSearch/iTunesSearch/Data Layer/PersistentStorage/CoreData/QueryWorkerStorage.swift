@@ -53,8 +53,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
             let entityDescription = NSEntityDescription.entity(forEntityName: self!.entityName, in: self!.coreDataManager.privateQueueManageObjectContext)
             
             guard entityDescription != nil else {
-                let failure = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Wrong Entity name 😱"])
-                completion(.failure(.saveError(failure)))
+                completion(.failure(.saveError(NSError.error(msg: "Wrong Entity name 😱"))))
                 return
             }
             

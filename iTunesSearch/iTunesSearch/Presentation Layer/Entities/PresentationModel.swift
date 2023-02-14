@@ -35,8 +35,8 @@ extension PresentationModel.SingerTrackDetail {
         trackName = dataModel.trackName
         singerName = dataModel.singerName
         collectionName = dataModel.collectionName
-        collectionPrice = dataModel.collectionPrice
-        trackPrice = dataModel.trackPrice
+        collectionPrice = dataModel.collectionPrice.toDollars
+        trackPrice = dataModel.trackPrice.toDollars
         releaseDate = dataModel.releaseDate
         genre = dataModel.genre
         country = dataModel.country

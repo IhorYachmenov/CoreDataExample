@@ -45,9 +45,9 @@ class SingerTrackDetailsViewController: UIViewController {
     private lazy var singerName: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .black
+        view.textColor = .red
         view.textAlignment = .left
-        view.font.withSize(20)
+        view.font = .boldSystemFont(ofSize: 15)
         view.text = "Lady Gaga"
         return view
     }()
@@ -202,7 +202,6 @@ class SingerTrackDetailsViewController: UIViewController {
         viewModel.fetchTrackDetails(trackId: trackId) { [weak self] result in
             switch result {
             case .success(let success):
-                print(success)
                 self?.trackName.text = success.trackName
                 self?.singerName.text = success.singerName
                 self?.collectionName.defaultTextAndTitle(text: success.collectionName)
@@ -212,7 +211,15 @@ class SingerTrackDetailsViewController: UIViewController {
                 self?.genre.defaultTextAndTitle(text: success.genre)
                 self?.country.defaultTextAndTitle(text: success.country)
             case .failure(let failure):
-                print(failure)
+                self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
+            }
+        }
+        
+        viewModel.imageSource = { [weak self] result in
+            switch result {
+            case .success(let success):
+                self?.trackImg.image = UIImage(data: success)
+            case .failure(let failure):
                 self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
             }
         }

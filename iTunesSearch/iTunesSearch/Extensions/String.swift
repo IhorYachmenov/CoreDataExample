@@ -12,6 +12,10 @@ extension String {
         NSLocalizedString(self, comment: "")
     }
     
+    var toDollars: String {
+        "$\(self)"
+    }
+    
     var parceDateFormat: String {
 //        let dateString = "1961-11-11T08:00:00Z"
         let dateFormatter = DateFormatter()
