@@ -8,20 +8,19 @@
 import UIKit
 
 /// **In Progress
-#warning("Detail screen with more data, observe data, navigation")
 #warning("_SingerTracksDelegate")
 protocol SingerTracksDelegate: AnyObject {
-    func coordinator(didSelectTrackWithId: String)
+    func coordinator(didSelect trackId: String)
 }
 
 protocol _SingerTracksDelegate: AnyObject {
     associatedtype TrackID
-    func coordinator(_ coordinator: SingerTracksCoordinator, didSelect trackId: TrackID)
+    func coordinator(didSelect trackId: TrackID)
 }
 
 class SingerTracksViewController: UIViewController {
     /// Navigation
-    weak var coordinatorDelegate: SingerTracksDelegate!
+    weak var coordinatorDelegate: SingerTracksDelegate?
     
     /// Data Properties
     private var data: Array<PresentationModel.SingerTrack> = Array() {
@@ -111,7 +110,7 @@ class SingerTracksViewController: UIViewController {
 // MARK: Data Source
 extension SingerTracksViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinatorDelegate.coordinator(didSelectTrackWithId: data[indexPath.row].trackId)
+        coordinatorDelegate?.coordinator(didSelect: data[indexPath.row].trackId)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

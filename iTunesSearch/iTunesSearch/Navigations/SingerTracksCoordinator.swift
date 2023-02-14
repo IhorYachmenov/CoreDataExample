@@ -26,12 +26,10 @@ class SingerTracksCoordinator: Coordinator {
             self.removeChild(self)
         }
     }
-    #warning("track id naming, naming onDetailCoordinatorFinished, on did")
-    #warning("coordinator -> router dependency")
+    #warning("coordinator -> router dependency, inside showDetailCoordinator")
     #warning("Unit tests dependency")
-    private func showDetailCoordinator(id: String) {
-        // let router = ...
-        let detailCoordinator = SingerTrackDetailsCoordinator(router: router, trackId: id)
+    private func showDetailCoordinator(trackId: String) {
+        let detailCoordinator = SingerTrackDetailsCoordinator(router: router, trackId: trackId)
         coordinate(to: detailCoordinator)
         
         detailCoordinator.didFinished = { [weak self, weak detailCoordinator] in
@@ -44,8 +42,8 @@ class SingerTracksCoordinator: Coordinator {
 
 // MARK: - Delegate
 extension SingerTracksCoordinator: SingerTracksDelegate {
-    func coordinator(didSelectTrackWithId: String) {
-        showDetailCoordinator(id: didSelectTrackWithId)
+    func coordinator(didSelect trackId: String) {
+        showDetailCoordinator(trackId: trackId)
     }
 }
 
