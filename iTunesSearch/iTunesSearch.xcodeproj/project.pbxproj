@@ -54,6 +54,8 @@
 		CE39D7F7299A5CE5009F4202 /* SingerTrackDetailsViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7F6299A5CE5009F4202 /* SingerTrackDetailsViewModelInterface.swift */; };
 		CE39D7FA299A5E45009F4202 /* SingerTrackDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7F9299A5E45009F4202 /* SingerTrackDetailsUseCase.swift */; };
 		CE39D7FD299A5E65009F4202 /* SingerTrackDetailsUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7FC299A5E65009F4202 /* SingerTrackDetailsUseCaseInterface.swift */; };
+		CE39D7FF299BCAA0009F4202 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7FE299BCAA0009F4202 /* UIViewController.swift */; };
+		CE39D801299BCBFC009F4202 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D800299BCBFC009F4202 /* UILabel.swift */; };
 		CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */; };
 		CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */; };
 		CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC550298DBDE1004F281C /* Mapper.swift */; };
@@ -138,6 +140,8 @@
 		CE39D7F6299A5CE5009F4202 /* SingerTrackDetailsViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsViewModelInterface.swift; sourceTree = "<group>"; };
 		CE39D7F9299A5E45009F4202 /* SingerTrackDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsUseCase.swift; sourceTree = "<group>"; };
 		CE39D7FC299A5E65009F4202 /* SingerTrackDetailsUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsUseCaseInterface.swift; sourceTree = "<group>"; };
+		CE39D7FE299BCAA0009F4202 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		CE39D800299BCBFC009F4202 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorage.swift; sourceTree = "<group>"; };
 		CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStoragable.swift; sourceTree = "<group>"; };
 		CE4FC550298DBDE1004F281C /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -293,6 +297,8 @@
 			children = (
 				CE266D3F29812EB600D6E038 /* Optional.swift */,
 				CE39D7CC2993C72A009F4202 /* String.swift */,
+				CE39D7FE299BCAA0009F4202 /* UIViewController.swift */,
+				CE39D800299BCBFC009F4202 /* UILabel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -768,11 +774,13 @@
 				CE39D7F7299A5CE5009F4202 /* SingerTrackDetailsViewModelInterface.swift in Sources */,
 				CE266D7529897CC700D6E038 /* APIHeaders.swift in Sources */,
 				CE266D57298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld in Sources */,
+				CE39D7FF299BCAA0009F4202 /* UIViewController.swift in Sources */,
 				CE266D4029812EB600D6E038 /* Optional.swift in Sources */,
 				CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */,
 				CE266D7D298A994000D6E038 /* SingerTracksViewModelInterface.swift in Sources */,
 				CE266D2929807DFF00D6E038 /* SingerTrackListContentView.swift in Sources */,
 				CE39D7CD2993C72A009F4202 /* String.swift in Sources */,
+				CE39D801299BCBFC009F4202 /* UILabel.swift in Sources */,
 				CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */,
 				CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */,
 				CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */,

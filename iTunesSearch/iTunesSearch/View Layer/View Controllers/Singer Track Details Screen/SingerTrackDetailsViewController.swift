@@ -57,6 +57,7 @@ class SingerTrackDetailsViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textColor = .black
         view.textAlignment = .left
+        view.numberOfLines = 3
         view.font.withSize(10)
         view.text = Constants.SingerTrackDetailsScreen.collectionName
         return view
@@ -198,12 +199,21 @@ class SingerTrackDetailsViewController: UIViewController {
         
         initUIComponents()
         
-        viewModel.fetchTrackDetails(trackId: trackId) { result in
+        viewModel.fetchTrackDetails(trackId: trackId) { [weak self] result in
             switch result {
             case .success(let success):
                 print(success)
+                self?.trackName.text = success.trackName
+                self?.singerName.text = success.singerName
+                self?.collectionName.defaultTextAndTitle(text: success.collectionName)
+                self?.collectionPrice.defaultTextAndTitle(text: success.collectionPrice)
+                self?.trackPrice.defaultTextAndTitle(text: success.trackPrice)
+                self?.releaseDate.defaultTextAndTitle(text: success.releaseDate)
+                self?.genre.defaultTextAndTitle(text: success.genre)
+                self?.country.defaultTextAndTitle(text: success.country)
             case .failure(let failure):
                 print(failure)
+                self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
             }
         }
     }
@@ -223,7 +233,6 @@ class SingerTrackDetailsViewController: UIViewController {
         view.addSubview(currentTimeOfTrack)
         view.addSubview(endTimeOfTrack)
         view.addSubview(playDemoButton)
-        
         
         trackImg.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
         trackImg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingAndTrailingConstant).isActive = true
@@ -252,7 +261,7 @@ class SingerTrackDetailsViewController: UIViewController {
         progressView.heightAnchor.constraint(equalToConstant: 6).isActive = true
         progressView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
         progressView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
-        progressView.bottomAnchor.constraint(equalTo: playDemoButton.topAnchor, constant: -50).isActive = true
+        progressView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20).isActive = true
         
         currentTimeOfTrack.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 5).isActive = true
         currentTimeOfTrack.leadingAnchor.constraint(equalTo: progressView.leadingAnchor, constant: 0).isActive = true
@@ -260,7 +269,8 @@ class SingerTrackDetailsViewController: UIViewController {
         endTimeOfTrack.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 5).isActive = true
         endTimeOfTrack.trailingAnchor.constraint(equalTo: progressView.trailingAnchor, constant: 0).isActive = true
         
-        playDemoButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50).isActive = true
+        playDemoButton.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 50).isActive = true
+        playDemoButton.bottomAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50).isActive = true
         playDemoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     

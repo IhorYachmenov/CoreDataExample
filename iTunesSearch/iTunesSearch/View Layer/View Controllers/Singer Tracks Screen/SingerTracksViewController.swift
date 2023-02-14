@@ -106,14 +106,6 @@ class SingerTracksViewController: UIViewController {
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
-    
-    private func presentAlertController(msg: String, title: String) {
-        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: Constants.Alert.alertActionButtonTitle, style: .destructive)
-        alert.addAction(action)
-        present(alert, animated: true)
-    }
 }
 
 // MARK: Data Source

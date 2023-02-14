@@ -19,9 +19,13 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
         storageUseCase.fetchTrackDetails(trackId: trackId) { result in
             switch result {
             case .success(let success):
-                completion(.success(PresentationModel.SingerTrackDetail(dataModel: success)))
+                DispatchQueue.main.async {
+                    completion(.success(PresentationModel.SingerTrackDetail(dataModel: success)))
+                }
             case .failure(let failure):
-                completion(.failure(failure))
+                DispatchQueue.main.async {
+                    completion(.failure(failure))
+                }
             }
         }
     }
