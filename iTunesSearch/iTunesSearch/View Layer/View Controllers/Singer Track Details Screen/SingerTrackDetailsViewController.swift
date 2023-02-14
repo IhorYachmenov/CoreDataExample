@@ -29,6 +29,7 @@ class SingerTrackDetailsViewController: UIViewController {
         view.layer.cornerRadius = 10
         view.layer.borderWidth = 2
         view.layer.borderColor = UIColor.black.cgColor
+        view.clipsToBounds = true
         return view
     }()
     
@@ -204,12 +205,12 @@ class SingerTrackDetailsViewController: UIViewController {
             case .success(let success):
                 self?.trackName.text = success.trackName
                 self?.singerName.text = success.singerName
-                self?.collectionName.defaultTextAndTitle(text: success.collectionName)
-                self?.collectionPrice.defaultTextAndTitle(text: success.collectionPrice)
-                self?.trackPrice.defaultTextAndTitle(text: success.trackPrice)
-                self?.releaseDate.defaultTextAndTitle(text: success.releaseDate)
-                self?.genre.defaultTextAndTitle(text: success.genre)
-                self?.country.defaultTextAndTitle(text: success.country)
+                self?.collectionName.appendInfoToText(info: success.collectionName)
+                self?.collectionPrice.attributedInfoToText(info: success.collectionPrice)
+                self?.trackPrice.attributedInfoToText(info: success.trackPrice)
+                self?.releaseDate.appendInfoToText(info: success.releaseDate)
+                self?.genre.appendInfoToText(info: success.genre)
+                self?.country.appendInfoToText(info: success.country)
             case .failure(let failure):
                 self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
             }

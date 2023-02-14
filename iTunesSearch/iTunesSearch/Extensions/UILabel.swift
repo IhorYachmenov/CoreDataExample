@@ -8,7 +8,18 @@
 import UIKit
 
 extension UILabel {
-    func defaultTextAndTitle(text: String) {
-        self.text = "\(String(describing: self.text ?? "")) \(text)"
+    func appendInfoToText(info: String) {
+        self.text = "\(String(describing: self.text ?? "")) \(info)"
+    }
+    
+    func attributedInfoToText(info: String, highlightedTextColor: UIColor = .red) {
+        let existingText = self.text ?? ""
+        let combinedText = "\(existingText) \(info)"
+        
+        let attributedString = NSMutableAttributedString(string: combinedText)
+        attributedString.color(highlightedTextColor, forText: info)
+        attributedString.font(UIFont.boldSystemFont(ofSize: 17), forText: info)
+        self.attributedText = attributedString
     }
 }
+
