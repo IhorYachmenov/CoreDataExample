@@ -15,18 +15,18 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
     private let coreDataManager: CoreDataStorageManager = CoreDataStorageManager.shared
     private let entityName = NSStringFromClass(Entity.self)
     
-    init(sortDescriptor: PartialKeyPath<Entity>) {
+    init<T>(sortDescriptor: KeyPath<Entity, T>) {
         super.init()
         setupFetchResultsController(persistentStorage: coreDataManager, entityName: entityName, sortDescriptor: sortDescriptor)
     }
     
-    private func setupFetchResultsController(
+    private func setupFetchResultsController<T>(
         persistentStorage: CoreDataStorageManager,
         entityName: String,
-        sortDescriptor: PartialKeyPath<Entity>
+        sortDescriptor: KeyPath<Entity, T>
     ) {
         let fetchRequest = NSFetchRequest<Entity>.init(entityName: entityName)
-        let sort = NSSortDescriptor(keyPath: sortDescriptor as! KeyPath<Entity, String?>, ascending: true)
+        let sort = NSSortDescriptor(keyPath: sortDescriptor, ascending: true)
         fetchRequest.sortDescriptors = [sort]
         
         fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
@@ -82,8 +82,8 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
         completion: @escaping (Result<Entity, StorageError>) -> ()
     ) {
         coreDataManager.mainQueueManageObjectContext.perform { [weak self] in
-            print(value)
             let predicate = NSPredicate(format: "%K == %@", keyPath._kvcKeyPathString!, value as! CVarArg)
+            
             self?.fetchedResultsController.fetchRequest.fetchLimit = 1
             self?.fetchedResultsController.fetchRequest.predicate = predicate
             
@@ -101,7 +101,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
         }
 
     }
-    
+  
     // MARK: - NSFetchedResultsControllerDelegate
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {

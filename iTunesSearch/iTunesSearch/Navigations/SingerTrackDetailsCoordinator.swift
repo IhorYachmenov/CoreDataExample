@@ -11,7 +11,7 @@ class SingerTrackDetailsCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router
     private var trackId: String
-    var onDetailCoordinatorFinished: (() -> Void)?
+    var didFinished: (() -> Void)?
     
     init(router: Router, trackId: String) {
         self.router = router
@@ -27,7 +27,7 @@ class SingerTrackDetailsCoordinator: Coordinator {
         router.dismiss(animated: true) { [weak self] in
             guard let self = self else { return }
             self.removeChild(self)
-            self.onDetailCoordinatorFinished?()
+            self.didFinished?()
         }
     }
 }

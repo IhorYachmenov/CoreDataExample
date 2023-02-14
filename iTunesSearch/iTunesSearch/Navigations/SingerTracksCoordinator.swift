@@ -34,7 +34,7 @@ class SingerTracksCoordinator: Coordinator {
         let detailCoordinator = SingerTrackDetailsCoordinator(router: router, trackId: id)
         coordinate(to: detailCoordinator)
         
-        detailCoordinator.onDetailCoordinatorFinished = { [weak self, weak detailCoordinator] in
+        detailCoordinator.didFinished = { [weak self, weak detailCoordinator] in
             guard let self = self else { return }
             guard let index = self.children.firstIndex(where: { $0 === detailCoordinator }) else { return }
             self.children.remove(at: index)

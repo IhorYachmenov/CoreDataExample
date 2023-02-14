@@ -23,6 +23,7 @@ enum DataModel {
     }
 }
 
+/// **CoreData**
 extension DataModel.SingerTrack {
     init(entity: SingerTrack) {
         trackName = entity.trackName.isNil()
@@ -39,6 +40,8 @@ extension DataModel.SingerTrack {
     }
 }
 
+
+/// **Network Model**
 extension DataModel.SingerTrack {
     init(networkModel: NetworkModel.SingerTrack) {
         trackName = networkModel.trackName.isNil()
@@ -47,7 +50,7 @@ extension DataModel.SingerTrack {
         country = networkModel.country.isNil()
         collectionName = networkModel.collectionName.isNil()
         collectionPrice = networkModel.collectionPrice.isNilToString()
-        releaseDate = networkModel.releaseDate.isNil()
+        releaseDate = networkModel.releaseDate.isNil().parceDateFormat
         genre = networkModel.primaryGenreName.isNil()
         demoURL = networkModel.previewUrl.isNil()
         trackImgURL = networkModel.artworkUrl100.isNil()

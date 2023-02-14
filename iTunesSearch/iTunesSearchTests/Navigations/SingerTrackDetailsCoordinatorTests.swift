@@ -39,7 +39,7 @@ class SingerTrackDetailsCoordinatorTests: XCTestCase {
     
     func testDismissCoordinator() {
         var coordinatorFinished = false
-        sut.onDetailCoordinatorFinished = {
+        sut.didFinished = {
             coordinatorFinished = true
         }
         
