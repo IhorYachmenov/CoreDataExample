@@ -5,7 +5,7 @@
 //  Created by user on 06.02.2023.
 //
 
-class SingerTracksCoordinator: Coordinator {
+final class SingerTracksCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router
     
@@ -25,8 +25,8 @@ class SingerTracksCoordinator: Coordinator {
         }
     }
     #warning("coordinator -> router dependency, inside showDetailCoordinator")
-    #warning("Unit tests dependency")
     private func showDetailCoordinator(trackId: String) {
+//        let router = RounterBuilder.makerRouter(type: .PlayerScreenRouter)
         let detailCoordinator = SingerTrackDetailsCoordinator(router: router, trackId: trackId)
         coordinate(to: detailCoordinator)
         

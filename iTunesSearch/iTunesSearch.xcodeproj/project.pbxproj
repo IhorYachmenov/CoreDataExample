@@ -60,6 +60,7 @@
 		CE39D80A299C4121009F4202 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D809299C4121009F4202 /* NSMutableAttributedString.swift */; };
 		CE39D80C299CE075009F4202 /* ConstantsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D80B299CE075009F4202 /* ConstantsError.swift */; };
 		CE39D80E299CE8AC009F4202 /* UIWindowMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D80D299CE8AC009F4202 /* UIWindowMock.swift */; };
+		CE39D810299CFCCE009F4202 /* RouterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D80F299CFCCE009F4202 /* RouterBuilder.swift */; };
 		CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */; };
 		CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */; };
 		CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC550298DBDE1004F281C /* Mapper.swift */; };
@@ -150,6 +151,7 @@
 		CE39D809299C4121009F4202 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		CE39D80B299CE075009F4202 /* ConstantsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsError.swift; sourceTree = "<group>"; };
 		CE39D80D299CE8AC009F4202 /* UIWindowMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowMock.swift; sourceTree = "<group>"; };
+		CE39D80F299CFCCE009F4202 /* RouterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterBuilder.swift; sourceTree = "<group>"; };
 		CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorage.swift; sourceTree = "<group>"; };
 		CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStoragable.swift; sourceTree = "<group>"; };
 		CE4FC550298DBDE1004F281C /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 			children = (
 				CE39D7E329941ABE009F4202 /* Router.swift */,
 				CE39D7EC299969B4009F4202 /* AppRouter.swift */,
+				CE39D80F299CFCCE009F4202 /* RouterBuilder.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -797,6 +800,7 @@
 				CE266D5A2981679400D6E038 /* SingerTrack.swift in Sources */,
 				CE266D6F2987DEF500D6E038 /* SingerTracksWorkerUseCaseInterface.swift in Sources */,
 				CE266D04298031F600D6E038 /* ResponseHandler+Extension.swift in Sources */,
+				CE39D810299CFCCE009F4202 /* RouterBuilder.swift in Sources */,
 				CE4FC55C29911A45004F281C /* SingerTrackDetailsViewController.swift in Sources */,
 				CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */,
 				CE39D7F7299A5CE5009F4202 /* SingerTrackDetailsViewModelInterface.swift in Sources */,

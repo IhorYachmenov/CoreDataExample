@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AppRouter: Router {
+final class AppRouter: Router {
     let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {

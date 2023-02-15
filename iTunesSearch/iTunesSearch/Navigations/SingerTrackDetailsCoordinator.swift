@@ -5,7 +5,7 @@
 //  Created by user on 06.02.2023.
 //
 
-class SingerTrackDetailsCoordinator: Coordinator {
+final class SingerTrackDetailsCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router
     private var trackId: String
