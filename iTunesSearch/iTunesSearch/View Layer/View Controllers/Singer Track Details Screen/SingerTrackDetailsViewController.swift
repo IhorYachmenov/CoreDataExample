@@ -129,8 +129,6 @@ class SingerTrackDetailsViewController: UIViewController {
         return view
     }()
     
-    private let progress = Progress(totalUnitCount: 100)
-    
     private lazy var progressView: UIProgressView = {
         let view = UIProgressView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -140,7 +138,7 @@ class SingerTrackDetailsViewController: UIViewController {
         return view
     }()
     
-    private lazy var currentTimeOfTrack: UILabel = {
+    private lazy var trackCurrentTime: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textColor = .black
@@ -150,7 +148,7 @@ class SingerTrackDetailsViewController: UIViewController {
         return view
     }()
     
-    private lazy var endTimeOfTrack: UILabel = {
+    private lazy var trackDuration: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textColor = .black
@@ -182,9 +180,7 @@ class SingerTrackDetailsViewController: UIViewController {
         view.configuration = configuration
         
         view.addAction(UIAction(handler: { [weak self] _ in
-            self?.animateProgressView()
-            self?.animateImage()
-            self?.viewModel.playDemo(url: self?.audioURL)
+            self?.viewModel.playTrack(url: self?.audioURL)
         }), for: .touchUpInside)
         
         return view
@@ -222,10 +218,22 @@ class SingerTrackDetailsViewController: UIViewController {
             }
         }
         
-        viewModel.imageSource = { [weak self] result in
+        viewModel.imageDataSource = { [weak self] result in
             switch result {
             case .success(let success):
                 self?.trackImg.image = UIImage(data: success)
+            case .failure(let failure):
+                self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
+            }
+        }
+        
+        viewModel.audioDataSource = { [weak self] result in
+            switch result {
+            case .success(let success):
+                self?.trackCurrentTime.text = success.currentTime
+                self?.trackDuration.text = success.duration
+                self?.animateImage(isPaused: success.isPaused)
+                self?.animateProgressView(progress: success.progress)
             case .failure(let failure):
                 self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
             }
@@ -244,8 +252,8 @@ class SingerTrackDetailsViewController: UIViewController {
         view.addSubview(singerName)
         view.addSubview(stackView)
         view.addSubview(progressView)
-        view.addSubview(currentTimeOfTrack)
-        view.addSubview(endTimeOfTrack)
+        view.addSubview(trackCurrentTime)
+        view.addSubview(trackDuration)
         view.addSubview(playDemoButton)
         
         trackImg.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
@@ -281,37 +289,46 @@ class SingerTrackDetailsViewController: UIViewController {
         progressView.bottomAnchor.constraint(equalTo: playDemoButton.topAnchor, constant: -50).isActive = true
         progressView.topAnchor.constraint(greaterThanOrEqualTo: stackView.bottomAnchor, constant: 20).isActive = true
         
-        currentTimeOfTrack.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 5).isActive = true
-        currentTimeOfTrack.leadingAnchor.constraint(equalTo: progressView.leadingAnchor, constant: 0).isActive = true
+        trackCurrentTime.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 5).isActive = true
+        trackCurrentTime.leadingAnchor.constraint(equalTo: progressView.leadingAnchor, constant: 0).isActive = true
         
-        endTimeOfTrack.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 5).isActive = true
-        endTimeOfTrack.trailingAnchor.constraint(equalTo: progressView.trailingAnchor, constant: 0).isActive = true
+        trackDuration.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 5).isActive = true
+        trackDuration.trailingAnchor.constraint(equalTo: progressView.trailingAnchor, constant: 0).isActive = true
         
         playDemoButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50).isActive = true
         playDemoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
     }
     
-    private func animateProgressView() {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
-            guard self?.progress.isFinished == false else {
-                timer.invalidate()
-                return
-            }
-            
-            self?.progress.completedUnitCount += 1
-            
-            let progressFloat = Float(self?.progress.fractionCompleted ?? 0)
-            self?.progressView.setProgress(progressFloat, animated: true)
-        }
+    private func animateProgressView(progress: Progress) {
+        /// **In progress
+//        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
+//            guard self?.progress.isFinished == false else {
+//                timer.invalidate()
+//                return
+//            }
+//
+//            self?.progress.completedUnitCount += 1
+//
+//            let progressFloat = Float(progress.fractionCompleted ?? 0)
+//            self?.progressView.setProgress(progressFloat, animated: true)
+//        }
         
+        let progressFloat = Float(progress.fractionCompleted)
+        progressView.setProgress(progressFloat, animated: true)
         
     }
     
-    private func animateImage() {
-        musicPaused = !musicPaused
+    private func animateImage(isPaused : Bool) {
         UIView.animate(withDuration: 0.3, delay: 0) {
-            self.trackImg.transform = (self.musicPaused == false) ? .identity : CGAffineTransform(scaleX: 1.5, y: 1.5)
+            self.trackImg.transform = (isPaused == false) ? .identity : CGAffineTransform(scaleX: 1.5, y: 1.5)
+        }
+        
+        // Animate button
+        if (isPaused) {
+            
+        } else {
+            
         }
     }
 }

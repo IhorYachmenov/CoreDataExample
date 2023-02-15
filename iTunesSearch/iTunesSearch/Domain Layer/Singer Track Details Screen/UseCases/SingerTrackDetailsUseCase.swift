@@ -9,6 +9,7 @@ import Foundation
 
 final class SingerTrackDetailsUseCase {
     private var repository: PersistentStorageRepositoryInterface
+    
     private lazy var imageDownloaderClient = ImageDownloaderClient()
     private lazy var trackDonwloaderClient = TrackDownloaderClient()
     private lazy var audioClient = AudioClient()
@@ -27,7 +28,7 @@ extension SingerTrackDetailsUseCase: SingerTrackDetailsUseCaseInterface {
         repository.fetchTrackDetails(trackId: trackId, completion: completion)
     }
     
-    func playDemo(url: String?) {
+    func playTrack(url: String?) {
         trackDonwloaderClient.downloadTrack(url: url) { [weak self] result in
             switch result {
             case .success(let success):
@@ -37,5 +38,9 @@ extension SingerTrackDetailsUseCase: SingerTrackDetailsUseCaseInterface {
                 print(failure)
             }
         }
+    }
+    
+    func subscribeOnAudioData(completion: @escaping (Result<PlayerObject, Error>) -> ()) {
+        audioClient.audioDataPublisher = completion
     }
 }

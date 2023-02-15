@@ -8,5 +8,6 @@
 import Foundation
 
 protocol AudioClientInterface {
-    
+    associatedtype AudioObject
+    var audioDataPublisher: ((Result<AudioObject, Error>) -> ())? { get set }
 }

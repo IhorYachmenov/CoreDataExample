@@ -8,12 +8,26 @@
 import Foundation
 
 final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
-    var imageSource: ((Result<Data, Error>) -> ())?
+    var audioDataSource: ((Result<PlayerObject, Error>) -> ())?
+    var imageDataSource: ((Result<Data, Error>) -> ())?
     
     private var useCase: SingerTrackDetailsUseCaseInterface
     
     init(useCase: SingerTrackDetailsUseCaseInterface) {
         self.useCase = useCase
+        
+        useCase.subscribeOnAudioData { [weak self] result in
+            switch result {
+            case .success(let success):
+                DispatchQueue.main.async {
+                    self?.audioDataSource?(.success(success))
+                }
+            case .failure(let failure):
+                DispatchQueue.main.async {
+                    self?.audioDataSource?(.failure(failure))
+                }
+            }
+        }
     }
     
     func fetchTrackDetails(trackId: String, completion: @escaping (Result<PresentationModel.SingerTrackDetail, StorageError>) -> ()) {
@@ -30,9 +44,9 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
                     self?.useCase.downloadImage(url: url) { result in
                         switch result {
                         case .success(let success):
-                            self?.imageSource?(.success(success))
+                            self?.imageDataSource?(.success(success))
                         case .failure(let failure):
-                            self?.imageSource?(.failure(failure))
+                            self?.imageDataSource?(.failure(failure))
                         }
                     }
                 }
@@ -45,7 +59,7 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
         }
     }
     
-    func playDemo(url: String?) {
-        useCase.playDemo(url: url)
+    func playTrack(url: String?) {
+        useCase.playTrack(url: url)
     }
 }

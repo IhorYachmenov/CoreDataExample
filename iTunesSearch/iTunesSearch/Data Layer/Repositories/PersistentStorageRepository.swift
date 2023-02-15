@@ -21,7 +21,7 @@ extension PersistentStorageRepository: PersistentStorageRepositoryInterface {
         singerTracksQueryStorageGeneric.saveDataModel(data: singerTrack, completion: completion)
     }
     
-    func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {    
+    func subscribeOnData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {    
         singerTracksQueryStorageGeneric.dataPublisher = { data in
             let dataModels = data.map { DataModel.SingerTrack(entity: $0) }
             completion(dataModels)

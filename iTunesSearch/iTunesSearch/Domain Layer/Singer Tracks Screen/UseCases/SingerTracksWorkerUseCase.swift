@@ -39,7 +39,7 @@ extension SingerTracksWorkerUseCase: SingerTracksWorkerUseCaseInterface {
     }
     
     func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
-        storage.subscribeOfData(completion: completion)
+        storage.subscribeOnData(completion: completion)
     }
 }
 

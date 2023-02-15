@@ -27,7 +27,7 @@ extension StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
         })
     }
     
-    func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
-        repository.subscribeOfData(completion: completion)
+    func subscribeOnData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
+        repository.subscribeOnData(completion: completion)
     }
 }

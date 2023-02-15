@@ -8,8 +8,8 @@
 import Foundation
 
 protocol SingerTrackDetailsViewModelInterface {
-    var imageSource: ((Result<Data, Error>) -> ())? { get set }
+    var imageDataSource: ((Result<Data, Error>) -> ())? { get set }
+    var audioDataSource: ((Result<PlayerObject, Error>) -> ())? { get set }
     func fetchTrackDetails(trackId: String, completion: @escaping (Result<PresentationModel.SingerTrackDetail, StorageError>) -> ())
-    // ** In Progress
-    func playDemo(url: String?)
+    func playTrack(url: String?)
 }

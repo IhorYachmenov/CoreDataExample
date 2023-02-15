@@ -8,9 +8,21 @@
 import Foundation
 import AVFoundation
 
-class AudioClient {
+struct PlayerObject {
+    let currentTime: String
+    let duration: String
+    let isPaused: Bool
+    let progress: Progress
+}
+
+class AudioClient: AudioClientInterface {
+    typealias AudioObject = PlayerObject
     
-    var player: AVAudioPlayer!
+    var audioDataPublisher: ((Result<AudioObject, Error>) -> ())?
+    
+    // Update progress later
+    private let progress = Progress(totalUnitCount: 100)
+    private var player: AVAudioPlayer!
     
     init() {
         
@@ -26,6 +38,4 @@ class AudioClient {
     }
 }
 
-extension AudioClient: AudioClientInterface {
-    
-}
+
