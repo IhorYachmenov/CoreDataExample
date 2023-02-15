@@ -13,6 +13,7 @@
 "Release date:" = "Дата випуску:";
 "Genre:" = "Жанр:";
 "Country:" = "Країна:";
+"Play Demo" = "Превʼю";
 
 "Error" = "Помилка";
 "OK" = "Гаразд";
@@ -22,3 +23,6 @@
 "Server error element a nil" = "Помилка серверу елемент nil";
 "Service Error:" = "Помика сервісу:";
 "Unknown Error" = "Невідома помилка";
+
+"Demo URL unavailable" = "URL Превʼю треку недоступне";
+"Demo URL corrupted" = "URL Превʼю треку пошкоджене";

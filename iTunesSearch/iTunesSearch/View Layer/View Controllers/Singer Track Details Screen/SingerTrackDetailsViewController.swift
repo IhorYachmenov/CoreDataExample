@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol SingerTrackDetailsDelegate: AnyObject {
     func dismissCoordinator()
@@ -17,6 +18,7 @@ class SingerTrackDetailsViewController: UIViewController {
     
     /// Properties
     private var trackId: String
+    private var audioURL: String?
     var viewModel: SingerTrackDetailsViewModelInterface!
     
     /// UI Properties
@@ -40,6 +42,7 @@ class SingerTrackDetailsViewController: UIViewController {
         view.textAlignment = .left
         view.font = .boldSystemFont(ofSize: 20)
         view.text = "Rommance"
+        view.numberOfLines = 1
         return view
     }()
     
@@ -50,6 +53,7 @@ class SingerTrackDetailsViewController: UIViewController {
         view.textAlignment = .left
         view.font = .boldSystemFont(ofSize: 15)
         view.text = "Lady Gaga"
+        view.numberOfLines = 1
         return view
     }()
     
@@ -119,6 +123,7 @@ class SingerTrackDetailsViewController: UIViewController {
     private lazy var stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
+        view.distribution = .fillProportionally
         view.spacing = 5
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -177,9 +182,9 @@ class SingerTrackDetailsViewController: UIViewController {
         view.configuration = configuration
         
         view.addAction(UIAction(handler: { [weak self] _ in
-            print("Play")
             self?.animateProgressView()
             self?.animateImage()
+            self?.viewModel.playDemo(url: self?.audioURL)
         }), for: .touchUpInside)
         
         return view
@@ -211,6 +216,7 @@ class SingerTrackDetailsViewController: UIViewController {
                 self?.releaseDate.appendInfoToText(info: success.releaseDate)
                 self?.genre.appendInfoToText(info: success.genre)
                 self?.country.appendInfoToText(info: success.country)
+                self?.audioURL = success.demoURL
             case .failure(let failure):
                 self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
             }
@@ -250,14 +256,17 @@ class SingerTrackDetailsViewController: UIViewController {
         trackName.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: UIScreen.main.bounds.width - (75 * 2) + 60).isActive = true
         trackName.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
         trackName.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
+        trackName.setContentHuggingPriority(UILayoutPriority(rawValue: 745), for: .vertical)
         
         singerName.topAnchor.constraint(equalTo: trackName.bottomAnchor, constant: 5).isActive = true
         singerName.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
         singerName.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
+        singerName.setContentHuggingPriority(UILayoutPriority(rawValue: 746), for: .vertical)
         
-        stackView.topAnchor.constraint(equalTo: singerName.bottomAnchor, constant: 20).isActive = true
+        stackView.topAnchor.constraint(equalTo: singerName.bottomAnchor, constant: 30).isActive = true
         stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
         stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
+        stackView.setContentHuggingPriority(UILayoutPriority(rawValue: 751), for: .vertical)
         
         stackView.addArrangedSubview(collectionName)
         stackView.addArrangedSubview(collectionPrice)
@@ -269,7 +278,8 @@ class SingerTrackDetailsViewController: UIViewController {
         progressView.heightAnchor.constraint(equalToConstant: 6).isActive = true
         progressView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30).isActive = true
         progressView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
-        progressView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20).isActive = true
+        progressView.bottomAnchor.constraint(equalTo: playDemoButton.topAnchor, constant: -50).isActive = true
+        progressView.topAnchor.constraint(greaterThanOrEqualTo: stackView.bottomAnchor, constant: 20).isActive = true
         
         currentTimeOfTrack.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 5).isActive = true
         currentTimeOfTrack.leadingAnchor.constraint(equalTo: progressView.leadingAnchor, constant: 0).isActive = true
@@ -277,12 +287,12 @@ class SingerTrackDetailsViewController: UIViewController {
         endTimeOfTrack.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 5).isActive = true
         endTimeOfTrack.trailingAnchor.constraint(equalTo: progressView.trailingAnchor, constant: 0).isActive = true
         
-        playDemoButton.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 50).isActive = true
-        playDemoButton.bottomAnchor.constraint(greaterThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50).isActive = true
+        playDemoButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50).isActive = true
         playDemoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
     }
     
-    func animateProgressView() {
+    private func animateProgressView() {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
             guard self?.progress.isFinished == false else {
                 timer.invalidate()
@@ -294,9 +304,11 @@ class SingerTrackDetailsViewController: UIViewController {
             let progressFloat = Float(self?.progress.fractionCompleted ?? 0)
             self?.progressView.setProgress(progressFloat, animated: true)
         }
+        
+        
     }
     
-    func animateImage() {
+    private func animateImage() {
         musicPaused = !musicPaused
         UIView.animate(withDuration: 0.3, delay: 0) {
             self.trackImg.transform = (self.musicPaused == false) ? .identity : CGAffineTransform(scaleX: 1.5, y: 1.5)

@@ -61,6 +61,11 @@
 		CE39D80C299CE075009F4202 /* ConstantsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D80B299CE075009F4202 /* ConstantsError.swift */; };
 		CE39D80E299CE8AC009F4202 /* UIWindowMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D80D299CE8AC009F4202 /* UIWindowMock.swift */; };
 		CE39D810299CFCCE009F4202 /* RouterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D80F299CFCCE009F4202 /* RouterBuilder.swift */; };
+		CE39D815299D5CC5009F4202 /* TrackDownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D814299D5CC5009F4202 /* TrackDownloaderClient.swift */; };
+		CE39D818299D789C009F4202 /* ImageDownloaderClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D817299D789C009F4202 /* ImageDownloaderClientInterface.swift */; };
+		CE39D81B299D790C009F4202 /* TrackDownloaderClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D81A299D790C009F4202 /* TrackDownloaderClientInterface.swift */; };
+		CE39D81F299D7B19009F4202 /* AudioClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D81E299D7B19009F4202 /* AudioClient.swift */; };
+		CE39D822299D7D23009F4202 /* AudioClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D821299D7D23009F4202 /* AudioClientInterface.swift */; };
 		CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */; };
 		CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */; };
 		CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC550298DBDE1004F281C /* Mapper.swift */; };
@@ -152,6 +157,11 @@
 		CE39D80B299CE075009F4202 /* ConstantsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsError.swift; sourceTree = "<group>"; };
 		CE39D80D299CE8AC009F4202 /* UIWindowMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowMock.swift; sourceTree = "<group>"; };
 		CE39D80F299CFCCE009F4202 /* RouterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterBuilder.swift; sourceTree = "<group>"; };
+		CE39D814299D5CC5009F4202 /* TrackDownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDownloaderClient.swift; sourceTree = "<group>"; };
+		CE39D817299D789C009F4202 /* ImageDownloaderClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderClientInterface.swift; sourceTree = "<group>"; };
+		CE39D81A299D790C009F4202 /* TrackDownloaderClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDownloaderClientInterface.swift; sourceTree = "<group>"; };
+		CE39D81E299D7B19009F4202 /* AudioClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClient.swift; sourceTree = "<group>"; };
+		CE39D821299D7D23009F4202 /* AudioClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClientInterface.swift; sourceTree = "<group>"; };
 		CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorage.swift; sourceTree = "<group>"; };
 		CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStoragable.swift; sourceTree = "<group>"; };
 		CE4FC550298DBDE1004F281C /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -285,6 +295,7 @@
 		CE266CFA2980310800D6E038 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				CE39D81C299D7ABB009F4202 /* Media Clients */,
 				CE266D5F2984040F00D6E038 /* Network Services */,
 				CE266D732989483800D6E038 /* Network Entities */,
 				CE266D17298037B700D6E038 /* Network Clients */,
@@ -318,8 +329,9 @@
 		CE266D17298037B700D6E038 /* Network Clients */ = {
 			isa = PBXGroup;
 			children = (
-				CE39D803299BE0F1009F4202 /* Image Downloader Client */,
-				CE39D802299BE0D4009F4202 /* REST API Client */,
+				CE39D813299D5CA4009F4202 /* Track Donwloader */,
+				CE39D803299BE0F1009F4202 /* Image Downloader */,
+				CE39D802299BE0D4009F4202 /* REST API */,
 			);
 			path = "Network Clients";
 			sourceTree = "<group>";
@@ -566,7 +578,7 @@
 			path = Interfaces;
 			sourceTree = "<group>";
 		};
-		CE39D802299BE0D4009F4202 /* REST API Client */ = {
+		CE39D802299BE0D4009F4202 /* REST API */ = {
 			isa = PBXGroup;
 			children = (
 				CE266D052980320100D6E038 /* APIHandler.swift */,
@@ -577,15 +589,66 @@
 				CE266CFB298031AD00D6E038 /* APIPath.swift */,
 				CE266D7429897CC700D6E038 /* APIHeaders.swift */,
 			);
-			path = "REST API Client";
+			path = "REST API";
 			sourceTree = "<group>";
 		};
-		CE39D803299BE0F1009F4202 /* Image Downloader Client */ = {
+		CE39D803299BE0F1009F4202 /* Image Downloader */ = {
 			isa = PBXGroup;
 			children = (
+				CE39D816299D7883009F4202 /* Interfaces */,
 				CE39D804299BE1DC009F4202 /* ImageDownloaderClient.swift */,
 			);
-			path = "Image Downloader Client";
+			path = "Image Downloader";
+			sourceTree = "<group>";
+		};
+		CE39D813299D5CA4009F4202 /* Track Donwloader */ = {
+			isa = PBXGroup;
+			children = (
+				CE39D819299D78FF009F4202 /* Interfaces */,
+				CE39D814299D5CC5009F4202 /* TrackDownloaderClient.swift */,
+			);
+			path = "Track Donwloader";
+			sourceTree = "<group>";
+		};
+		CE39D816299D7883009F4202 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				CE39D817299D789C009F4202 /* ImageDownloaderClientInterface.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		CE39D819299D78FF009F4202 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				CE39D81A299D790C009F4202 /* TrackDownloaderClientInterface.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		CE39D81C299D7ABB009F4202 /* Media Clients */ = {
+			isa = PBXGroup;
+			children = (
+				CE39D81D299D7AD5009F4202 /* Audio Client */,
+			);
+			path = "Media Clients";
+			sourceTree = "<group>";
+		};
+		CE39D81D299D7AD5009F4202 /* Audio Client */ = {
+			isa = PBXGroup;
+			children = (
+				CE39D820299D7CF1009F4202 /* Interfaces */,
+				CE39D81E299D7B19009F4202 /* AudioClient.swift */,
+			);
+			path = "Audio Client";
+			sourceTree = "<group>";
+		};
+		CE39D820299D7CF1009F4202 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				CE39D821299D7D23009F4202 /* AudioClientInterface.swift */,
+			);
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 		CE4FC544298D1580004F281C /* Entities */ = {
@@ -800,6 +863,7 @@
 				CE266D5A2981679400D6E038 /* SingerTrack.swift in Sources */,
 				CE266D6F2987DEF500D6E038 /* SingerTracksWorkerUseCaseInterface.swift in Sources */,
 				CE266D04298031F600D6E038 /* ResponseHandler+Extension.swift in Sources */,
+				CE39D81B299D790C009F4202 /* TrackDownloaderClientInterface.swift in Sources */,
 				CE39D810299CFCCE009F4202 /* RouterBuilder.swift in Sources */,
 				CE4FC55C29911A45004F281C /* SingerTrackDetailsViewController.swift in Sources */,
 				CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */,
@@ -807,6 +871,7 @@
 				CE39D805299BE1DC009F4202 /* ImageDownloaderClient.swift in Sources */,
 				CE266D7529897CC700D6E038 /* APIHeaders.swift in Sources */,
 				CE266D57298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld in Sources */,
+				CE39D822299D7D23009F4202 /* AudioClientInterface.swift in Sources */,
 				CE39D7FF299BCAA0009F4202 /* UIViewController.swift in Sources */,
 				CE266D4029812EB600D6E038 /* Optional.swift in Sources */,
 				CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */,
@@ -820,9 +885,11 @@
 				CE39D7E429941ABE009F4202 /* Router.swift in Sources */,
 				CE266D4C29814FB100D6E038 /* StorageSingerTracksUseCaseInterface.swift in Sources */,
 				CE266D3D29812E0500D6E038 /* DataModel.swift in Sources */,
+				CE39D815299D5CC5009F4202 /* TrackDownloaderClient.swift in Sources */,
 				CE39D80C299CE075009F4202 /* ConstantsError.swift in Sources */,
 				CE266D1D298042E100D6E038 /* PresentationModel.swift in Sources */,
 				CE266D102980358E00D6E038 /* DownloadSingerTrackUseCase.swift in Sources */,
+				CE39D818299D789C009F4202 /* ImageDownloaderClientInterface.swift in Sources */,
 				CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */,
 				CE4FC56F299290D2004F281C /* ProgressView.swift in Sources */,
 				CE266D132980368600D6E038 /* SearchSingerTrackAPI.swift in Sources */,
@@ -844,6 +911,7 @@
 				CE4FC5692992703F004F281C /* ConstantsSingerTrackDetailsScreen.swift in Sources */,
 				CE266D2B29807E4000D6E038 /* SingerTrackListConfigurator.swift in Sources */,
 				CE266D062980320100D6E038 /* APIHandler.swift in Sources */,
+				CE39D81F299D7B19009F4202 /* AudioClient.swift in Sources */,
 				CE266D0D2980346500D6E038 /* SingerTracksViewModel.swift in Sources */,
 				CE4FC55E2991280D004F281C /* SingerTrackDetailsCoordinator.swift in Sources */,
 				CE4FC56729926F6C004F281C /* ConstantsSingerTracksScreen.swift in Sources */,
@@ -1042,8 +1110,7 @@
 				INFOPLIST_FILE = iTunesSearch/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1069,8 +1136,7 @@
 				INFOPLIST_FILE = iTunesSearch/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

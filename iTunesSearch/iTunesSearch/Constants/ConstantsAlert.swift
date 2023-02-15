@@ -11,6 +11,8 @@ struct Constants {
     struct Alert {
         static let alertTitle = "Error".localized
         static let alertActionButtonTitle = "OK".localized
+        static let demoURLUnavailable = "Demo URL unavailable".localized
+        static let demoURLCorrupted = "Demo URL corrupted".localized
     }
 }
 

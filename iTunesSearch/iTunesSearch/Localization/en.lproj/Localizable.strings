@@ -13,6 +13,7 @@
 "Release Date:" = "Release Date:";
 "Genre:" = "Genre:";
 "Country:" = "Country:";
+"Play Demo" = "Play Demo";
 
 "Error" = "Error";
 "OK" = "OK";
@@ -22,3 +23,6 @@
 "Server error element a nil" = "Server error element a nil";
 "Service Error:" = "Service Error:";
 "Unknown Error" = "Unknown Error";
+
+"Demo URL unavailable" = "Demo URL unavailable";
+"Demo URL corrupted" = "Demo URL corrupted";

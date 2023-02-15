@@ -8,7 +8,6 @@
 import Foundation
 
 final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
-    
     var imageSource: ((Result<Data, Error>) -> ())?
     
     private var useCase: SingerTrackDetailsUseCaseInterface
@@ -44,5 +43,9 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
                 }
             }
         }
+    }
+    
+    func playDemo(url: String?) {
+        useCase.playDemo(url: url)
     }
 }

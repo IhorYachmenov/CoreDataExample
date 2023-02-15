@@ -9,10 +9,11 @@ import Foundation
 
 fileprivate let imageCache = NSCache<NSString, NSData>()
 
-class ImageDownloaderClient: NSObject {
-    
-    override init() {}
-    
+class ImageDownloaderClient {
+    init() {}
+}
+
+extension ImageDownloaderClient: ImageDownloaderClientInterface {
     func downloadImage(url: URL, completion: @escaping (Result<Data, Error>) -> ()) {
         if let data = imageCache.object(forKey: url.absoluteString as NSString) {
             DispatchQueue.main.async {

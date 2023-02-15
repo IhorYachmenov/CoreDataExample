@@ -590,8 +590,8 @@
             filePath = "iTunesSearch/Presentation Layer/Singer Tracks Screen/View Models/SingerTracksViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "init(useCase:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -606,8 +606,8 @@
             filePath = "iTunesSearch/Presentation Layer/Singer Tracks Screen/View Models/SingerTracksViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "init(useCase:)"
             landmarkType = "7">
             <Locations>
@@ -654,8 +654,8 @@
             filePath = "iTunesSearch/Presentation Layer/Singer Tracks Screen/View Models/SingerTracksViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "init(useCase:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -670,8 +670,8 @@
             filePath = "iTunesSearch/Presentation Layer/Singer Tracks Screen/View Models/SingerTracksViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "init(useCase:)"
             landmarkType = "7">
             <Locations>
@@ -733,8 +733,8 @@
             filePath = "iTunesSearch/Presentation Layer/Singer Tracks Screen/View Models/SingerTracksViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "init(useCase:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -861,8 +861,8 @@
             filePath = "iTunesSearch/Presentation Layer/Singer Tracks Screen/View Models/SingerTracksViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "init(useCase:)"
             landmarkType = "7">
             <Locations>
@@ -966,17 +966,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B4633A1D-49C0-4EE0-BA4A-87CC81711899"
+            uuid = "AC0825C3-FEB7-4215-A398-4ACC6306BF49"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iTunesSearch/Infrastructure/Network Clients/Image Downloader Client/ImageDownloaderClient.swift"
+            filePath = "iTunesSearch/Infrastructure/Network Clients/Track Donwloader Client/TrackDownloaderClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "downloadImage(url:completion:)"
-            landmarkType = "7">
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "downloadTrack(url:completion:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

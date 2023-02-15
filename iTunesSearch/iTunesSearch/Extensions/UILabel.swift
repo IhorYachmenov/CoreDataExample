@@ -12,7 +12,7 @@ extension UILabel {
         self.text = "\(String(describing: self.text ?? "")) \(info)"
     }
     
-    func attributedInfoToText(info: String, highlightedTextColor: UIColor = .red) {
+    func attributedInfoToText(info: String, highlightedTextColor: UIColor = .systemGreen) {
         let existingText = self.text ?? ""
         let combinedText = "\(existingText) \(info)"
         
