@@ -5,8 +5,6 @@
 //  Created by user on 06.02.2023.
 //
 
-import UIKit
-
 class SingerTrackDetailsCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router

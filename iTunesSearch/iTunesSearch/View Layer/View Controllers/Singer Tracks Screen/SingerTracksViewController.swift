@@ -7,12 +7,11 @@
 
 import UIKit
 
-/// **In Progress
-#warning("_SingerTracksDelegate")
 protocol SingerTracksDelegate: AnyObject {
     func coordinator(didSelect trackId: String)
 }
 
+#warning("_SingerTracksDelegate")
 protocol _SingerTracksDelegate: AnyObject {
     associatedtype TrackID
     func coordinator(didSelect trackId: TrackID)
