@@ -20,11 +20,10 @@ class ImageDownloaderClient: NSObject {
             }
             return
         }
-        print("Data not in cache")
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard error == nil else {
-                completion(.failure(NSError.error(msg: "Server error while donwloading image")))
+                completion(.failure(NSError.error(msg: Constants.Error.downloadingImage)))
                 return
             }
             
@@ -35,7 +34,7 @@ class ImageDownloaderClient: NSObject {
                     completion(.success(data))
                 }
             } else {
-                completion(.failure(NSError.error(msg: "Download was successful but data corrupted")))
+                completion(.failure(NSError.error(msg: Constants.Error.corruptingData)))
             }
         }.resume()
     }

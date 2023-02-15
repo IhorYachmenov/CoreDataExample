@@ -13,3 +13,12 @@
 "Release Date:" = "Release Date:";
 "Genre:" = "Genre:";
 "Country:" = "Country:";
+
+"Error" = "Error";
+"OK" = "OK";
+"Server error while downloading image" = "Server error while downloading image";
+"Download was successful but data corrupted" = "Download was successful but data corrupted";
+"Wrong Entity name 😱" = "Wrong Entity name 😱";
+"Server error element a nil" = "Server error element a nil";
+"Service Error:" = "Service Error:";
+"Unknown Error" = "Unknown Error";

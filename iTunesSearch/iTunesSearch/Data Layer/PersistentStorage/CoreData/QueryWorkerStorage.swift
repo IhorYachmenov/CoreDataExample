@@ -53,12 +53,12 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
             let entityDescription = NSEntityDescription.entity(forEntityName: self!.entityName, in: self!.coreDataManager.privateQueueManageObjectContext)
             
             guard entityDescription != nil else {
-                completion(.failure(.saveError(NSError.error(msg: "Wrong Entity name 😱"))))
+                completion(.failure(.saveError(NSError.error(msg: Constants.Error.coreDataSave))))
                 return
             }
             
             let manageObject = NSManagedObject(entity: entityDescription!, insertInto: self?.coreDataManager.privateQueueManageObjectContext)
-            #warning("Need to examine")
+            
             Mapper().mapToEntity(from: data, target: manageObject, completion: {
                 do {
                     try self?.coreDataManager.privateQueueManageObjectContext.save()

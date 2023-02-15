@@ -225,7 +225,7 @@ class SingerTrackDetailsViewController: UIViewController {
             }
         }
     }
-  
+    
     deinit {
         coodinatorDelegate?.dismissCoordinator()
     }

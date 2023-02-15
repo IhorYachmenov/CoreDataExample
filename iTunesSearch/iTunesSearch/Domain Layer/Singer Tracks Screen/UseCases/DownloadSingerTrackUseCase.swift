@@ -28,7 +28,7 @@ extension DownloadSingerTrackUseCase: DownloadSingerTrackUseCaseInterface {
                 if let dataModel = data?.last {
                     completion(.success(dataModel))
                 } else {
-                    completion(.failure(ServiceError(httpStatus: 0, message: "Server error element a nil")))
+                    completion(.failure(ServiceError(httpStatus: 0, message: Constants.Error.nilElement)))
                 }
             }
         }
