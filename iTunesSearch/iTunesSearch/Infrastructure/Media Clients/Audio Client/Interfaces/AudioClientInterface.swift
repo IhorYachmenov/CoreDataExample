@@ -11,12 +11,12 @@ enum MediaModel {
     struct AudioDetail {
         let currentTime: String
         let duration: String
-        let isPaused: Bool
-        let progress: Progress
+        var isPlaying: Bool
+        var progress: Float
     }
 }
 
 protocol AudioClientInterface {
-    associatedtype AudioObject
-    var audioDataPublisher: ((Result<AudioObject, Error>) -> ())? { get set }
+    var dataPublisher: ((Result<MediaModel.AudioDetail, Error>) -> ())? { get set }
+    func playTrack(url: URL, completion: @escaping (Error?) -> ())
 }

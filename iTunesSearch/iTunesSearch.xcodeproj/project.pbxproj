@@ -66,6 +66,8 @@
 		CE39D81F299D7B19009F4202 /* AudioClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D81E299D7B19009F4202 /* AudioClient.swift */; };
 		CE39D822299D7D23009F4202 /* AudioClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D821299D7D23009F4202 /* AudioClientInterface.swift */; };
 		CE39D828299E60F3009F4202 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D827299E60F3009F4202 /* Data.swift */; };
+		CE39D82A299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D829299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift */; };
+		CE39D82D299E9E71009F4202 /* AudioPlayerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D82C299E9E71009F4202 /* AudioPlayerUseCase.swift */; };
 		CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */; };
 		CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */; };
 		CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC550298DBDE1004F281C /* Mapper.swift */; };
@@ -162,6 +164,8 @@
 		CE39D81E299D7B19009F4202 /* AudioClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClient.swift; sourceTree = "<group>"; };
 		CE39D821299D7D23009F4202 /* AudioClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClientInterface.swift; sourceTree = "<group>"; };
 		CE39D827299E60F3009F4202 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		CE39D829299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerUseCaseInterface.swift; sourceTree = "<group>"; };
+		CE39D82C299E9E71009F4202 /* AudioPlayerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerUseCase.swift; sourceTree = "<group>"; };
 		CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorage.swift; sourceTree = "<group>"; };
 		CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStoragable.swift; sourceTree = "<group>"; };
 		CE4FC550298DBDE1004F281C /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -285,6 +289,7 @@
 		CE266CF92980310000D6E038 /* Domain Layer */ = {
 			isa = PBXGroup;
 			children = (
+				CE39D82B299E9E46009F4202 /* Common Use Cases */,
 				CE4FC5612992556C004F281C /* Singer Track Details Screen */,
 				CE4FC55F299254D5004F281C /* Singer Tracks Screen */,
 			);
@@ -643,6 +648,23 @@
 			path = Interfaces;
 			sourceTree = "<group>";
 		};
+		CE39D82B299E9E46009F4202 /* Common Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				CE39D82E299E9E7B009F4202 /* Interfaces */,
+				CE39D82C299E9E71009F4202 /* AudioPlayerUseCase.swift */,
+			);
+			path = "Common Use Cases";
+			sourceTree = "<group>";
+		};
+		CE39D82E299E9E7B009F4202 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				CE39D829299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
 		CE4FC544298D1580004F281C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -861,6 +883,7 @@
 				CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */,
 				CE39D7F7299A5CE5009F4202 /* SingerTrackDetailsViewModelInterface.swift in Sources */,
 				CE39D805299BE1DC009F4202 /* ImageDownloaderClient.swift in Sources */,
+				CE39D82A299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift in Sources */,
 				CE266D7529897CC700D6E038 /* APIHeaders.swift in Sources */,
 				CE266D57298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld in Sources */,
 				CE39D822299D7D23009F4202 /* AudioClientInterface.swift in Sources */,
@@ -910,6 +933,7 @@
 				CE39D7E929968358009F4202 /* ViewControllers.swift in Sources */,
 				CE39D7FD299A5E65009F4202 /* SingerTrackDetailsUseCaseInterface.swift in Sources */,
 				CE266D2D29807E8E00D6E038 /* SingerTrackListCell.swift in Sources */,
+				CE39D82D299E9E71009F4202 /* AudioPlayerUseCase.swift in Sources */,
 				CE266D02298031EA00D6E038 /* RequestHandler+Extension.swift in Sources */,
 				CE266D00298031DA00D6E038 /* APILoader.swift in Sources */,
 				CE266D1A29803E8D00D6E038 /* NetworkModel.swift in Sources */,

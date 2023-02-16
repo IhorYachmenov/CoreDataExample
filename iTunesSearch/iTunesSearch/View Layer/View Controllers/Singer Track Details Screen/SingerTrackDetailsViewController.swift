@@ -200,9 +200,9 @@ class SingerTrackDetailsViewController: UIViewController {
                 
                 self?.trackImg.image = details?.image?.image
                 
-                self?.trackCurrentTime.text = track?.currentTime
-                self?.trackDuration.text = track?.duration
-                self?.animateImage(isPaused: track?.isPaused)
+                self?.trackCurrentTime.text = track?.currentTime ?? "00:00"
+                self?.trackDuration.text = track?.duration ?? "00:00"
+                self?.animateImage(isPlaying: track?.isPlaying)
                 self?.animateProgressView(progress: track?.progress)
             case .failure(let failure):
                 self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
@@ -270,7 +270,7 @@ class SingerTrackDetailsViewController: UIViewController {
         
     }
     
-    private func animateProgressView(progress: Progress?) {
+    private func animateProgressView(progress: Float?) {
         guard let progress = progress else { return }
         #warning("animate progress")
 //        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
@@ -284,20 +284,19 @@ class SingerTrackDetailsViewController: UIViewController {
 //            let progressFloat = Float(progress.fractionCompleted ?? 0)
 //            self?.progressView.setProgress(progressFloat, animated: true)
 //        }
-        
-        let progressFloat = Float(progress.fractionCompleted)
-        progressView.setProgress(progressFloat, animated: true)
+//        let progressFloat = Float(progress.fractionCompleted)
+        progressView.setProgress(progress, animated: true)
         
     }
     
-    private func animateImage(isPaused: Bool?) {
-        guard let isPaused = isPaused else { return }
+    private func animateImage(isPlaying: Bool?) {
+        guard let isPlaying = isPlaying else { return }
         UIView.animate(withDuration: 0.3, delay: 0) {
-            self.trackImg.transform = (isPaused == false) ? .identity : CGAffineTransform(scaleX: 1.5, y: 1.5)
+            self.trackImg.transform = (isPlaying == false) ? .identity : CGAffineTransform(scaleX: 1.5, y: 1.5)
         }
         
         #warning("Animate button")
-        if (isPaused) {
+        if (isPlaying) {
             
         } else {
             

@@ -27,8 +27,8 @@ extension PresentationModel {
         struct Track {
             let currentTime: String
             let duration: String
-            let isPaused: Bool
-            let progress: Progress
+            let isPlaying: Bool
+            let progress: Float
         }
     }
     
@@ -51,7 +51,7 @@ extension PresentationModel.SingerTrackDetails.Track {
     init(mediaModel: MediaModel.AudioDetail) {
         currentTime = mediaModel.currentTime
         duration = mediaModel.duration
-        isPaused = mediaModel.isPaused
+        isPlaying = mediaModel.isPlaying
         progress = mediaModel.progress
     }
 }

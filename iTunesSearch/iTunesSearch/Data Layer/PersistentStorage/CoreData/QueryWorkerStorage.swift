@@ -36,7 +36,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
         fetchedResultsController.delegate = self
         
         try? fetchedResultsController.performFetch()
-        #warning("check main thread")
+        
         DispatchQueue.main.async { [weak self] in
             self?.dataPublisher?(self?.fetchedResultsController.fetchedObjects ?? [])
         }
@@ -69,8 +69,6 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
                     completion(.saveError(error))
                 }
             })
-            
-            
         }
     }
         
