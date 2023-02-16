@@ -20,12 +20,12 @@ class AudioClient: NSObject, AudioClientInterface {
     func playTrack(url: URL, completion: @escaping (Error?) -> ()) {
         if let audioPlayer = audioPlayer {
             if (audioPlayer.isPlaying) {
-                model.isPlaying = audioPlayer.isPlaying
+//                model.isPlaying = audioPlayer.isPlaying
                 audioPlayer.pause()
                 pauseDataUpdates()
                 return
             } else {
-                model.isPlaying = audioPlayer.isPlaying
+//                model.isPlaying = audioPlayer.isPlaying
                 audioPlayer.play()
                 enableDataUpdates()
                 return
@@ -61,6 +61,8 @@ class AudioClient: NSObject, AudioClientInterface {
         DispatchQueue.main.async { [weak self] in
             self?.timer?.invalidate()
             self?.timer = nil
+            self?.model.isPlaying = false
+            self?.pushUpdate()
         }
     }
     

@@ -11,7 +11,9 @@ extension Constants {
     struct SingerTrackDetailsScreen {
         static let defaultTrackImgName = "music.quarternote.3"
         static let playButtonTitle = "Play Demo".localized
+        static let pauseButtonTitle = "Pause".localized
         static let playButtonDefaultImgName = "play.fill"
+        static let playButtonPauseImgName = "pause.fill"
         static let collectionName = "Collection name:".localized
         static let collectionPrice = "Collection price:".localized
         static let trackPrice = "Track price:".localized

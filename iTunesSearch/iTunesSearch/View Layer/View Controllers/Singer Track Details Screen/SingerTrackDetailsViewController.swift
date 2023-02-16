@@ -282,11 +282,6 @@ class SingerTrackDetailsViewController: UIViewController {
             self.trackImg.transform = (isPlaying == false) ? .identity : CGAffineTransform(scaleX: 1.5, y: 1.5)
         }
         
-        #warning("Animate button")
-        if (isPlaying) {
-            
-        } else {
-            
-        }
+        playDemoButton.playerButtonState(isPlaying: isPlaying)
     }
 }

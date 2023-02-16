@@ -48,6 +48,7 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
         }
         
         self.audioPlayerUseCase.subscribeOnAudioData(completion: { [weak self] data in
+            print(data.isPlaying)
             self?.dataModel.track = PresentationModel.SingerTrackDetails.Track(mediaModel: data)
             self?.pushDataModel()
         })
