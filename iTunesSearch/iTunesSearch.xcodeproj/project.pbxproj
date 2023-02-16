@@ -298,7 +298,6 @@
 			isa = PBXGroup;
 			children = (
 				CE39D81C299D7ABB009F4202 /* Media Clients */,
-				CE266D732989483800D6E038 /* Network Entities */,
 				CE266D17298037B700D6E038 /* Network Clients */,
 			);
 			path = Infrastructure;
@@ -330,7 +329,8 @@
 		CE266D17298037B700D6E038 /* Network Clients */ = {
 			isa = PBXGroup;
 			children = (
-				CE39D813299D5CA4009F4202 /* Track Donwloader */,
+				CE266D732989483800D6E038 /* Network Entities */,
+				CE39D813299D5CA4009F4202 /* Track Downloader */,
 				CE39D803299BE0F1009F4202 /* Image Downloader */,
 				CE39D802299BE0D4009F4202 /* REST API */,
 			);
@@ -603,13 +603,13 @@
 			path = "Image Downloader";
 			sourceTree = "<group>";
 		};
-		CE39D813299D5CA4009F4202 /* Track Donwloader */ = {
+		CE39D813299D5CA4009F4202 /* Track Downloader */ = {
 			isa = PBXGroup;
 			children = (
 				CE39D819299D78FF009F4202 /* Interfaces */,
 				CE39D814299D5CC5009F4202 /* TrackDownloaderClient.swift */,
 			);
-			path = "Track Donwloader";
+			path = "Track Downloader";
 			sourceTree = "<group>";
 		};
 		CE39D816299D7883009F4202 /* Interfaces */ = {
