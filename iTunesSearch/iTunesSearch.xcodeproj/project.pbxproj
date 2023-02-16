@@ -66,6 +66,7 @@
 		CE39D81B299D790C009F4202 /* TrackDownloaderClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D81A299D790C009F4202 /* TrackDownloaderClientInterface.swift */; };
 		CE39D81F299D7B19009F4202 /* AudioClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D81E299D7B19009F4202 /* AudioClient.swift */; };
 		CE39D822299D7D23009F4202 /* AudioClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D821299D7D23009F4202 /* AudioClientInterface.swift */; };
+		CE39D826299E2ACF009F4202 /* MediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D825299E2ACF009F4202 /* MediaModel.swift */; };
 		CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */; };
 		CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */; };
 		CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC550298DBDE1004F281C /* Mapper.swift */; };
@@ -162,6 +163,7 @@
 		CE39D81A299D790C009F4202 /* TrackDownloaderClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDownloaderClientInterface.swift; sourceTree = "<group>"; };
 		CE39D81E299D7B19009F4202 /* AudioClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClient.swift; sourceTree = "<group>"; };
 		CE39D821299D7D23009F4202 /* AudioClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClientInterface.swift; sourceTree = "<group>"; };
+		CE39D825299E2ACF009F4202 /* MediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModel.swift; sourceTree = "<group>"; };
 		CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorage.swift; sourceTree = "<group>"; };
 		CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStoragable.swift; sourceTree = "<group>"; };
 		CE4FC550298DBDE1004F281C /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -296,7 +298,6 @@
 			isa = PBXGroup;
 			children = (
 				CE39D81C299D7ABB009F4202 /* Media Clients */,
-				CE266D5F2984040F00D6E038 /* Network Services */,
 				CE266D732989483800D6E038 /* Network Entities */,
 				CE266D17298037B700D6E038 /* Network Clients */,
 			);
@@ -581,6 +582,7 @@
 		CE39D802299BE0D4009F4202 /* REST API */ = {
 			isa = PBXGroup;
 			children = (
+				CE266D5F2984040F00D6E038 /* Network Services */,
 				CE266D052980320100D6E038 /* APIHandler.swift */,
 				CE266D01298031EA00D6E038 /* RequestHandler+Extension.swift */,
 				CE266D03298031F600D6E038 /* ResponseHandler+Extension.swift */,
@@ -637,6 +639,7 @@
 		CE39D81D299D7AD5009F4202 /* Audio Client */ = {
 			isa = PBXGroup;
 			children = (
+				CE39D823299E2A94009F4202 /* Entities */,
 				CE39D820299D7CF1009F4202 /* Interfaces */,
 				CE39D81E299D7B19009F4202 /* AudioClient.swift */,
 			);
@@ -649,6 +652,14 @@
 				CE39D821299D7D23009F4202 /* AudioClientInterface.swift */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		CE39D823299E2A94009F4202 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CE39D825299E2ACF009F4202 /* MediaModel.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		CE4FC544298D1580004F281C /* Entities */ = {
@@ -898,6 +909,7 @@
 				CE266CFE298031C600D6E038 /* APIEnvironment.swift in Sources */,
 				CE266D3329812BEB00D6E038 /* PersistentStorageRepository.swift in Sources */,
 				CE266D6D2987DED900D6E038 /* SingerTracksWorkerUseCase.swift in Sources */,
+				CE39D826299E2ACF009F4202 /* MediaModel.swift in Sources */,
 				CE266D0A2980335800D6E038 /* ConstantsAlert.swift in Sources */,
 				CE39D80A299C4121009F4202 /* NSMutableAttributedString.swift in Sources */,
 				CE266D3629812C5700D6E038 /* PersistentStorageRepositoryInterface.swift in Sources */,

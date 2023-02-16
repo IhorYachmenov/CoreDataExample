@@ -301,7 +301,7 @@ class SingerTrackDetailsViewController: UIViewController {
     }
     
     private func animateProgressView(progress: Progress) {
-        /// **In progress
+        #warning("animate progress")
 //        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
 //            guard self?.progress.isFinished == false else {
 //                timer.invalidate()
@@ -324,7 +324,7 @@ class SingerTrackDetailsViewController: UIViewController {
             self.trackImg.transform = (isPaused == false) ? .identity : CGAffineTransform(scaleX: 1.5, y: 1.5)
         }
         
-        // Animate button
+        #warning("Animate button")
         if (isPaused) {
             
         } else {

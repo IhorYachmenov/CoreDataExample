@@ -9,7 +9,7 @@ import Foundation
 
 protocol SingerTrackDetailsViewModelInterface {
     var imageDataSource: ((Result<Data, Error>) -> ())? { get set }
-    var audioDataSource: ((Result<PlayerObject, Error>) -> ())? { get set }
+    var audioDataSource: ((Result<PresentationModel.PlayerObject, Error>) -> ())? { get set }
     func fetchTrackDetails(trackId: String, completion: @escaping (Result<PresentationModel.SingerTrackDetail, StorageError>) -> ())
     func playTrack(url: String?)
 }

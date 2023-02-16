@@ -8,7 +8,7 @@
 import Foundation
 
 final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
-    var audioDataSource: ((Result<PlayerObject, Error>) -> ())?
+    var audioDataSource: ((Result<PresentationModel.PlayerObject, Error>) -> ())?
     var imageDataSource: ((Result<Data, Error>) -> ())?
     
     private var useCase: SingerTrackDetailsUseCaseInterface
@@ -20,7 +20,7 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
             switch result {
             case .success(let success):
                 DispatchQueue.main.async {
-                    self?.audioDataSource?(.success(success))
+                    self?.audioDataSource?(.success(PresentationModel.PlayerObject(mediaModel: success)))
                 }
             case .failure(let failure):
                 DispatchQueue.main.async {

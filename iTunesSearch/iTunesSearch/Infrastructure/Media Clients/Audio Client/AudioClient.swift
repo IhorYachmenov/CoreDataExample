@@ -8,15 +8,10 @@
 import Foundation
 import AVFoundation
 
-struct PlayerObject {
-    let currentTime: String
-    let duration: String
-    let isPaused: Bool
-    let progress: Progress
-}
+
 
 class AudioClient: AudioClientInterface {
-    typealias AudioObject = PlayerObject
+    typealias AudioObject = MediaModel.PlayerObject
     
     var audioDataPublisher: ((Result<AudioObject, Error>) -> ())?
     

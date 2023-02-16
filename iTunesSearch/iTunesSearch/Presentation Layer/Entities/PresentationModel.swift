@@ -28,6 +28,13 @@ enum PresentationModel {
         let demoURL: String
         let trackImgURL: String
     }
+    
+    struct PlayerObject {
+        let currentTime: String
+        let duration: String
+        let isPaused: Bool
+        let progress: Progress
+    }
 }
 
 extension PresentationModel.SingerTrackDetail {
@@ -55,3 +62,11 @@ extension PresentationModel.SingerTrack {
     }
 }
 
+extension PresentationModel.PlayerObject {
+    init(mediaModel: MediaModel.PlayerObject) {
+        currentTime = mediaModel.currentTime
+        duration = mediaModel.duration
+        isPaused = mediaModel.isPaused
+        progress = mediaModel.progress
+    }
+}
