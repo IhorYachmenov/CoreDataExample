@@ -24,7 +24,7 @@ final class SingerTracksCoordinator: Coordinator {
             self.removeChild(self)
         }
     }
-    #warning("Q: - coordinator -> router dependency, inside showDetailCoordinator")
+    #warning("** Q: - coordinator -> router dependency, inside showDetailCoordinator")
     private func showDetailCoordinator(trackId: String) {
 //        let router = RounterBuilder.makerRouter(type: .PlayerScreenRouter)
         let detailCoordinator = SingerTrackDetailsCoordinator(router: router, trackId: trackId)
@@ -40,6 +40,7 @@ final class SingerTracksCoordinator: Coordinator {
 
 // MARK: - Delegate
 extension SingerTracksCoordinator: SingerTracksDelegate {
+
     func coordinator(didSelect trackId: String) {
         showDetailCoordinator(trackId: trackId)
     }

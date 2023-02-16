@@ -24,7 +24,7 @@ extension SingerTrackDetailsUseCase: SingerTrackDetailsUseCaseInterface {
         imageDownloaderClient.downloadImage(url: url, completion: completion)
     }
     
-    func fetchTrackDetails(trackId: String, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
+    func fetchTrackDetails(trackId: String, completion: @escaping (StorageError?) -> ()) {
         repository.fetchTrackDetails(trackId: trackId, completion: completion)
     }
     
@@ -42,5 +42,11 @@ extension SingerTrackDetailsUseCase: SingerTrackDetailsUseCaseInterface {
     
     func subscribeOnAudioData(completion: @escaping (Result<MediaModel.PlayerObject, Error>) -> ()) {
         audioClient.audioDataPublisher = completion
+    }
+    
+    func subscribeOnData(completion: @escaping (DataModel.SingerTrack?) -> ()) {
+        repository.subscribeOnData { data in
+            completion(data.first)
+        }
     }
 }

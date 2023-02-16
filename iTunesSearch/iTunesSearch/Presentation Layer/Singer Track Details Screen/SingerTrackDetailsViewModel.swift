@@ -8,53 +8,52 @@
 import Foundation
 
 final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
-    var audioDataSource: ((Result<PresentationModel.PlayerObject, Error>) -> ())?
-    var imageDataSource: ((Result<Data, Error>) -> ())?
+    var dataSource: ((Result<PresentationModel.SingerTrackDetails, Error>) -> ())?
     
+    private var trackId: String
+    private var audioURL: String?
     private var useCase: SingerTrackDetailsUseCaseInterface
     
-    init(useCase: SingerTrackDetailsUseCaseInterface) {
+    private var dataModel = PresentationModel.SingerTrackDetails()
+    
+    init(trackId: String, useCase: SingerTrackDetailsUseCaseInterface) {
         self.useCase = useCase
+        self.trackId = trackId
         
-        useCase.subscribeOnAudioData { [weak self] result in
-            switch result {
-            case .success(let success):
+        self.useCase.fetchTrackDetails(trackId: trackId) { [weak self] failure in
+            if let failure = failure {
                 DispatchQueue.main.async {
-                    self?.audioDataSource?(.success(PresentationModel.PlayerObject(mediaModel: success)))
-                }
-            case .failure(let failure):
-                DispatchQueue.main.async {
-                    self?.audioDataSource?(.failure(failure))
+                    self?.dataSource?(.failure(failure))
                 }
             }
         }
-    }
-    
-    func fetchTrackDetails(trackId: String, completion: @escaping (Result<PresentationModel.SingerTrackDetail, StorageError>) -> ()) {
-        useCase.fetchTrackDetails(trackId: trackId) { [weak self] result in
-            switch result {
-            case .success(let success):
-                DispatchQueue.main.async {
-                    completion(.success(PresentationModel.SingerTrackDetail(dataModel: success)))
-                }
+        
+        self.useCase.subscribeOnData { [weak self] data in
+            if let data = data {
+                self?.audioURL = data.demoURL
+                self?.dataModel.details = PresentationModel.SingerTrackDetails.Details(dataModel: data)
+                self?.pushDataModel()
                 
-                self?.useCase.downloadImage(url: success.trackImgURL) { result in
+                self?.useCase.downloadImage(url: data.trackImgURL) { [weak self] result in
                     switch result {
                     case .success(let success):
-                        self?.imageDataSource?(.success(success))
-                    case .failure(let failure):
-                        self?.imageDataSource?(.failure(failure))
+                        self?.dataModel.details?.image = success
+                        self?.pushDataModel()
+                    case .failure(_):
+                        break
                     }
-                }
-            case .failure(let failure):
-                DispatchQueue.main.async {
-                    completion(.failure(failure))
                 }
             }
         }
+
     }
     
-    func playTrack(url: String?) {
-        useCase.playTrack(url: url)
+    func playTrack() {
+        useCase.playTrack(url: audioURL)
+    }
+    
+    
+    private func pushDataModel() {
+        dataSource?(.success(dataModel))
     }
 }

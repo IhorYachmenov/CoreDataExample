@@ -8,10 +8,9 @@
 import Foundation
 
 protocol SingerTrackDetailsUseCaseInterface {
-    #warning("Q: - Result not a media model")
-    #warning("Q: - Media layer architecture")
     func downloadImage(url: String?, completion: @escaping (Result<Data, Error>) -> ())
-    func fetchTrackDetails(trackId: String, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ())
+    func fetchTrackDetails(trackId: String, completion: @escaping (StorageError?) -> ())
+    func subscribeOnData(completion: @escaping (DataModel.SingerTrack?) -> ())
     
     // In progress
     func playTrack(url: String?)

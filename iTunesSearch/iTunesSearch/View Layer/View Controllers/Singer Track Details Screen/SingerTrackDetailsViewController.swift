@@ -17,8 +17,6 @@ class SingerTrackDetailsViewController: UIViewController {
     weak var coodinatorDelegate: SingerTrackDetailsDelegate?
     
     /// Properties
-    private var trackId: String
-    private var audioURL: String?
     var viewModel: SingerTrackDetailsViewModelInterface!
     
     /// UI Properties
@@ -64,7 +62,6 @@ class SingerTrackDetailsViewController: UIViewController {
         view.textAlignment = .left
         view.numberOfLines = 3
         view.font.withSize(10)
-        view.text = Constants.SingerTrackDetailsScreen.collectionName
         return view
     }()
     
@@ -75,7 +72,6 @@ class SingerTrackDetailsViewController: UIViewController {
         view.textAlignment = .left
         //        view.font = .boldSystemFont(ofSize: 10)
         view.font.withSize(10)
-        view.text = Constants.SingerTrackDetailsScreen.collectionPrice
         return view
     }()
     
@@ -86,7 +82,6 @@ class SingerTrackDetailsViewController: UIViewController {
         view.textAlignment = .left
         //        view.font = .boldSystemFont(ofSize: 10)
         view.font.withSize(10)
-        view.text = Constants.SingerTrackDetailsScreen.trackPrice
         return view
     }()
     
@@ -96,7 +91,6 @@ class SingerTrackDetailsViewController: UIViewController {
         view.textColor = .black
         view.textAlignment = .left
         view.font.withSize(10)
-        view.text = Constants.SingerTrackDetailsScreen.releaseDate
         return view
     }()
     
@@ -106,7 +100,6 @@ class SingerTrackDetailsViewController: UIViewController {
         view.textColor = .black
         view.textAlignment = .left
         view.font.withSize(10)
-        view.text = Constants.SingerTrackDetailsScreen.genre
         return view
     }()
     
@@ -116,7 +109,6 @@ class SingerTrackDetailsViewController: UIViewController {
         view.textColor = .black
         view.textAlignment = .left
         view.font.withSize(10)
-        view.text = Constants.SingerTrackDetailsScreen.country
         return view
     }()
     
@@ -180,60 +172,38 @@ class SingerTrackDetailsViewController: UIViewController {
         view.configuration = configuration
         
         view.addAction(UIAction(handler: { [weak self] _ in
-            self?.viewModel.playTrack(url: self?.audioURL)
+            self?.viewModel.playTrack()
         }), for: .touchUpInside)
         
         return view
     }()
-    
-    init(trackId: String) {
-        self.trackId = trackId
-        super.init(nibName: nil, bundle: nil)
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initUIComponents()
         
-        viewModel.fetchTrackDetails(trackId: trackId) { [weak self] result in
+        viewModel.dataSource = { [weak self] result in
             switch result {
             case .success(let success):
-                self?.trackName.text = success.trackName
-                self?.singerName.text = success.singerName
-                self?.collectionName.appendInfoToText(info: success.collectionName)
-                self?.collectionPrice.attributedInfoToText(info: success.collectionPrice)
-                self?.trackPrice.attributedInfoToText(info: success.trackPrice)
-                self?.releaseDate.appendInfoToText(info: success.releaseDate)
-                self?.genre.appendInfoToText(info: success.genre)
-                self?.country.appendInfoToText(info: success.country)
-                self?.audioURL = success.demoURL
-            case .failure(let failure):
-                self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
-            }
-        }
-        
-        viewModel.imageDataSource = { [weak self] result in
-            switch result {
-            case .success(let success):
-                self?.trackImg.image = UIImage(data: success)
-            case .failure(let failure):
-                self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
-            }
-        }
-        
-        viewModel.audioDataSource = { [weak self] result in
-            switch result {
-            case .success(let success):
-                self?.trackCurrentTime.text = success.currentTime
-                self?.trackDuration.text = success.duration
-                self?.animateImage(isPaused: success.isPaused)
-                self?.animateProgressView(progress: success.progress)
+                let details = success.details
+                let track = success.track
+                
+                self?.trackName.text = details?.trackName
+                self?.singerName.text = details?.singerName
+                self?.collectionName.appentText(defaultText: Constants.SingerTrackDetailsScreen.collectionName, text: details?.collectionName)
+                self?.collectionPrice.attributedText(defaultText: Constants.SingerTrackDetailsScreen.collectionPrice, text: details?.collectionPrice)
+                self?.trackPrice.attributedText(defaultText: Constants.SingerTrackDetailsScreen.trackPrice, text: details?.trackPrice)
+                self?.releaseDate.appentText(defaultText: Constants.SingerTrackDetailsScreen.releaseDate, text: details?.releaseDate)
+                self?.genre.appentText(defaultText: Constants.SingerTrackDetailsScreen.genre, text: details?.genre)
+                self?.country.appentText(defaultText: Constants.SingerTrackDetailsScreen.country, text: details?.country)
+                
+                self?.trackImg.image = details?.image?.image
+                
+                self?.trackCurrentTime.text = track?.currentTime
+                self?.trackDuration.text = track?.duration
+                self?.animateImage(isPaused: track?.isPaused)
+                self?.animateProgressView(progress: track?.progress)
             case .failure(let failure):
                 self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
             }
@@ -300,7 +270,8 @@ class SingerTrackDetailsViewController: UIViewController {
         
     }
     
-    private func animateProgressView(progress: Progress) {
+    private func animateProgressView(progress: Progress?) {
+        guard let progress = progress else { return }
         #warning("animate progress")
 //        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
 //            guard self?.progress.isFinished == false else {
@@ -319,7 +290,8 @@ class SingerTrackDetailsViewController: UIViewController {
         
     }
     
-    private func animateImage(isPaused : Bool) {
+    private func animateImage(isPaused: Bool?) {
+        guard let isPaused = isPaused else { return }
         UIView.animate(withDuration: 0.3, delay: 0) {
             self.trackImg.transform = (isPaused == false) ? .identity : CGAffineTransform(scaleX: 1.5, y: 1.5)
         }

@@ -28,14 +28,9 @@ extension PersistentStorageRepository: PersistentStorageRepositoryInterface {
         }
     }
     
-    func fetchTrackDetails(trackId: String, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
+    func fetchTrackDetails(trackId: String, completion: @escaping (StorageError?) -> ()) {
         singerTracksQueryStorageGeneric.fetchEntity(matching: \.trackId, equalTo: trackId) { result in
-            switch result {
-            case .success(let success):
-                completion(.success(DataModel.SingerTrack(entity: success)))
-            case .failure(let failure):
-                completion(.failure(failure))
-            }
+            completion(result)
         }
     }
 }

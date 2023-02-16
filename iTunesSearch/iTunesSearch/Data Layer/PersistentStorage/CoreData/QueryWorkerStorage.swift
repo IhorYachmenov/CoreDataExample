@@ -36,7 +36,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
         fetchedResultsController.delegate = self
         
         try? fetchedResultsController.performFetch()
-        
+        #warning("check main thread")
         DispatchQueue.main.async { [weak self] in
             self?.dataPublisher?(self?.fetchedResultsController.fetchedObjects ?? [])
         }
@@ -62,11 +62,10 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
             Mapper().mapToEntity(from: data, target: manageObject, completion: {
                 do {
                     try self?.coreDataManager.privateQueueManageObjectContext.save()
-                    print("Data saved successfully private Q🥳")
                     self?.coreDataManager.privateQueueManageObjectContext.reset()
+                    
                     completion(.success(data))
                 } catch {
-                    print("Can't save singer track privateQ 😶‍🌫️")
                     completion(.failure(.saveError(error)))
                 }
             })
@@ -78,7 +77,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
     func fetchEntity<T>(
         matching keyPath: KeyPath<Entity, T>,
         equalTo value: T,
-        completion: @escaping (Result<Entity, StorageError>) -> ()
+        completion: @escaping (StorageError?) -> ()
     ) {
         coreDataManager.mainQueueManageObjectContext.perform { [weak self] in
             let predicate = NSPredicate(format: "%K == %@", keyPath._kvcKeyPathString!, value as! CVarArg)
@@ -90,12 +89,13 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
                 try self?.fetchedResultsController.performFetch()
             
                 if let obj = self?.fetchedResultsController.fetchedObjects?.first {
-                    completion(.success(obj))
+                    self?.dataPublisher?([obj])
+                    completion(nil)
                 } else {
-                    completion(.failure(StorageError.notFoundError))
+                    completion(StorageError.notFoundError)
                 }
             } catch {
-                completion(.failure(.readError(error)))
+                completion(.readError(error))
             }
         }
 

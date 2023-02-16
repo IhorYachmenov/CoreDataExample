@@ -8,12 +8,13 @@
 import UIKit
 
 extension UILabel {
-    func appendInfoToText(info: String) {
-        self.text = "\(String(describing: self.text ?? "")) \(info)"
+    func appentText(defaultText: String?, text: String?) {
+        self.text = "\(String(describing: defaultText ?? "")) \(text ?? "")"
     }
     
-    func attributedInfoToText(info: String, highlightedTextColor: UIColor = .systemGreen) {
-        let existingText = self.text ?? ""
+    func attributedText(defaultText: String?, text: String?, highlightedTextColor: UIColor = .systemGreen) {
+        let existingText = defaultText ?? ""
+        let info = text ?? ""
         let combinedText = "\(existingText) \(info)"
         
         let attributedString = NSMutableAttributedString(string: combinedText)

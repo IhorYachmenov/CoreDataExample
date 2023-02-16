@@ -24,7 +24,6 @@
 		CE266D102980358E00D6E038 /* DownloadSingerTrackUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D0F2980358E00D6E038 /* DownloadSingerTrackUseCase.swift */; };
 		CE266D132980368600D6E038 /* SearchSingerTrackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D122980368600D6E038 /* SearchSingerTrackAPI.swift */; };
 		CE266D1A29803E8D00D6E038 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D1929803E8D00D6E038 /* NetworkModel.swift */; };
-		CE266D1D298042E100D6E038 /* PresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D1C298042E100D6E038 /* PresentationModel.swift */; };
 		CE266D2929807DFF00D6E038 /* SingerTrackListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D2829807DFF00D6E038 /* SingerTrackListContentView.swift */; };
 		CE266D2B29807E4000D6E038 /* SingerTrackListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D2A29807E4000D6E038 /* SingerTrackListConfigurator.swift */; };
 		CE266D2D29807E8E00D6E038 /* SingerTrackListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D2C29807E8E00D6E038 /* SingerTrackListCell.swift */; };
@@ -67,6 +66,7 @@
 		CE39D81F299D7B19009F4202 /* AudioClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D81E299D7B19009F4202 /* AudioClient.swift */; };
 		CE39D822299D7D23009F4202 /* AudioClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D821299D7D23009F4202 /* AudioClientInterface.swift */; };
 		CE39D826299E2ACF009F4202 /* MediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D825299E2ACF009F4202 /* MediaModel.swift */; };
+		CE39D828299E60F3009F4202 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D827299E60F3009F4202 /* Data.swift */; };
 		CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */; };
 		CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */; };
 		CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC550298DBDE1004F281C /* Mapper.swift */; };
@@ -119,7 +119,6 @@
 		CE266D0F2980358E00D6E038 /* DownloadSingerTrackUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadSingerTrackUseCase.swift; sourceTree = "<group>"; };
 		CE266D122980368600D6E038 /* SearchSingerTrackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSingerTrackAPI.swift; sourceTree = "<group>"; };
 		CE266D1929803E8D00D6E038 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
-		CE266D1C298042E100D6E038 /* PresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationModel.swift; sourceTree = "<group>"; };
 		CE266D2829807DFF00D6E038 /* SingerTrackListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackListContentView.swift; sourceTree = "<group>"; };
 		CE266D2A29807E4000D6E038 /* SingerTrackListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackListConfigurator.swift; sourceTree = "<group>"; };
 		CE266D2C29807E8E00D6E038 /* SingerTrackListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackListCell.swift; sourceTree = "<group>"; };
@@ -164,6 +163,7 @@
 		CE39D81E299D7B19009F4202 /* AudioClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClient.swift; sourceTree = "<group>"; };
 		CE39D821299D7D23009F4202 /* AudioClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClientInterface.swift; sourceTree = "<group>"; };
 		CE39D825299E2ACF009F4202 /* MediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModel.swift; sourceTree = "<group>"; };
+		CE39D827299E60F3009F4202 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorage.swift; sourceTree = "<group>"; };
 		CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStoragable.swift; sourceTree = "<group>"; };
 		CE4FC550298DBDE1004F281C /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -268,7 +268,6 @@
 		CE266CF72980308E00D6E038 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
-				CE266D1B2980429100D6E038 /* Entities */,
 				CE4FC56029925500004F281C /* Singer Tracks Screen */,
 				CE4FC56229925583004F281C /* Singer Track Details Screen */,
 			);
@@ -322,6 +321,7 @@
 				CE39D800299BCBFC009F4202 /* UILabel.swift */,
 				CE39D806299BE391009F4202 /* Error.swift */,
 				CE39D809299C4121009F4202 /* NSMutableAttributedString.swift */,
+				CE39D827299E60F3009F4202 /* Data.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,20 +329,11 @@
 		CE266D17298037B700D6E038 /* Network Clients */ = {
 			isa = PBXGroup;
 			children = (
-				CE266D732989483800D6E038 /* Network Entities */,
 				CE39D813299D5CA4009F4202 /* Track Downloader */,
 				CE39D803299BE0F1009F4202 /* Image Downloader */,
 				CE39D802299BE0D4009F4202 /* REST API */,
 			);
 			path = "Network Clients";
-			sourceTree = "<group>";
-		};
-		CE266D1B2980429100D6E038 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				CE266D1C298042E100D6E038 /* PresentationModel.swift */,
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		CE266D232980481000D6E038 /* View Models */ = {
@@ -483,20 +474,20 @@
 			path = Interfaces;
 			sourceTree = "<group>";
 		};
-		CE266D5F2984040F00D6E038 /* Network Services */ = {
+		CE266D5F2984040F00D6E038 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				CE266D122980368600D6E038 /* SearchSingerTrackAPI.swift */,
 			);
-			path = "Network Services";
+			path = Services;
 			sourceTree = "<group>";
 		};
-		CE266D732989483800D6E038 /* Network Entities */ = {
+		CE266D732989483800D6E038 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				CE266D1929803E8D00D6E038 /* NetworkModel.swift */,
 			);
-			path = "Network Entities";
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		CE266D7629897F3C00D6E038 /* Constants */ = {
@@ -582,7 +573,8 @@
 		CE39D802299BE0D4009F4202 /* REST API */ = {
 			isa = PBXGroup;
 			children = (
-				CE266D5F2984040F00D6E038 /* Network Services */,
+				CE266D732989483800D6E038 /* Entities */,
+				CE266D5F2984040F00D6E038 /* Services */,
 				CE266D052980320100D6E038 /* APIHandler.swift */,
 				CE266D01298031EA00D6E038 /* RequestHandler+Extension.swift */,
 				CE266D03298031F600D6E038 /* ResponseHandler+Extension.swift */,
@@ -898,7 +890,6 @@
 				CE266D3D29812E0500D6E038 /* DataModel.swift in Sources */,
 				CE39D815299D5CC5009F4202 /* TrackDownloaderClient.swift in Sources */,
 				CE39D80C299CE075009F4202 /* ConstantsError.swift in Sources */,
-				CE266D1D298042E100D6E038 /* PresentationModel.swift in Sources */,
 				CE266D102980358E00D6E038 /* DownloadSingerTrackUseCase.swift in Sources */,
 				CE39D818299D789C009F4202 /* ImageDownloaderClientInterface.swift in Sources */,
 				CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */,
@@ -912,6 +903,7 @@
 				CE39D826299E2ACF009F4202 /* MediaModel.swift in Sources */,
 				CE266D0A2980335800D6E038 /* ConstantsAlert.swift in Sources */,
 				CE39D80A299C4121009F4202 /* NSMutableAttributedString.swift in Sources */,
+				CE39D828299E60F3009F4202 /* Data.swift in Sources */,
 				CE266D3629812C5700D6E038 /* PersistentStorageRepositoryInterface.swift in Sources */,
 				CE39D807299BE391009F4202 /* Error.swift in Sources */,
 				CE266D4829814C0400D6E038 /* CoreDataStorageManager.swift in Sources */,

@@ -30,9 +30,9 @@ final class ViewControllers {
         
         let storageUseCase = SingerTrackDetailsUseCase(storageRepository: repository)
         
-        let viewModel = SingerTrackDetailsViewModel(useCase: storageUseCase)
+        let viewModel = SingerTrackDetailsViewModel(trackId: trackId, useCase: storageUseCase)
         
-        let viewController = SingerTrackDetailsViewController(trackId: trackId)
+        let viewController = SingerTrackDetailsViewController()
         viewController.coodinatorDelegate = delegate
         viewController.viewModel = viewModel
         

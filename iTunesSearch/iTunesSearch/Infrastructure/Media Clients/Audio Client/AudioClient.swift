@@ -8,8 +8,6 @@
 import Foundation
 import AVFoundation
 
-
-
 class AudioClient: AudioClientInterface {
     typealias AudioObject = MediaModel.PlayerObject
     
@@ -26,6 +24,7 @@ class AudioClient: AudioClientInterface {
     func playTrack(url: URL) {
         do {
             player = try AVAudioPlayer(contentsOf: url)
+            player.prepareToPlay()
             player.play()
         } catch {
             print("Error Playing Audio ", error)
