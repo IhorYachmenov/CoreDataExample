@@ -9,7 +9,7 @@ import Foundation
 import AVFoundation
 
 class AudioClient: AudioClientInterface {
-    typealias AudioObject = MediaModel.PlayerObject
+    typealias AudioObject = MediaModel.AudioDetail
     
     var audioDataPublisher: ((Result<AudioObject, Error>) -> ())?
     

@@ -40,11 +40,11 @@ extension SingerTrackDetailsUseCase: SingerTrackDetailsUseCaseInterface {
         }
     }
     
-    func subscribeOnAudioData(completion: @escaping (Result<MediaModel.PlayerObject, Error>) -> ()) {
+    func subscribeOnAudioData(completion: @escaping (Result<MediaModel.AudioDetail, Error>) -> ()) {
         audioClient.audioDataPublisher = completion
     }
     
-    func subscribeOnData(completion: @escaping (DataModel.SingerTrack?) -> ()) {
+    func subscribeOnTrackData(completion: @escaping (DataModel.SingerTrack?) -> ()) {
         repository.subscribeOnData { data in
             completion(data.first)
         }

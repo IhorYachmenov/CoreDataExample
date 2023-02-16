@@ -47,6 +47,15 @@ extension PresentationModel.SingerTrackDetails.Details {
     }
 }
 
+extension PresentationModel.SingerTrackDetails.Track {
+    init(mediaModel: MediaModel.AudioDetail) {
+        currentTime = mediaModel.currentTime
+        duration = mediaModel.duration
+        isPaused = mediaModel.isPaused
+        progress = mediaModel.progress
+    }
+}
+
 protocol SingerTrackDetailsViewModelInterface {
     var dataSource: ((Result<PresentationModel.SingerTrackDetails, Error>) -> ())? { get set }
     func playTrack()

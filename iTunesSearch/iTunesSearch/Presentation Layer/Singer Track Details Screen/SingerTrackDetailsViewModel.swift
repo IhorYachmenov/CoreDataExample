@@ -8,13 +8,12 @@
 import Foundation
 
 final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
-    var dataSource: ((Result<PresentationModel.SingerTrackDetails, Error>) -> ())?
-    
     private var trackId: String
     private var audioURL: String?
     private var useCase: SingerTrackDetailsUseCaseInterface
-    
     private var dataModel = PresentationModel.SingerTrackDetails()
+    
+    var dataSource: ((Result<PresentationModel.SingerTrackDetails, Error>) -> ())?
     
     init(trackId: String, useCase: SingerTrackDetailsUseCaseInterface) {
         self.useCase = useCase
@@ -28,7 +27,7 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
             }
         }
         
-        self.useCase.subscribeOnData { [weak self] data in
+        self.useCase.subscribeOnTrackData { [weak self] data in
             if let data = data {
                 self?.audioURL = data.demoURL
                 self?.dataModel.details = PresentationModel.SingerTrackDetails.Details(dataModel: data)
@@ -45,6 +44,18 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
                 }
             }
         }
+        
+        self.useCase.subscribeOnAudioData(completion: { [weak self] result in
+            switch result {
+            case .success(let success):
+                self?.dataModel.track = PresentationModel.SingerTrackDetails.Track(mediaModel: success)
+                self?.pushDataModel()
+            case .failure(let failure):
+                DispatchQueue.main.async {
+                    self?.dataSource?(.failure(failure))
+                }
+            }
+        })
 
     }
     
@@ -54,6 +65,8 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
     
     
     private func pushDataModel() {
-        dataSource?(.success(dataModel))
+        DispatchQueue.main.async { [weak self] in
+            self?.dataSource?(.success(self!.dataModel))
+        }
     }
 }
