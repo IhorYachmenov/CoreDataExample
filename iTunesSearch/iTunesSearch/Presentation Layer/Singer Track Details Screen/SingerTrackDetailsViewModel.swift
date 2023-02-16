@@ -38,19 +38,14 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
                     completion(.success(PresentationModel.SingerTrackDetail(dataModel: success)))
                 }
                 
-                let url = URL(string: success.trackImgURL)
-                
-                if let url = url {
-                    self?.useCase.downloadImage(url: url) { result in
-                        switch result {
-                        case .success(let success):
-                            self?.imageDataSource?(.success(success))
-                        case .failure(let failure):
-                            self?.imageDataSource?(.failure(failure))
-                        }
+                self?.useCase.downloadImage(url: success.trackImgURL) { result in
+                    switch result {
+                    case .success(let success):
+                        self?.imageDataSource?(.success(success))
+                    case .failure(let failure):
+                        self?.imageDataSource?(.failure(failure))
                     }
                 }
-                
             case .failure(let failure):
                 DispatchQueue.main.async {
                     completion(.failure(failure))

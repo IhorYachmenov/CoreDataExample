@@ -14,7 +14,18 @@ class ImageDownloaderClient {
 }
 
 extension ImageDownloaderClient: ImageDownloaderClientInterface {
-    func downloadImage(url: URL, completion: @escaping (Result<Data, Error>) -> ()) {
+    func downloadImage(url: String?, completion: @escaping (Result<Data, Error>) -> ()) {
+        guard let urlString = url else {
+            completion(.failure(NSError.error(msg: Constants.Error.nilElement)))
+            return
+        }
+        
+        guard let url = URL(string: urlString) else {
+            completion(.failure(NSError.error(msg: Constants.Error.nilElement)))
+            return
+        }
+        
+        
         if let data = imageCache.object(forKey: url.absoluteString as NSString) {
             DispatchQueue.main.async {
                 completion(.success(data as Data))

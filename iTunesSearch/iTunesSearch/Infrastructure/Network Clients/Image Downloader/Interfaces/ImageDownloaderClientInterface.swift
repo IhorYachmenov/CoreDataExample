@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ImageDownloaderClientInterface {
-    func downloadImage(url: URL, completion: @escaping (Result<Data, Error>) -> ())
+    func downloadImage(url: String?, completion: @escaping (Result<Data, Error>) -> ())
 }

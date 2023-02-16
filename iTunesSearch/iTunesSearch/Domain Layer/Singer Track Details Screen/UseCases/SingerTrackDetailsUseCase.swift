@@ -20,7 +20,7 @@ final class SingerTrackDetailsUseCase {
 }
 
 extension SingerTrackDetailsUseCase: SingerTrackDetailsUseCaseInterface {
-    func downloadImage(url: URL, completion: @escaping (Result<Data, Error>) -> ()) {
+    func downloadImage(url: String?, completion: @escaping (Result<Data, Error>) -> ()) {
         imageDownloaderClient.downloadImage(url: url, completion: completion)
     }
     
