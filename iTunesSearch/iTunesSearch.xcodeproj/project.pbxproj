@@ -322,15 +322,12 @@
 		CE266D0E298034E500D6E038 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CE39D833299ED815009F4202 /* UIKit */,
 				CE266D3F29812EB600D6E038 /* Optional.swift */,
 				CE39D7CC2993C72A009F4202 /* String.swift */,
-				CE39D7FE299BCAA0009F4202 /* UIViewController.swift */,
-				CE39D800299BCBFC009F4202 /* UILabel.swift */,
 				CE39D806299BE391009F4202 /* Error.swift */,
 				CE39D809299C4121009F4202 /* NSMutableAttributedString.swift */,
 				CE39D827299E60F3009F4202 /* Data.swift */,
-				CE39D82F299ECD50009F4202 /* UIButton.swift */,
-				CE39D831299ED251009F4202 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -669,6 +666,17 @@
 				CE39D829299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		CE39D833299ED815009F4202 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				CE39D82F299ECD50009F4202 /* UIButton.swift */,
+				CE39D831299ED251009F4202 /* UIColor.swift */,
+				CE39D7FE299BCAA0009F4202 /* UIViewController.swift */,
+				CE39D800299BCBFC009F4202 /* UILabel.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		CE4FC544298D1580004F281C /* Entities */ = {

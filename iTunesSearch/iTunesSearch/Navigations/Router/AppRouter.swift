@@ -12,5 +12,6 @@ final class AppRouter: Router {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.navigationController.navigationBar.tintColor = .oppositeSystemBackgroundColor
     }
 }
