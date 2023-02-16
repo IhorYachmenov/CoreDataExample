@@ -15,7 +15,9 @@ class AudioClient: NSObject, AudioClientInterface {
     private var audioPlayer: AVAudioPlayer!
     private var timer: Timer?
     
-    override init() {}
+    override init() {
+        model = MediaModel.AudioDetail(currentTime: "00:00", duration: "00:00", isPlaying: false, progress: 0)
+    }
    
     func playTrack(url: URL, completion: @escaping (Error?) -> ()) {
         if let audioPlayer = audioPlayer {
@@ -49,8 +51,10 @@ class AudioClient: NSObject, AudioClientInterface {
     }
     
     private func enableDataUpdates() {
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] timer in
-            self?.trackData()
+        DispatchQueue.main.async { [weak self] in
+            self?.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] timer in
+                self?.trackData()
+            }
         }
     }
     

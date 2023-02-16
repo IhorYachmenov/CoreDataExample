@@ -14,7 +14,7 @@ class SingerTrackListCell: UITableViewCell {
         super.updateConfiguration(using: state)
     
         var backgroundConfig = backgroundConfiguration?.updated(for: state)
-        backgroundConfig?.backgroundColor = .white
+        backgroundConfig?.backgroundColor = .systemBackground
         
 //        if state.isHighlighted || state.isSelected {
 //            backgroundConfig?.backgroundColor = .lightGray

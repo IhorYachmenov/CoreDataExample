@@ -28,7 +28,7 @@ class SingerTrackDetailsViewController: UIViewController {
         view.image = UIImage(systemName: Constants.SingerTrackDetailsScreen.defaultTrackImgName)
         view.layer.cornerRadius = 10
         view.layer.borderWidth = 2
-        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderColor = UIColor.oppositeSystemBackgroundColor.cgColor
         view.clipsToBounds = true
         return view
     }()
@@ -36,7 +36,7 @@ class SingerTrackDetailsViewController: UIViewController {
     private lazy var trackName: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .black
+        view.textColor = .oppositeSystemBackgroundColor
         view.textAlignment = .left
         view.font = .boldSystemFont(ofSize: 20)
         view.text = "Rommance"
@@ -58,7 +58,7 @@ class SingerTrackDetailsViewController: UIViewController {
     private lazy var collectionName: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .black
+        view.textColor = .oppositeSystemBackgroundColor
         view.textAlignment = .left
         view.numberOfLines = 3
         view.font.withSize(10)
@@ -68,7 +68,7 @@ class SingerTrackDetailsViewController: UIViewController {
     private lazy var collectionPrice: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .black
+        view.textColor = .oppositeSystemBackgroundColor
         view.textAlignment = .left
         //        view.font = .boldSystemFont(ofSize: 10)
         view.font.withSize(10)
@@ -78,9 +78,8 @@ class SingerTrackDetailsViewController: UIViewController {
     private lazy var trackPrice: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .black
+        view.textColor = .oppositeSystemBackgroundColor
         view.textAlignment = .left
-        //        view.font = .boldSystemFont(ofSize: 10)
         view.font.withSize(10)
         return view
     }()
@@ -88,7 +87,7 @@ class SingerTrackDetailsViewController: UIViewController {
     private lazy var releaseDate: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .black
+        view.textColor = .oppositeSystemBackgroundColor
         view.textAlignment = .left
         view.font.withSize(10)
         return view
@@ -97,7 +96,7 @@ class SingerTrackDetailsViewController: UIViewController {
     private lazy var genre: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .black
+        view.textColor = .oppositeSystemBackgroundColor
         view.textAlignment = .left
         view.font.withSize(10)
         return view
@@ -106,7 +105,7 @@ class SingerTrackDetailsViewController: UIViewController {
     private lazy var country: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .black
+        view.textColor = .oppositeSystemBackgroundColor
         view.textAlignment = .left
         view.font.withSize(10)
         return view
@@ -133,7 +132,7 @@ class SingerTrackDetailsViewController: UIViewController {
     private lazy var trackCurrentTime: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .black
+        view.textColor = .oppositeSystemBackgroundColor
         view.textAlignment = .left
         view.font.withSize(5)
         view.text = "0:00"
@@ -143,7 +142,7 @@ class SingerTrackDetailsViewController: UIViewController {
     private lazy var trackDuration: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.textColor = .black
+        view.textColor = .oppositeSystemBackgroundColor
         view.textAlignment = .right
         view.font.withSize(5)
         view.text = "3:00"
@@ -159,6 +158,7 @@ class SingerTrackDetailsViewController: UIViewController {
         configuration.image = UIImage(systemName: Constants.SingerTrackDetailsScreen.playButtonDefaultImgName)
         configuration.imagePlacement = .leading
         configuration.imagePadding = 15
+        configuration.baseForegroundColor = .white
         configuration.cornerStyle = .large
         configuration.background.backgroundColor = .red
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15)
@@ -172,6 +172,7 @@ class SingerTrackDetailsViewController: UIViewController {
         view.configuration = configuration
         
         view.addAction(UIAction(handler: { [weak self] _ in
+            view.configuration?.showsActivityIndicator = true
             self?.viewModel.playTrack()
         }), for: .touchUpInside)
         
@@ -205,6 +206,7 @@ class SingerTrackDetailsViewController: UIViewController {
                 self?.animateImage(isPlaying: track?.isPlaying)
                 self?.animateProgressView(progress: track?.progress)
             case .failure(let failure):
+                self?.playDemoButton.configuration?.showsActivityIndicator = false
                 self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
             }
         }
@@ -215,7 +217,7 @@ class SingerTrackDetailsViewController: UIViewController {
     }
     
     func initUIComponents() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         
         view.addSubview(trackImg)
         view.addSubview(trackName)
@@ -283,5 +285,6 @@ class SingerTrackDetailsViewController: UIViewController {
         }
         
         playDemoButton.playerButtonState(isPlaying: isPlaying)
+        playDemoButton.configuration?.showsActivityIndicator = false
     }
 }

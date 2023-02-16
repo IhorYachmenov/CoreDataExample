@@ -43,8 +43,8 @@ class SingerTracksViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setTitle(Constants.SingerTracksScreen.downloadButtonTitle, for: .normal)
         view.tintColor = .gray
-        view.backgroundColor = .white
-        view.setTitleColor(.black, for: .normal)
+        view.backgroundColor = .systemBackground
+        view.setTitleColor(.oppositeSystemBackgroundColor, for: .normal)
         view.layer.cornerRadius = 10
         view.layer.borderWidth = 2
         view.layer.borderColor = UIColor.red.cgColor
@@ -79,7 +79,7 @@ class SingerTracksViewController: UIViewController {
     }
     
     private func initUIComponents(){
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         
         view.addSubview(button)
         view.addSubview(loader)

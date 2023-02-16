@@ -69,6 +69,7 @@
 		CE39D82A299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D829299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift */; };
 		CE39D82D299E9E71009F4202 /* AudioPlayerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D82C299E9E71009F4202 /* AudioPlayerUseCase.swift */; };
 		CE39D830299ECD50009F4202 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D82F299ECD50009F4202 /* UIButton.swift */; };
+		CE39D832299ED251009F4202 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D831299ED251009F4202 /* UIColor.swift */; };
 		CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */; };
 		CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */; };
 		CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC550298DBDE1004F281C /* Mapper.swift */; };
@@ -168,6 +169,7 @@
 		CE39D829299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerUseCaseInterface.swift; sourceTree = "<group>"; };
 		CE39D82C299E9E71009F4202 /* AudioPlayerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerUseCase.swift; sourceTree = "<group>"; };
 		CE39D82F299ECD50009F4202 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		CE39D831299ED251009F4202 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorage.swift; sourceTree = "<group>"; };
 		CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStoragable.swift; sourceTree = "<group>"; };
 		CE4FC550298DBDE1004F281C /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -328,6 +330,7 @@
 				CE39D809299C4121009F4202 /* NSMutableAttributedString.swift */,
 				CE39D827299E60F3009F4202 /* Data.swift */,
 				CE39D82F299ECD50009F4202 /* UIButton.swift */,
+				CE39D831299ED251009F4202 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -884,6 +887,7 @@
 				CE39D810299CFCCE009F4202 /* RouterBuilder.swift in Sources */,
 				CE4FC55C29911A45004F281C /* SingerTrackDetailsViewController.swift in Sources */,
 				CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */,
+				CE39D832299ED251009F4202 /* UIColor.swift in Sources */,
 				CE39D7F7299A5CE5009F4202 /* SingerTrackDetailsViewModelInterface.swift in Sources */,
 				CE39D805299BE1DC009F4202 /* ImageDownloaderClient.swift in Sources */,
 				CE39D82A299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift in Sources */,

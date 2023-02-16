@@ -28,7 +28,7 @@ class SingerTrackListContentView: UIView, UIContentView {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.numberOfLines = 1
-        view.textColor = .black
+        view.textColor = .oppositeSystemBackgroundColor
         view.textAlignment = .left
         view.font = .boldSystemFont(ofSize: 20)
         return view
@@ -38,7 +38,7 @@ class SingerTrackListContentView: UIView, UIContentView {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.numberOfLines = 1
-        view.textColor = .black
+        view.textColor = .oppositeSystemBackgroundColor
         view.textAlignment = .right
         view.font.withSize(20)
         return view
