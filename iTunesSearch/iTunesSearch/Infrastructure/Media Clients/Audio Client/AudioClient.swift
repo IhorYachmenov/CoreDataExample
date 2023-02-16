@@ -19,6 +19,11 @@ class AudioClient: NSObject, AudioClientInterface {
         
     }
     
+    deinit {
+        #warning("de init not work")
+        print("BOOM")
+    }
+    
     func playTrack(url: URL, completion: @escaping (Error?) -> ()) {
         if let audioPlayer = audioPlayer {
             if (audioPlayer.isPlaying) {
@@ -87,6 +92,7 @@ class AudioClient: NSObject, AudioClientInterface {
 // MARK: - AVAudioPlayerDelegate
 extension AudioClient: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        #warning("examine")
         print("End")
         timer?.fire()
         if (flag) {

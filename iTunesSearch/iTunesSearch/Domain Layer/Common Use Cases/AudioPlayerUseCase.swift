@@ -22,7 +22,6 @@ extension AudioPlayerUseCase: AudioPlayerUseCaseInterface {
         trackDownloaderClient.downloadTrack(url: url) { [weak self] result in
             switch result {
             case .success(let success):
-                print(success)
                 self?.audioClient.playTrack(url: success, completion: { error in
                     if let error = error {
                         completion(error)

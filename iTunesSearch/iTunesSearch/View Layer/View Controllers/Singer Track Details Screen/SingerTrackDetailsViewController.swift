@@ -199,7 +199,7 @@ class SingerTrackDetailsViewController: UIViewController {
                 self?.country.appentText(defaultText: Constants.SingerTrackDetailsScreen.country, text: details?.country)
                 
                 self?.trackImg.image = details?.image?.image
-                
+                #warning("$ text")
                 self?.trackCurrentTime.text = track?.currentTime ?? "00:00"
                 self?.trackDuration.text = track?.duration ?? "00:00"
                 self?.animateImage(isPlaying: track?.isPlaying)
