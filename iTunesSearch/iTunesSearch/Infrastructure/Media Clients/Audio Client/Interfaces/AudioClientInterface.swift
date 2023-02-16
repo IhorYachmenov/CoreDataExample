@@ -17,6 +17,6 @@ enum MediaModel {
 }
 
 protocol AudioClientInterface {
-    var dataPublisher: ((Result<MediaModel.AudioDetail, Error>) -> ())? { get set }
+    var dataPublisher: ((MediaModel.AudioDetail) -> ())? { get set }
     func playTrack(url: URL, completion: @escaping (Error?) -> ())
 }

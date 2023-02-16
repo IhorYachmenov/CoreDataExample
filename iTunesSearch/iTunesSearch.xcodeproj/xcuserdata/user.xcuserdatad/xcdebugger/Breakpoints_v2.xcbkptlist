@@ -590,8 +590,8 @@
             filePath = "iTunesSearch/Presentation Layer/Singer Tracks Screen/View Models/SingerTracksViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "init(useCase:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -606,8 +606,8 @@
             filePath = "iTunesSearch/Presentation Layer/Singer Tracks Screen/View Models/SingerTracksViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "init(useCase:)"
             landmarkType = "7">
             <Locations>
@@ -654,8 +654,8 @@
             filePath = "iTunesSearch/Presentation Layer/Singer Tracks Screen/View Models/SingerTracksViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "init(useCase:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -670,8 +670,8 @@
             filePath = "iTunesSearch/Presentation Layer/Singer Tracks Screen/View Models/SingerTracksViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "init(useCase:)"
             landmarkType = "7">
             <Locations>
@@ -733,8 +733,8 @@
             filePath = "iTunesSearch/Presentation Layer/Singer Tracks Screen/View Models/SingerTracksViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "init(useCase:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -861,8 +861,8 @@
             filePath = "iTunesSearch/Presentation Layer/Singer Tracks Screen/View Models/SingerTracksViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "init(useCase:)"
             landmarkType = "7">
             <Locations>
@@ -989,8 +989,8 @@
             filePath = "iTunesSearch/Infrastructure/Media Clients/Audio Client/AudioClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "playTrack(url:completion:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -47,18 +47,10 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
             }
         }
         
-        self.audioPlayerUseCase.subscribeOnAudioData(completion: { [weak self] result in
-            switch result {
-            case .success(let success):
-                self?.dataModel.track = PresentationModel.SingerTrackDetails.Track(mediaModel: success)
-                self?.pushDataModel()
-            case .failure(let failure):
-                DispatchQueue.main.async {
-                    self?.dataSource?(.failure(failure))
-                }
-            }
+        self.audioPlayerUseCase.subscribeOnAudioData(completion: { [weak self] data in
+            self?.dataModel.track = PresentationModel.SingerTrackDetails.Track(mediaModel: data)
+            self?.pushDataModel()
         })
-
     }
     
     func playTrack() {

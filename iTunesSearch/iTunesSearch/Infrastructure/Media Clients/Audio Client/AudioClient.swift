@@ -9,21 +9,14 @@ import Foundation
 import AVFoundation
 
 class AudioClient: NSObject, AudioClientInterface {
-    var dataPublisher: ((Result<MediaModel.AudioDetail, Error>) -> ())?
+    var dataPublisher: ((MediaModel.AudioDetail) -> ())?
     
     private var model: MediaModel.AudioDetail!
     private var audioPlayer: AVAudioPlayer!
     private var timer: Timer?
     
-    override init() {
-        
-    }
-    
-    deinit {
-        #warning("de init not work")
-        print("BOOM")
-    }
-    
+    override init() {}
+   
     func playTrack(url: URL, completion: @escaping (Error?) -> ()) {
         if let audioPlayer = audioPlayer {
             if (audioPlayer.isPlaying) {
@@ -54,14 +47,13 @@ class AudioClient: NSObject, AudioClientInterface {
 
     
     private func pushUpdate(){
-        dataPublisher?(.success(model))
+        dataPublisher?(model)
     }
     
     private func enableDataUpdates() {
-        DispatchQueue.main.async { [weak self] in
-            self?.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self!, selector: #selector(self!.trackData), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] timer in
+            self?.trackData()
         }
-
     }
     
     private func pauseDataUpdates() {
@@ -92,11 +84,7 @@ class AudioClient: NSObject, AudioClientInterface {
 // MARK: - AVAudioPlayerDelegate
 extension AudioClient: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        #warning("examine")
-        print("End")
         timer?.fire()
-        if (flag) {
-            audioPlayer = nil
-        }
+        audioPlayer = nil
     }
 }
