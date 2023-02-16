@@ -11,7 +11,7 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
     private var trackId: String
     private var audioURL: String?
     private var useCase: SingerTrackDetailsUseCaseInterface
-    private var dataModel = PresentationModel.SingerTrackDetails()
+    private lazy var dataModel = PresentationModel.SingerTrackDetails()
     
     var dataSource: ((Result<PresentationModel.SingerTrackDetails, Error>) -> ())?
     

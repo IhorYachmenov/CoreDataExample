@@ -30,6 +30,7 @@ class TrackDownloaderClient {
     }
 }
 
+// MARK: - TrackDownloaderClientInterface
 extension TrackDownloaderClient: TrackDownloaderClientInterface {
     func downloadTrack(url: String?, completion: @escaping (Result<URL, Error>) -> ()) {
         guard let url = url else {
