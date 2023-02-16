@@ -199,7 +199,7 @@ class SingerTrackDetailsViewController: UIViewController {
                 self?.country.appentText(defaultText: Constants.SingerTrackDetailsScreen.country, text: details?.country)
                 
                 self?.trackImg.image = details?.image?.image
-                #warning("$ text")
+                
                 self?.trackCurrentTime.text = track?.currentTime ?? "00:00"
                 self?.trackDuration.text = track?.duration ?? "00:00"
                 self?.animateImage(isPlaying: track?.isPlaying)
@@ -272,19 +272,6 @@ class SingerTrackDetailsViewController: UIViewController {
     
     private func animateProgressView(progress: Float?) {
         guard let progress = progress else { return }
-        #warning("animate progress")
-//        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
-//            guard self?.progress.isFinished == false else {
-//                timer.invalidate()
-//                return
-//            }
-//
-//            self?.progress.completedUnitCount += 1
-//
-//            let progressFloat = Float(progress.fractionCompleted ?? 0)
-//            self?.progressView.setProgress(progressFloat, animated: true)
-//        }
-//        let progressFloat = Float(progress.fractionCompleted)
         progressView.setProgress(progress, animated: true)
         
     }

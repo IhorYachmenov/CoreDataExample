@@ -11,12 +11,6 @@ protocol SingerTracksDelegate: AnyObject {
     func coordinator(didSelect trackId: String)
 }
 
-#warning("Q: - _SingerTracksDelegate")
-protocol _SingerTracksDelegate: AnyObject {
-    associatedtype TrackID
-    func coordinator(didSelect trackId: TrackID)
-}
-
 class SingerTracksViewController: UIViewController {
     /// Navigation
     weak var coordinatorDelegate: SingerTracksDelegate?
