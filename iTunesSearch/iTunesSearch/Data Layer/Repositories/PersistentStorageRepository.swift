@@ -17,7 +17,7 @@ final class PersistentStorageRepository {
 }
 
 extension PersistentStorageRepository: PersistentStorageRepositoryInterface {
-    func saveSingerTrack(singerTrack: DataModel.SingerTrack, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
+    func saveSingerTrack(singerTrack: DataModel.SingerTrack, completion: @escaping (StorageError?) -> ()) {
         singerTracksQueryStorageGeneric.saveDataModel(data: singerTrack, completion: completion)
     }
     

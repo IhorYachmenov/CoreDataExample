@@ -8,6 +8,6 @@
 import Foundation
 
 protocol StorageSingerTracksUseCaseInterface {
-    func saveSingerTrack(track: DataModel.SingerTrack, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ())
+    func saveSingerTrack(track: DataModel.SingerTrack, completion: @escaping (StorageError?) -> ())
     func subscribeOnData(completion: @escaping ([DataModel.SingerTrack]) -> ())
 }

@@ -8,6 +8,6 @@
 import Foundation
 
 protocol SingerTracksWorkerUseCaseInterface {
-    func downloadAndSaveSingerTrack(name: String, completion: @escaping (Result<DataModel.SingerTrack, Error>) -> ())
+    func downloadAndSaveSingerTrack(name: String, completion: @escaping (Error?) -> ())
     func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ())
 }

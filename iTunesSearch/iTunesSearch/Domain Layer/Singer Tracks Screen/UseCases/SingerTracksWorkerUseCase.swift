@@ -18,22 +18,17 @@ class SingerTracksWorkerUseCase {
 }
 
 extension SingerTracksWorkerUseCase: SingerTracksWorkerUseCaseInterface {
-    func downloadAndSaveSingerTrack(name: String, completion: @escaping (Result<DataModel.SingerTrack, Error>) -> ()) {
+    func downloadAndSaveSingerTrack(name: String, completion: @escaping (Error?) -> ()) {
         download.downloadSingerTrack(name: name) { [weak self] result in
             switch result {
             case .success(let success):
-                
-                self?.storage.saveSingerTrack(track: success) { result in
-                    switch result {
-                    case .success(let success):
-                        completion(.success(success))
-                    case .failure(let failure):
-                        completion(.failure(failure))
+                self?.storage.saveSingerTrack(track: success) { failure in
+                    if let failure = failure {
+                        completion(failure)
                     }
                 }
             case .failure(let failure):
-                print(failure)
-                completion(.failure(failure))
+                completion(failure)
             }
         }
     }

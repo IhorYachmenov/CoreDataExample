@@ -39,11 +39,8 @@ final class SingerTracksViewModel: SingerTracksViewModelInterface {
     }
     
     func downloadSong() {
-        singerTracksWorker.downloadAndSaveSingerTrack(name: singer) { [weak self] result in
-            switch result {
-            case .success(_):
-                break
-            case .failure(let failure):
+        singerTracksWorker.downloadAndSaveSingerTrack(name: singer) { [weak self] failure in
+            if let failure = failure {
                 DispatchQueue.main.async {
                     self?.dataSource?(.failure(failure))
                 }

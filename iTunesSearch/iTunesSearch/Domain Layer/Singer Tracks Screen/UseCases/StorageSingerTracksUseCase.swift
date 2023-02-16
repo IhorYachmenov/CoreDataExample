@@ -16,13 +16,10 @@ final class StorageSingerTracksUseCase {
 }
 
 extension StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
-    func saveSingerTrack(track: DataModel.SingerTrack, completion: @escaping (Result<DataModel.SingerTrack, StorageError>) -> ()) {
-        repository.saveSingerTrack(singerTrack: track, completion: { result in
-            switch result {
-            case .success(let success):
-                completion(.success(success))
-            case .failure(let failure):
-                completion(.failure(failure))
+    func saveSingerTrack(track: DataModel.SingerTrack, completion: @escaping (StorageError?) -> ()) {
+        repository.saveSingerTrack(singerTrack: track, completion: { failure in
+            if let failure = failure {
+                completion(failure)
             }
         })
     }

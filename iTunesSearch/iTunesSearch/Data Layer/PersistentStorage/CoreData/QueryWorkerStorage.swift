@@ -46,14 +46,14 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
     
     func saveDataModel(
         data: DataType,
-        completion: @escaping (Result<DataType, StorageError>) -> ()
+        completion: @escaping (StorageError?) -> ()
     ) {
         coreDataManager.privateQueueManageObjectContext.perform { [weak self] in
             
             let entityDescription = NSEntityDescription.entity(forEntityName: self!.entityName, in: self!.coreDataManager.privateQueueManageObjectContext)
             
             guard entityDescription != nil else {
-                completion(.failure(.saveError(NSError.error(msg: Constants.Error.coreDataSave))))
+                completion(.saveError(NSError.error(msg: Constants.Error.coreDataSave)))
                 return
             }
             
@@ -64,9 +64,9 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
                     try self?.coreDataManager.privateQueueManageObjectContext.save()
                     self?.coreDataManager.privateQueueManageObjectContext.reset()
                     
-                    completion(.success(data))
+                    completion(nil)
                 } catch {
-                    completion(.failure(.saveError(error)))
+                    completion(.saveError(error))
                 }
             })
             
