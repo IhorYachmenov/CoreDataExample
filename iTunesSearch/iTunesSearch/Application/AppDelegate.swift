@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var appCoordinator : AppCoordinator?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        print(String.localizedStringWithFormat(Constants.Alert.greeting, "Admin", "\(Date.now)"))
         window = UIWindow(frame: UIScreen.main.bounds)
 
         guard let window = window else { return false }

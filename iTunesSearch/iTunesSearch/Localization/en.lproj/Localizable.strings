@@ -31,3 +31,6 @@ Data-not-found = "Data not found";
 // Alert text
 Demo-URL-unavailable = "Demo URL unavailable";
 Demo-URL-corrupted = "Demo URL corrupted";
+
+// Argument testing
+greeting = "Hi, %@ - %@!";

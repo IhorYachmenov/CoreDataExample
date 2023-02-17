@@ -13,6 +13,8 @@ struct Constants {
         static let actionButtonTitle = "OK".localized
         static let demoURLUnavailable = "Demo-URL-unavailable".localized
         static let demoURLCorrupted = "Demo-URL-corrupted".localized
+        // Test variable
+        static let greeting = "greeting".localized
     }
 }
 
