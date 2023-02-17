@@ -8,7 +8,7 @@
 import Foundation
 
 final class AudioPlayerUseCase {
-    private lazy var trackDownloaderClient = TrackDownloaderClient()
+    private lazy var trackDownloaderClient: TrackDownloaderClientInterface = TrackDownloaderClient()
     private var audioClient: AudioClientInterface
     
     init(audioClient: AudioClientInterface) {
@@ -17,7 +17,6 @@ final class AudioPlayerUseCase {
 }
 
 extension AudioPlayerUseCase: AudioPlayerUseCaseInterface {
-    
     func playTrack(url: String?, completion: @escaping (Error?) -> ()) {
         trackDownloaderClient.downloadTrack(url: url) { [weak self] result in
             switch result {

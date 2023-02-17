@@ -9,11 +9,11 @@ import Foundation
 import CoreData
 
 final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSFetchedResultsControllerDelegate, QueryWorkerStoragable {
-    var dataPublisher: (([Entity]) -> ())?
-    
     private var fetchedResultsController: NSFetchedResultsController<Entity>!
     private let coreDataManager: CoreDataStorageManager = CoreDataStorageManager.shared
     private let entityName = NSStringFromClass(Entity.self)
+    
+    var dataPublisher: (([Entity]) -> ())?
     
     init<T>(sortDescriptor: KeyPath<Entity, T>) {
         super.init()
@@ -43,7 +43,6 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
     }
     
     // MARK: - QueryWorkerStoragable
-    
     func saveDataModel(
         data: DataType,
         completion: @escaping (StorageError?) -> ()
@@ -53,7 +52,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
             let entityDescription = NSEntityDescription.entity(forEntityName: self!.entityName, in: self!.coreDataManager.privateQueueManageObjectContext)
             
             guard entityDescription != nil else {
-                completion(.saveError(NSError.error(msg: Constants.Error.coreDataSave)))
+                completion(.saveError(NSError.error(msg: Constants.Error.coreDataSaving)))
                 return
             }
             
@@ -90,7 +89,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
                     self?.dataPublisher?([obj])
                     completion(nil)
                 } else {
-                    completion(StorageError.notFoundError)
+                    completion(StorageError.notFoundError(NSError.error(msg: Constants.Error.dataNotFound)))
                 }
             } catch {
                 completion(.readError(error))
@@ -100,10 +99,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
     }
   
     // MARK: - NSFetchedResultsControllerDelegate
-    
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        print("NSFRC count -> ", fetchedResultsController.fetchedObjects?.count ?? 0)
-        
         dataPublisher?(fetchedResultsController.fetchedObjects ?? [])
     }
 }

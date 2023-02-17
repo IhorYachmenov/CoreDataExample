@@ -54,7 +54,7 @@ extension TrackDownloaderClient: TrackDownloaderClientInterface {
         
         let downloadTask = URLSession.shared.downloadTask(with: url) { [weak self] (location, response, error) in
             guard let location = location else {
-                completion(.failure(NSError.error(msg: Constants.Error.unknownError)))
+                completion(.failure(NSError.error(msg: Constants.Error.unknown)))
                 return
             }
             

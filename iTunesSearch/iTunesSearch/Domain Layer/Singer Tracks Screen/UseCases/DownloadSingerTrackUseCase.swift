@@ -15,7 +15,7 @@ extension DownloadSingerTrackUseCase: DownloadSingerTrackUseCaseInterface {
     func downloadSingerTrack(name: String, completion: @escaping (Result<DataModel.SingerTrack, ServiceError>) -> ()) {
         let request = SearchSingerTrackAPI()
         let apiLoader = APILoader(apiHandler: request)
-        print("Singer Name Downloading ->", name)
+        
         let param: Dictionary<String, Any> = ["limit" : "1", "media" : "music", "term" : name]
     
         apiLoader.loadAPIRequest(requestData: param) { (model, error) in

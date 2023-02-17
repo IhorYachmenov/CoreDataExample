@@ -24,12 +24,12 @@ struct APILoader<T: APIHandler> {
                 if let httpResponse = response as? HTTPURLResponse {
                     
                     guard error == nil else {
-                        completionHandler(nil, ServiceError(httpStatus: httpResponse.statusCode, message: "\(Constants.Error.serviseErrorTitle) \(error?.localizedDescription ?? "\(Constants.Error.unknownError)")"))
+                        completionHandler(nil, ServiceError(httpStatus: httpResponse.statusCode, message: "\(Constants.Error.serviceErrorTitle) \(error?.localizedDescription ?? "\(Constants.Error.unknown)")"))
                         return
                     }
                     
                     guard let responseData = data else {
-                        completionHandler(nil, ServiceError(httpStatus: httpResponse.statusCode, message: "\(Constants.Error.serviseErrorTitle) \(error?.localizedDescription ?? "\(Constants.Error.unknownError)")"))
+                        completionHandler(nil, ServiceError(httpStatus: httpResponse.statusCode, message: "\(Constants.Error.serviceErrorTitle) \(error?.localizedDescription ?? "\(Constants.Error.unknown)")"))
                         return
                     }
                     
@@ -37,12 +37,12 @@ struct APILoader<T: APIHandler> {
                         let parsedResponse = try self.apiHandler.parseResponse(data: responseData, response: httpResponse)
                          completionHandler(parsedResponse, nil)
                     } catch {
-                         completionHandler(nil, ServiceError(httpStatus:  httpResponse.statusCode, message: "\(Constants.Error.serviseErrorTitle) \(error.localizedDescription)"))
+                         completionHandler(nil, ServiceError(httpStatus:  httpResponse.statusCode, message: "\(Constants.Error.serviceErrorTitle) \(error.localizedDescription)"))
                     }
                     
                 } else {
                     
-                    completionHandler(nil, ServiceError(httpStatus: 0, message: "\(Constants.Error.serviseErrorTitle) \(error?.localizedDescription ?? "\(Constants.Error.unknownError)")"))
+                    completionHandler(nil, ServiceError(httpStatus: 0, message: "\(Constants.Error.serviceErrorTitle) \(error?.localizedDescription ?? "\(Constants.Error.unknown)")"))
                 }
                 
             }.resume()

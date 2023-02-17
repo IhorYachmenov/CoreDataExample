@@ -205,7 +205,7 @@ class SingerTrackDetailsViewController: UIViewController {
                 self?.animateImage(isPlaying: track?.isPlaying)
                 self?.animateProgressView(progress: track?.progress)
             case .failure(let failure):
-                self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
+                self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.title)
             }
         }
     }

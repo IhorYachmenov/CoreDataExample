@@ -12,7 +12,7 @@ enum StorageError: Error {
     case readError(Error)
     case saveError(Error)
     case deleteError(Error)
-    case notFoundError
+    case notFoundError(Error)
 }
 
 final class CoreDataStorageManager {
@@ -20,12 +20,10 @@ final class CoreDataStorageManager {
     
     private init() {}
 
-    // MARK: - Core Data stack
     private lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "SingerTrackDataModel")
         container.loadPersistentStores { _, error in
             if let error = error as NSError? {
-                // TODO: - Log to Crashlytics
                 assertionFailure("CoreData Unresolved error \(error), \(error.userInfo)")
             }
         }

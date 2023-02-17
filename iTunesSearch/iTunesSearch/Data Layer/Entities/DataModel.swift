@@ -23,7 +23,7 @@ enum DataModel {
     }
 }
 
-/// **CoreData**
+/// **CoreData Entities**
 extension DataModel.SingerTrack {
     init(entity: SingerTrack) {
         trackName = entity.trackName.isNil()
@@ -40,8 +40,6 @@ extension DataModel.SingerTrack {
     }
 }
 
-
-/// **Network Model**
 extension DataModel.SingerTrack {
     init(networkModel: NetworkModel.SingerTrack) {
         trackName = networkModel.trackName.isNil()

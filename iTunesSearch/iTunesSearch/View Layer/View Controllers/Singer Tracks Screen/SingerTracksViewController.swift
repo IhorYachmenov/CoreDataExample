@@ -73,7 +73,7 @@ class SingerTracksViewController: UIViewController {
             case .success(let success):
                 self?.data = success
             case .failure(let failure):
-                self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
+                self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.title)
             }
         }
     }

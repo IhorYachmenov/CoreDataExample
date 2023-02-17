@@ -11,7 +11,7 @@ extension UIViewController {
     func presentAlertController(msg: String, title: String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         
-        let action = UIAlertAction(title: Constants.Alert.alertActionButtonTitle, style: .destructive)
+        let action = UIAlertAction(title: Constants.Alert.actionButtonTitle, style: .destructive)
         alert.addAction(action)
         present(alert, animated: true)
     }

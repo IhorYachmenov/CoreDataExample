@@ -8,6 +8,4 @@
 import UIKit
 @testable import iTunesSearch
 
-class RouterMock: Router {
-    var navigationController = UINavigationController()
-}
+class RouterMock: Router { var navigationController = UINavigationController() }

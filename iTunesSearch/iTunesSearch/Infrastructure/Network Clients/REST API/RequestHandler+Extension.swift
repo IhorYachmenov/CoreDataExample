@@ -8,7 +8,6 @@
 import Foundation
 
 // MARK: Request Handler Supporting methods
-
 extension RequestHandler {
     
     func setQueryParams(parameters:[String: Any], url: URL) -> URL {

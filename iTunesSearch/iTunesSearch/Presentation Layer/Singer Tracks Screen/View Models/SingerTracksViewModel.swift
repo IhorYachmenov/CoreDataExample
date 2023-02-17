@@ -8,13 +8,13 @@
 import Foundation
 
 final class SingerTracksViewModel: SingerTracksViewModelInterface {
-    /// MARK - Data Source
+    /// Data Source
     var dataSource: ((Result<[PresentationModel.SingerTrack], Error>) -> ())?
     
-    /// MARK: - View Model properties
+    /// View Model properties
     private lazy var listOfSingers = ["Janet Jackson", "Eminem", "Katy Perry", "Lady Gaga", "Snoop Dogg", "Elvis Presley", "Taylor Swift", "Adele", "Beyonce", "Justin Bieber", "Ed Sheeran", "Rihanna", "Bruno Mars", "Kendrick Lamar", "Drake", "Nicki Minaj", "Kanye West", "Post Malone", "Cardi B", "Lizzo", "Shawn Mendes", "Ariana Grande", "Dua Lipa", "Harry Styles", "Billie Eilish", "The Weeknd", "Miley Cyrus", "Chris Brown", "Charlie Puth", "Khalid", "Zayn", "Selena Gomez", "Katy Perry", "Lil Nas X", "Doja Cat", "Olivia Rodrigo", "Camila Cabello", "Halsey", "The Chainsmokers", "Imagine Dragons", "Maroon 5", "The Beatles", "Elton John", "Michael Jackson", "Whitney Houston", "Prince", "Madonna", "David Bowie", "Queen", "Led Zeppelin", "AC/DC"]
  
-    /// MARK: - Use Cases
+    /// Use Cases
     private var singerTracksWorker: SingerTracksWorkerUseCaseInterface!
     
     init(useCase: SingerTracksWorkerUseCaseInterface) {

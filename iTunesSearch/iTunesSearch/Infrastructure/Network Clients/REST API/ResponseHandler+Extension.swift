@@ -8,8 +8,7 @@
 import Foundation
 
 // MARK: Response Handler - parse default
-
-struct ServiceError: Error,Codable {
+struct ServiceError: Error, Codable {
     let httpStatus: Int
     let message: String
 }
@@ -22,7 +21,7 @@ extension ResponseHandler {
             if response.statusCode == 200 {
                 return body
             } else {
-                throw ServiceError(httpStatus: response.statusCode, message: "\(Constants.Error.unknownError)")
+                throw ServiceError(httpStatus: response.statusCode, message: "\(Constants.Error.unknown)")
             }
         } catch  {
             throw ServiceError(httpStatus: response.statusCode, message: error.localizedDescription)

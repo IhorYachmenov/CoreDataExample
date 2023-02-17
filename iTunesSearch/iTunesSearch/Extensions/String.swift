@@ -17,7 +17,7 @@ extension String {
     }
     
     var parceDateFormat: String {
-//        let dateString = "1961-11-11T08:00:00Z"
+//        let inputExample = "1961-11-11T08:00:00Z"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
 

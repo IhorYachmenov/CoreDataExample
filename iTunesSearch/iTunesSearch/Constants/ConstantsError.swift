@@ -10,9 +10,10 @@ extension Constants {
     struct Error {
         static let downloadingImage = "Server error while downloading image".localized
         static let corruptingData = "Download was successful but data corrupted".localized
-        static let coreDataSave = "Wrong Entity name 😱".localized
-        static let nilElement = "Server error element a nil".localized
-        static let serviseErrorTitle = "Service Error:".localized
-        static let unknownError = "Unknown Error".localized
+        static let coreDataSaving = "Can't save data to data base".localized
+        static let nilElement = "Element a nil".localized
+        static let serviceErrorTitle = "Service Error:".localized
+        static let unknown = "Unknown Error".localized
+        static let dataNotFound = "Data not found".localized
     }
 }
