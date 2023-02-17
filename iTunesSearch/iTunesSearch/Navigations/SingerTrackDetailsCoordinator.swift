@@ -8,8 +8,8 @@
 final class SingerTrackDetailsCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router
-    private var trackId: String
     var didFinished: (() -> Void)?
+    private var trackId: String
     
     init(router: Router, trackId: String) {
         self.router = router

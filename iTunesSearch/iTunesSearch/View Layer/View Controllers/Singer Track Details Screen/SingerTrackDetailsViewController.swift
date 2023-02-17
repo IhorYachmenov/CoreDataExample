@@ -172,7 +172,6 @@ class SingerTrackDetailsViewController: UIViewController {
         view.configuration = configuration
         
         view.addAction(UIAction(handler: { [weak self] _ in
-            view.configuration?.showsActivityIndicator = true
             self?.viewModel.playTrack()
         }), for: .touchUpInside)
         
@@ -206,7 +205,6 @@ class SingerTrackDetailsViewController: UIViewController {
                 self?.animateImage(isPlaying: track?.isPlaying)
                 self?.animateProgressView(progress: track?.progress)
             case .failure(let failure):
-                self?.playDemoButton.configuration?.showsActivityIndicator = false
                 self?.presentAlertController(msg: failure.localizedDescription, title: Constants.Alert.alertTitle)
             }
         }
