@@ -48,7 +48,7 @@ extension PresentationModel.SingerTrackDetails.Details {
 }
 
 extension PresentationModel.SingerTrackDetails.Track {
-    init(mediaModel: MediaModel.AudioDetail) {
+    init(mediaModel: MediaModel.AudioData) {
         currentTime = mediaModel.currentTime
         duration = mediaModel.duration
         isPlaying = mediaModel.isPlaying

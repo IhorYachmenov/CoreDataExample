@@ -33,7 +33,7 @@ extension AudioPlayerUseCase: AudioPlayerUseCaseInterface {
         }
     }
     
-    func subscribeOnAudioData(completion: @escaping (MediaModel.AudioDetail) -> ()) {
+    func subscribeOnAudioData(completion: @escaping (MediaModel.AudioData) -> ()) {
         audioClient.dataPublisher = completion
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 enum MediaModel {
-    struct AudioDetail {
+    struct AudioData {
         let currentTime: String
         let duration: String
         var isPlaying: Bool
@@ -17,6 +17,6 @@ enum MediaModel {
 }
 
 protocol AudioClientInterface {
-    var dataPublisher: ((MediaModel.AudioDetail) -> ())? { get set }
+    var dataPublisher: ((MediaModel.AudioData) -> ())? { get set }
     func playTrack(url: URL, completion: @escaping (Error?) -> ())
 }
