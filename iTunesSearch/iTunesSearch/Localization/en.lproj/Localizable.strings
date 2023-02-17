@@ -6,24 +6,28 @@
   
 */
 
-"Download 1 Track" = "Download 1 Track";
-"Collection name:" = "Collection name:";
-"Collection Price:" = "Collection Price:";
-"Track Price:" = "Track Price:";
-"Release Date:" = "Release Date:";
-"Genre:" = "Genre:";
-"Country:" = "Country:";
-"Play Demo" = "Play Demo";
-"Pause" = "Pause";
+// Track and Track detail screens text
+Download-Track = "Download 1 Track";
+Collection-name = "Collection name:";
+Collection-price = "Collection Price:";
+Track-price = "Track Price:";
+Release-date = "Release Date:";
+Genre = "Genre:";
+Country = "Country:";
+Play-demo = "Play Demo";
+Pause = "Pause";
 
-"Error" = "Error";
-"OK" = "OK";
-"Server error while downloading image" = "Server error while downloading image";
-"Download was successful but data corrupted" = "Download was successful but data corrupted";
-"Can't save data to data base" = "Can't save data to data base";
-"Element a nil" = "Element a nil";
-"Service Error:" = "Service Error:";
-"Unknown Error" = "Unknown Error";
+// Errors
+Error = "Error";
+OK = "OK";
+Server-error-while-downloading-image = "Server error while downloading image";
+Download-was-successful-but-data-corrupted = "Download was successful but data corrupted";
+Cant-save-data-to-data-base = "Can't save data to data base";
+Element-a-nil = "Element a nil";
+Service-error = "Service Error:";
+Unknown-error = "Unknown Error";
+Data-not-found = "Data not found";
 
-"Demo URL unavailable" = "Demo URL unavailable";
-"Demo URL corrupted" = "Demo URL corrupted";
+// Alert text
+Demo-URL-unavailable = "Demo URL unavailable";
+Demo-URL-corrupted = "Demo URL corrupted";

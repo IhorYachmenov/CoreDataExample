@@ -7,10 +7,9 @@
 
 import Foundation
 
-#warning("swiftgen, code generate")
 extension Constants {
     struct SingerTracksScreen {
-        static let downloadButtonTitle = "Download 1 Track".localized
+        static let downloadButtonTitle = "Download-Track".localized
     }
 }
 
