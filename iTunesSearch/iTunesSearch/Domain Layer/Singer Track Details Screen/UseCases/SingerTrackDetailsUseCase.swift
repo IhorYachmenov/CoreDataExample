@@ -9,10 +9,11 @@ import Foundation
 
 final class SingerTrackDetailsUseCase {
     private var repository: PersistentStorageRepositoryInterface
-    private lazy var imageDownloaderClient: ImageDownloaderClientInterface = ImageDownloaderClient()
+    private var imageDownloaderClient: ImageDownloaderClientInterface
     
-    init(storageRepository: PersistentStorageRepositoryInterface) {
+    init(storageRepository: PersistentStorageRepositoryInterface, imageDownloaderClient: ImageDownloaderClientInterface) {
         repository = storageRepository
+        self.imageDownloaderClient = imageDownloaderClient
     }
 }
 

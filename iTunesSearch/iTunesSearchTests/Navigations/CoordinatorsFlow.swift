@@ -8,7 +8,7 @@
 import XCTest
 @testable import iTunesSearch
 
-class CoordinatorsTests: XCTestCase {
+class CoordinatorsFlowTests: XCTestCase {
     var window: WindowMock!
     var router: Router!
     var appCoordinator: AppCoordinator!

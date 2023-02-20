@@ -5,10 +5,10 @@
 //  Created by user on 20.02.2023.
 //
 
-@testable import iTunesSearch
 import XCTest
+@testable import iTunesSearch
 
-class DataLayerTests: XCTestCase {
+class PersistentStorageRepositoryTests: XCTestCase {
     private var repositoryPattern: PersistentStorageRepositoryInterface!
     
     override func setUp() {

@@ -47,7 +47,7 @@
 		CE39D7E929968358009F4202 /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7E829968358009F4202 /* ViewControllers.swift */; };
 		CE39D7ED299969B4009F4202 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7EC299969B4009F4202 /* AppRouter.swift */; };
 		CE39D7F0299984CF009F4202 /* RouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7EF299984CF009F4202 /* RouterMock.swift */; };
-		CE39D7F2299989BE009F4202 /* CoordinatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7F1299989BE009F4202 /* CoordinatorsTests.swift */; };
+		CE39D7F2299989BE009F4202 /* CoordinatorsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7F1299989BE009F4202 /* CoordinatorsFlow.swift */; };
 		CE39D7F4299A5C53009F4202 /* SingerTrackDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7F3299A5C53009F4202 /* SingerTrackDetailsViewModel.swift */; };
 		CE39D7F7299A5CE5009F4202 /* SingerTrackDetailsViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7F6299A5CE5009F4202 /* SingerTrackDetailsViewModelInterface.swift */; };
 		CE39D7FA299A5E45009F4202 /* SingerTrackDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7F9299A5E45009F4202 /* SingerTrackDetailsUseCase.swift */; };
@@ -70,7 +70,9 @@
 		CE39D82D299E9E71009F4202 /* AudioPlayerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D82C299E9E71009F4202 /* AudioPlayerUseCase.swift */; };
 		CE39D830299ECD50009F4202 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D82F299ECD50009F4202 /* UIButton.swift */; };
 		CE39D832299ED251009F4202 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D831299ED251009F4202 /* UIColor.swift */; };
-		CE39D83529A38DBE009F4202 /* DataLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83429A38DBE009F4202 /* DataLayerTests.swift */; };
+		CE39D83529A38DBE009F4202 /* PersistentStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83429A38DBE009F4202 /* PersistentStorageRepository.swift */; };
+		CE39D83929A3B1F8009F4202 /* SingerTracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83829A3B1F8009F4202 /* SingerTracksViewModel.swift */; };
+		CE39D83C29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83B29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift */; };
 		CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */; };
 		CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */; };
 		CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC550298DBDE1004F281C /* Mapper.swift */; };
@@ -148,7 +150,7 @@
 		CE39D7E829968358009F4202 /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
 		CE39D7EC299969B4009F4202 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		CE39D7EF299984CF009F4202 /* RouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMock.swift; sourceTree = "<group>"; };
-		CE39D7F1299989BE009F4202 /* CoordinatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsTests.swift; sourceTree = "<group>"; };
+		CE39D7F1299989BE009F4202 /* CoordinatorsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsFlow.swift; sourceTree = "<group>"; };
 		CE39D7F3299A5C53009F4202 /* SingerTrackDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsViewModel.swift; sourceTree = "<group>"; };
 		CE39D7F6299A5CE5009F4202 /* SingerTrackDetailsViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsViewModelInterface.swift; sourceTree = "<group>"; };
 		CE39D7F9299A5E45009F4202 /* SingerTrackDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsUseCase.swift; sourceTree = "<group>"; };
@@ -171,7 +173,9 @@
 		CE39D82C299E9E71009F4202 /* AudioPlayerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerUseCase.swift; sourceTree = "<group>"; };
 		CE39D82F299ECD50009F4202 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		CE39D831299ED251009F4202 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		CE39D83429A38DBE009F4202 /* DataLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerTests.swift; sourceTree = "<group>"; };
+		CE39D83429A38DBE009F4202 /* PersistentStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorageRepository.swift; sourceTree = "<group>"; };
+		CE39D83829A3B1F8009F4202 /* SingerTracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModel.swift; sourceTree = "<group>"; };
+		CE39D83B29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadSingerTrackUseCaseMoc.swift; sourceTree = "<group>"; };
 		CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorage.swift; sourceTree = "<group>"; };
 		CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStoragable.swift; sourceTree = "<group>"; };
 		CE4FC550298DBDE1004F281C /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				CE39D7EE299984BD009F4202 /* Navigations */,
+				CE39D83729A3B1CA009F4202 /* Presentation Layer */,
+				CE39D83629A3B1A1009F4202 /* Data Layer */,
 			);
 			path = iTunesSearchTests;
 			sourceTree = "<group>";
@@ -546,10 +552,9 @@
 		CE39D7EE299984BD009F4202 /* Navigations */ = {
 			isa = PBXGroup;
 			children = (
-				CE39D7F1299989BE009F4202 /* CoordinatorsTests.swift */,
+				CE39D7F1299989BE009F4202 /* CoordinatorsFlow.swift */,
 				CE39D7EF299984CF009F4202 /* RouterMock.swift */,
 				CE39D80D299CE8AC009F4202 /* UIWindowMock.swift */,
-				CE39D83429A38DBE009F4202 /* DataLayerTests.swift */,
 			);
 			path = Navigations;
 			sourceTree = "<group>";
@@ -680,6 +685,31 @@
 				CE39D800299BCBFC009F4202 /* UILabel.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		CE39D83629A3B1A1009F4202 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				CE39D83429A38DBE009F4202 /* PersistentStorageRepository.swift */,
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		CE39D83729A3B1CA009F4202 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				CE39D83A29A3B591009F4202 /* Singer Tracks Screen */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		CE39D83A29A3B591009F4202 /* Singer Tracks Screen */ = {
+			isa = PBXGroup;
+			children = (
+				CE39D83829A3B1F8009F4202 /* SingerTracksViewModel.swift */,
+				CE39D83B29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift */,
+			);
+			path = "Singer Tracks Screen";
 			sourceTree = "<group>";
 		};
 		CE4FC544298D1580004F281C /* Entities */ = {
@@ -964,10 +994,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE39D83929A3B1F8009F4202 /* SingerTracksViewModel.swift in Sources */,
+				CE39D83C29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift in Sources */,
 				CE39D80E299CE8AC009F4202 /* UIWindowMock.swift in Sources */,
-				CE39D83529A38DBE009F4202 /* DataLayerTests.swift in Sources */,
+				CE39D83529A38DBE009F4202 /* PersistentStorageRepository.swift in Sources */,
 				CE39D7F0299984CF009F4202 /* RouterMock.swift in Sources */,
-				CE39D7F2299989BE009F4202 /* CoordinatorsTests.swift in Sources */,
+				CE39D7F2299989BE009F4202 /* CoordinatorsFlow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

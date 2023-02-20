@@ -28,8 +28,9 @@ final class ViewControllers {
     class func configureSingerTrackDetails(delegate: SingerTrackDetailsDelegate, trackId: String) -> SingerTrackDetailsViewController {
         let repository = PersistentStorageRepository()
         let audioClient = AudioClient()
+        let imageDownloaderClient = ImageDownloaderClient()
         
-        let storageUseCase = SingerTrackDetailsUseCase(storageRepository: repository)
+        let storageUseCase = SingerTrackDetailsUseCase(storageRepository: repository, imageDownloaderClient: imageDownloaderClient)
         let audioPlayerUseCase = AudioPlayerUseCase(audioClient: audioClient)
         
         let viewModel = SingerTrackDetailsViewModel(trackId: trackId, useCase: storageUseCase, audioPlayerUseCase: audioPlayerUseCase)
