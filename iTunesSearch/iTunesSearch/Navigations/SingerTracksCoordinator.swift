@@ -26,8 +26,6 @@ final class SingerTracksCoordinator: Coordinator {
     }
 #warning("** Q: - coordinator -> router dependency, inside showDetailCoordinator")
 #warning("check terminal warning")
-#warning("swiftgen, code generate")
-#warning("localization argument")
     private func showDetailCoordinator(trackId: String) {
         //        let router = RounterBuilder.makerRouter(type: .PlayerScreenRouter)
         let detailCoordinator = SingerTrackDetailsCoordinator(router: router, trackId: trackId)
