@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+iTunesSearch in iTunesSearch, no dependencies
+iTunesSearchTests in iTunesSearch, depends on:
+iTunesSearch in iTunesSearch (explicit)
+iTunesSearchUITests in iTunesSearch, depends on:
+iTunesSearch in iTunesSearch (explicit)

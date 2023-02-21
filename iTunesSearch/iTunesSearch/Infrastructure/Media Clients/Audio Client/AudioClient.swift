@@ -5,7 +5,6 @@
 //  Created by user on 15.02.2023.
 //
 
-import Foundation
 import AVFoundation
 
 class AudioClient: NSObject, AudioClientInterface {
@@ -37,7 +36,6 @@ class AudioClient: NSObject, AudioClientInterface {
             audioPlayer.delegate = self
             if (audioPlayer!.prepareToPlay()) {
                 audioPlayer!.play()
-            
                 enableDataUpdates()
                 completion(nil)
             }

@@ -1,0 +1,35 @@
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Navigations/Router/RouterBuilder.swift":
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/RouterBuilder.swiftdeps"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/RouterBuilder.d"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/RouterBuilder.dia"
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/RouterBuilder.o"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/View Layer/View Controllers/Singer Track Details Screen/SingerTrackDetailsViewController.swift":
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrackDetailsViewController.dia"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrackDetailsViewController.swiftdeps"
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrackDetailsViewController.o"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrackDetailsViewController.d"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Infrastructure/Network Clients/REST API/ResponseHandler+Extension.swift":
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/ResponseHandler+Extension.dia"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/ResponseHandler+Extension.d"
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/ResponseHandler+Extension.o"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/ResponseHandler+Extension.swiftdeps"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Domain Layer/Singer Tracks Screen/UseCases/Interfaces/SingerTracksWorkerUseCaseInterface.swift":
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTracksWorkerUseCaseInterface.d"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTracksWorkerUseCaseInterface.swiftdeps"
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTracksWorkerUseCaseInterface.o"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTracksWorkerUseCaseInterface.dia"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Data Layer/PersistentStorage/CoreData/CoreDataStorage/Entities/SingerTrack.swift":
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrack.o"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrack.swiftdeps"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrack.d"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrack.dia"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/View Layer/View Controllers/Singer Tracks Screen/SingerTracksViewController.swift":
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTracksViewController.swiftdeps"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTracksViewController.dia"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTracksViewController.d"
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTracksViewController.o"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Infrastructure/Network Clients/Track Downloader/Interfaces/TrackDownloaderClientInterface.swift":
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/TrackDownloaderClientInterface.swiftdeps"
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/TrackDownloaderClientInterface.o"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/TrackDownloaderClientInterface.d"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/TrackDownloaderClientInterface.dia"

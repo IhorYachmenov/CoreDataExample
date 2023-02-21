@@ -1,0 +1,35 @@
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Extensions/Error.swift":
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/Error.o"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/Error.dia"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/Error.swiftdeps"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/Error.d"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Navigations/Router/AppRouter.swift":
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/AppRouter.o"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/AppRouter.swiftdeps"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/AppRouter.dia"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/AppRouter.d"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Domain Layer/Singer Tracks Screen/UseCases/Interfaces/DownloadSingerTrackUseCaseInterface.swift":
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/DownloadSingerTrackUseCaseInterface.dia"
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/DownloadSingerTrackUseCaseInterface.o"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/DownloadSingerTrackUseCaseInterface.swiftdeps"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/DownloadSingerTrackUseCaseInterface.d"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Infrastructure/Network Clients/REST API/APIPath.swift":
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/APIPath.dia"
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/APIPath.o"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/APIPath.d"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/APIPath.swiftdeps"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Domain Layer/Singer Tracks Screen/UseCases/StorageSingerTracksUseCase.swift":
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/StorageSingerTracksUseCase.o"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/StorageSingerTracksUseCase.dia"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/StorageSingerTracksUseCase.swiftdeps"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/StorageSingerTracksUseCase.d"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Data Layer/Repositories/Interfaces/PersistentStorageRepositoryInterface.swift":
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/PersistentStorageRepositoryInterface.d"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/PersistentStorageRepositoryInterface.swiftdeps"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/PersistentStorageRepositoryInterface.dia"
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/PersistentStorageRepositoryInterface.o"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Data Layer/PersistentStorage/CoreData/CoreDataStorage/CoreDataStorageManager.swift":
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/CoreDataStorageManager.o"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/CoreDataStorageManager.d"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/CoreDataStorageManager.swiftdeps"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/CoreDataStorageManager.dia"

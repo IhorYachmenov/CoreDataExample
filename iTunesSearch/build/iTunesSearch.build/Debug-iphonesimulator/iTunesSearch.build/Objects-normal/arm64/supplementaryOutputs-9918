@@ -1,0 +1,35 @@
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Constants/ConstantsSingerTrackDetailsScreen.swift":
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/ConstantsSingerTrackDetailsScreen.swiftdeps"
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/ConstantsSingerTrackDetailsScreen.o"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/ConstantsSingerTrackDetailsScreen.dia"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/ConstantsSingerTrackDetailsScreen.d"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Infrastructure/Media Clients/Audio Client/AudioClient.swift":
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/AudioClient.swiftdeps"
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/AudioClient.o"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/AudioClient.dia"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/AudioClient.d"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Navigations/Coordinator.swift":
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/Coordinator.swiftdeps"
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/Coordinator.o"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/Coordinator.d"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/Coordinator.dia"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Presentation Layer/Singer Tracks Screen/View Models/SingerTracksViewModel.swift":
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTracksViewModel.d"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTracksViewModel.dia"
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTracksViewModel.o"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTracksViewModel.swiftdeps"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/View Layer/Views/Cells/Singer Tracks List Cell Component/SingerTrackListConfigurator.swift":
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrackListConfigurator.o"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrackListConfigurator.swiftdeps"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrackListConfigurator.d"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrackListConfigurator.dia"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Navigations/SingerTrackDetailsCoordinator.swift":
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrackDetailsCoordinator.o"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrackDetailsCoordinator.d"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrackDetailsCoordinator.swiftdeps"
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/SingerTrackDetailsCoordinator.dia"
+"/Users/user/Desktop/CoreDataExample/iTunesSearch/iTunesSearch/Infrastructure/Network Clients/REST API/APIHandler.swift":
+  diagnostics: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/APIHandler.dia"
+  swift-dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/APIHandler.swiftdeps"
+  dependencies: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/APIHandler.d"
+  object: "/Users/user/Desktop/CoreDataExample/iTunesSearch/build/iTunesSearch.build/Debug-iphonesimulator/iTunesSearch.build/Objects-normal/arm64/APIHandler.o"
