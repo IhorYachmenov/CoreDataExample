@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SingerTrack" representedClassName="SingerTrack" syncable="YES" codeGenerationType="class">
+        <attribute name="collectionName" optional="YES" attributeType="String"/>
+        <attribute name="collectionPrice" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="demoURL" optional="YES" attributeType="String"/>
+        <attribute name="genre" optional="YES" attributeType="String"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String"/>
+        <attribute name="singerName" optional="YES" attributeType="String"/>
+        <attribute name="trackId" optional="YES" attributeType="String"/>
+        <attribute name="trackImgURL" optional="YES" attributeType="String"/>
+        <attribute name="trackName" optional="YES" attributeType="String"/>
+        <attribute name="trackPrice" optional="YES" attributeType="String"/>
+    </entity>
+</model>
