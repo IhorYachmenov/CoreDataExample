@@ -34,8 +34,8 @@ class AudioClient: NSObject, AudioClientInterface {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer.delegate = self
-            if (audioPlayer!.prepareToPlay()) {
-                audioPlayer!.play()
+            if (audioPlayer.prepareToPlay()) {
+                audioPlayer.play()
                 enableDataUpdates()
                 completion(nil)
             }
