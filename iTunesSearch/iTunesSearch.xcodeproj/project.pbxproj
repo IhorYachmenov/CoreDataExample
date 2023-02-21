@@ -103,6 +103,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CE39D9ED29A5050C009F4202 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		CE266CC329802E6200D6E038 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE266CC629802E6200D6E038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +189,7 @@
 		CE39D83429A38DBE009F4202 /* PersistentStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorageRepository.swift; sourceTree = "<group>"; };
 		CE39D83829A3B1F8009F4202 /* SingerTracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModel.swift; sourceTree = "<group>"; };
 		CE39D83B29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadSingerTrackUseCaseMoc.swift; sourceTree = "<group>"; };
+		CE39D9E129A504D9009F4202 /* Infrastructure.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Infrastructure.xcodeproj; path = ../../Infrastructure/Infrastructure.xcodeproj; sourceTree = "<group>"; };
 		CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorage.swift; sourceTree = "<group>"; };
 		CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStoragable.swift; sourceTree = "<group>"; };
 		CE4FC550298DBDE1004F281C /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -221,6 +235,7 @@
 				CE266CDC29802E6400D6E038 /* iTunesSearchTests */,
 				CE266CE629802E6400D6E038 /* iTunesSearchUITests */,
 				CE266CC429802E6200D6E038 /* Products */,
+				CE39D9EA29A5050C009F4202 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -237,6 +252,7 @@
 		CE266CC529802E6200D6E038 /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				CE39D9E129A504D9009F4202 /* Infrastructure.xcodeproj */,
 				CE4FC55229911651004F281C /* Navigations */,
 				CE266D5B2984009C00D6E038 /* View Layer */,
 				CE266CF72980308E00D6E038 /* Presentation Layer */,
@@ -712,6 +728,13 @@
 			path = "Singer Tracks Screen";
 			sourceTree = "<group>";
 		};
+		CE39D9EA29A5050C009F4202 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE4FC544298D1580004F281C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -799,6 +822,7 @@
 				CE266CBF29802E6200D6E038 /* Sources */,
 				CE266CC029802E6200D6E038 /* Frameworks */,
 				CE266CC129802E6200D6E038 /* Resources */,
+				CE39D9ED29A5050C009F4202 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
