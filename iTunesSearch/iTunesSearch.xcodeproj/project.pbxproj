@@ -73,6 +73,8 @@
 		CE39D83529A38DBE009F4202 /* PersistentStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83429A38DBE009F4202 /* PersistentStorageRepository.swift */; };
 		CE39D83929A3B1F8009F4202 /* SingerTracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83829A3B1F8009F4202 /* SingerTracksViewModel.swift */; };
 		CE39D83C29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83B29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift */; };
+		CE39DA1C29A53DAB009F4202 /* Domain_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE39DA1829A53D99009F4202 /* Domain_Layer.framework */; };
+		CE39DA1D29A53DAB009F4202 /* Domain_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE39DA1829A53D99009F4202 /* Domain_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */; };
 		CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */; };
 		CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC550298DBDE1004F281C /* Mapper.swift */; };
@@ -101,6 +103,20 @@
 			remoteGlobalIDString = CE266CC229802E6200D6E038;
 			remoteInfo = iTunesSearch;
 		};
+		CE39DA1729A53D99009F4202 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE39DA1229A53D99009F4202 /* Domain Layer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE39D9F829A53D7F009F4202;
+			remoteInfo = "Domain Layer";
+		};
+		CE39DA1929A53D99009F4202 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE39DA1229A53D99009F4202 /* Domain Layer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE39DA0229A53D7F009F4202;
+			remoteInfo = "Domain LayerTests";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -110,6 +126,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CE39DA1D29A53DAB009F4202 /* Domain_Layer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,7 +206,7 @@
 		CE39D83429A38DBE009F4202 /* PersistentStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorageRepository.swift; sourceTree = "<group>"; };
 		CE39D83829A3B1F8009F4202 /* SingerTracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModel.swift; sourceTree = "<group>"; };
 		CE39D83B29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadSingerTrackUseCaseMoc.swift; sourceTree = "<group>"; };
-		CE39D9E129A504D9009F4202 /* Infrastructure.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Infrastructure.xcodeproj; path = ../../Infrastructure/Infrastructure.xcodeproj; sourceTree = "<group>"; };
+		CE39DA1229A53D99009F4202 /* Domain Layer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Domain Layer.xcodeproj"; path = "../Domain Layer/Domain Layer.xcodeproj"; sourceTree = "<group>"; };
 		CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorage.swift; sourceTree = "<group>"; };
 		CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStoragable.swift; sourceTree = "<group>"; };
 		CE4FC550298DBDE1004F281C /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -208,6 +225,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE39DA1C29A53DAB009F4202 /* Domain_Layer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,11 +249,12 @@
 		CE266CBA29802E6200D6E038 = {
 			isa = PBXGroup;
 			children = (
+				CE39DA1229A53D99009F4202 /* Domain Layer.xcodeproj */,
 				CE266CC529802E6200D6E038 /* iTunesSearch */,
 				CE266CDC29802E6400D6E038 /* iTunesSearchTests */,
 				CE266CE629802E6400D6E038 /* iTunesSearchUITests */,
 				CE266CC429802E6200D6E038 /* Products */,
-				CE39D9EA29A5050C009F4202 /* Frameworks */,
+				CE39DA1B29A53DAB009F4202 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -252,7 +271,6 @@
 		CE266CC529802E6200D6E038 /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
-				CE39D9E129A504D9009F4202 /* Infrastructure.xcodeproj */,
 				CE4FC55229911651004F281C /* Navigations */,
 				CE266D5B2984009C00D6E038 /* View Layer */,
 				CE266CF72980308E00D6E038 /* Presentation Layer */,
@@ -728,7 +746,16 @@
 			path = "Singer Tracks Screen";
 			sourceTree = "<group>";
 		};
-		CE39D9EA29A5050C009F4202 /* Frameworks */ = {
+		CE39DA1329A53D99009F4202 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE39DA1829A53D99009F4202 /* Domain_Layer.framework */,
+				CE39DA1A29A53D99009F4202 /* Domain LayerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE39DA1B29A53DAB009F4202 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -904,6 +931,12 @@
 			mainGroup = CE266CBA29802E6200D6E038;
 			productRefGroup = CE266CC429802E6200D6E038 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CE39DA1329A53D99009F4202 /* Products */;
+					ProjectRef = CE39DA1229A53D99009F4202 /* Domain Layer.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CE266CC229802E6200D6E038 /* iTunesSearch */,
@@ -912,6 +945,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CE39DA1829A53D99009F4202 /* Domain_Layer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Domain_Layer.framework;
+			remoteRef = CE39DA1729A53D99009F4202 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE39DA1A29A53D99009F4202 /* Domain LayerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Domain LayerTests.xctest";
+			remoteRef = CE39DA1929A53D99009F4202 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CE266CC129802E6200D6E038 /* Resources */ = {
