@@ -129,8 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				CE39DBBE29A54E57009F4202 /* Domain Layer */,
-				CE39DBFB29A54ED3009F4202 /* Infrastructure.xcodeproj */,
 				CE39DBF229A54ECA009F4202 /* Data Layer.xcodeproj */,
+				CE39DBFB29A54ED3009F4202 /* Infrastructure.xcodeproj */,
 				CE39DC0B29A5508F009F4202 /* Extensions */,
 				CE39DC0A29A55089009F4202 /* Constants */,
 				CE39DBCA29A54E57009F4202 /* Domain LayerTests */,

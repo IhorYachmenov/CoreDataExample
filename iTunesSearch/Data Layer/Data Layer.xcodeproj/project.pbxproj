@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE057D1929A561CA00C7CC7A /* SingerTrackDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE057D1729A561CA00C7CC7A /* SingerTrackDataModel.xcdatamodeld */; };
 		CE39DB7729A54BCC009F4202 /* Data_Layer.docc in Sources */ = {isa = PBXBuildFile; fileRef = CE39DB7629A54BCC009F4202 /* Data_Layer.docc */; };
 		CE39DB7D29A54BCD009F4202 /* Data_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE39DB7229A54BCC009F4202 /* Data_Layer.framework */; };
 		CE39DB8229A54BCD009F4202 /* Data_LayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39DB8129A54BCD009F4202 /* Data_LayerTests.swift */; };
@@ -15,7 +16,6 @@
 		CE39DBA029A54BFC009F4202 /* QueryWorkerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39DB9029A54BFB009F4202 /* QueryWorkerStorage.swift */; };
 		CE39DBA129A54BFC009F4202 /* CoreDataStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39DB9229A54BFB009F4202 /* CoreDataStorageManager.swift */; };
 		CE39DBA229A54BFC009F4202 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39DB9429A54BFB009F4202 /* Mapper.swift */; };
-		CE39DBA329A54BFC009F4202 /* SingerTrackDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE39DB9529A54BFB009F4202 /* SingerTrackDataModel.xcdatamodeld */; };
 		CE39DBA429A54BFC009F4202 /* SingerTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39DB9829A54BFB009F4202 /* SingerTrack.swift */; };
 		CE39DBA529A54BFC009F4202 /* QueryWorkerStoragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39DB9A29A54BFB009F4202 /* QueryWorkerStoragable.swift */; };
 		CE39DBA629A54BFC009F4202 /* PersistentStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39DB9C29A54BFB009F4202 /* PersistentStorageRepository.swift */; };
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE057D1829A561CA00C7CC7A /* SingerTrackDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SingerTrackDataModel.xcdatamodel; sourceTree = "<group>"; };
 		CE39DB7229A54BCC009F4202 /* Data_Layer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data_Layer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE39DB7529A54BCC009F4202 /* Data_Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data_Layer.h; sourceTree = "<group>"; };
 		CE39DB7629A54BCC009F4202 /* Data_Layer.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Data_Layer.docc; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		CE39DB9029A54BFB009F4202 /* QueryWorkerStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorage.swift; sourceTree = "<group>"; };
 		CE39DB9229A54BFB009F4202 /* CoreDataStorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStorageManager.swift; sourceTree = "<group>"; };
 		CE39DB9429A54BFB009F4202 /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
-		CE39DB9629A54BFB009F4202 /* SingerTrackDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SingerTrackDataModel.xcdatamodel; sourceTree = "<group>"; };
 		CE39DB9829A54BFB009F4202 /* SingerTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingerTrack.swift; sourceTree = "<group>"; };
 		CE39DB9A29A54BFB009F4202 /* QueryWorkerStoragable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryWorkerStoragable.swift; sourceTree = "<group>"; };
 		CE39DB9C29A54BFB009F4202 /* PersistentStorageRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStorageRepository.swift; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 			children = (
 				CE39DB7529A54BCC009F4202 /* Data_Layer.h */,
 				CE39DB8C29A54BFB009F4202 /* Entities */,
-				CE39DB8E29A54BFB009F4202 /* PersistentStorage */,
 				CE39DB9B29A54BFB009F4202 /* Repositories */,
+				CE39DB8E29A54BFB009F4202 /* PersistentStorage */,
 				CE39DBA929A54C5A009F4202 /* Constants */,
 				CE39DBA829A54C50009F4202 /* Extensions */,
 				CE39DB7629A54BCC009F4202 /* Data_Layer.docc */,
@@ -135,9 +135,9 @@
 		CE39DB8F29A54BFB009F4202 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				CE39DB9929A54BFB009F4202 /* Interfaces */,
 				CE39DB9029A54BFB009F4202 /* QueryWorkerStorage.swift */,
 				CE39DB9129A54BFB009F4202 /* CoreDataStorage */,
-				CE39DB9929A54BFB009F4202 /* Interfaces */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -147,8 +147,8 @@
 			children = (
 				CE39DB9229A54BFB009F4202 /* CoreDataStorageManager.swift */,
 				CE39DB9329A54BFB009F4202 /* Mapper */,
-				CE39DB9529A54BFB009F4202 /* SingerTrackDataModel.xcdatamodeld */,
 				CE39DB9729A54BFB009F4202 /* Entities */,
+				CE057D1729A561CA00C7CC7A /* SingerTrackDataModel.xcdatamodeld */,
 			);
 			path = CoreDataStorage;
 			sourceTree = "<group>";
@@ -322,7 +322,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE39DB7729A54BCC009F4202 /* Data_Layer.docc in Sources */,
-				CE39DBA329A54BFC009F4202 /* SingerTrackDataModel.xcdatamodeld in Sources */,
 				CE39DBA529A54BFC009F4202 /* QueryWorkerStoragable.swift in Sources */,
 				CE39DBA029A54BFC009F4202 /* QueryWorkerStorage.swift in Sources */,
 				CE39DC1229A554A3009F4202 /* String.swift in Sources */,
@@ -331,6 +330,7 @@
 				CE39DBAF29A54CD0009F4202 /* Constants.swift in Sources */,
 				CE39DB9F29A54BFC009F4202 /* DataModel.swift in Sources */,
 				CE39DBB129A54D07009F4202 /* NSError.swift in Sources */,
+				CE057D1929A561CA00C7CC7A /* SingerTrackDataModel.xcdatamodeld in Sources */,
 				CE39DBA229A54BFC009F4202 /* Mapper.swift in Sources */,
 				CE39DBA729A54BFC009F4202 /* PersistentStorageRepositoryInterface.swift in Sources */,
 				CE39DBA629A54BFC009F4202 /* PersistentStorageRepository.swift in Sources */,
@@ -600,12 +600,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CE39DB9529A54BFB009F4202 /* SingerTrackDataModel.xcdatamodeld */ = {
+		CE057D1729A561CA00C7CC7A /* SingerTrackDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CE39DB9629A54BFB009F4202 /* SingerTrackDataModel.xcdatamodel */,
+				CE057D1829A561CA00C7CC7A /* SingerTrackDataModel.xcdatamodel */,
 			);
-			currentVersion = CE39DB9629A54BFB009F4202 /* SingerTrackDataModel.xcdatamodel */;
+			currentVersion = CE057D1829A561CA00C7CC7A /* SingerTrackDataModel.xcdatamodel */;
 			path = SingerTrackDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

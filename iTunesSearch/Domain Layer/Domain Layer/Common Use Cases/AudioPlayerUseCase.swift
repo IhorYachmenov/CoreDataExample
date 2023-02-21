@@ -7,17 +7,17 @@
 
 import Infrastructure
 
-final class AudioPlayerUseCase {
+public final class AudioPlayerUseCase {
     private lazy var trackDownloaderClient: TrackDownloaderClientInterface = TrackDownloaderClient()
     private var audioClient: AudioClientInterface
     
-    init(audioClient: AudioClientInterface) {
+    public init(audioClient: AudioClientInterface) {
         self.audioClient = audioClient
     }
 }
 
 extension AudioPlayerUseCase: AudioPlayerUseCaseInterface {
-    func playTrack(url: String?, completion: @escaping (Error?) -> ()) {
+    public func playTrack(url: String?, completion: @escaping (Error?) -> ()) {
         trackDownloaderClient.downloadTrack(url: url) { [weak self] result in
             switch result {
             case .success(let success):
@@ -32,7 +32,7 @@ extension AudioPlayerUseCase: AudioPlayerUseCaseInterface {
         }
     }
     
-    func subscribeOnAudioData(completion: @escaping (MediaModel.AudioData) -> ()) {
+    public func subscribeOnAudioData(completion: @escaping (MediaModel.AudioData) -> ()) {
         audioClient.dataPublisher = completion
     }
 }

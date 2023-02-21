@@ -18,7 +18,7 @@ public enum StorageError: Error {
 final class CoreDataStorageManager {
     static let shared = CoreDataStorageManager()
     
-    private init() {}
+    init() {}
 
     private lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "SingerTrackDataModel")

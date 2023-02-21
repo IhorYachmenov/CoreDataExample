@@ -5,7 +5,7 @@
 //  Created by user on 13.02.2023.
 //
 
-import Foundation
+import Domain_Layer
 
 final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
     private var trackId: String

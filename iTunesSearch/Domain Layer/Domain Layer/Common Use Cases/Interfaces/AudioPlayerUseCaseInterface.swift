@@ -6,7 +6,8 @@
 //
 
 import Infrastructure
-protocol AudioPlayerUseCaseInterface {
+
+public protocol AudioPlayerUseCaseInterface {
     func playTrack(url: String?, completion: @escaping (Error?) -> ())
     func subscribeOnAudioData(completion: @escaping (MediaModel.AudioData) -> ())
 }

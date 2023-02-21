@@ -9,10 +9,10 @@ import Foundation
 
 public enum MediaModel {
     public struct AudioData {
-        let currentTime: String
-        let duration: String
-        var isPlaying: Bool
-        var progress: Float
+        public let currentTime: String
+        public let duration: String
+        public var isPlaying: Bool
+        public var progress: Float
     }
 }
 

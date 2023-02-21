@@ -8,26 +8,26 @@
 import Data_Layer
 import Infrastructure
 
-final class SingerTrackDetailsUseCase {
+public final class SingerTrackDetailsUseCase {
     private var repository: PersistentStorageRepositoryInterface
     private var imageDownloaderClient: ImageDownloaderClientInterface
     
-    init(storageRepository: PersistentStorageRepositoryInterface, imageDownloaderClient: ImageDownloaderClientInterface) {
+    public init(storageRepository: PersistentStorageRepositoryInterface, imageDownloaderClient: ImageDownloaderClientInterface) {
         repository = storageRepository
         self.imageDownloaderClient = imageDownloaderClient
     }
 }
 
 extension SingerTrackDetailsUseCase: SingerTrackDetailsUseCaseInterface {
-    func downloadImage(url: String?, completion: @escaping (Result<Data, Error>) -> ()) {
+    public func downloadImage(url: String?, completion: @escaping (Result<Data, Error>) -> ()) {
         imageDownloaderClient.downloadImage(url: url, completion: completion)
     }
     
-    func fetchTrackDetails(trackId: String, completion: @escaping (StorageError?) -> ()) {
+    public func fetchTrackDetails(trackId: String, completion: @escaping (StorageError?) -> ()) {
         repository.fetchTrackDetails(trackId: trackId, completion: completion)
     }
     
-    func subscribeOnTrackData(completion: @escaping (DataModel.SingerTrack?) -> ()) {
+    public func subscribeOnTrackData(completion: @escaping (DataModel.SingerTrack?) -> ()) {
         repository.subscribeOnData { data in
             completion(data.first)
         }

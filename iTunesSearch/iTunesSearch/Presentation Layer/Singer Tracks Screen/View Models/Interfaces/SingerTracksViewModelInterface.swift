@@ -5,7 +5,7 @@
 //  Created by user on 01.02.2023.
 //
 
-import Foundation
+import Data_Layer
 
 enum PresentationModel {
     struct SingerTrack {

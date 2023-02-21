@@ -7,39 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE057D0629A55C4200C7CC7A /* Domain_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE057D0529A55C4200C7CC7A /* Domain_Layer.framework */; };
+		CE057D0729A55C4200C7CC7A /* Domain_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE057D0529A55C4200C7CC7A /* Domain_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CC629802E6200D6E038 /* AppDelegate.swift */; };
 		CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */; };
 		CE266CD029802E6300D6E038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE266CCF29802E6300D6E038 /* Assets.xcassets */; };
 		CE266CD329802E6300D6E038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE266CD129802E6300D6E038 /* LaunchScreen.storyboard */; };
 		CE266CE829802E6400D6E038 /* iTunesSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CE729802E6400D6E038 /* iTunesSearchUITests.swift */; };
 		CE266CEA29802E6400D6E038 /* iTunesSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CE929802E6400D6E038 /* iTunesSearchUITestsLaunchTests.swift */; };
-		CE266CFC298031AD00D6E038 /* APIPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CFB298031AD00D6E038 /* APIPath.swift */; };
-		CE266CFE298031C600D6E038 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CFD298031C600D6E038 /* APIEnvironment.swift */; };
-		CE266D00298031DA00D6E038 /* APILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CFF298031DA00D6E038 /* APILoader.swift */; };
-		CE266D02298031EA00D6E038 /* RequestHandler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D01298031EA00D6E038 /* RequestHandler+Extension.swift */; };
-		CE266D04298031F600D6E038 /* ResponseHandler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D03298031F600D6E038 /* ResponseHandler+Extension.swift */; };
-		CE266D062980320100D6E038 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D052980320100D6E038 /* APIHandler.swift */; };
 		CE266D0A2980335800D6E038 /* ConstantsAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D092980335800D6E038 /* ConstantsAlert.swift */; };
 		CE266D0D2980346500D6E038 /* SingerTracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D0C2980346500D6E038 /* SingerTracksViewModel.swift */; };
-		CE266D102980358E00D6E038 /* DownloadSingerTrackUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D0F2980358E00D6E038 /* DownloadSingerTrackUseCase.swift */; };
-		CE266D132980368600D6E038 /* SearchSingerTrackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D122980368600D6E038 /* SearchSingerTrackAPI.swift */; };
-		CE266D1A29803E8D00D6E038 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D1929803E8D00D6E038 /* NetworkModel.swift */; };
 		CE266D2929807DFF00D6E038 /* SingerTrackListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D2829807DFF00D6E038 /* SingerTrackListContentView.swift */; };
 		CE266D2B29807E4000D6E038 /* SingerTrackListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D2A29807E4000D6E038 /* SingerTrackListConfigurator.swift */; };
 		CE266D2D29807E8E00D6E038 /* SingerTrackListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D2C29807E8E00D6E038 /* SingerTrackListCell.swift */; };
-		CE266D3329812BEB00D6E038 /* PersistentStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D3229812BEB00D6E038 /* PersistentStorageRepository.swift */; };
-		CE266D3629812C5700D6E038 /* PersistentStorageRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D3529812C5700D6E038 /* PersistentStorageRepositoryInterface.swift */; };
-		CE266D3B29812D1F00D6E038 /* DownloadSingerTrackUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D3A29812D1F00D6E038 /* DownloadSingerTrackUseCaseInterface.swift */; };
-		CE266D3D29812E0500D6E038 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D3C29812E0500D6E038 /* DataModel.swift */; };
 		CE266D4029812EB600D6E038 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D3F29812EB600D6E038 /* Optional.swift */; };
-		CE266D4829814C0400D6E038 /* CoreDataStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D4729814C0400D6E038 /* CoreDataStorageManager.swift */; };
-		CE266D4C29814FB100D6E038 /* StorageSingerTracksUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D4B29814FB100D6E038 /* StorageSingerTracksUseCaseInterface.swift */; };
-		CE266D4E29814FE300D6E038 /* StorageSingerTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D4D29814FE300D6E038 /* StorageSingerTracksUseCase.swift */; };
-		CE266D57298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE266D55298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld */; };
-		CE266D5A2981679400D6E038 /* SingerTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D592981679400D6E038 /* SingerTrack.swift */; };
-		CE266D6D2987DED900D6E038 /* SingerTracksWorkerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D6C2987DED900D6E038 /* SingerTracksWorkerUseCase.swift */; };
-		CE266D6F2987DEF500D6E038 /* SingerTracksWorkerUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D6E2987DEF500D6E038 /* SingerTracksWorkerUseCaseInterface.swift */; };
-		CE266D7529897CC700D6E038 /* APIHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D7429897CC700D6E038 /* APIHeaders.swift */; };
 		CE266D7D298A994000D6E038 /* SingerTracksViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D7C298A994000D6E038 /* SingerTracksViewModelInterface.swift */; };
 		CE39D7CD2993C72A009F4202 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7CC2993C72A009F4202 /* String.swift */; };
 		CE39D7D12993C85F009F4202 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE39D7D32993C85F009F4202 /* Localizable.strings */; };
@@ -50,32 +31,19 @@
 		CE39D7F2299989BE009F4202 /* CoordinatorsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7F1299989BE009F4202 /* CoordinatorsFlow.swift */; };
 		CE39D7F4299A5C53009F4202 /* SingerTrackDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7F3299A5C53009F4202 /* SingerTrackDetailsViewModel.swift */; };
 		CE39D7F7299A5CE5009F4202 /* SingerTrackDetailsViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7F6299A5CE5009F4202 /* SingerTrackDetailsViewModelInterface.swift */; };
-		CE39D7FA299A5E45009F4202 /* SingerTrackDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7F9299A5E45009F4202 /* SingerTrackDetailsUseCase.swift */; };
-		CE39D7FD299A5E65009F4202 /* SingerTrackDetailsUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7FC299A5E65009F4202 /* SingerTrackDetailsUseCaseInterface.swift */; };
 		CE39D7FF299BCAA0009F4202 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7FE299BCAA0009F4202 /* UIViewController.swift */; };
 		CE39D801299BCBFC009F4202 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D800299BCBFC009F4202 /* UILabel.swift */; };
-		CE39D805299BE1DC009F4202 /* ImageDownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D804299BE1DC009F4202 /* ImageDownloaderClient.swift */; };
 		CE39D807299BE391009F4202 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D806299BE391009F4202 /* Error.swift */; };
 		CE39D80A299C4121009F4202 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D809299C4121009F4202 /* NSMutableAttributedString.swift */; };
 		CE39D80C299CE075009F4202 /* ConstantsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D80B299CE075009F4202 /* ConstantsError.swift */; };
 		CE39D80E299CE8AC009F4202 /* UIWindowMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D80D299CE8AC009F4202 /* UIWindowMock.swift */; };
 		CE39D810299CFCCE009F4202 /* RouterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D80F299CFCCE009F4202 /* RouterBuilder.swift */; };
-		CE39D815299D5CC5009F4202 /* TrackDownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D814299D5CC5009F4202 /* TrackDownloaderClient.swift */; };
-		CE39D818299D789C009F4202 /* ImageDownloaderClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D817299D789C009F4202 /* ImageDownloaderClientInterface.swift */; };
-		CE39D81B299D790C009F4202 /* TrackDownloaderClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D81A299D790C009F4202 /* TrackDownloaderClientInterface.swift */; };
-		CE39D81F299D7B19009F4202 /* AudioClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D81E299D7B19009F4202 /* AudioClient.swift */; };
-		CE39D822299D7D23009F4202 /* AudioClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D821299D7D23009F4202 /* AudioClientInterface.swift */; };
 		CE39D828299E60F3009F4202 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D827299E60F3009F4202 /* Data.swift */; };
-		CE39D82A299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D829299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift */; };
-		CE39D82D299E9E71009F4202 /* AudioPlayerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D82C299E9E71009F4202 /* AudioPlayerUseCase.swift */; };
 		CE39D830299ECD50009F4202 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D82F299ECD50009F4202 /* UIButton.swift */; };
 		CE39D832299ED251009F4202 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D831299ED251009F4202 /* UIColor.swift */; };
 		CE39D83529A38DBE009F4202 /* PersistentStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83429A38DBE009F4202 /* PersistentStorageRepository.swift */; };
 		CE39D83929A3B1F8009F4202 /* SingerTracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83829A3B1F8009F4202 /* SingerTracksViewModel.swift */; };
 		CE39D83C29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83B29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift */; };
-		CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */; };
-		CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */; };
-		CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC550298DBDE1004F281C /* Mapper.swift */; };
 		CE4FC55429911681004F281C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55329911681004F281C /* Coordinator.swift */; };
 		CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55529911745004F281C /* AppCoordinator.swift */; };
 		CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */; };
@@ -87,6 +55,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CE057D1329A5605E00C7CC7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE057CF929A55C2300C7CC7A /* Domain Layer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE39DBBC29A54E57009F4202;
+			remoteInfo = "Domain Layer";
+		};
+		CE057D1529A5605E00C7CC7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE057CF929A55C2300C7CC7A /* Domain Layer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE39DBC629A54E57009F4202;
+			remoteInfo = "Domain LayerTests";
+		};
 		CE266CDA29802E6400D6E038 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CE266CBB29802E6200D6E038 /* Project object */;
@@ -103,7 +85,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CE057D0829A55C4200C7CC7A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE057D0729A55C4200C7CC7A /* Domain_Layer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CE057CF929A55C2300C7CC7A /* Domain Layer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Domain Layer.xcodeproj"; path = "../Domain Layer/Domain Layer.xcodeproj"; sourceTree = "<group>"; };
+		CE057D0529A55C4200C7CC7A /* Domain_Layer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain_Layer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE266CC329802E6200D6E038 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE266CC629802E6200D6E038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewController.swift; sourceTree = "<group>"; };
@@ -114,33 +112,12 @@
 		CE266CE329802E6400D6E038 /* iTunesSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTunesSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE266CE729802E6400D6E038 /* iTunesSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchUITests.swift; sourceTree = "<group>"; };
 		CE266CE929802E6400D6E038 /* iTunesSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CE266CFB298031AD00D6E038 /* APIPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPath.swift; sourceTree = "<group>"; };
-		CE266CFD298031C600D6E038 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
-		CE266CFF298031DA00D6E038 /* APILoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILoader.swift; sourceTree = "<group>"; };
-		CE266D01298031EA00D6E038 /* RequestHandler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestHandler+Extension.swift"; sourceTree = "<group>"; };
-		CE266D03298031F600D6E038 /* ResponseHandler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseHandler+Extension.swift"; sourceTree = "<group>"; };
-		CE266D052980320100D6E038 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		CE266D092980335800D6E038 /* ConstantsAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsAlert.swift; sourceTree = "<group>"; };
 		CE266D0C2980346500D6E038 /* SingerTracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModel.swift; sourceTree = "<group>"; };
-		CE266D0F2980358E00D6E038 /* DownloadSingerTrackUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadSingerTrackUseCase.swift; sourceTree = "<group>"; };
-		CE266D122980368600D6E038 /* SearchSingerTrackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSingerTrackAPI.swift; sourceTree = "<group>"; };
-		CE266D1929803E8D00D6E038 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		CE266D2829807DFF00D6E038 /* SingerTrackListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackListContentView.swift; sourceTree = "<group>"; };
 		CE266D2A29807E4000D6E038 /* SingerTrackListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackListConfigurator.swift; sourceTree = "<group>"; };
 		CE266D2C29807E8E00D6E038 /* SingerTrackListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackListCell.swift; sourceTree = "<group>"; };
-		CE266D3229812BEB00D6E038 /* PersistentStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorageRepository.swift; sourceTree = "<group>"; };
-		CE266D3529812C5700D6E038 /* PersistentStorageRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorageRepositoryInterface.swift; sourceTree = "<group>"; };
-		CE266D3A29812D1F00D6E038 /* DownloadSingerTrackUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadSingerTrackUseCaseInterface.swift; sourceTree = "<group>"; };
-		CE266D3C29812E0500D6E038 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		CE266D3F29812EB600D6E038 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
-		CE266D4729814C0400D6E038 /* CoreDataStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorageManager.swift; sourceTree = "<group>"; };
-		CE266D4B29814FB100D6E038 /* StorageSingerTracksUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageSingerTracksUseCaseInterface.swift; sourceTree = "<group>"; };
-		CE266D4D29814FE300D6E038 /* StorageSingerTracksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageSingerTracksUseCase.swift; sourceTree = "<group>"; };
-		CE266D56298162A900D6E038 /* SingerTrackDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SingerTrackDataModel.xcdatamodel; sourceTree = "<group>"; };
-		CE266D592981679400D6E038 /* SingerTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrack.swift; sourceTree = "<group>"; };
-		CE266D6C2987DED900D6E038 /* SingerTracksWorkerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksWorkerUseCase.swift; sourceTree = "<group>"; };
-		CE266D6E2987DEF500D6E038 /* SingerTracksWorkerUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksWorkerUseCaseInterface.swift; sourceTree = "<group>"; };
-		CE266D7429897CC700D6E038 /* APIHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeaders.swift; sourceTree = "<group>"; };
 		CE266D7C298A994000D6E038 /* SingerTracksViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModelInterface.swift; sourceTree = "<group>"; };
 		CE39D7CC2993C72A009F4202 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CE39D7D22993C85F009F4202 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -153,32 +130,19 @@
 		CE39D7F1299989BE009F4202 /* CoordinatorsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsFlow.swift; sourceTree = "<group>"; };
 		CE39D7F3299A5C53009F4202 /* SingerTrackDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsViewModel.swift; sourceTree = "<group>"; };
 		CE39D7F6299A5CE5009F4202 /* SingerTrackDetailsViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsViewModelInterface.swift; sourceTree = "<group>"; };
-		CE39D7F9299A5E45009F4202 /* SingerTrackDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsUseCase.swift; sourceTree = "<group>"; };
-		CE39D7FC299A5E65009F4202 /* SingerTrackDetailsUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsUseCaseInterface.swift; sourceTree = "<group>"; };
 		CE39D7FE299BCAA0009F4202 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CE39D800299BCBFC009F4202 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
-		CE39D804299BE1DC009F4202 /* ImageDownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderClient.swift; sourceTree = "<group>"; };
 		CE39D806299BE391009F4202 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		CE39D809299C4121009F4202 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		CE39D80B299CE075009F4202 /* ConstantsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsError.swift; sourceTree = "<group>"; };
 		CE39D80D299CE8AC009F4202 /* UIWindowMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowMock.swift; sourceTree = "<group>"; };
 		CE39D80F299CFCCE009F4202 /* RouterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterBuilder.swift; sourceTree = "<group>"; };
-		CE39D814299D5CC5009F4202 /* TrackDownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDownloaderClient.swift; sourceTree = "<group>"; };
-		CE39D817299D789C009F4202 /* ImageDownloaderClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderClientInterface.swift; sourceTree = "<group>"; };
-		CE39D81A299D790C009F4202 /* TrackDownloaderClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDownloaderClientInterface.swift; sourceTree = "<group>"; };
-		CE39D81E299D7B19009F4202 /* AudioClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClient.swift; sourceTree = "<group>"; };
-		CE39D821299D7D23009F4202 /* AudioClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClientInterface.swift; sourceTree = "<group>"; };
 		CE39D827299E60F3009F4202 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		CE39D829299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerUseCaseInterface.swift; sourceTree = "<group>"; };
-		CE39D82C299E9E71009F4202 /* AudioPlayerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerUseCase.swift; sourceTree = "<group>"; };
 		CE39D82F299ECD50009F4202 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		CE39D831299ED251009F4202 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		CE39D83429A38DBE009F4202 /* PersistentStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorageRepository.swift; sourceTree = "<group>"; };
 		CE39D83829A3B1F8009F4202 /* SingerTracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModel.swift; sourceTree = "<group>"; };
 		CE39D83B29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadSingerTrackUseCaseMoc.swift; sourceTree = "<group>"; };
-		CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStorage.swift; sourceTree = "<group>"; };
-		CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWorkerStoragable.swift; sourceTree = "<group>"; };
-		CE4FC550298DBDE1004F281C /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		CE4FC55329911681004F281C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CE4FC55529911745004F281C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksCoordinator.swift; sourceTree = "<group>"; };
@@ -194,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE057D0629A55C4200C7CC7A /* Domain_Layer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +179,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE057D0429A55C4200C7CC7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE057D0529A55C4200C7CC7A /* Domain_Layer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE057D0F29A5605E00C7CC7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE057D1429A5605E00C7CC7A /* Domain_Layer.framework */,
+				CE057D1629A5605E00C7CC7A /* Domain LayerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CE266CBA29802E6200D6E038 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +203,7 @@
 				CE266CDC29802E6400D6E038 /* iTunesSearchTests */,
 				CE266CE629802E6400D6E038 /* iTunesSearchUITests */,
 				CE266CC429802E6200D6E038 /* Products */,
+				CE057D0429A55C4200C7CC7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,9 +223,7 @@
 				CE4FC55229911651004F281C /* Navigations */,
 				CE266D5B2984009C00D6E038 /* View Layer */,
 				CE266CF72980308E00D6E038 /* Presentation Layer */,
-				CE266CF92980310000D6E038 /* Domain Layer */,
-				CE266CF8298030E800D6E038 /* Data Layer */,
-				CE266CFA2980310800D6E038 /* Infrastructure */,
+				CE057CF929A55C2300C7CC7A /* Domain Layer.xcodeproj */,
 				CE266CF629802ED800D6E038 /* Application */,
 				CE266D072980330E00D6E038 /* Resources */,
 				CE266D7629897F3C00D6E038 /* Constants */,
@@ -288,35 +269,6 @@
 			path = "Presentation Layer";
 			sourceTree = "<group>";
 		};
-		CE266CF8298030E800D6E038 /* Data Layer */ = {
-			isa = PBXGroup;
-			children = (
-				CE266D3029812B8300D6E038 /* Entities */,
-				CE266D3129812B8D00D6E038 /* Repositories */,
-				CE266D4229814A5200D6E038 /* PersistentStorage */,
-			);
-			path = "Data Layer";
-			sourceTree = "<group>";
-		};
-		CE266CF92980310000D6E038 /* Domain Layer */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D82B299E9E46009F4202 /* Common Use Cases */,
-				CE4FC5612992556C004F281C /* Singer Track Details Screen */,
-				CE4FC55F299254D5004F281C /* Singer Tracks Screen */,
-			);
-			path = "Domain Layer";
-			sourceTree = "<group>";
-		};
-		CE266CFA2980310800D6E038 /* Infrastructure */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D81C299D7ABB009F4202 /* Media Clients */,
-				CE266D17298037B700D6E038 /* Network Clients */,
-			);
-			path = Infrastructure;
-			sourceTree = "<group>";
-		};
 		CE266D072980330E00D6E038 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,16 +290,6 @@
 				CE39D827299E60F3009F4202 /* Data.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		CE266D17298037B700D6E038 /* Network Clients */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D813299D5CA4009F4202 /* Track Downloader */,
-				CE39D803299BE0F1009F4202 /* Image Downloader */,
-				CE39D802299BE0D4009F4202 /* REST API */,
-			);
-			path = "Network Clients";
 			sourceTree = "<group>";
 		};
 		CE266D232980481000D6E038 /* View Models */ = {
@@ -396,60 +338,6 @@
 			path = "Singer Tracks List Cell Component";
 			sourceTree = "<group>";
 		};
-		CE266D3029812B8300D6E038 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				CE266D3C29812E0500D6E038 /* DataModel.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		CE266D3129812B8D00D6E038 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				CE266D5E298401CC00D6E038 /* Interfaces */,
-				CE266D3229812BEB00D6E038 /* PersistentStorageRepository.swift */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
-		CE266D4129814A0F00D6E038 /* CoreDataStorage */ = {
-			isa = PBXGroup;
-			children = (
-				CE4FC54F298DBDD5004F281C /* Mapper */,
-				CE4FC544298D1580004F281C /* Entities */,
-				CE266D4729814C0400D6E038 /* CoreDataStorageManager.swift */,
-				CE266D55298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld */,
-			);
-			path = CoreDataStorage;
-			sourceTree = "<group>";
-		};
-		CE266D4229814A5200D6E038 /* PersistentStorage */ = {
-			isa = PBXGroup;
-			children = (
-				CE266D4329814A6100D6E038 /* CoreData */,
-			);
-			path = PersistentStorage;
-			sourceTree = "<group>";
-		};
-		CE266D4329814A6100D6E038 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				CE266D4629814BC300D6E038 /* Interfaces */,
-				CE4FC54B298D6647004F281C /* QueryWorkerStorage.swift */,
-				CE266D4129814A0F00D6E038 /* CoreDataStorage */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		CE266D4629814BC300D6E038 /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-				CE4FC54D298D66CA004F281C /* QueryWorkerStoragable.swift */,
-			);
-			path = Interfaces;
-			sourceTree = "<group>";
-		};
 		CE266D5B2984009C00D6E038 /* View Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,51 +345,6 @@
 				CE266D242980481E00D6E038 /* View Controllers */,
 			);
 			path = "View Layer";
-			sourceTree = "<group>";
-		};
-		CE266D5C298400AE00D6E038 /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				CE266D5D2984018400D6E038 /* Interfaces */,
-				CE266D0F2980358E00D6E038 /* DownloadSingerTrackUseCase.swift */,
-				CE266D4D29814FE300D6E038 /* StorageSingerTracksUseCase.swift */,
-				CE266D6C2987DED900D6E038 /* SingerTracksWorkerUseCase.swift */,
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
-		CE266D5D2984018400D6E038 /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-				CE266D3A29812D1F00D6E038 /* DownloadSingerTrackUseCaseInterface.swift */,
-				CE266D4B29814FB100D6E038 /* StorageSingerTracksUseCaseInterface.swift */,
-				CE266D6E2987DEF500D6E038 /* SingerTracksWorkerUseCaseInterface.swift */,
-			);
-			path = Interfaces;
-			sourceTree = "<group>";
-		};
-		CE266D5E298401CC00D6E038 /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-				CE266D3529812C5700D6E038 /* PersistentStorageRepositoryInterface.swift */,
-			);
-			path = Interfaces;
-			sourceTree = "<group>";
-		};
-		CE266D5F2984040F00D6E038 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				CE266D122980368600D6E038 /* SearchSingerTrackAPI.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		CE266D732989483800D6E038 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				CE266D1929803E8D00D6E038 /* NetworkModel.swift */,
-			);
-			path = Entities;
 			sourceTree = "<group>";
 		};
 		CE266D7629897F3C00D6E038 /* Constants */ = {
@@ -567,115 +410,6 @@
 			path = Interfaces;
 			sourceTree = "<group>";
 		};
-		CE39D7F8299A5DF6009F4202 /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D7FB299A5E55009F4202 /* Interfaces */,
-				CE39D7F9299A5E45009F4202 /* SingerTrackDetailsUseCase.swift */,
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
-		CE39D7FB299A5E55009F4202 /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D7FC299A5E65009F4202 /* SingerTrackDetailsUseCaseInterface.swift */,
-			);
-			path = Interfaces;
-			sourceTree = "<group>";
-		};
-		CE39D802299BE0D4009F4202 /* REST API */ = {
-			isa = PBXGroup;
-			children = (
-				CE266D732989483800D6E038 /* Entities */,
-				CE266D5F2984040F00D6E038 /* Services */,
-				CE266D052980320100D6E038 /* APIHandler.swift */,
-				CE266D01298031EA00D6E038 /* RequestHandler+Extension.swift */,
-				CE266D03298031F600D6E038 /* ResponseHandler+Extension.swift */,
-				CE266CFF298031DA00D6E038 /* APILoader.swift */,
-				CE266CFD298031C600D6E038 /* APIEnvironment.swift */,
-				CE266CFB298031AD00D6E038 /* APIPath.swift */,
-				CE266D7429897CC700D6E038 /* APIHeaders.swift */,
-			);
-			path = "REST API";
-			sourceTree = "<group>";
-		};
-		CE39D803299BE0F1009F4202 /* Image Downloader */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D816299D7883009F4202 /* Interfaces */,
-				CE39D804299BE1DC009F4202 /* ImageDownloaderClient.swift */,
-			);
-			path = "Image Downloader";
-			sourceTree = "<group>";
-		};
-		CE39D813299D5CA4009F4202 /* Track Downloader */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D819299D78FF009F4202 /* Interfaces */,
-				CE39D814299D5CC5009F4202 /* TrackDownloaderClient.swift */,
-			);
-			path = "Track Downloader";
-			sourceTree = "<group>";
-		};
-		CE39D816299D7883009F4202 /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D817299D789C009F4202 /* ImageDownloaderClientInterface.swift */,
-			);
-			path = Interfaces;
-			sourceTree = "<group>";
-		};
-		CE39D819299D78FF009F4202 /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D81A299D790C009F4202 /* TrackDownloaderClientInterface.swift */,
-			);
-			path = Interfaces;
-			sourceTree = "<group>";
-		};
-		CE39D81C299D7ABB009F4202 /* Media Clients */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D81D299D7AD5009F4202 /* Audio Client */,
-			);
-			path = "Media Clients";
-			sourceTree = "<group>";
-		};
-		CE39D81D299D7AD5009F4202 /* Audio Client */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D820299D7CF1009F4202 /* Interfaces */,
-				CE39D81E299D7B19009F4202 /* AudioClient.swift */,
-			);
-			path = "Audio Client";
-			sourceTree = "<group>";
-		};
-		CE39D820299D7CF1009F4202 /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D821299D7D23009F4202 /* AudioClientInterface.swift */,
-			);
-			path = Interfaces;
-			sourceTree = "<group>";
-		};
-		CE39D82B299E9E46009F4202 /* Common Use Cases */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D82E299E9E7B009F4202 /* Interfaces */,
-				CE39D82C299E9E71009F4202 /* AudioPlayerUseCase.swift */,
-			);
-			path = "Common Use Cases";
-			sourceTree = "<group>";
-		};
-		CE39D82E299E9E7B009F4202 /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D829299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift */,
-			);
-			path = Interfaces;
-			sourceTree = "<group>";
-		};
 		CE39D833299ED815009F4202 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -712,22 +446,6 @@
 			path = "Singer Tracks Screen";
 			sourceTree = "<group>";
 		};
-		CE4FC544298D1580004F281C /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				CE266D592981679400D6E038 /* SingerTrack.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		CE4FC54F298DBDD5004F281C /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-				CE4FC550298DBDE1004F281C /* Mapper.swift */,
-			);
-			path = Mapper;
-			sourceTree = "<group>";
-		};
 		CE4FC55229911651004F281C /* Navigations */ = {
 			isa = PBXGroup;
 			children = (
@@ -756,28 +474,12 @@
 			path = "Singer Track Details Screen";
 			sourceTree = "<group>";
 		};
-		CE4FC55F299254D5004F281C /* Singer Tracks Screen */ = {
-			isa = PBXGroup;
-			children = (
-				CE266D5C298400AE00D6E038 /* UseCases */,
-			);
-			path = "Singer Tracks Screen";
-			sourceTree = "<group>";
-		};
 		CE4FC56029925500004F281C /* Singer Tracks Screen */ = {
 			isa = PBXGroup;
 			children = (
 				CE266D232980481000D6E038 /* View Models */,
 			);
 			path = "Singer Tracks Screen";
-			sourceTree = "<group>";
-		};
-		CE4FC5612992556C004F281C /* Singer Track Details Screen */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D7F8299A5DF6009F4202 /* UseCases */,
-			);
-			path = "Singer Track Details Screen";
 			sourceTree = "<group>";
 		};
 		CE4FC56229925583004F281C /* Singer Track Details Screen */ = {
@@ -799,6 +501,7 @@
 				CE266CBF29802E6200D6E038 /* Sources */,
 				CE266CC029802E6200D6E038 /* Frameworks */,
 				CE266CC129802E6200D6E038 /* Resources */,
+				CE057D0829A55C4200C7CC7A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -880,6 +583,12 @@
 			mainGroup = CE266CBA29802E6200D6E038;
 			productRefGroup = CE266CC429802E6200D6E038 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CE057D0F29A5605E00C7CC7A /* Products */;
+					ProjectRef = CE057CF929A55C2300C7CC7A /* Domain Layer.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CE266CC229802E6200D6E038 /* iTunesSearch */,
@@ -888,6 +597,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CE057D1429A5605E00C7CC7A /* Domain_Layer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Domain_Layer.framework;
+			remoteRef = CE057D1329A5605E00C7CC7A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE057D1629A5605E00C7CC7A /* Domain LayerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Domain LayerTests.xctest";
+			remoteRef = CE057D1529A5605E00C7CC7A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CE266CC129802E6200D6E038 /* Resources */ = {
@@ -921,20 +647,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE266D5A2981679400D6E038 /* SingerTrack.swift in Sources */,
-				CE266D6F2987DEF500D6E038 /* SingerTracksWorkerUseCaseInterface.swift in Sources */,
-				CE266D04298031F600D6E038 /* ResponseHandler+Extension.swift in Sources */,
-				CE39D81B299D790C009F4202 /* TrackDownloaderClientInterface.swift in Sources */,
 				CE39D810299CFCCE009F4202 /* RouterBuilder.swift in Sources */,
 				CE4FC55C29911A45004F281C /* SingerTrackDetailsViewController.swift in Sources */,
 				CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */,
 				CE39D832299ED251009F4202 /* UIColor.swift in Sources */,
 				CE39D7F7299A5CE5009F4202 /* SingerTrackDetailsViewModelInterface.swift in Sources */,
-				CE39D805299BE1DC009F4202 /* ImageDownloaderClient.swift in Sources */,
-				CE39D82A299E9E3B009F4202 /* AudioPlayerUseCaseInterface.swift in Sources */,
-				CE266D7529897CC700D6E038 /* APIHeaders.swift in Sources */,
-				CE266D57298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld in Sources */,
-				CE39D822299D7D23009F4202 /* AudioClientInterface.swift in Sources */,
 				CE39D7FF299BCAA0009F4202 /* UIViewController.swift in Sources */,
 				CE266D4029812EB600D6E038 /* Optional.swift in Sources */,
 				CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */,
@@ -942,51 +659,26 @@
 				CE266D2929807DFF00D6E038 /* SingerTrackListContentView.swift in Sources */,
 				CE39D7CD2993C72A009F4202 /* String.swift in Sources */,
 				CE39D801299BCBFC009F4202 /* UILabel.swift in Sources */,
-				CE4FC54E298D66CA004F281C /* QueryWorkerStoragable.swift in Sources */,
-				CE4FC54C298D6647004F281C /* QueryWorkerStorage.swift in Sources */,
 				CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */,
 				CE39D7E429941ABE009F4202 /* Router.swift in Sources */,
-				CE266D4C29814FB100D6E038 /* StorageSingerTracksUseCaseInterface.swift in Sources */,
-				CE266D3D29812E0500D6E038 /* DataModel.swift in Sources */,
-				CE39D815299D5CC5009F4202 /* TrackDownloaderClient.swift in Sources */,
 				CE39D80C299CE075009F4202 /* ConstantsError.swift in Sources */,
-				CE266D102980358E00D6E038 /* DownloadSingerTrackUseCase.swift in Sources */,
-				CE39D818299D789C009F4202 /* ImageDownloaderClientInterface.swift in Sources */,
-				CE4FC551298DBDE1004F281C /* Mapper.swift in Sources */,
 				CE4FC56F299290D2004F281C /* ProgressView.swift in Sources */,
-				CE266D132980368600D6E038 /* SearchSingerTrackAPI.swift in Sources */,
 				CE39D7F4299A5C53009F4202 /* SingerTrackDetailsViewModel.swift in Sources */,
 				CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */,
-				CE266CFE298031C600D6E038 /* APIEnvironment.swift in Sources */,
-				CE266D3329812BEB00D6E038 /* PersistentStorageRepository.swift in Sources */,
-				CE266D6D2987DED900D6E038 /* SingerTracksWorkerUseCase.swift in Sources */,
 				CE266D0A2980335800D6E038 /* ConstantsAlert.swift in Sources */,
 				CE39D80A299C4121009F4202 /* NSMutableAttributedString.swift in Sources */,
 				CE39D830299ECD50009F4202 /* UIButton.swift in Sources */,
 				CE39D828299E60F3009F4202 /* Data.swift in Sources */,
-				CE266D3629812C5700D6E038 /* PersistentStorageRepositoryInterface.swift in Sources */,
 				CE39D807299BE391009F4202 /* Error.swift in Sources */,
-				CE266D4829814C0400D6E038 /* CoreDataStorageManager.swift in Sources */,
-				CE266D4E29814FE300D6E038 /* StorageSingerTracksUseCase.swift in Sources */,
-				CE266D3B29812D1F00D6E038 /* DownloadSingerTrackUseCaseInterface.swift in Sources */,
 				CE39D7ED299969B4009F4202 /* AppRouter.swift in Sources */,
-				CE266CFC298031AD00D6E038 /* APIPath.swift in Sources */,
 				CE4FC55429911681004F281C /* Coordinator.swift in Sources */,
 				CE4FC5692992703F004F281C /* ConstantsSingerTrackDetailsScreen.swift in Sources */,
 				CE266D2B29807E4000D6E038 /* SingerTrackListConfigurator.swift in Sources */,
-				CE266D062980320100D6E038 /* APIHandler.swift in Sources */,
-				CE39D81F299D7B19009F4202 /* AudioClient.swift in Sources */,
 				CE266D0D2980346500D6E038 /* SingerTracksViewModel.swift in Sources */,
 				CE4FC55E2991280D004F281C /* SingerTrackDetailsCoordinator.swift in Sources */,
 				CE4FC56729926F6C004F281C /* ConstantsSingerTracksScreen.swift in Sources */,
 				CE39D7E929968358009F4202 /* ViewControllers.swift in Sources */,
-				CE39D7FD299A5E65009F4202 /* SingerTrackDetailsUseCaseInterface.swift in Sources */,
 				CE266D2D29807E8E00D6E038 /* SingerTrackListCell.swift in Sources */,
-				CE39D82D299E9E71009F4202 /* AudioPlayerUseCase.swift in Sources */,
-				CE266D02298031EA00D6E038 /* RequestHandler+Extension.swift in Sources */,
-				CE266D00298031DA00D6E038 /* APILoader.swift in Sources */,
-				CE266D1A29803E8D00D6E038 /* NetworkModel.swift in Sources */,
-				CE39D7FA299A5E45009F4202 /* SingerTrackDetailsUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1184,6 +876,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iTunesSearch-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1211,6 +904,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iTunesSearch-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1336,19 +1030,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		CE266D55298162A900D6E038 /* SingerTrackDataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CE266D56298162A900D6E038 /* SingerTrackDataModel.xcdatamodel */,
-			);
-			currentVersion = CE266D56298162A900D6E038 /* SingerTrackDataModel.xcdatamodel */;
-			path = SingerTrackDataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CE266CBB29802E6200D6E038 /* Project object */;
 }

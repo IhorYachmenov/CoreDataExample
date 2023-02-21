@@ -7,18 +7,18 @@
 
 import AVFoundation
 
-class AudioClient: NSObject, AudioClientInterface {
-    var dataPublisher: ((MediaModel.AudioData) -> ())?
+public final class AudioClient: NSObject, AudioClientInterface {
+    public var dataPublisher: ((MediaModel.AudioData) -> ())?
     
     private var model: MediaModel.AudioData!
     private var audioPlayer: AVAudioPlayer!
     private var timer: Timer?
     
-    override init() {
+    public override init() {
         model = MediaModel.AudioData(currentTime: "00:00", duration: "00:00", isPlaying: false, progress: 0)
     }
    
-    func playTrack(url: URL, completion: @escaping (Error?) -> ()) {
+    public func playTrack(url: URL, completion: @escaping (Error?) -> ()) {
         if let audioPlayer = audioPlayer {
             if (audioPlayer.isPlaying) {
                 audioPlayer.pause()
@@ -81,7 +81,7 @@ class AudioClient: NSObject, AudioClientInterface {
 
 // MARK: - AVAudioPlayerDelegate
 extension AudioClient: AVAudioPlayerDelegate {
-    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+    public func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         timer?.fire()
         audioPlayer = nil
     }

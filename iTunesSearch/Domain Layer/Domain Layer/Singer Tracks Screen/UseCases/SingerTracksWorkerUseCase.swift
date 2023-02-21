@@ -8,18 +8,18 @@
 import Data_Layer
 import Infrastructure
 
-class SingerTracksWorkerUseCase {
+public final class SingerTracksWorkerUseCase {
     private var download: DownloadSingerTrackUseCaseInterface
     private var storage: StorageSingerTracksUseCaseInterface
     
-    init(useCase download: DownloadSingerTrackUseCaseInterface, useCase storage: StorageSingerTracksUseCaseInterface) {
+    public init(useCase download: DownloadSingerTrackUseCaseInterface, useCase storage: StorageSingerTracksUseCaseInterface) {
         self.download = download
         self.storage = storage
     }
 }
 
 extension SingerTracksWorkerUseCase: SingerTracksWorkerUseCaseInterface {
-    func downloadAndSaveSingerTrack(name: String, completion: @escaping (Error?) -> ()) {
+    public func downloadAndSaveSingerTrack(name: String, completion: @escaping (Error?) -> ()) {
         download.downloadSingerTrack(name: name) { [weak self] result in
             switch result {
             case .success(let success):
@@ -34,7 +34,7 @@ extension SingerTracksWorkerUseCase: SingerTracksWorkerUseCaseInterface {
         }
     }
     
-    func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
+    public func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
         storage.subscribeOnData(completion: completion)
     }
 }

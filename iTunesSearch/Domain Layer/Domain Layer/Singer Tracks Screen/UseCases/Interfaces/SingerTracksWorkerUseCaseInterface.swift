@@ -7,7 +7,7 @@
 
 import Data_Layer
 
-protocol SingerTracksWorkerUseCaseInterface {
+public protocol SingerTracksWorkerUseCaseInterface {
     func downloadAndSaveSingerTrack(name: String, completion: @escaping (Error?) -> ())
     func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ())
 }

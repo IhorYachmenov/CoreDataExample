@@ -8,12 +8,12 @@
 import Data_Layer
 import Infrastructure
 
-final class DownloadSingerTrackUseCase {
-    init() {}
+public final class DownloadSingerTrackUseCase {
+    public init() {}
 }
 
 extension DownloadSingerTrackUseCase: DownloadSingerTrackUseCaseInterface {
-    func downloadSingerTrack(name: String, completion: @escaping (Result<DataModel.SingerTrack, ServiceError>) -> ()) {
+    public func downloadSingerTrack(name: String, completion: @escaping (Result<DataModel.SingerTrack, ServiceError>) -> ()) {
         let request = SearchSingerTrackAPI()
         let apiLoader = APILoader(apiHandler: request)
         

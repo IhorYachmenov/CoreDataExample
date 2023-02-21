@@ -9,10 +9,10 @@ import Foundation
 
 fileprivate let imageCache = NSCache<NSString, NSData>()
 
-class ImageDownloaderClient: ImageDownloaderClientInterface {
-    init() {}
+public final class ImageDownloaderClient: ImageDownloaderClientInterface {
+    public init() {}
     
-    func downloadImage(url: String?, completion: @escaping (Result<Data, Error>) -> ()) {
+    public func downloadImage(url: String?, completion: @escaping (Result<Data, Error>) -> ()) {
         guard let urlString = url else {
             completion(.failure(NSError.error(msg: Constants.Error.nilElement)))
             return

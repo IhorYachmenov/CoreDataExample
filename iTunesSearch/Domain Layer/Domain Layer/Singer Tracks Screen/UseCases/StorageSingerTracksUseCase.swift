@@ -7,16 +7,16 @@
 
 import Data_Layer
 
-final class StorageSingerTracksUseCase {
+public final class StorageSingerTracksUseCase {
     private var repository: PersistentStorageRepositoryInterface
     
-    init(storageRepository: PersistentStorageRepositoryInterface) {
+    public init(storageRepository: PersistentStorageRepositoryInterface) {
         repository = storageRepository
     }
 }
 
 extension StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
-    func saveSingerTrack(track: DataModel.SingerTrack, completion: @escaping (StorageError?) -> ()) {
+    public func saveSingerTrack(track: DataModel.SingerTrack, completion: @escaping (StorageError?) -> ()) {
         repository.saveSingerTrack(singerTrack: track, completion: { failure in
             if let failure = failure {
                 completion(failure)
@@ -24,7 +24,7 @@ extension StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
         })
     }
     
-    func subscribeOnData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
+    public func subscribeOnData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
         repository.subscribeOnData(completion: completion)
     }
 }

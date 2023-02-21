@@ -5,7 +5,9 @@
 //  Created by user on 10.02.2023.
 //
 
-import Foundation
+import Data_Layer
+import Domain_Layer
+import Infrastructure
 
 final class ViewControllers {
     
