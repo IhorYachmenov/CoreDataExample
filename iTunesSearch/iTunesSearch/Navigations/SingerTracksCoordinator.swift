@@ -40,11 +40,16 @@ final class SingerTracksCoordinator: Coordinator {
 
 // MARK: - Delegate
 extension SingerTracksCoordinator: SingerTracksDelegate {
-    
     func coordinator(didSelect trackId: String) {
         showDetailCoordinator(trackId: trackId)
     }
 }
+
+
+
+
+
+
 
 
 
