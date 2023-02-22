@@ -4,7 +4,7 @@
 //
 //  Created by user on 06.02.2023.
 //
-
+#warning("Implement separate screen from detail screen for testing RouterBuilder")
 final class SingerTrackDetailsCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router
