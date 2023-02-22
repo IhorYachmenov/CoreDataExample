@@ -16,6 +16,7 @@ Genre = "Genre:";
 Country = "Country:";
 Play-demo = "Play Demo";
 Pause = "Pause";
+Clips = "Clips";
 
 // Errors
 Error = "Error";

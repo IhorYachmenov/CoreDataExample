@@ -10,6 +10,7 @@ import AVFoundation
 
 protocol SingerTrackDetailsDelegate: AnyObject {
     func dismissCoordinator()
+    func openClipsCoordinator()
 }
 
 class SingerTrackDetailsViewController: UIViewController {
@@ -177,6 +178,36 @@ class SingerTrackDetailsViewController: UIViewController {
         
         return view
     }()
+    
+    private lazy var clipsButton: UIButton = {
+        let view = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        var configuration = UIButton.Configuration.filled()
+        configuration.title = Constants.SingerTrackDetailsScreen.clipsButtonTitle
+        configuration.image = UIImage(systemName: Constants.SingerTrackDetailsScreen.clipsButtonDefaultImgName)?.withTintColor(.oppositeSystemBackgroundColor, renderingMode: .alwaysOriginal)
+        configuration.imagePlacement = .trailing
+        configuration.imagePadding = 5
+        configuration.baseForegroundColor = .systemBackground
+        configuration.background.backgroundColor = .systemBackground
+        
+        configuration.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
+            var outgoing = incoming
+            outgoing.backgroundColor = .systemBackground
+            outgoing.foregroundColor = .oppositeSystemBackgroundColor
+            outgoing.font = UIFont.boldSystemFont(ofSize: 20)
+            
+            return outgoing
+        }
+        view.configuration = configuration
+        
+        view.addAction(UIAction(handler: { [weak self] _ in
+            self?.coodinatorDelegate?.openClipsCoordinator()
+        }), for: .touchUpInside)
+        
+        
+        return view
+    }()
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -216,6 +247,7 @@ class SingerTrackDetailsViewController: UIViewController {
     
     func initUIComponents() {
         view.backgroundColor = .systemBackground
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: clipsButton)
         
         view.addSubview(trackImg)
         view.addSubview(trackName)

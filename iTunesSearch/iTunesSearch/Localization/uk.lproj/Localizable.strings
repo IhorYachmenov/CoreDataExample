@@ -16,6 +16,7 @@ Genre = "Жанр:";
 Country = "Країна:";
 Play-demo = "Превʼю";
 Pause = "Пауза";
+Clips = "Кліпи";
 
 // Errors
 Error = "Помилка";

@@ -32,6 +32,9 @@ final class SingerTrackDetailsCoordinator: Coordinator {
 
 // MARK: - Delegate
 extension SingerTrackDetailsCoordinator: SingerTrackDetailsDelegate {
+    func openClipsCoordinator() {
+        print(trackId)
+    }
     func dismissCoordinator() {
         stop()
     }
