@@ -21,10 +21,10 @@
 		CE39DBEF29A54E99009F4202 /* StorageSingerTracksUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39DBE529A54E99009F4202 /* StorageSingerTracksUseCaseInterface.swift */; };
 		CE39DBF029A54E99009F4202 /* DownloadSingerTrackUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39DBE629A54E99009F4202 /* DownloadSingerTrackUseCaseInterface.swift */; };
 		CE39DBF129A54E99009F4202 /* SingerTracksWorkerUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39DBE729A54E99009F4202 /* SingerTracksWorkerUseCaseInterface.swift */; };
-		CE39DC0529A54EE7009F4202 /* Data_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE39DBF829A54ECA009F4202 /* Data_Layer.framework */; };
-		CE39DC0629A54EE7009F4202 /* Data_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE39DBF829A54ECA009F4202 /* Data_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE39DC0729A54EE7009F4202 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE39DC0129A54ED3009F4202 /* Infrastructure.framework */; };
-		CE39DC0829A54EE7009F4202 /* Infrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE39DC0129A54ED3009F4202 /* Infrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE39DC0529A54EE7009F4202 /* Data_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE39DBF829A54ECA009F4202 /* Data_Layer.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		CE39DC0629A54EE7009F4202 /* Data_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE39DBF829A54ECA009F4202 /* Data_Layer.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE39DC0729A54EE7009F4202 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE39DC0129A54ED3009F4202 /* Infrastructure.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		CE39DC0829A54EE7009F4202 /* Infrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE39DC0129A54ED3009F4202 /* Infrastructure.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE39DC0D29A550A8009F4202 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39DC0C29A550A8009F4202 /* Constants.swift */; };
 		CE39DC1429A556B0009F4202 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39DC1329A556B0009F4202 /* NSError.swift */; };
 /* End PBXBuildFile section */
