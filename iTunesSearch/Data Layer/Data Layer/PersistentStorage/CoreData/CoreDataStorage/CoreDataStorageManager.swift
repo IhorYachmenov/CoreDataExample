@@ -8,6 +8,8 @@
 import Foundation
 import CoreData
 
+#warning("Error")
+#warning("module name reversing")
 public enum StorageError: Error {
     case readError(Error)
     case saveError(Error)
@@ -21,7 +23,14 @@ final class CoreDataStorageManager {
     init() {}
 
     private lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "SingerTrackDataModel")
+        let bundle = Bundle(for: CoreDataStorageManager.self)
+        guard
+            let modelUrl = bundle.url(forResource: "SingerTrackDataModel", withExtension: "momd"),
+            let model = NSManagedObjectModel(contentsOf: modelUrl)
+        else {
+            fatalError("No model")
+        }
+        let container = NSPersistentContainer(name: "Container", managedObjectModel: model)
         container.loadPersistentStores { _, error in
             if let error = error as NSError? {
                 assertionFailure("CoreData Unresolved error \(error), \(error.userInfo)")

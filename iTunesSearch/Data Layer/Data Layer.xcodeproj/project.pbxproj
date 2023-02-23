@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE057D1929A561CA00C7CC7A /* SingerTrackDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE057D1729A561CA00C7CC7A /* SingerTrackDataModel.xcdatamodeld */; };
+		CE057D5029A64E2200C7CC7A /* SingerTrack+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE057D4E29A64E2200C7CC7A /* SingerTrack+CoreDataClass.swift */; };
+		CE057D5129A64E2200C7CC7A /* SingerTrack+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE057D4F29A64E2200C7CC7A /* SingerTrack+CoreDataProperties.swift */; };
 		CE39DB7729A54BCC009F4202 /* Data_Layer.docc in Sources */ = {isa = PBXBuildFile; fileRef = CE39DB7629A54BCC009F4202 /* Data_Layer.docc */; };
 		CE39DB7D29A54BCD009F4202 /* Data_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE39DB7229A54BCC009F4202 /* Data_Layer.framework */; };
 		CE39DB8229A54BCD009F4202 /* Data_LayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39DB8129A54BCD009F4202 /* Data_LayerTests.swift */; };
@@ -38,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		CE057D1829A561CA00C7CC7A /* SingerTrackDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SingerTrackDataModel.xcdatamodel; sourceTree = "<group>"; };
+		CE057D4E29A64E2200C7CC7A /* SingerTrack+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingerTrack+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE057D4F29A64E2200C7CC7A /* SingerTrack+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingerTrack+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE057D7829A780AB00C7CC7A /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE39DB7229A54BCC009F4202 /* Data_Layer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data_Layer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE39DB7529A54BCC009F4202 /* Data_Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data_Layer.h; sourceTree = "<group>"; };
 		CE39DB7629A54BCC009F4202 /* Data_Layer.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Data_Layer.docc; sourceTree = "<group>"; };
@@ -76,12 +81,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE057D7729A780AB00C7CC7A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE057D7829A780AB00C7CC7A /* Infrastructure.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE39DB6829A54BCC009F4202 = {
 			isa = PBXGroup;
 			children = (
 				CE39DB7429A54BCC009F4202 /* Data Layer */,
 				CE39DB8029A54BCD009F4202 /* Data LayerTests */,
 				CE39DB7329A54BCC009F4202 /* Products */,
+				CE057D7729A780AB00C7CC7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +178,8 @@
 		CE39DB9729A54BFB009F4202 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				CE057D4E29A64E2200C7CC7A /* SingerTrack+CoreDataClass.swift */,
+				CE057D4F29A64E2200C7CC7A /* SingerTrack+CoreDataProperties.swift */,
 				CE39DB9829A54BFB009F4202 /* SingerTrack.swift */,
 			);
 			path = Entities;
@@ -322,11 +338,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE39DB7729A54BCC009F4202 /* Data_Layer.docc in Sources */,
+				CE057D5029A64E2200C7CC7A /* SingerTrack+CoreDataClass.swift in Sources */,
 				CE39DBA529A54BFC009F4202 /* QueryWorkerStoragable.swift in Sources */,
 				CE39DBA029A54BFC009F4202 /* QueryWorkerStorage.swift in Sources */,
 				CE39DC1229A554A3009F4202 /* String.swift in Sources */,
 				CE39DBA429A54BFC009F4202 /* SingerTrack.swift in Sources */,
 				CE39DBA129A54BFC009F4202 /* CoreDataStorageManager.swift in Sources */,
+				CE057D5129A64E2200C7CC7A /* SingerTrack+CoreDataProperties.swift in Sources */,
 				CE39DBAF29A54CD0009F4202 /* Constants.swift in Sources */,
 				CE39DB9F29A54BFC009F4202 /* DataModel.swift in Sources */,
 				CE39DBB129A54D07009F4202 /* NSError.swift in Sources */,

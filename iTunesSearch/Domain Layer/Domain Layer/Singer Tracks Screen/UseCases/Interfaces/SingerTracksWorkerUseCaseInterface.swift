@@ -6,7 +6,8 @@
 //
 
 import Data_Layer
-
+#warning("docC")
+#warning("downloadAndSaveSingerTrack <- , naming observe etc.")
 public protocol SingerTracksWorkerUseCaseInterface {
     func downloadAndSaveSingerTrack(name: String, completion: @escaping (Error?) -> ())
     func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ())

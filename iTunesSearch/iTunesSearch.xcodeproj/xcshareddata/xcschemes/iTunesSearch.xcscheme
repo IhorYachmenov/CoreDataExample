@@ -50,6 +50,17 @@
                ReferencedContainer = "container:iTunesSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CE057D3329A6410100C7CC7A"
+               BuildableName = "SomeLayerTests.xctest"
+               BlueprintName = "SomeLayerTests"
+               ReferencedContainer = "container:iTunesSearch.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

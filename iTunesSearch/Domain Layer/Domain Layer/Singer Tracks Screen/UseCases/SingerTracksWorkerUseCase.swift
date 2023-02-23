@@ -8,6 +8,7 @@
 import Data_Layer
 import Infrastructure
 
+#warning("Use case API")
 public final class SingerTracksWorkerUseCase {
     private var download: DownloadSingerTrackUseCaseInterface
     private var storage: StorageSingerTracksUseCaseInterface

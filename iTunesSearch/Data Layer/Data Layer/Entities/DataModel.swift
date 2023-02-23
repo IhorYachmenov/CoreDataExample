@@ -5,6 +5,7 @@
 //  Created by user on 25.01.2023.
 //
 
+#warning("swift only frameworks, objc+swift, umbrella..., module.modulemap, cocoapods")
 import Infrastructure
 
 public enum DataModel {

@@ -1014,33 +1014,158 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "75C3C1F2-4875-4804-918B-CE9F4C7FE8D0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Data Layer/Data Layer/PersistentStorage/CoreData/CoreDataStorage/CoreDataStorageManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "persistentContainer"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B88D5E86-8E84-4C3B-A3BB-3E7204A5D69B"
-            shouldBeEnabled = "Yes"
+            uuid = "3A8CB6D4-5DD8-458A-9DAC-A35F329879DF"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Data Layer/Data Layer/PersistentStorage/CoreData/QueryWorkerStorage.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "setupFetchResultsController(persistentStorage:entityName:sortDescriptor:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7586B2C2-3908-4C50-8082-5BF968D04E9D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Data Layer/Data Layer/PersistentStorage/CoreData/CoreDataStorage/CoreDataStorageManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "persistentContainer"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "7586B2C2-3908-4C50-8082-5BF968D04E9D - 6a30415dea7e5fac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.NSPersistentContainer in Data_Layer.CoreDataStorageManager.persistentContainer.getter : __C.NSPersistentContainer"
+                  moduleName = "Data_Layer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/CoreDataExample/iTunesSearch/Data%20Layer/Data%20Layer/PersistentStorage/CoreData/CoreDataStorage/CoreDataStorageManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "680">
+               </Location>
+               <Location
+                  uuid = "7586B2C2-3908-4C50-8082-5BF968D04E9D - f4454f2caf305165"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSPersistentStoreDescription, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 () -&gt; __C.NSPersistentContainer in Data_Layer.CoreDataStorageManager.persistentContainer.getter : __C.NSPersistentContainer"
+                  moduleName = "Data_Layer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/CoreDataExample/iTunesSearch/Data%20Layer/Data%20Layer/PersistentStorage/CoreData/CoreDataStorage/CoreDataStorageManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "7586B2C2-3908-4C50-8082-5BF968D04E9D - 6a30415dea7e5ed0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.NSPersistentContainer in Data_Layer.CoreDataStorageManager.persistentContainer.getter : __C.NSPersistentContainer"
+                  moduleName = "Data_Layer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/CoreDataExample/iTunesSearch/Data%20Layer/Data%20Layer/PersistentStorage/CoreData/CoreDataStorage/CoreDataStorageManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "788">
+               </Location>
+               <Location
+                  uuid = "7586B2C2-3908-4C50-8082-5BF968D04E9D - 6a30415dea7e5ef1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.NSPersistentContainer in Data_Layer.CoreDataStorageManager.persistentContainer.getter : __C.NSPersistentContainer"
+                  moduleName = "Data_Layer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/CoreDataExample/iTunesSearch/Data%20Layer/Data%20Layer/PersistentStorage/CoreData/CoreDataStorage/CoreDataStorageManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "712">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0417BEB-119C-4E60-B8F8-C58E4302B300"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Data Layer/Data Layer/PersistentStorage/CoreData/CoreDataStorage/CoreDataStorageManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "persistentContainer"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "E0417BEB-119C-4E60-B8F8-C58E4302B300 - 6a30415dea7e5e6e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.NSPersistentContainer in Data_Layer.CoreDataStorageManager.persistentContainer.getter : __C.NSPersistentContainer"
+                  moduleName = "Data_Layer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/CoreDataExample/iTunesSearch/Data%20Layer/Data%20Layer/PersistentStorage/CoreData/CoreDataStorage/CoreDataStorageManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1080">
+               </Location>
+               <Location
+                  uuid = "E0417BEB-119C-4E60-B8F8-C58E4302B300 - 6a30415dea7e5e4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.NSPersistentContainer in Data_Layer.CoreDataStorageManager.persistentContainer.getter : __C.NSPersistentContainer"
+                  moduleName = "Data_Layer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/CoreDataExample/iTunesSearch/Data%20Layer/Data%20Layer/PersistentStorage/CoreData/CoreDataStorage/CoreDataStorageManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "604">
+               </Location>
+               <Location
+                  uuid = "E0417BEB-119C-4E60-B8F8-C58E4302B300 - 6a30415dea7e5e4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.NSPersistentContainer in Data_Layer.CoreDataStorageManager.persistentContainer.getter : __C.NSPersistentContainer"
+                  moduleName = "Data_Layer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/CoreDataExample/iTunesSearch/Data%20Layer/Data%20Layer/PersistentStorage/CoreData/CoreDataStorage/CoreDataStorageManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "680">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
