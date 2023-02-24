@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import TestStatic
+import TestFramework
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appCoordinator = AppCoordinator(window: window, router: appRouter)
         appCoordinator!.start()
         
+        TestStatic()
+        TestFramework()
         return true
     }
 }

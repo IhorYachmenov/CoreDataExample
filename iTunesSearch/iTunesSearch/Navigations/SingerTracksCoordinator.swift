@@ -25,6 +25,14 @@ final class SingerTracksCoordinator: Coordinator {
         }
     }
 #warning("** Q: - coordinator -> router dependency, inside showDetailCoordinator")
+#warning("docC")
+#warning("downloadAndSaveSingerTrack <- , naming observe etc., example SingerTracksWorkerUseCaseInterface")
+#warning("Use case API link SingerTracksWorkerUseCase")
+#warning("separate model module ?, data entities")
+#warning("swift only frameworks, objc+swift, umbrella..., module.modulemap, cocoapods")
+#warning("Error, StorageError")
+#warning("module name reversing, is layers com.....")
+    
     private func showDetailCoordinator(trackId: String) {
         //        let router = RounterBuilder.makerRouter(type: .PlayerScreenRouter)
         let detailCoordinator = SingerTrackDetailsCoordinator(router: router, trackId: trackId)

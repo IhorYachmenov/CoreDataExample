@@ -8,8 +8,6 @@
 import Foundation
 import CoreData
 
-#warning("Error")
-#warning("module name reversing")
 public enum StorageError: Error {
     case readError(Error)
     case saveError(Error)

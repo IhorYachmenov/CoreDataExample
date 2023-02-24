@@ -11,8 +11,6 @@
 		CE057D8D29A7838D00C7CC7A /* Data_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE057D8B29A7838D00C7CC7A /* Data_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE057D9129A783C400C7CC7A /* Domain_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE057D0529A55C4200C7CC7A /* Domain_Layer.framework */; };
 		CE057D9229A783C400C7CC7A /* Domain_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE057D0529A55C4200C7CC7A /* Domain_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE057D9329A7840400C7CC7A /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE057D8E29A783A200C7CC7A /* Infrastructure.framework */; };
-		CE057D9429A7840400C7CC7A /* Infrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE057D8E29A783A200C7CC7A /* Infrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CC629802E6200D6E038 /* AppDelegate.swift */; };
 		CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */; };
 		CE266CD029802E6300D6E038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE266CCF29802E6300D6E038 /* Assets.xcassets */; };
@@ -48,6 +46,11 @@
 		CE39D83529A38DBE009F4202 /* PersistentStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83429A38DBE009F4202 /* PersistentStorageRepository.swift */; };
 		CE39D83929A3B1F8009F4202 /* SingerTracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83829A3B1F8009F4202 /* SingerTracksViewModel.swift */; };
 		CE39D83C29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83B29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift */; };
+		CE4C3B3029A7919200CD2A8C /* TestFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C3B2F29A7919200CD2A8C /* TestFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE4C3B3829A7987100CD2A8C /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C3B2229A78F8400CD2A8C /* Infrastructure.framework */; };
+		CE4C3B3929A7987100CD2A8C /* Infrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C3B2229A78F8400CD2A8C /* Infrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE4C3B3F29A79BD500CD2A8C /* TestFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3B3E29A79BD500CD2A8C /* TestFramework.swift */; };
+		CE4C3B4029A7A80A00CD2A8C /* libTestStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE057DAD29A78D5400C7CC7A /* libTestStatic.a */; };
 		CE4FC55429911681004F281C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55329911681004F281C /* Coordinator.swift */; };
 		CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55529911745004F281C /* AppCoordinator.swift */; };
 		CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */; };
@@ -73,6 +76,13 @@
 			remoteGlobalIDString = CE39DBC629A54E57009F4202;
 			remoteInfo = "Domain LayerTests";
 		};
+		CE057DAC29A78D5400C7CC7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE057DA829A78D5400C7CC7A /* TestStatic.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE057D9E29A78D3B00C7CC7A;
+			remoteInfo = TestStatic;
+		};
 		CE266CDA29802E6400D6E038 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CE266CBB29802E6200D6E038 /* Project object */;
@@ -87,6 +97,20 @@
 			remoteGlobalIDString = CE266CC229802E6200D6E038;
 			remoteInfo = iTunesSearch;
 		};
+		CE4C3B2129A78F8400CD2A8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE4C3AF829A78F8400CD2A8C /* Infrastructure.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE39DB1F29A542A3009F4202;
+			remoteInfo = Infrastructure;
+		};
+		CE4C3B2329A78F8400CD2A8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE4C3AF829A78F8400CD2A8C /* Infrastructure.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE39DB2929A542A3009F4202;
+			remoteInfo = InfrastructureTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -96,7 +120,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CE057D9429A7840400C7CC7A /* Infrastructure.framework in Embed Frameworks */,
+				CE4C3B3929A7987100CD2A8C /* Infrastructure.framework in Embed Frameworks */,
 				CE057D9229A783C400C7CC7A /* Domain_Layer.framework in Embed Frameworks */,
 				CE057D8D29A7838D00C7CC7A /* Data_Layer.framework in Embed Frameworks */,
 			);
@@ -111,6 +135,8 @@
 		CE057D3B29A6410100C7CC7A /* SomeLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeLayerTests.swift; sourceTree = "<group>"; };
 		CE057D8B29A7838D00C7CC7A /* Data_Layer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data_Layer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE057D8E29A783A200C7CC7A /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE057DA829A78D5400C7CC7A /* TestStatic.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TestStatic.xcodeproj; path = TestStatic/TestStatic.xcodeproj; sourceTree = "<group>"; };
+		CE057DB629A78EF000C7CC7A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		CE266CC329802E6200D6E038 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE266CC629802E6200D6E038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +178,31 @@
 		CE39D83429A38DBE009F4202 /* PersistentStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorageRepository.swift; sourceTree = "<group>"; };
 		CE39D83829A3B1F8009F4202 /* SingerTracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModel.swift; sourceTree = "<group>"; };
 		CE39D83B29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadSingerTrackUseCaseMoc.swift; sourceTree = "<group>"; };
+		CE4C3AF829A78F8400CD2A8C /* Infrastructure.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Infrastructure.xcodeproj; sourceTree = "<group>"; };
+		CE4C3AFC29A78F8400CD2A8C /* InfrastructureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureTests.swift; sourceTree = "<group>"; };
+		CE4C3AFF29A78F8400CD2A8C /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		CE4C3B0029A78F8400CD2A8C /* NSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
+		CE4C3B0229A78F8400CD2A8C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE4C3B0529A78F8400CD2A8C /* AudioClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClient.swift; sourceTree = "<group>"; };
+		CE4C3B0729A78F8400CD2A8C /* AudioClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClientInterface.swift; sourceTree = "<group>"; };
+		CE4C3B0829A78F8400CD2A8C /* Infrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infrastructure.h; sourceTree = "<group>"; };
+		CE4C3B0929A78F8400CD2A8C /* Infrastructure.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Infrastructure.docc; sourceTree = "<group>"; };
+		CE4C3B0C29A78F8400CD2A8C /* TrackDownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDownloaderClient.swift; sourceTree = "<group>"; };
+		CE4C3B0E29A78F8400CD2A8C /* TrackDownloaderClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDownloaderClientInterface.swift; sourceTree = "<group>"; };
+		CE4C3B1029A78F8400CD2A8C /* APIHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeaders.swift; sourceTree = "<group>"; };
+		CE4C3B1129A78F8400CD2A8C /* ResponseHandler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseHandler+Extension.swift"; sourceTree = "<group>"; };
+		CE4C3B1229A78F8400CD2A8C /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
+		CE4C3B1329A78F8400CD2A8C /* APILoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILoader.swift; sourceTree = "<group>"; };
+		CE4C3B1429A78F8400CD2A8C /* RequestHandler+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestHandler+Extension.swift"; sourceTree = "<group>"; };
+		CE4C3B1629A78F8400CD2A8C /* SearchSingerTrackAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSingerTrackAPI.swift; sourceTree = "<group>"; };
+		CE4C3B1829A78F8400CD2A8C /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		CE4C3B1929A78F8400CD2A8C /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		CE4C3B1A29A78F8400CD2A8C /* APIPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPath.swift; sourceTree = "<group>"; };
+		CE4C3B1C29A78F8400CD2A8C /* ImageDownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderClient.swift; sourceTree = "<group>"; };
+		CE4C3B1E29A78F8400CD2A8C /* ImageDownloaderClientInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderClientInterface.swift; sourceTree = "<group>"; };
+		CE4C3B2D29A7919200CD2A8C /* TestFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4C3B2F29A7919200CD2A8C /* TestFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFramework.h; sourceTree = "<group>"; };
+		CE4C3B3E29A79BD500CD2A8C /* TestFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFramework.swift; sourceTree = "<group>"; };
 		CE4FC55329911681004F281C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CE4FC55529911745004F281C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksCoordinator.swift; sourceTree = "<group>"; };
@@ -167,7 +218,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE057D9329A7840400C7CC7A /* Infrastructure.framework in Frameworks */,
+				CE4C3B3829A7987100CD2A8C /* Infrastructure.framework in Frameworks */,
+				CE4C3B4029A7A80A00CD2A8C /* libTestStatic.a in Frameworks */,
 				CE057D9129A783C400C7CC7A /* Domain_Layer.framework in Frameworks */,
 				CE057D8C29A7838D00C7CC7A /* Data_Layer.framework in Frameworks */,
 			);
@@ -187,12 +239,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE4C3B2A29A7919200CD2A8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		CE057D0429A55C4200C7CC7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE4C3AF729A78F8400CD2A8C /* Infrastructure */,
+				CE057DB629A78EF000C7CC7A /* Accelerate.framework */,
 				CE057D8E29A783A200C7CC7A /* Infrastructure.framework */,
 				CE057D8B29A7838D00C7CC7A /* Data_Layer.framework */,
 				CE057D0529A55C4200C7CC7A /* Domain_Layer.framework */,
@@ -217,13 +278,23 @@
 			path = SomeLayerTests;
 			sourceTree = "<group>";
 		};
+		CE057DA929A78D5400C7CC7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE057DAD29A78D5400C7CC7A /* libTestStatic.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CE266CBA29802E6200D6E038 = {
 			isa = PBXGroup;
 			children = (
+				CE057DA829A78D5400C7CC7A /* TestStatic.xcodeproj */,
 				CE266CC529802E6200D6E038 /* iTunesSearch */,
 				CE266CDC29802E6400D6E038 /* iTunesSearchTests */,
 				CE266CE629802E6400D6E038 /* iTunesSearchUITests */,
 				CE057D3A29A6410100C7CC7A /* SomeLayerTests */,
+				CE4C3B2E29A7919200CD2A8C /* TestFramework */,
 				CE266CC429802E6200D6E038 /* Products */,
 				CE057D0429A55C4200C7CC7A /* Frameworks */,
 			);
@@ -235,6 +306,7 @@
 				CE266CC329802E6200D6E038 /* iTunesSearch.app */,
 				CE266CD929802E6400D6E038 /* iTunesSearchTests.xctest */,
 				CE266CE329802E6400D6E038 /* iTunesSearchUITests.xctest */,
+				CE4C3B2D29A7919200CD2A8C /* TestFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -468,6 +540,173 @@
 			path = "Singer Tracks Screen";
 			sourceTree = "<group>";
 		};
+		CE4C3AF729A78F8400CD2A8C /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3AF829A78F8400CD2A8C /* Infrastructure.xcodeproj */,
+				CE4C3AFB29A78F8400CD2A8C /* InfrastructureTests */,
+				CE4C3AFD29A78F8400CD2A8C /* Infrastructure */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		CE4C3AF929A78F8400CD2A8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3B2229A78F8400CD2A8C /* Infrastructure.framework */,
+				CE4C3B2429A78F8400CD2A8C /* InfrastructureTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE4C3AFB29A78F8400CD2A8C /* InfrastructureTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3AFC29A78F8400CD2A8C /* InfrastructureTests.swift */,
+			);
+			path = InfrastructureTests;
+			sourceTree = "<group>";
+		};
+		CE4C3AFD29A78F8400CD2A8C /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3AFE29A78F8400CD2A8C /* Extension */,
+				CE4C3B0129A78F8400CD2A8C /* Constants */,
+				CE4C3B0329A78F8400CD2A8C /* Media Clients */,
+				CE4C3B0829A78F8400CD2A8C /* Infrastructure.h */,
+				CE4C3B0929A78F8400CD2A8C /* Infrastructure.docc */,
+				CE4C3B0A29A78F8400CD2A8C /* Network Clients */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		CE4C3AFE29A78F8400CD2A8C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3AFF29A78F8400CD2A8C /* Optional.swift */,
+				CE4C3B0029A78F8400CD2A8C /* NSError.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CE4C3B0129A78F8400CD2A8C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3B0229A78F8400CD2A8C /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CE4C3B0329A78F8400CD2A8C /* Media Clients */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3B0429A78F8400CD2A8C /* Audio Client */,
+			);
+			path = "Media Clients";
+			sourceTree = "<group>";
+		};
+		CE4C3B0429A78F8400CD2A8C /* Audio Client */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3B0529A78F8400CD2A8C /* AudioClient.swift */,
+				CE4C3B0629A78F8400CD2A8C /* Interfaces */,
+			);
+			path = "Audio Client";
+			sourceTree = "<group>";
+		};
+		CE4C3B0629A78F8400CD2A8C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3B0729A78F8400CD2A8C /* AudioClientInterface.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		CE4C3B0A29A78F8400CD2A8C /* Network Clients */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3B0B29A78F8400CD2A8C /* Track Downloader */,
+				CE4C3B0F29A78F8400CD2A8C /* REST API */,
+				CE4C3B1B29A78F8400CD2A8C /* Image Downloader */,
+			);
+			path = "Network Clients";
+			sourceTree = "<group>";
+		};
+		CE4C3B0B29A78F8400CD2A8C /* Track Downloader */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3B0C29A78F8400CD2A8C /* TrackDownloaderClient.swift */,
+				CE4C3B0D29A78F8400CD2A8C /* Interfaces */,
+			);
+			path = "Track Downloader";
+			sourceTree = "<group>";
+		};
+		CE4C3B0D29A78F8400CD2A8C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3B0E29A78F8400CD2A8C /* TrackDownloaderClientInterface.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		CE4C3B0F29A78F8400CD2A8C /* REST API */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3B1029A78F8400CD2A8C /* APIHeaders.swift */,
+				CE4C3B1129A78F8400CD2A8C /* ResponseHandler+Extension.swift */,
+				CE4C3B1229A78F8400CD2A8C /* APIEnvironment.swift */,
+				CE4C3B1329A78F8400CD2A8C /* APILoader.swift */,
+				CE4C3B1429A78F8400CD2A8C /* RequestHandler+Extension.swift */,
+				CE4C3B1529A78F8400CD2A8C /* Services */,
+				CE4C3B1729A78F8400CD2A8C /* Entities */,
+				CE4C3B1929A78F8400CD2A8C /* APIHandler.swift */,
+				CE4C3B1A29A78F8400CD2A8C /* APIPath.swift */,
+			);
+			path = "REST API";
+			sourceTree = "<group>";
+		};
+		CE4C3B1529A78F8400CD2A8C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3B1629A78F8400CD2A8C /* SearchSingerTrackAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE4C3B1729A78F8400CD2A8C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3B1829A78F8400CD2A8C /* NetworkModel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CE4C3B1B29A78F8400CD2A8C /* Image Downloader */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3B1C29A78F8400CD2A8C /* ImageDownloaderClient.swift */,
+				CE4C3B1D29A78F8400CD2A8C /* Interfaces */,
+			);
+			path = "Image Downloader";
+			sourceTree = "<group>";
+		};
+		CE4C3B1D29A78F8400CD2A8C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3B1E29A78F8400CD2A8C /* ImageDownloaderClientInterface.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		CE4C3B2E29A7919200CD2A8C /* TestFramework */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3B2F29A7919200CD2A8C /* TestFramework.h */,
+				CE4C3B3E29A79BD500CD2A8C /* TestFramework.swift */,
+			);
+			path = TestFramework;
+			sourceTree = "<group>";
+		};
 		CE4FC55229911651004F281C /* Navigations */ = {
 			isa = PBXGroup;
 			children = (
@@ -514,6 +753,17 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CE4C3B2829A7919200CD2A8C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4C3B3029A7919200CD2A8C /* TestFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		CE266CC229802E6200D6E038 /* iTunesSearch */ = {
@@ -570,6 +820,24 @@
 			productReference = CE266CE329802E6400D6E038 /* iTunesSearchUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		CE4C3B2C29A7919200CD2A8C /* TestFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4C3B3529A7919200CD2A8C /* Build configuration list for PBXNativeTarget "TestFramework" */;
+			buildPhases = (
+				CE4C3B2829A7919200CD2A8C /* Headers */,
+				CE4C3B2929A7919200CD2A8C /* Sources */,
+				CE4C3B2A29A7919200CD2A8C /* Frameworks */,
+				CE4C3B2B29A7919200CD2A8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestFramework;
+			productName = TestFramework;
+			productReference = CE4C3B2D29A7919200CD2A8C /* TestFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -591,6 +859,10 @@
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = CE266CC229802E6200D6E038;
 					};
+					CE4C3B2C29A7919200CD2A8C = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+					};
 				};
 			};
 			buildConfigurationList = CE266CBE29802E6200D6E038 /* Build configuration list for PBXProject "iTunesSearch" */;
@@ -610,12 +882,21 @@
 					ProductGroup = CE057D0F29A5605E00C7CC7A /* Products */;
 					ProjectRef = CE057CF929A55C2300C7CC7A /* Domain Layer.xcodeproj */;
 				},
+				{
+					ProductGroup = CE4C3AF929A78F8400CD2A8C /* Products */;
+					ProjectRef = CE4C3AF829A78F8400CD2A8C /* Infrastructure.xcodeproj */;
+				},
+				{
+					ProductGroup = CE057DA929A78D5400C7CC7A /* Products */;
+					ProjectRef = CE057DA829A78D5400C7CC7A /* TestStatic.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
 				CE266CC229802E6200D6E038 /* iTunesSearch */,
 				CE266CD829802E6400D6E038 /* iTunesSearchTests */,
 				CE266CE229802E6400D6E038 /* iTunesSearchUITests */,
+				CE4C3B2C29A7919200CD2A8C /* TestFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -633,6 +914,27 @@
 			fileType = wrapper.cfbundle;
 			path = "Domain LayerTests.xctest";
 			remoteRef = CE057D1529A5605E00C7CC7A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE057DAD29A78D5400C7CC7A /* libTestStatic.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTestStatic.a;
+			remoteRef = CE057DAC29A78D5400C7CC7A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE4C3B2229A78F8400CD2A8C /* Infrastructure.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Infrastructure.framework;
+			remoteRef = CE4C3B2129A78F8400CD2A8C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE4C3B2429A78F8400CD2A8C /* InfrastructureTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = InfrastructureTests.xctest;
+			remoteRef = CE4C3B2329A78F8400CD2A8C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -656,6 +958,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CE266CE129802E6400D6E038 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4C3B2B29A7919200CD2A8C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -723,6 +1032,14 @@
 			files = (
 				CE266CEA29802E6400D6E038 /* iTunesSearchUITestsLaunchTests.swift in Sources */,
 				CE266CE829802E6400D6E038 /* iTunesSearchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE4C3B2929A7919200CD2A8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4C3B3F29A79BD500CD2A8C /* TestFramework.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -890,6 +1207,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YSQD9849J2;
+				FRAMEWORK_SEARCH_PATHS = /Users/user/Desktop/CoreDataExample/iTunesSearch/Infrastructure;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iTunesSearch/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -917,6 +1235,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YSQD9849J2;
+				FRAMEWORK_SEARCH_PATHS = /Users/user/Desktop/CoreDataExample/iTunesSearch/Infrastructure;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iTunesSearch/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1012,6 +1331,71 @@
 			};
 			name = Release;
 		};
+		CE4C3B3629A7919200CD2A8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YSQD9849J2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TestFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CE4C3B3729A7919200CD2A8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YSQD9849J2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TestFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1047,6 +1431,15 @@
 			buildConfigurations = (
 				CE266CF429802E6400D6E038 /* Debug */,
 				CE266CF529802E6400D6E038 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE4C3B3529A7919200CD2A8C /* Build configuration list for PBXNativeTarget "TestFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4C3B3629A7919200CD2A8C /* Debug */,
+				CE4C3B3729A7919200CD2A8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
