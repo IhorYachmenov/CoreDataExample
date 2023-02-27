@@ -95,8 +95,6 @@
 		CE39D830299ECD50009F4202 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D82F299ECD50009F4202 /* UIButton.swift */; };
 		CE39D832299ED251009F4202 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D831299ED251009F4202 /* UIColor.swift */; };
 		CE39D83529A38DBE009F4202 /* PersistentStorageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83429A38DBE009F4202 /* PersistentStorageRepository.swift */; };
-		CE39D83929A3B1F8009F4202 /* SingerTracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83829A3B1F8009F4202 /* SingerTracksViewModel.swift */; };
-		CE39D83C29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D83B29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift */; };
 		CE4FC55429911681004F281C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55329911681004F281C /* Coordinator.swift */; };
 		CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55529911745004F281C /* AppCoordinator.swift */; };
 		CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */; };
@@ -260,8 +258,6 @@
 		CE39D82F299ECD50009F4202 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		CE39D831299ED251009F4202 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		CE39D83429A38DBE009F4202 /* PersistentStorageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStorageRepository.swift; sourceTree = "<group>"; };
-		CE39D83829A3B1F8009F4202 /* SingerTracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModel.swift; sourceTree = "<group>"; };
-		CE39D83B29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadSingerTrackUseCaseMoc.swift; sourceTree = "<group>"; };
 		CE4FC55329911681004F281C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CE4FC55529911745004F281C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksCoordinator.swift; sourceTree = "<group>"; };
@@ -783,7 +779,6 @@
 			isa = PBXGroup;
 			children = (
 				CE39D7EE299984BD009F4202 /* Navigations */,
-				CE39D83729A3B1CA009F4202 /* Presentation Layer */,
 				CE39D83629A3B1A1009F4202 /* Data Layer */,
 			);
 			path = iTunesSearchTests;
@@ -938,23 +933,6 @@
 				CE39D83429A38DBE009F4202 /* PersistentStorageRepository.swift */,
 			);
 			path = "Data Layer";
-			sourceTree = "<group>";
-		};
-		CE39D83729A3B1CA009F4202 /* Presentation Layer */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D83A29A3B591009F4202 /* Singer Tracks Screen */,
-			);
-			path = "Presentation Layer";
-			sourceTree = "<group>";
-		};
-		CE39D83A29A3B591009F4202 /* Singer Tracks Screen */ = {
-			isa = PBXGroup;
-			children = (
-				CE39D83829A3B1F8009F4202 /* SingerTracksViewModel.swift */,
-				CE39D83B29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift */,
-			);
-			path = "Singer Tracks Screen";
 			sourceTree = "<group>";
 		};
 		CE4FC55229911651004F281C /* Navigations */ = {
@@ -1383,8 +1361,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE39D83929A3B1F8009F4202 /* SingerTracksViewModel.swift in Sources */,
-				CE39D83C29A3B5B9009F4202 /* DownloadSingerTrackUseCaseMoc.swift in Sources */,
 				CE39D80E299CE8AC009F4202 /* UIWindowMock.swift in Sources */,
 				CE39D83529A38DBE009F4202 /* PersistentStorageRepository.swift in Sources */,
 				CE39D7F0299984CF009F4202 /* RouterMock.swift in Sources */,

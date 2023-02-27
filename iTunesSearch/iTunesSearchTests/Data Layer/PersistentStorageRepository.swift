@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import iTunesSearch
+import Data_Layer
 
 class PersistentStorageRepositoryTests: XCTestCase {
     private var repositoryPattern: PersistentStorageRepositoryInterface!
@@ -41,7 +42,7 @@ class PersistentStorageRepositoryTests: XCTestCase {
             XCTAssertNil(error)
         }
         
-        repositoryPattern.subscribeOnData { dataModel in
+        repositoryPattern.observeData { dataModel in
             XCTAssert(dataModel.count == 1)
             XCTAssert(dataModel.last!.trackId == savingTestData.trackId && dataModel.last!.trackName == savingTestData.trackName)
         }
