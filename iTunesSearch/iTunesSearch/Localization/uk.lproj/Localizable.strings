@@ -17,18 +17,9 @@ Country = "Країна:";
 Play-demo = "Превʼю";
 Pause = "Пауза";
 
-// Errors
+// Alert text
 Error = "Помилка";
 OK = "Гаразд";
-Server-error-while-downloading-image = "Помилка сервера підчас завантаження картинки";
-Download-was-successful-but-data-corrupted = "Завантаження пройшло успішно, але дані пошкоджено";
-Cant-save-data-to-data-base = "Не можемо зберегти дані до бази данної";
-Element-a-nil = "Елемент nil";
-Service-error = "Помика сервісу:";
-Unknown-error = "Невідома помилка";
-Data-not-found = "Data not found";
-
-// Alert text
 Demo-URL-unavailable = "URL Превʼю треку недоступне";
 Demo-URL-corrupted = "URL Превʼю треку пошкоджене";
 

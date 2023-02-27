@@ -17,18 +17,9 @@ Country = "Country:";
 Play-demo = "Play Demo";
 Pause = "Pause";
 
-// Errors
+// Alert text
 Error = "Error";
 OK = "OK";
-Server-error-while-downloading-image = "Server error while downloading image";
-Download-was-successful-but-data-corrupted = "Download was successful but data corrupted";
-Cant-save-data-to-data-base = "Can't save data to data base";
-Element-a-nil = "Element a nil";
-Service-error = "Service Error:";
-Unknown-error = "Unknown Error";
-Data-not-found = "Data not found";
-
-// Alert text
 Demo-URL-unavailable = "Demo URL unavailable";
 Demo-URL-corrupted = "Demo URL corrupted";
 
