@@ -769,6 +769,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4FC55229911651004F281C /* Navigations */,
+				CE39D7E729968346009F4202 /* Configurators */,
 				CE266D5B2984009C00D6E038 /* View Layer */,
 				CE266CF629802ED800D6E038 /* Application */,
 				CE266D072980330E00D6E038 /* Resources */,
@@ -832,7 +833,6 @@
 		CE266D242980481E00D6E038 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE39D7E729968346009F4202 /* Configurators */,
 				CE4FC55A29911A1F004F281C /* Singer Track Details Screen */,
 				CE4FC559299119E0004F281C /* Singer Tracks Screen */,
 			);
