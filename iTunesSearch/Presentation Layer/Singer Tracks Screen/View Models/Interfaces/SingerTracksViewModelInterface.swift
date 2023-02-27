@@ -7,17 +7,17 @@
 
 import Data_Layer
 
-enum PresentationModel {
-    struct SingerTrack {
-        let trackName: String
-        let singerName: String
-        let trackPrice: String
-        let country: String
-        let trackId: String
+public enum PresentationModel {
+    public struct SingerTrack {
+        public let trackName: String
+        public let singerName: String
+        public let trackPrice: String
+        public let country: String
+        public let trackId: String
     }
 }
 
-extension PresentationModel.SingerTrack {
+public extension PresentationModel.SingerTrack {
     init(dataModel: DataModel.SingerTrack) {
         trackName = dataModel.trackName
         singerName = dataModel.singerName
@@ -27,7 +27,7 @@ extension PresentationModel.SingerTrack {
     }
 }
 
-protocol SingerTracksViewModelInterface {
+public  protocol SingerTracksViewModelInterface {
     var dataSource: ((Result<[PresentationModel.SingerTrack], Error>) -> ())? { get set }
     func downloadSong()
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Presentation_Layer
 
 protocol SingerTrackDetailsDelegate: AnyObject {
     func dismissCoordinator()

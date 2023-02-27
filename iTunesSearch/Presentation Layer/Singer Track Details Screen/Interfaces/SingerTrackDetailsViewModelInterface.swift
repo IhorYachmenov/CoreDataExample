@@ -8,28 +8,28 @@
 import Data_Layer
 import Infrastructure
 
-extension PresentationModel {
+public extension PresentationModel {
     struct SingerTrackDetails {
-        var details: Details?
-        var track: Track?
+        public var details: Details?
+        public var track: Track?
         
-        struct Details {
-            let trackName: String
-            let singerName: String
-            let collectionName: String
-            let collectionPrice: String
-            let trackPrice: String
-            let releaseDate: String
-            let genre: String
-            let country: String
-            var image: Data?
+        public struct Details {
+            public let trackName: String
+            public let singerName: String
+            public let collectionName: String
+            public let collectionPrice: String
+            public let trackPrice: String
+            public let releaseDate: String
+            public let genre: String
+            public let country: String
+            public var image: Data?
         }
         
-        struct Track {
-            let currentTime: String
-            let duration: String
-            let isPlaying: Bool
-            let progress: Float
+        public struct Track {
+            public let currentTime: String
+            public let duration: String
+            public let isPlaying: Bool
+            public let progress: Float
         }
     }
     
@@ -57,7 +57,7 @@ extension PresentationModel.SingerTrackDetails.Track {
     }
 }
 
-protocol SingerTrackDetailsViewModelInterface {
+public protocol SingerTrackDetailsViewModelInterface {
     var dataSource: ((Result<PresentationModel.SingerTrackDetails, Error>) -> ())? { get set }
     func playTrack()
 }

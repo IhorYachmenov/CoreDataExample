@@ -7,16 +7,16 @@
 
 import Domain_Layer
 
-final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
+public final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
     private var trackId: String
     private var audioURL: String?
     private var useCase: SingerTrackDetailsUseCaseInterface
     private var audioPlayerUseCase: AudioPlayerUseCaseInterface
     private lazy var dataModel = PresentationModel.SingerTrackDetails()
     
-    var dataSource: ((Result<PresentationModel.SingerTrackDetails, Error>) -> ())?
+    public var dataSource: ((Result<PresentationModel.SingerTrackDetails, Error>) -> ())?
     
-    init(trackId: String, useCase: SingerTrackDetailsUseCaseInterface, audioPlayerUseCase: AudioPlayerUseCaseInterface) {
+    public init(trackId: String, useCase: SingerTrackDetailsUseCaseInterface, audioPlayerUseCase: AudioPlayerUseCaseInterface) {
         self.useCase = useCase
         self.trackId = trackId
         self.audioPlayerUseCase = audioPlayerUseCase
@@ -53,7 +53,7 @@ final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
         })
     }
     
-    func playTrack() {
+    public func playTrack() {
         audioPlayerUseCase.playTrack(url: audioURL) { error in
             if let error = error {
                 DispatchQueue.main.async { [weak self] in
