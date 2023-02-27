@@ -32,7 +32,6 @@
 		CE2551E329ACB186008944B7 /* QueryWorkerStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2551CC29ACB186008944B7 /* QueryWorkerStorage.swift */; };
 		CE2551E429ACB186008944B7 /* CoreDataStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2551CE29ACB186008944B7 /* CoreDataStorageManager.swift */; };
 		CE2551E529ACB186008944B7 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2551D029ACB186008944B7 /* Mapper.swift */; };
-		CE2551E629ACB186008944B7 /* SingerTrackDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE2551D129ACB186008944B7 /* SingerTrackDataModel.xcdatamodeld */; };
 		CE2551E729ACB186008944B7 /* SingerTrack+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2551D429ACB186008944B7 /* SingerTrack+CoreDataClass.swift */; };
 		CE2551E829ACB186008944B7 /* SingerTrack+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2551D529ACB186008944B7 /* SingerTrack+CoreDataProperties.swift */; };
 		CE2551E929ACB186008944B7 /* SingerTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2551D629ACB186008944B7 /* SingerTrack.swift */; };
@@ -64,8 +63,9 @@
 		CE25524A29AD1449008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25524929AD1449008944B7 /* String.swift */; };
 		CE25524C29AD14CD008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25524B29AD14CD008944B7 /* String.swift */; };
 		CE25524E29AD14F6008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25524D29AD14F6008944B7 /* String.swift */; };
-		CE25524F29AD1D10008944B7 /* Data_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25514929ACAFE3008944B7 /* Data_Layer.framework */; };
-		CE25525029AD1D10008944B7 /* Data_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE25514929ACAFE3008944B7 /* Data_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE25525D29AD3722008944B7 /* SingerTrackDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE2551D129ACB186008944B7 /* SingerTrackDataModel.xcdatamodeld */; };
+		CE25526129AD6979008944B7 /* Data_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25514929ACAFE3008944B7 /* Data_Layer.framework */; };
+		CE25526229AD6979008944B7 /* Data_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE25514929ACAFE3008944B7 /* Data_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CC629802E6200D6E038 /* AppDelegate.swift */; };
 		CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */; };
 		CE266CD029802E6300D6E038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE266CCF29802E6300D6E038 /* Assets.xcassets */; };
@@ -85,7 +85,6 @@
 		CE39D7FF299BCAA0009F4202 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7FE299BCAA0009F4202 /* UIViewController.swift */; };
 		CE39D801299BCBFC009F4202 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D800299BCBFC009F4202 /* UILabel.swift */; };
 		CE39D80A299C4121009F4202 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D809299C4121009F4202 /* NSMutableAttributedString.swift */; };
-		CE39D80C299CE075009F4202 /* ConstantsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D80B299CE075009F4202 /* ConstantsError.swift */; };
 		CE39D80E299CE8AC009F4202 /* UIWindowMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D80D299CE8AC009F4202 /* UIWindowMock.swift */; };
 		CE39D810299CFCCE009F4202 /* RouterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D80F299CFCCE009F4202 /* RouterBuilder.swift */; };
 		CE39D828299E60F3009F4202 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D827299E60F3009F4202 /* Data.swift */; };
@@ -148,13 +147,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CE25525129AD1D10008944B7 /* Embed Frameworks */ = {
+		CE25526329AD6979008944B7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CE25525029AD1D10008944B7 /* Data_Layer.framework in Embed Frameworks */,
+				CE25526229AD6979008944B7 /* Data_Layer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,7 +244,6 @@
 		CE39D7FE299BCAA0009F4202 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CE39D800299BCBFC009F4202 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		CE39D809299C4121009F4202 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
-		CE39D80B299CE075009F4202 /* ConstantsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsError.swift; sourceTree = "<group>"; };
 		CE39D80D299CE8AC009F4202 /* UIWindowMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowMock.swift; sourceTree = "<group>"; };
 		CE39D80F299CFCCE009F4202 /* RouterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterBuilder.swift; sourceTree = "<group>"; };
 		CE39D827299E60F3009F4202 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -297,7 +295,7 @@
 			files = (
 				CE25521D29ACB423008944B7 /* Presentation_Layer.framework in Frameworks */,
 				CE25515F29ACAFEC008944B7 /* Domain_Layer.framework in Frameworks */,
-				CE25524F29AD1D10008944B7 /* Data_Layer.framework in Frameworks */,
+				CE25526129AD6979008944B7 /* Data_Layer.framework in Frameworks */,
 				CE25513E29ACAFD6008944B7 /* Infrastructure.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -869,7 +867,6 @@
 				CE266D092980335800D6E038 /* ConstantsAlert.swift */,
 				CE4FC56629926F6C004F281C /* ConstantsSingerTracksScreen.swift */,
 				CE4FC5682992703F004F281C /* ConstantsSingerTrackDetailsScreen.swift */,
-				CE39D80B299CE075009F4202 /* ConstantsError.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -1070,7 +1067,7 @@
 				CE266CBF29802E6200D6E038 /* Sources */,
 				CE266CC029802E6200D6E038 /* Frameworks */,
 				CE266CC129802E6200D6E038 /* Resources */,
-				CE25525129AD1D10008944B7 /* Embed Frameworks */,
+				CE25526329AD6979008944B7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1267,11 +1264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE25525D29AD3722008944B7 /* SingerTrackDataModel.xcdatamodeld in Sources */,
 				CE2551EC29ACB186008944B7 /* PersistentStorageRepositoryInterface.swift in Sources */,
 				CE2551ED29ACB186008944B7 /* String.swift in Sources */,
 				CE2551E129ACB186008944B7 /* Constants.swift in Sources */,
 				CE2551EE29ACB186008944B7 /* Optional.swift in Sources */,
-				CE2551E629ACB186008944B7 /* SingerTrackDataModel.xcdatamodeld in Sources */,
 				CE2551EB29ACB186008944B7 /* PersistentStorageRepository.swift in Sources */,
 				CE2551E329ACB186008944B7 /* QueryWorkerStorage.swift in Sources */,
 				CE2551E429ACB186008944B7 /* CoreDataStorageManager.swift in Sources */,
@@ -1332,7 +1329,6 @@
 				CE39D801299BCBFC009F4202 /* UILabel.swift in Sources */,
 				CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */,
 				CE39D7E429941ABE009F4202 /* Router.swift in Sources */,
-				CE39D80C299CE075009F4202 /* ConstantsError.swift in Sources */,
 				CE4FC56F299290D2004F281C /* ProgressView.swift in Sources */,
 				CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */,
 				CE266D0A2980335800D6E038 /* ConstantsAlert.swift in Sources */,
@@ -1810,6 +1806,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = YSQD9849J2;
 				FRAMEWORK_SEARCH_PATHS = /Users/user/Desktop/CoreDataExample/iTunesSearch/Infrastructure;
 				GENERATE_INFOPLIST_FILE = YES;
