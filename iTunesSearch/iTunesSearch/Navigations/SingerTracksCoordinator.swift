@@ -25,13 +25,14 @@ final class SingerTracksCoordinator: Coordinator {
         }
     }
 #warning("** Q: - coordinator -> router dependency, inside showDetailCoordinator")
+    
 #warning("Documentation - Optional *")
-
-#warning("CHECK NAMING after all renaming in project, and errors")
-
 #warning("separate model module ?, data entities")
-#warning("swift only frameworks, objc+swift, umbrella..., module.modulemap, cocoapods")
-    #warning("move existing tests")
+    
+    #warning("Service layer constants, CONSTANTS")
+    
+    #warning("Set compatibility only with swift")
+#warning("move existing tests")
 
     
     private func showDetailCoordinator(trackId: String) {

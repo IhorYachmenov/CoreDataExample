@@ -14,15 +14,15 @@ final class DownloadSingerTrackUseCase {
 }
 
 extension DownloadSingerTrackUseCase: DownloadSingerTrackUseCaseInterface {
-    func downloadSingerTrack(name: String, completion: @escaping (Result<DataModel.SingerTrack, ServiceError>) -> ()) {
+    func downloadSingerTrack(name: String, completion: @escaping (Result<DataModel.SingerTrack, Error>) -> ()) {
         let request = SearchSingerTrackAPI()
         let apiLoader = APILoader(apiHandler: request)
         
         let param: Dictionary<String, Any> = ["limit" : "1", "media" : "music", "term" : name]
     
         apiLoader.loadAPIRequest(requestData: param) { (model, error) in
-            if let _ = error {
-                completion(.failure(error!))
+            if let error = error {
+                completion(.failure(error))
             } else {
                 
                 let data = model?.results.map { $0.map { DataModel.SingerTrack(networkModel: $0) } }
@@ -30,7 +30,7 @@ extension DownloadSingerTrackUseCase: DownloadSingerTrackUseCaseInterface {
                 if let dataModel = data?.last {
                     completion(.success(dataModel))
                 } else {
-                    completion(.failure(NSError.error(msg: Constants.Error.nilElement) as! ServiceError))
+                    completion(.failure(NSError.error(msg: Constants.Error.nilElement)))
                 }
             }
         }

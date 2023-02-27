@@ -52,7 +52,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
             let entityDescription = NSEntityDescription.entity(forEntityName: self!.entityName, in: self!.coreDataManager.privateQueueManageObjectContext)
             
             guard entityDescription != nil else {
-                completion(NSError.error(msg: Constants.Error.coreDataSaving))
+                completion(NSError.error(msg: Constants.Error.dataNotSaved))
                 return
             }
             
