@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol PersistentStorageRepositoryInterface {
-    func subscribeOnData(completion: @escaping ([DataModel.SingerTrack]) -> ())
-    func saveSingerTrack(singerTrack: DataModel.SingerTrack, completion: @escaping (StorageError?) -> ())
-    func fetchTrackDetails(trackId: String, completion: @escaping (StorageError?) -> ())
+    func observeData(completion: @escaping ([DataModel.SingerTrack]) -> ())
+    func saveSingerTrack(singerTrack: DataModel.SingerTrack, completion: @escaping (Error?) -> ())
+    func fetchTrackDetails(trackId: String, completion: @escaping (Error?) -> ())
 }

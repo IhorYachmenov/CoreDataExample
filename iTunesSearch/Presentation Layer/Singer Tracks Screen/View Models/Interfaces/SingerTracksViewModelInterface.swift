@@ -28,6 +28,6 @@ public extension PresentationModel.SingerTrack {
 }
 
 public  protocol SingerTracksViewModelInterface {
-    var dataSource: ((Result<[PresentationModel.SingerTrack], Error>) -> ())? { get set }
+    var observeData: ((Result<[PresentationModel.SingerTrack], Error>) -> ())? { get set }
     func downloadSong()
 }

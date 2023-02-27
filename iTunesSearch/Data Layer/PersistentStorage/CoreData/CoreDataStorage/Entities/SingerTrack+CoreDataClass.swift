@@ -10,6 +10,4 @@ import Foundation
 import CoreData
 
 @objc(SingerTrack)
-public class SingerTrack: NSManagedObject {
-
-}
+public class SingerTrack: NSManagedObject {}

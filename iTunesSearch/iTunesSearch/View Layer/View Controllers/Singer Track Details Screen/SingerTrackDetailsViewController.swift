@@ -184,7 +184,7 @@ class SingerTrackDetailsViewController: UIViewController {
         
         initUIComponents()
         
-        viewModel.dataSource = { [weak self] result in
+        viewModel.observeData = { [weak self] result in
             switch result {
             case .success(let success):
                 let details = success.details

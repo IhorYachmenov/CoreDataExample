@@ -9,5 +9,5 @@ import Infrastructure
 
 public protocol AudioPlayerUseCaseInterface {
     func playTrack(url: String?, completion: @escaping (Error?) -> ())
-    func subscribeOnAudioData(completion: @escaping (MediaModel.AudioData) -> ())
+    func observeData(completion: @escaping (MediaModel.AudioData) -> ())
 }

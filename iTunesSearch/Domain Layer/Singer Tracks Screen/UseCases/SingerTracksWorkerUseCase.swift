@@ -12,14 +12,14 @@ public final class SingerTracksWorkerUseCase {
     private var download: DownloadSingerTrackUseCaseInterface
     private var storage: StorageSingerTracksUseCaseInterface
     
-    public init(useCase download: DownloadSingerTrackUseCaseInterface, useCase storage: StorageSingerTracksUseCaseInterface) {
-        self.download = download
-        self.storage = storage
+    public init(storageRepository: PersistentStorageRepositoryInterface) {
+        self.download = DownloadSingerTrackUseCase()
+        self.storage = StorageSingerTracksUseCase(storageRepository: storageRepository)
     }
 }
 
 extension SingerTracksWorkerUseCase: SingerTracksWorkerUseCaseInterface {
-    public func downloadAndSaveSingerTrack(name: String, completion: @escaping (Error?) -> ()) {
+    public func downloadTrack(name: String, completion: @escaping (Error?) -> ()) {
         download.downloadSingerTrack(name: name) { [weak self] result in
             switch result {
             case .success(let success):
@@ -34,8 +34,8 @@ extension SingerTracksWorkerUseCase: SingerTracksWorkerUseCaseInterface {
         }
     }
     
-    public func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
-        storage.subscribeOnData(completion: completion)
+    public func observeData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
+        storage.observeStorageData(completion: completion)
     }
 }
 

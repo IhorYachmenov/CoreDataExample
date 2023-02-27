@@ -13,7 +13,7 @@ struct Constants {
         static let nilElement = "Element-a-nil"
         static let serviceErrorTitle = "Service-error"
         static let unknown = "Unknown-error"
-        static let demoURLUnavailable = "Demo-URL-unavailable"
-        static let demoURLCorrupted = "Demo-URL-corrupted"
+        static let urlUnavailable = "Demo-URL-unavailable"
+        static let urlCorrupted = "Demo-URL-corrupted"
     }
 }

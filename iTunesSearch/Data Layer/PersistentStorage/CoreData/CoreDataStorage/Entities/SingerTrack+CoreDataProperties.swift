@@ -11,7 +11,6 @@ import CoreData
 
 
 extension SingerTrack {
-
     @nonobjc public class func fetchRequest() -> NSFetchRequest<SingerTrack> {
         return NSFetchRequest<SingerTrack>(entityName: "SingerTrack")
     }
@@ -27,7 +26,6 @@ extension SingerTrack {
     @NSManaged public var trackImgURL: String?
     @NSManaged public var trackName: String?
     @NSManaged public var trackPrice: String?
-
 }
 
 //extension SingerTrack : Identifiable {

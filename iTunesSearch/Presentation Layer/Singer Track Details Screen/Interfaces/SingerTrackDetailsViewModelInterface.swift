@@ -59,6 +59,6 @@ extension PresentationModel.SingerTrackDetails.Track {
 }
 
 public protocol SingerTrackDetailsViewModelInterface {
-    var dataSource: ((Result<PresentationModel.SingerTrackDetails, Error>) -> ())? { get set }
+    var observeData: ((Result<PresentationModel.SingerTrackDetails, Error>) -> ())? { get set }
     func playTrack()
 }

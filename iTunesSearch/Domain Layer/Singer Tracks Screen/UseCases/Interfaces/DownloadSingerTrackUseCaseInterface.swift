@@ -8,6 +8,6 @@
 import Data_Layer
 import Infrastructure
 
-public protocol DownloadSingerTrackUseCaseInterface {
+protocol DownloadSingerTrackUseCaseInterface {
     func downloadSingerTrack(name: String, completion: @escaping (Result<DataModel.SingerTrack, ServiceError>) -> ())
 }

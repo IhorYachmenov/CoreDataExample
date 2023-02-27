@@ -45,14 +45,14 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
     // MARK: - QueryWorkerStoragable
     func saveDataModel(
         data: DataType,
-        completion: @escaping (StorageError?) -> ()
+        completion: @escaping (Error?) -> ()
     ) {
         coreDataManager.privateQueueManageObjectContext.perform { [weak self] in
             
             let entityDescription = NSEntityDescription.entity(forEntityName: self!.entityName, in: self!.coreDataManager.privateQueueManageObjectContext)
             
             guard entityDescription != nil else {
-                completion(.saveError(NSError.error(msg: Constants.Error.coreDataSaving)))
+                completion(NSError.error(msg: Constants.Error.coreDataSaving))
                 return
             }
             
@@ -65,7 +65,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
                     
                     completion(nil)
                 } catch {
-                    completion(.saveError(error))
+                    completion(error)
                 }
             })
         }
@@ -74,7 +74,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
     func fetchEntity<T>(
         matching keyPath: KeyPath<Entity, T>,
         equalTo value: T,
-        completion: @escaping (StorageError?) -> ()
+        completion: @escaping (Error?) -> ()
     ) {
         coreDataManager.mainQueueManageObjectContext.perform { [weak self] in
             let predicate = NSPredicate(format: "%K == %@", keyPath._kvcKeyPathString!, value as! CVarArg)
@@ -89,10 +89,10 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
                     self?.dataPublisher?([obj])
                     completion(nil)
                 } else {
-                    completion(StorageError.notFoundError(NSError.error(msg: Constants.Error.dataNotFound)))
+                    completion(NSError.error(msg: Constants.Error.dataNotFound))
                 }
             } catch {
-                completion(.readError(error))
+                completion(error)
             }
         }
 

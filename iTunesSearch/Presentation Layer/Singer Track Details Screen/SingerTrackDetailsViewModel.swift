@@ -15,7 +15,7 @@ public final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInter
     private var audioPlayerUseCase: AudioPlayerUseCaseInterface
     private lazy var dataModel = PresentationModel.SingerTrackDetails()
     
-    public var dataSource: ((Result<PresentationModel.SingerTrackDetails, Error>) -> ())?
+    public var observeData: ((Result<PresentationModel.SingerTrackDetails, Error>) -> ())?
     
     public init(trackId: String, useCase: SingerTrackDetailsUseCaseInterface, audioPlayerUseCase: AudioPlayerUseCaseInterface) {
         self.useCase = useCase
@@ -25,12 +25,12 @@ public final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInter
         self.useCase.fetchTrackDetails(trackId: trackId) { [weak self] failure in
             if let failure = failure {
                 DispatchQueue.main.async {
-                    self?.dataSource?(.failure(failure))
+                    self?.observeData?(.failure(failure))
                 }
             }
         }
         
-        self.useCase.subscribeOnTrackData { [weak self] data in
+        self.useCase.observeData { [weak self] data in
             if let data = data {
                 self?.audioURL = data.demoURL
                 self?.dataModel.details = PresentationModel.SingerTrackDetails.Details(dataModel: data)
@@ -48,17 +48,17 @@ public final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInter
             }
         }
         
-        self.audioPlayerUseCase.subscribeOnAudioData(completion: { [weak self] data in
+        self.audioPlayerUseCase.observeData(completion: { [weak self] data in
             self?.dataModel.track = PresentationModel.SingerTrackDetails.Track(mediaModel: data)
             self?.pushDataModel()
         })
     }
     
     public func playTrack() {
-        audioPlayerUseCase.playTrack(url: audioURL) { error in
-            if let error = error {
+        audioPlayerUseCase.playTrack(url: audioURL) { failure in
+            if let failure = failure {
                 DispatchQueue.main.async { [weak self] in
-                    self?.dataSource?(.failure(error))
+                    self?.observeData?(.failure(failure))
                 }
             }
         }
@@ -66,7 +66,7 @@ public final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInter
     
     private func pushDataModel() {
         DispatchQueue.main.async { [weak self] in
-            self?.dataSource?(.success(self!.dataModel))
+            self?.observeData?(.success(self!.dataModel))
         }
     }
 }

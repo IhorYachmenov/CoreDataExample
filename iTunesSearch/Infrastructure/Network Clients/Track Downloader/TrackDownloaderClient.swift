@@ -34,11 +34,11 @@ public class TrackDownloaderClient {
 extension TrackDownloaderClient: TrackDownloaderClientInterface {
     public func downloadTrack(url: String?, completion: @escaping (Result<URL, Error>) -> ()) {
         guard let url = url else {
-            completion(.failure(NSError.error(msg: Constants.Error.demoURLUnavailable)))
+            completion(.failure(NSError.error(msg: Constants.Error.urlUnavailable)))
             return
         }
         guard let url = URL(string: url) else {
-            completion(.failure(NSError.error(msg: Constants.Error.demoURLCorrupted)))
+            completion(.failure(NSError.error(msg: Constants.Error.urlCorrupted)))
             return
         }
         
@@ -67,7 +67,6 @@ extension TrackDownloaderClient: TrackDownloaderClientInterface {
             } catch {
                 try? FileManager.default.removeItem(at: location)
                 print("Error moving to new location: \(error.localizedDescription)")
-
             }
         }
         downloadTask.resume()

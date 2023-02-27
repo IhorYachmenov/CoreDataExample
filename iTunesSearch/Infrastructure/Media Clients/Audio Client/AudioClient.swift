@@ -40,7 +40,7 @@ public final class AudioClient: NSObject, AudioClientInterface {
                 completion(nil)
             }
         } catch {
-            completion(NSError.error(msg: error.localizedDescription))
+            completion(error)
         }
     }
 

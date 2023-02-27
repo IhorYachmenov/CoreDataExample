@@ -631,9 +631,9 @@
 			isa = PBXGroup;
 			children = (
 				CE2551FE29ACB1C6008944B7 /* Interfaces */,
+				CE2551FD29ACB1C6008944B7 /* StorageSingerTracksUseCase.swift */,
 				CE2551FB29ACB1C6008944B7 /* DownloadSingerTrackUseCase.swift */,
 				CE2551FC29ACB1C6008944B7 /* SingerTracksWorkerUseCase.swift */,
-				CE2551FD29ACB1C6008944B7 /* StorageSingerTracksUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";

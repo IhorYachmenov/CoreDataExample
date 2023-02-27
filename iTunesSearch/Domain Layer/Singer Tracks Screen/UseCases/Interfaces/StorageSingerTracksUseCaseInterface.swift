@@ -7,7 +7,7 @@
 
 import Data_Layer
 
-public protocol StorageSingerTracksUseCaseInterface {
-    func saveSingerTrack(track: DataModel.SingerTrack, completion: @escaping (StorageError?) -> ())
-    func subscribeOnData(completion: @escaping ([DataModel.SingerTrack]) -> ())
+protocol StorageSingerTracksUseCaseInterface {
+    func saveSingerTrack(track: DataModel.SingerTrack, completion: @escaping (Error?) -> ())
+    func observeStorageData(completion: @escaping ([DataModel.SingerTrack]) -> ())
 }

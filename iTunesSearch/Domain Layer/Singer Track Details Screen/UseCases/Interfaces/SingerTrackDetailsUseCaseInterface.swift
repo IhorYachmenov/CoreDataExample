@@ -10,6 +10,6 @@ import Foundation
 
 public protocol SingerTrackDetailsUseCaseInterface {
     func downloadImage(url: String?, completion: @escaping (Result<Data, Error>) -> ())
-    func fetchTrackDetails(trackId: String, completion: @escaping (StorageError?) -> ())
-    func subscribeOnTrackData(completion: @escaping (DataModel.SingerTrack?) -> ())
+    func fetchTrackDetails(trackId: String, completion: @escaping (Error?) -> ())
+    func observeData(completion: @escaping (DataModel.SingerTrack?) -> ())
 }

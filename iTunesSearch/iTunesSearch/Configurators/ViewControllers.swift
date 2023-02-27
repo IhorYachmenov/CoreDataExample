@@ -15,9 +15,7 @@ final class ViewControllers {
     class func configureSingerTracks(delegate: SingerTracksDelegate) -> SingerTracksViewController {
         let repository = PersistentStorageRepository()
         
-        let search = DownloadSingerTrackUseCase()
-        let storage = StorageSingerTracksUseCase(storageRepository: repository)
-        let singerTrackWorkerUseCase = SingerTracksWorkerUseCase(useCase: search, useCase: storage)
+        let singerTrackWorkerUseCase = SingerTracksWorkerUseCase(storageRepository: repository)
         
         let viewModel = SingerTracksViewModel(useCase: singerTrackWorkerUseCase)
         

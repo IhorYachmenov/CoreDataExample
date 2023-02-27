@@ -24,12 +24,12 @@ extension SingerTrackDetailsUseCase: SingerTrackDetailsUseCaseInterface {
         imageDownloaderClient.downloadImage(url: url, completion: completion)
     }
     
-    public func fetchTrackDetails(trackId: String, completion: @escaping (StorageError?) -> ()) {
+    public func fetchTrackDetails(trackId: String, completion: @escaping (Error?) -> ()) {
         repository.fetchTrackDetails(trackId: trackId, completion: completion)
     }
     
-    public func subscribeOnTrackData(completion: @escaping (DataModel.SingerTrack?) -> ()) {
-        repository.subscribeOnData { data in
+    public func observeData(completion: @escaping (DataModel.SingerTrack?) -> ()) {
+        repository.observeData { data in
             completion(data.first)
         }
     }

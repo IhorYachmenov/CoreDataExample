@@ -8,6 +8,6 @@
 import Data_Layer
 
 public protocol SingerTracksWorkerUseCaseInterface {
-    func downloadAndSaveSingerTrack(name: String, completion: @escaping (Error?) -> ())
-    func subscribeOfData(completion: @escaping ([DataModel.SingerTrack]) -> ())
+    func downloadTrack(name: String, completion: @escaping (Error?) -> ())
+    func observeData(completion: @escaping ([DataModel.SingerTrack]) -> ())
 }
