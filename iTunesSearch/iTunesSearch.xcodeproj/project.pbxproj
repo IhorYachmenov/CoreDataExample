@@ -8,11 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE25513E29ACAFD6008944B7 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25513829ACAFD6008944B7 /* Infrastructure.framework */; };
-		CE25513F29ACAFD6008944B7 /* Infrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE25513829ACAFD6008944B7 /* Infrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE25514F29ACAFE3008944B7 /* Data_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25514929ACAFE3008944B7 /* Data_Layer.framework */; };
-		CE25515029ACAFE3008944B7 /* Data_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE25514929ACAFE3008944B7 /* Data_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE25515F29ACAFEC008944B7 /* Domain_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25515929ACAFEC008944B7 /* Domain_Layer.framework */; };
-		CE25516029ACAFEC008944B7 /* Domain_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE25515929ACAFEC008944B7 /* Domain_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE2551B429ACB12E008944B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25519629ACB12E008944B7 /* Constants.swift */; };
 		CE2551B529ACB12E008944B7 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25519829ACB12E008944B7 /* Optional.swift */; };
 		CE2551B629ACB12E008944B7 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25519929ACB12E008944B7 /* NSError.swift */; };
@@ -59,7 +55,6 @@
 		CE25521029ACB1C6008944B7 /* AudioPlayerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25520329ACB1C6008944B7 /* AudioPlayerUseCase.swift */; };
 		CE25521129ACB1C6008944B7 /* AudioPlayerUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25520529ACB1C6008944B7 /* AudioPlayerUseCaseInterface.swift */; };
 		CE25521D29ACB423008944B7 /* Presentation_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25521729ACB423008944B7 /* Presentation_Layer.framework */; };
-		CE25521E29ACB423008944B7 /* Presentation_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE25521729ACB423008944B7 /* Presentation_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE25522B29ACB45E008944B7 /* SingerTrackDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25522329ACB45E008944B7 /* SingerTrackDetailsViewModel.swift */; };
 		CE25522C29ACB45E008944B7 /* SingerTrackDetailsViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25522529ACB45E008944B7 /* SingerTrackDetailsViewModelInterface.swift */; };
 		CE25522D29ACB45E008944B7 /* SingerTracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25522829ACB45E008944B7 /* SingerTracksViewModel.swift */; };
@@ -69,6 +64,8 @@
 		CE25524A29AD1449008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25524929AD1449008944B7 /* String.swift */; };
 		CE25524C29AD14CD008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25524B29AD14CD008944B7 /* String.swift */; };
 		CE25524E29AD14F6008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25524D29AD14F6008944B7 /* String.swift */; };
+		CE25524F29AD1D10008944B7 /* Data_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25514929ACAFE3008944B7 /* Data_Layer.framework */; };
+		CE25525029AD1D10008944B7 /* Data_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE25514929ACAFE3008944B7 /* Data_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CC629802E6200D6E038 /* AppDelegate.swift */; };
 		CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */; };
 		CE266CD029802E6300D6E038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE266CCF29802E6300D6E038 /* Assets.xcassets */; };
@@ -151,16 +148,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CE25514329ACAFD6008944B7 /* Embed Frameworks */ = {
+		CE25525129AD1D10008944B7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CE25521E29ACB423008944B7 /* Presentation_Layer.framework in Embed Frameworks */,
-				CE25515029ACAFE3008944B7 /* Data_Layer.framework in Embed Frameworks */,
-				CE25516029ACAFEC008944B7 /* Domain_Layer.framework in Embed Frameworks */,
-				CE25513F29ACAFD6008944B7 /* Infrastructure.framework in Embed Frameworks */,
+				CE25525029AD1D10008944B7 /* Data_Layer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,8 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE25521D29ACB423008944B7 /* Presentation_Layer.framework in Frameworks */,
-				CE25514F29ACAFE3008944B7 /* Data_Layer.framework in Frameworks */,
 				CE25515F29ACAFEC008944B7 /* Domain_Layer.framework in Frameworks */,
+				CE25524F29AD1D10008944B7 /* Data_Layer.framework in Frameworks */,
 				CE25513E29ACAFD6008944B7 /* Infrastructure.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1076,7 +1070,7 @@
 				CE266CBF29802E6200D6E038 /* Sources */,
 				CE266CC029802E6200D6E038 /* Frameworks */,
 				CE266CC129802E6200D6E038 /* Resources */,
-				CE25514329ACAFD6008944B7 /* Embed Frameworks */,
+				CE25525129AD1D10008944B7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1453,7 +1447,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example-itunes.presentation.domain.infrastructure";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1485,7 +1479,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Infrastructure;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1581,7 +1575,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example-itunes.presentation.domain";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1613,7 +1607,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Domain-Layer";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1645,7 +1639,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example-itunes.presentation";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1677,7 +1671,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Presentation-Layer";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1812,7 +1806,6 @@
 		CE266CEE29802E6400D6E038 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1841,7 +1834,6 @@
 		CE266CEF29802E6400D6E038 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
