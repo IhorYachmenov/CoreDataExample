@@ -52,7 +52,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
             let entityDescription = NSEntityDescription.entity(forEntityName: self!.entityName, in: self!.coreDataManager.privateQueueManageObjectContext)
             
             guard entityDescription != nil else {
-                completion(NSError.error(msg: Constants.Error.dataNotSaved))
+                completion(NSError.error(msg: Constants.Error.CoreData.dataNotSaved))
                 return
             }
             
@@ -89,7 +89,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
                     self?.dataPublisher?([obj])
                     completion(nil)
                 } else {
-                    completion(NSError.error(msg: Constants.Error.dataNotFound))
+                    completion(NSError.error(msg: Constants.Error.CoreData.dataNotFound))
                 }
             } catch {
                 completion(error)

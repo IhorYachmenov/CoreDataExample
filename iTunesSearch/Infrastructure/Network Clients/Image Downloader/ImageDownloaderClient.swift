@@ -14,12 +14,12 @@ public final class ImageDownloaderClient: ImageDownloaderClientInterface {
     
     public func downloadImage(url: String?, completion: @escaping (Result<Data, Error>) -> ()) {
         guard let urlString = url else {
-            completion(.failure(NSError.error(msg: Constants.Error.nilElement)))
+            completion(.failure(NSError.error(msg: Constants.Error.ImageClient.urlEmpty)))
             return
         }
         
         guard let url = URL(string: urlString) else {
-            completion(.failure(NSError.error(msg: Constants.Error.nilElement)))
+            completion(.failure(NSError.error(msg: Constants.Error.ImageClient.notValidUrl)))
             return
         }
         
@@ -33,7 +33,7 @@ public final class ImageDownloaderClient: ImageDownloaderClientInterface {
         
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard error == nil else {
-                completion(.failure(NSError.error(msg: Constants.Error.downloadingImage)))
+                completion(.failure(NSError.error(msg: Constants.Error.ImageClient.downloadingError)))
                 return
             }
             
@@ -44,7 +44,7 @@ public final class ImageDownloaderClient: ImageDownloaderClientInterface {
                     completion(.success(data))
                 }
             } else {
-                completion(.failure(NSError.error(msg: Constants.Error.corruptingData)))
+                completion(.failure(NSError.error(msg: Constants.Error.ImageClient.dataCorrupted)))
             }
         }.resume()
     }

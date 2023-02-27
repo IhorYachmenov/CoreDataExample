@@ -21,7 +21,7 @@ public extension PresentationModel.SingerTrack {
     init(dataModel: DataModel.SingerTrack) {
         trackName = dataModel.trackName
         singerName = dataModel.singerName
-        trackPrice = dataModel.trackPrice
+        trackPrice = dataModel.trackPrice.toDollars
         country = dataModel.country
         trackId = dataModel.trackId
     }

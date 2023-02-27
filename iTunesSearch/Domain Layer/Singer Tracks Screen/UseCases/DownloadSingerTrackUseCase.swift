@@ -30,7 +30,7 @@ extension DownloadSingerTrackUseCase: DownloadSingerTrackUseCaseInterface {
                 if let dataModel = data?.last {
                     completion(.success(dataModel))
                 } else {
-                    completion(.failure(NSError.error(msg: Constants.Error.nilElement)))
+                    completion(.failure(NSError.error(msg: Constants.Error.DownloadSingerTrackUseCase.nilData)))
                 }
             }
         }

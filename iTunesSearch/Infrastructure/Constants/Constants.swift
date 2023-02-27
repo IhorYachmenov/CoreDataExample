@@ -6,14 +6,25 @@
 //
 
 import Foundation
+
 struct Constants {
     struct Error {
-        static let downloadingImage = "Server-error-while-downloading-image"
-        static let corruptingData = "Download-was-successful-but-data-corrupted"
-        static let nilElement = "Element-a-nil"
-        static let serviceErrorTitle = "Service-error"
-        static let unknown = "Unknown-error"
-        static let urlUnavailable = "Demo-URL-unavailable"
-        static let urlCorrupted = "Demo-URL-corrupted"
+        struct ImageClient {
+            static let urlEmpty = "Demo-URL-corrupted"
+            static let notValidUrl = ""
+            static let downloadingError = ""
+            static let dataCorrupted = ""
+        }
+        struct TrackDownloaderClient {
+            static let urlEmpty = "Demo-URL-corrupted"
+            static let notValidUrl = ""
+            static let fileSystemUrlNotExist = ""
+        }
+        struct RESTapi {
+            static let urlResponceNil = "Server-error-while-downloading-image"
+            static let requestDataNil = ""
+            static let parsingProblem = ""
+            static let unknown = "Unknown-error"
+        }
     }
 }

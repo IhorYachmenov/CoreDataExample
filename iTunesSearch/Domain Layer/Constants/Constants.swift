@@ -9,8 +9,8 @@ import Foundation
 
 struct Constants {
     struct Error {
-        static let nilElement = "Element-a-nil"
-        static let serviceErrorTitle = "Service-error"
-        static let unknown = "Unknown-error"
+        struct DownloadSingerTrackUseCase {
+            static let nilData = "Element-a-nil"
+        }
     }
 }

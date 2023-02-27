@@ -29,9 +29,8 @@ final class SingerTracksCoordinator: Coordinator {
 #warning("Documentation - Optional *")
 #warning("separate model module ?, data entities")
     
-    #warning("Service layer constants, CONSTANTS")
-    
     #warning("Set compatibility only with swift")
+    #warning("Full localization")
 #warning("move existing tests")
 
     

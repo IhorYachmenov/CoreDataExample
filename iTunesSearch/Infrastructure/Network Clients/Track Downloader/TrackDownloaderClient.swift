@@ -34,11 +34,11 @@ public class TrackDownloaderClient {
 extension TrackDownloaderClient: TrackDownloaderClientInterface {
     public func downloadTrack(url: String?, completion: @escaping (Result<URL, Error>) -> ()) {
         guard let url = url else {
-            completion(.failure(NSError.error(msg: Constants.Error.urlUnavailable)))
+            completion(.failure(NSError.error(msg: Constants.Error.TrackDownloaderClient.urlEmpty)))
             return
         }
         guard let url = URL(string: url) else {
-            completion(.failure(NSError.error(msg: Constants.Error.urlCorrupted)))
+            completion(.failure(NSError.error(msg: Constants.Error.TrackDownloaderClient.notValidUrl)))
             return
         }
         
@@ -54,7 +54,7 @@ extension TrackDownloaderClient: TrackDownloaderClientInterface {
         
         let downloadTask = URLSession.shared.downloadTask(with: url) { [weak self] (location, response, error) in
             guard let location = location else {
-                completion(.failure(NSError.error(msg: Constants.Error.unknown)))
+                completion(.failure(NSError.error(msg: Constants.Error.TrackDownloaderClient.fileSystemUrlNotExist)))
                 return
             }
             
@@ -66,7 +66,7 @@ extension TrackDownloaderClient: TrackDownloaderClientInterface {
                 completion(.success(fileURL))
             } catch {
                 try? FileManager.default.removeItem(at: location)
-                print("Error moving to new location: \(error.localizedDescription)")
+                completion(.failure(error))
             }
         }
         downloadTask.resume()

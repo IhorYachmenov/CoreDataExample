@@ -8,9 +8,9 @@
 import Foundation
 
 extension String {
-//    var localized: String {
-//        NSLocalizedString(self, comment: "")
-//    }
+    var localized: String {
+        NSLocalizedString(self, comment: "")
+    }
     
     var parceDateFormat: String {
         //        let inputExample = "1961-11-11T08:00:00Z"

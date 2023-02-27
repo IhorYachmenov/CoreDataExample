@@ -8,7 +8,9 @@
 import Foundation
 struct Constants {
     struct Error {
-        static let dataNotSaved = "Cant-save-data-to-data-base"
-        static let dataNotFound = "Data-not-found"
+        struct CoreData {
+            static let dataNotSaved = "Cant-save-data-to-data-base"
+            static let dataNotFound = "Data-not-found"
+        }
     }
 }

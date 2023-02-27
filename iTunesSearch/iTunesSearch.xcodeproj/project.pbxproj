@@ -66,6 +66,9 @@
 		CE25522E29ACB45E008944B7 /* SingerTracksViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25522A29ACB45E008944B7 /* SingerTracksViewModelInterface.swift */; };
 		CE25523129ACB4B5008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25523029ACB4B5008944B7 /* String.swift */; };
 		CE25523429ACDB0B008944B7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25523329ACDB0B008944B7 /* DataModel.swift */; };
+		CE25524A29AD1449008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25524929AD1449008944B7 /* String.swift */; };
+		CE25524C29AD14CD008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25524B29AD14CD008944B7 /* String.swift */; };
+		CE25524E29AD14F6008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25524D29AD14F6008944B7 /* String.swift */; };
 		CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CC629802E6200D6E038 /* AppDelegate.swift */; };
 		CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */; };
 		CE266CD029802E6300D6E038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE266CCF29802E6300D6E038 /* Assets.xcassets */; };
@@ -76,8 +79,6 @@
 		CE266D2929807DFF00D6E038 /* SingerTrackListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D2829807DFF00D6E038 /* SingerTrackListContentView.swift */; };
 		CE266D2B29807E4000D6E038 /* SingerTrackListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D2A29807E4000D6E038 /* SingerTrackListConfigurator.swift */; };
 		CE266D2D29807E8E00D6E038 /* SingerTrackListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D2C29807E8E00D6E038 /* SingerTrackListCell.swift */; };
-		CE266D4029812EB600D6E038 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D3F29812EB600D6E038 /* Optional.swift */; };
-		CE39D7CD2993C72A009F4202 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7CC2993C72A009F4202 /* String.swift */; };
 		CE39D7D12993C85F009F4202 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE39D7D32993C85F009F4202 /* Localizable.strings */; };
 		CE39D7E429941ABE009F4202 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7E329941ABE009F4202 /* Router.swift */; };
 		CE39D7E929968358009F4202 /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7E829968358009F4202 /* ViewControllers.swift */; };
@@ -86,7 +87,6 @@
 		CE39D7F2299989BE009F4202 /* CoordinatorsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7F1299989BE009F4202 /* CoordinatorsFlow.swift */; };
 		CE39D7FF299BCAA0009F4202 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7FE299BCAA0009F4202 /* UIViewController.swift */; };
 		CE39D801299BCBFC009F4202 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D800299BCBFC009F4202 /* UILabel.swift */; };
-		CE39D807299BE391009F4202 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D806299BE391009F4202 /* Error.swift */; };
 		CE39D80A299C4121009F4202 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D809299C4121009F4202 /* NSMutableAttributedString.swift */; };
 		CE39D80C299CE075009F4202 /* ConstantsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D80B299CE075009F4202 /* ConstantsError.swift */; };
 		CE39D80E299CE8AC009F4202 /* UIWindowMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D80D299CE8AC009F4202 /* UIWindowMock.swift */; };
@@ -223,6 +223,9 @@
 		CE25522A29ACB45E008944B7 /* SingerTracksViewModelInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModelInterface.swift; sourceTree = "<group>"; };
 		CE25523029ACB4B5008944B7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CE25523329ACDB0B008944B7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		CE25524929AD1449008944B7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CE25524B29AD14CD008944B7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CE25524D29AD14F6008944B7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CE266CC329802E6200D6E038 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE266CC629802E6200D6E038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewController.swift; sourceTree = "<group>"; };
@@ -237,8 +240,6 @@
 		CE266D2829807DFF00D6E038 /* SingerTrackListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackListContentView.swift; sourceTree = "<group>"; };
 		CE266D2A29807E4000D6E038 /* SingerTrackListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackListConfigurator.swift; sourceTree = "<group>"; };
 		CE266D2C29807E8E00D6E038 /* SingerTrackListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackListCell.swift; sourceTree = "<group>"; };
-		CE266D3F29812EB600D6E038 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
-		CE39D7CC2993C72A009F4202 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CE39D7D22993C85F009F4202 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE39D7D62993C90E009F4202 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CE39D7D72993C90E009F4202 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -249,7 +250,6 @@
 		CE39D7F1299989BE009F4202 /* CoordinatorsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorsFlow.swift; sourceTree = "<group>"; };
 		CE39D7FE299BCAA0009F4202 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CE39D800299BCBFC009F4202 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
-		CE39D806299BE391009F4202 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		CE39D809299C4121009F4202 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		CE39D80B299CE075009F4202 /* ConstantsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsError.swift; sourceTree = "<group>"; };
 		CE39D80D299CE8AC009F4202 /* UIWindowMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowMock.swift; sourceTree = "<group>"; };
@@ -374,6 +374,7 @@
 			children = (
 				CE25519829ACB12E008944B7 /* Optional.swift */,
 				CE25519929ACB12E008944B7 /* NSError.swift */,
+				CE25524D29AD14F6008944B7 /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -614,6 +615,7 @@
 			isa = PBXGroup;
 			children = (
 				CE2551F829ACB1C6008944B7 /* NSError.swift */,
+				CE25524B29AD14CD008944B7 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -815,11 +817,9 @@
 			isa = PBXGroup;
 			children = (
 				CE39D833299ED815009F4202 /* UIKit */,
-				CE266D3F29812EB600D6E038 /* Optional.swift */,
-				CE39D7CC2993C72A009F4202 /* String.swift */,
-				CE39D806299BE391009F4202 /* Error.swift */,
 				CE39D809299C4121009F4202 /* NSMutableAttributedString.swift */,
 				CE39D827299E60F3009F4202 /* Data.swift */,
+				CE25524929AD1449008944B7 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1247,6 +1247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE25524E29AD14F6008944B7 /* String.swift in Sources */,
 				CE2551B429ACB12E008944B7 /* Constants.swift in Sources */,
 				CE2551BB29ACB12E008944B7 /* APIHeaders.swift in Sources */,
 				CE2551BA29ACB12E008944B7 /* TrackDownloaderClientInterface.swift in Sources */,
@@ -1298,6 +1299,7 @@
 				CE25521029ACB1C6008944B7 /* AudioPlayerUseCase.swift in Sources */,
 				CE25520B29ACB1C6008944B7 /* SingerTracksWorkerUseCase.swift in Sources */,
 				CE25521129ACB1C6008944B7 /* AudioPlayerUseCaseInterface.swift in Sources */,
+				CE25524C29AD14CD008944B7 /* String.swift in Sources */,
 				CE25520629ACB1C6008944B7 /* SingerTrackDetailsUseCase.swift in Sources */,
 				CE25520E29ACB1C6008944B7 /* DownloadSingerTrackUseCaseInterface.swift in Sources */,
 				CE25523429ACDB0B008944B7 /* DataModel.swift in Sources */,
@@ -1331,10 +1333,8 @@
 				CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */,
 				CE39D832299ED251009F4202 /* UIColor.swift in Sources */,
 				CE39D7FF299BCAA0009F4202 /* UIViewController.swift in Sources */,
-				CE266D4029812EB600D6E038 /* Optional.swift in Sources */,
 				CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */,
 				CE266D2929807DFF00D6E038 /* SingerTrackListContentView.swift in Sources */,
-				CE39D7CD2993C72A009F4202 /* String.swift in Sources */,
 				CE39D801299BCBFC009F4202 /* UILabel.swift in Sources */,
 				CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */,
 				CE39D7E429941ABE009F4202 /* Router.swift in Sources */,
@@ -1342,10 +1342,10 @@
 				CE4FC56F299290D2004F281C /* ProgressView.swift in Sources */,
 				CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */,
 				CE266D0A2980335800D6E038 /* ConstantsAlert.swift in Sources */,
+				CE25524A29AD1449008944B7 /* String.swift in Sources */,
 				CE39D80A299C4121009F4202 /* NSMutableAttributedString.swift in Sources */,
 				CE39D830299ECD50009F4202 /* UIButton.swift in Sources */,
 				CE39D828299E60F3009F4202 /* Data.swift in Sources */,
-				CE39D807299BE391009F4202 /* Error.swift in Sources */,
 				CE39D7ED299969B4009F4202 /* AppRouter.swift in Sources */,
 				CE4FC55429911681004F281C /* Coordinator.swift in Sources */,
 				CE4FC5692992703F004F281C /* ConstantsSingerTrackDetailsScreen.swift in Sources */,
