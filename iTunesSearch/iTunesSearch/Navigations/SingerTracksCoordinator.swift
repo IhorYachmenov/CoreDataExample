@@ -31,9 +31,7 @@ final class SingerTracksCoordinator: Coordinator {
 
 #warning("separate model module ?, data entities")
 #warning("swift only frameworks, objc+swift, umbrella..., module.modulemap, cocoapods")
-#warning("Network extension in data layer")
-#warning("Framework test")
-#warning("Network layer Error test")
+    #warning("move existing tests")
 
     
     private func showDetailCoordinator(trackId: String) {

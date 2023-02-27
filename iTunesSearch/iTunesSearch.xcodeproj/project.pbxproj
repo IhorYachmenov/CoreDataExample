@@ -65,6 +65,7 @@
 		CE25522D29ACB45E008944B7 /* SingerTracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25522829ACB45E008944B7 /* SingerTracksViewModel.swift */; };
 		CE25522E29ACB45E008944B7 /* SingerTracksViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25522A29ACB45E008944B7 /* SingerTracksViewModelInterface.swift */; };
 		CE25523129ACB4B5008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25523029ACB4B5008944B7 /* String.swift */; };
+		CE25523429ACDB0B008944B7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25523329ACDB0B008944B7 /* DataModel.swift */; };
 		CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CC629802E6200D6E038 /* AppDelegate.swift */; };
 		CE266CCB29802E6200D6E038 /* SingerTracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */; };
 		CE266CD029802E6300D6E038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE266CCF29802E6300D6E038 /* Assets.xcassets */; };
@@ -223,6 +224,7 @@
 		CE25522829ACB45E008944B7 /* SingerTracksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModel.swift; sourceTree = "<group>"; };
 		CE25522A29ACB45E008944B7 /* SingerTracksViewModelInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModelInterface.swift; sourceTree = "<group>"; };
 		CE25523029ACB4B5008944B7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CE25523329ACDB0B008944B7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		CE266CC329802E6200D6E038 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE266CC629802E6200D6E038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE266CCA29802E6200D6E038 /* SingerTracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksViewController.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 		CE25515A29ACAFEC008944B7 /* Domain Layer */ = {
 			isa = PBXGroup;
 			children = (
+				CE25523229ACDAEF008944B7 /* Entities */,
 				CE25520229ACB1C6008944B7 /* Common Use Cases */,
 				CE2551F029ACB1C5008944B7 /* Singer Track Details Screen */,
 				CE2551F929ACB1C6008944B7 /* Singer Tracks Screen */,
@@ -723,6 +726,14 @@
 				CE25523029ACB4B5008944B7 /* String.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE25523229ACDAEF008944B7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CE25523329ACDB0B008944B7 /* DataModel.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		CE266CBA29802E6200D6E038 = {
@@ -1311,6 +1322,7 @@
 				CE25521129ACB1C6008944B7 /* AudioPlayerUseCaseInterface.swift in Sources */,
 				CE25520629ACB1C6008944B7 /* SingerTrackDetailsUseCase.swift in Sources */,
 				CE25520E29ACB1C6008944B7 /* DownloadSingerTrackUseCaseInterface.swift in Sources */,
+				CE25523429ACDB0B008944B7 /* DataModel.swift in Sources */,
 				CE25520D29ACB1C6008944B7 /* StorageSingerTracksUseCaseInterface.swift in Sources */,
 				CE25520829ACB1C6008944B7 /* Constants.swift in Sources */,
 				CE25520A29ACB1C6008944B7 /* DownloadSingerTrackUseCase.swift in Sources */,

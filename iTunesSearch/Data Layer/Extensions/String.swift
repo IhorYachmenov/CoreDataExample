@@ -6,13 +6,10 @@
 //
 
 import Foundation
+
 extension String {
 //    var localized: String {
 //        NSLocalizedString(self, comment: "")
-//    }
-//
-//    var toDollars: String {
-//        "$\(self)"
 //    }
     
     var parceDateFormat: String {
@@ -28,9 +25,4 @@ extension String {
             return self
         }
     }
-    
-//    // For Testing
-//    static func localizedStringWithArgument(key: String, arguments: [CVarArg]) -> String {
-//        return String(format: key, arguments: arguments)
-//    }
 }
