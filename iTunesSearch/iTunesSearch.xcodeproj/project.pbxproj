@@ -339,10 +339,10 @@
 			isa = PBXGroup;
 			children = (
 				CE25513A29ACAFD6008944B7 /* Infrastructure.h */,
-				CE25519529ACB12E008944B7 /* Constants */,
-				CE25519729ACB12E008944B7 /* Extension */,
 				CE25519A29ACB12E008944B7 /* Media Clients */,
 				CE25519F29ACB12E008944B7 /* Network Clients */,
+				CE25519529ACB12E008944B7 /* Constants */,
+				CE25519729ACB12E008944B7 /* Extension */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -351,11 +351,11 @@
 			isa = PBXGroup;
 			children = (
 				CE25514B29ACAFE3008944B7 /* Data_Layer.h */,
-				CE2551C629ACB186008944B7 /* Constants */,
 				CE2551C829ACB186008944B7 /* Entities */,
-				CE2551DD29ACB186008944B7 /* Extensions */,
-				CE2551CA29ACB186008944B7 /* PersistentStorage */,
 				CE2551D929ACB186008944B7 /* Repositories */,
+				CE2551CA29ACB186008944B7 /* PersistentStorage */,
+				CE2551C629ACB186008944B7 /* Constants */,
+				CE2551DD29ACB186008944B7 /* Extensions */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -365,10 +365,10 @@
 			children = (
 				CE25515B29ACAFEC008944B7 /* Domain_Layer.h */,
 				CE25520229ACB1C6008944B7 /* Common Use Cases */,
-				CE2551F529ACB1C6008944B7 /* Constants */,
-				CE2551F729ACB1C6008944B7 /* Extensions */,
 				CE2551F029ACB1C5008944B7 /* Singer Track Details Screen */,
 				CE2551F929ACB1C6008944B7 /* Singer Tracks Screen */,
+				CE2551F529ACB1C6008944B7 /* Constants */,
+				CE2551F729ACB1C6008944B7 /* Extensions */,
 			);
 			path = "Domain Layer";
 			sourceTree = "<group>";
@@ -401,8 +401,8 @@
 		CE25519B29ACB12E008944B7 /* Audio Client */ = {
 			isa = PBXGroup;
 			children = (
-				CE25519C29ACB12E008944B7 /* AudioClient.swift */,
 				CE25519D29ACB12E008944B7 /* Interfaces */,
+				CE25519C29ACB12E008944B7 /* AudioClient.swift */,
 			);
 			path = "Audio Client";
 			sourceTree = "<group>";
@@ -418,9 +418,9 @@
 		CE25519F29ACB12E008944B7 /* Network Clients */ = {
 			isa = PBXGroup;
 			children = (
+				CE2551B029ACB12E008944B7 /* Image Downloader */,
 				CE2551A029ACB12E008944B7 /* Track Downloader */,
 				CE2551A429ACB12E008944B7 /* REST API */,
-				CE2551B029ACB12E008944B7 /* Image Downloader */,
 			);
 			path = "Network Clients";
 			sourceTree = "<group>";
@@ -428,8 +428,8 @@
 		CE2551A029ACB12E008944B7 /* Track Downloader */ = {
 			isa = PBXGroup;
 			children = (
-				CE2551A129ACB12E008944B7 /* TrackDownloaderClient.swift */,
 				CE2551A229ACB12E008944B7 /* Interfaces */,
+				CE2551A129ACB12E008944B7 /* TrackDownloaderClient.swift */,
 			);
 			path = "Track Downloader";
 			sourceTree = "<group>";
@@ -445,13 +445,13 @@
 		CE2551A429ACB12E008944B7 /* REST API */ = {
 			isa = PBXGroup;
 			children = (
+				CE2551AC29ACB12E008944B7 /* Entities */,
+				CE2551AA29ACB12E008944B7 /* Services */,
 				CE2551A529ACB12E008944B7 /* APIHeaders.swift */,
 				CE2551A629ACB12E008944B7 /* ResponseHandler+Extension.swift */,
 				CE2551A729ACB12E008944B7 /* APIEnvironment.swift */,
 				CE2551A829ACB12E008944B7 /* APILoader.swift */,
 				CE2551A929ACB12E008944B7 /* RequestHandler+Extension.swift */,
-				CE2551AA29ACB12E008944B7 /* Services */,
-				CE2551AC29ACB12E008944B7 /* Entities */,
 				CE2551AE29ACB12E008944B7 /* APIHandler.swift */,
 				CE2551AF29ACB12E008944B7 /* APIPath.swift */,
 			);
@@ -477,8 +477,8 @@
 		CE2551B029ACB12E008944B7 /* Image Downloader */ = {
 			isa = PBXGroup;
 			children = (
-				CE2551B129ACB12E008944B7 /* ImageDownloaderClient.swift */,
 				CE2551B229ACB12E008944B7 /* Interfaces */,
+				CE2551B129ACB12E008944B7 /* ImageDownloaderClient.swift */,
 			);
 			path = "Image Downloader";
 			sourceTree = "<group>";
@@ -518,9 +518,9 @@
 		CE2551CB29ACB186008944B7 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				CE2551D729ACB186008944B7 /* Interfaces */,
 				CE2551CC29ACB186008944B7 /* QueryWorkerStorage.swift */,
 				CE2551CD29ACB186008944B7 /* CoreDataStorage */,
-				CE2551D729ACB186008944B7 /* Interfaces */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -528,10 +528,10 @@
 		CE2551CD29ACB186008944B7 /* CoreDataStorage */ = {
 			isa = PBXGroup;
 			children = (
-				CE2551CE29ACB186008944B7 /* CoreDataStorageManager.swift */,
-				CE2551CF29ACB186008944B7 /* Mapper */,
-				CE2551D129ACB186008944B7 /* SingerTrackDataModel.xcdatamodeld */,
 				CE2551D329ACB186008944B7 /* Entities */,
+				CE2551CF29ACB186008944B7 /* Mapper */,
+				CE2551CE29ACB186008944B7 /* CoreDataStorageManager.swift */,
+				CE2551D129ACB186008944B7 /* SingerTrackDataModel.xcdatamodeld */,
 			);
 			path = CoreDataStorage;
 			sourceTree = "<group>";
@@ -565,8 +565,8 @@
 		CE2551D929ACB186008944B7 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				CE2551DA29ACB186008944B7 /* PersistentStorageRepository.swift */,
 				CE2551DB29ACB186008944B7 /* Interfaces */,
+				CE2551DA29ACB186008944B7 /* PersistentStorageRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -600,8 +600,8 @@
 		CE2551F129ACB1C5008944B7 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				CE2551F229ACB1C5008944B7 /* SingerTrackDetailsUseCase.swift */,
 				CE2551F329ACB1C5008944B7 /* Interfaces */,
+				CE2551F229ACB1C5008944B7 /* SingerTrackDetailsUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -641,10 +641,10 @@
 		CE2551FA29ACB1C6008944B7 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				CE2551FE29ACB1C6008944B7 /* Interfaces */,
 				CE2551FB29ACB1C6008944B7 /* DownloadSingerTrackUseCase.swift */,
 				CE2551FC29ACB1C6008944B7 /* SingerTracksWorkerUseCase.swift */,
 				CE2551FD29ACB1C6008944B7 /* StorageSingerTracksUseCase.swift */,
-				CE2551FE29ACB1C6008944B7 /* Interfaces */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -662,8 +662,8 @@
 		CE25520229ACB1C6008944B7 /* Common Use Cases */ = {
 			isa = PBXGroup;
 			children = (
-				CE25520329ACB1C6008944B7 /* AudioPlayerUseCase.swift */,
 				CE25520429ACB1C6008944B7 /* Interfaces */,
+				CE25520329ACB1C6008944B7 /* AudioPlayerUseCase.swift */,
 			);
 			path = "Common Use Cases";
 			sourceTree = "<group>";
@@ -690,8 +690,8 @@
 		CE25522229ACB45E008944B7 /* Singer Track Details Screen */ = {
 			isa = PBXGroup;
 			children = (
-				CE25522329ACB45E008944B7 /* SingerTrackDetailsViewModel.swift */,
 				CE25522429ACB45E008944B7 /* Interfaces */,
+				CE25522329ACB45E008944B7 /* SingerTrackDetailsViewModel.swift */,
 			);
 			path = "Singer Track Details Screen";
 			sourceTree = "<group>";
@@ -715,8 +715,8 @@
 		CE25522729ACB45E008944B7 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				CE25522829ACB45E008944B7 /* SingerTracksViewModel.swift */,
 				CE25522929ACB45E008944B7 /* Interfaces */,
+				CE25522829ACB45E008944B7 /* SingerTracksViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -741,12 +741,12 @@
 			isa = PBXGroup;
 			children = (
 				CE266CC529802E6200D6E038 /* iTunesSearch */,
+				CE25521829ACB423008944B7 /* Presentation Layer */,
+				CE25515A29ACAFEC008944B7 /* Domain Layer */,
+				CE25514A29ACAFE3008944B7 /* Data Layer */,
+				CE25513929ACAFD6008944B7 /* Infrastructure */,
 				CE266CDC29802E6400D6E038 /* iTunesSearchTests */,
 				CE266CE629802E6400D6E038 /* iTunesSearchUITests */,
-				CE25513929ACAFD6008944B7 /* Infrastructure */,
-				CE25514A29ACAFE3008944B7 /* Data Layer */,
-				CE25515A29ACAFEC008944B7 /* Domain Layer */,
-				CE25521829ACB423008944B7 /* Presentation Layer */,
 				CE266CC429802E6200D6E038 /* Products */,
 			);
 			sourceTree = "<group>";
