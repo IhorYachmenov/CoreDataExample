@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE25513B29ACAFD6008944B7 /* Infrastructure.h in Headers */ = {isa = PBXBuildFile; fileRef = CE25513A29ACAFD6008944B7 /* Infrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE25513E29ACAFD6008944B7 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25513829ACAFD6008944B7 /* Infrastructure.framework */; };
 		CE25513F29ACAFD6008944B7 /* Infrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE25513829ACAFD6008944B7 /* Infrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE25514C29ACAFE3008944B7 /* Data_Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = CE25514B29ACAFE3008944B7 /* Data_Layer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE25514F29ACAFE3008944B7 /* Data_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25514929ACAFE3008944B7 /* Data_Layer.framework */; };
 		CE25515029ACAFE3008944B7 /* Data_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE25514929ACAFE3008944B7 /* Data_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE25515C29ACAFEC008944B7 /* Domain_Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = CE25515B29ACAFEC008944B7 /* Domain_Layer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE25515F29ACAFEC008944B7 /* Domain_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25515929ACAFEC008944B7 /* Domain_Layer.framework */; };
 		CE25516029ACAFEC008944B7 /* Domain_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE25515929ACAFEC008944B7 /* Domain_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE2551B429ACB12E008944B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25519629ACB12E008944B7 /* Constants.swift */; };
@@ -61,7 +58,6 @@
 		CE25520F29ACB1C6008944B7 /* SingerTracksWorkerUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25520129ACB1C6008944B7 /* SingerTracksWorkerUseCaseInterface.swift */; };
 		CE25521029ACB1C6008944B7 /* AudioPlayerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25520329ACB1C6008944B7 /* AudioPlayerUseCase.swift */; };
 		CE25521129ACB1C6008944B7 /* AudioPlayerUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25520529ACB1C6008944B7 /* AudioPlayerUseCaseInterface.swift */; };
-		CE25521A29ACB423008944B7 /* Presentation_Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = CE25521929ACB423008944B7 /* Presentation_Layer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE25521D29ACB423008944B7 /* Presentation_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25521729ACB423008944B7 /* Presentation_Layer.framework */; };
 		CE25521E29ACB423008944B7 /* Presentation_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE25521729ACB423008944B7 /* Presentation_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE25522B29ACB45E008944B7 /* SingerTrackDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25522329ACB45E008944B7 /* SingerTrackDetailsViewModel.swift */; };
@@ -174,11 +170,8 @@
 
 /* Begin PBXFileReference section */
 		CE25513829ACAFD6008944B7 /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE25513A29ACAFD6008944B7 /* Infrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infrastructure.h; sourceTree = "<group>"; };
 		CE25514929ACAFE3008944B7 /* Data_Layer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data_Layer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE25514B29ACAFE3008944B7 /* Data_Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data_Layer.h; sourceTree = "<group>"; };
 		CE25515929ACAFEC008944B7 /* Domain_Layer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain_Layer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE25515B29ACAFEC008944B7 /* Domain_Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain_Layer.h; sourceTree = "<group>"; };
 		CE25519629ACB12E008944B7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE25519829ACB12E008944B7 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		CE25519929ACB12E008944B7 /* NSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
@@ -225,7 +218,6 @@
 		CE25520329ACB1C6008944B7 /* AudioPlayerUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerUseCase.swift; sourceTree = "<group>"; };
 		CE25520529ACB1C6008944B7 /* AudioPlayerUseCaseInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerUseCaseInterface.swift; sourceTree = "<group>"; };
 		CE25521729ACB423008944B7 /* Presentation_Layer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation_Layer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE25521929ACB423008944B7 /* Presentation_Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation_Layer.h; sourceTree = "<group>"; };
 		CE25522329ACB45E008944B7 /* SingerTrackDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsViewModel.swift; sourceTree = "<group>"; };
 		CE25522529ACB45E008944B7 /* SingerTrackDetailsViewModelInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsViewModelInterface.swift; sourceTree = "<group>"; };
 		CE25522829ACB45E008944B7 /* SingerTracksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModel.swift; sourceTree = "<group>"; };
@@ -338,7 +330,6 @@
 		CE25513929ACAFD6008944B7 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				CE25513A29ACAFD6008944B7 /* Infrastructure.h */,
 				CE25519A29ACB12E008944B7 /* Media Clients */,
 				CE25519F29ACB12E008944B7 /* Network Clients */,
 				CE25519529ACB12E008944B7 /* Constants */,
@@ -350,7 +341,6 @@
 		CE25514A29ACAFE3008944B7 /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
-				CE25514B29ACAFE3008944B7 /* Data_Layer.h */,
 				CE2551C829ACB186008944B7 /* Entities */,
 				CE2551D929ACB186008944B7 /* Repositories */,
 				CE2551CA29ACB186008944B7 /* PersistentStorage */,
@@ -363,7 +353,6 @@
 		CE25515A29ACAFEC008944B7 /* Domain Layer */ = {
 			isa = PBXGroup;
 			children = (
-				CE25515B29ACAFEC008944B7 /* Domain_Layer.h */,
 				CE25520229ACB1C6008944B7 /* Common Use Cases */,
 				CE2551F029ACB1C5008944B7 /* Singer Track Details Screen */,
 				CE2551F929ACB1C6008944B7 /* Singer Tracks Screen */,
@@ -679,7 +668,6 @@
 		CE25521829ACB423008944B7 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
-				CE25521929ACB423008944B7 /* Presentation_Layer.h */,
 				CE25522229ACB45E008944B7 /* Singer Track Details Screen */,
 				CE25522629ACB45E008944B7 /* Singer Tracks Screen */,
 				CE25522F29ACB49A008944B7 /* Extensions */,
@@ -993,7 +981,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE25513B29ACAFD6008944B7 /* Infrastructure.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1001,7 +988,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE25514C29ACAFE3008944B7 /* Data_Layer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,7 +995,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE25515C29ACAFEC008944B7 /* Domain_Layer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1017,7 +1002,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE25521A29ACB423008944B7 /* Presentation_Layer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

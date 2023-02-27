@@ -7,6 +7,7 @@
 
 import Data_Layer
 import Infrastructure
+import Foundation
 
 public extension PresentationModel {
     struct SingerTrackDetails {

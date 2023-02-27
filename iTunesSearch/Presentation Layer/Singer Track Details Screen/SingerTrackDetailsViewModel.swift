@@ -6,6 +6,7 @@
 //
 
 import Domain_Layer
+import Foundation
 
 public final class SingerTrackDetailsViewModel: SingerTrackDetailsViewModelInterface {
     private var trackId: String

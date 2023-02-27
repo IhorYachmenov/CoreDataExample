@@ -6,6 +6,7 @@
 //
 
 import Data_Layer
+import Foundation
 
 public protocol SingerTrackDetailsUseCaseInterface {
     func downloadImage(url: String?, completion: @escaping (Result<Data, Error>) -> ())

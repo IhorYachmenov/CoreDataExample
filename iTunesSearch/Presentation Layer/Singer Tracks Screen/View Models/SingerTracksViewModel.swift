@@ -6,6 +6,7 @@
 //
 
 import Domain_Layer
+import Foundation
 
 public final class SingerTracksViewModel: SingerTracksViewModelInterface {
     /// Data Source

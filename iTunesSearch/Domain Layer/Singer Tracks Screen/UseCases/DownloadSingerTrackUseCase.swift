@@ -7,6 +7,7 @@
 
 import Data_Layer
 import Infrastructure
+import Foundation
 
 public final class DownloadSingerTrackUseCase {
     public init() {}
