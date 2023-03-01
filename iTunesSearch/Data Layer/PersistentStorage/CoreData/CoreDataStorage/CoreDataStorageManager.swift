@@ -8,14 +8,18 @@
 import Foundation
 import CoreData
 
+//image list -f --section=__TEXT image list -b -o  otool -L Data_Layer.framework/Data_Layer
+
+
 final class CoreDataStorageManager {
     static let shared = CoreDataStorageManager()
     
     init() {}
 
     private lazy var persistentContainer: NSPersistentContainer = {
-        let bundle = Bundle(for: CoreDataStorageManager.self)
-        
+        let bundle = Bundle.main//(identifier: "com.example-itunes.presentation.domain.data")!
+        let path = bundle.urls(forResourcesWithExtension: "momd", subdirectory: "Frameworks")//path(forResource: "SingerTrackDataModel", ofType: nil)
+        print(path)
         guard
             let modelUrl = bundle.url(forResource: "SingerTrackDataModel", withExtension: "momd"),
             let model = NSManagedObjectModel(contentsOf: modelUrl)
