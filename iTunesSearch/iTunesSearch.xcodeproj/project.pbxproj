@@ -103,6 +103,8 @@
 		CE60AADE29AFA4DE00A09A00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE39D7D32993C85F009F4202 /* Localizable.strings */; };
 		CE60AADF29AFAB4D00A09A00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE39D7D32993C85F009F4202 /* Localizable.strings */; };
 		CE60AAE029AFAB4E00A09A00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE39D7D32993C85F009F4202 /* Localizable.strings */; };
+		CE60AB0B29AFB61900A09A00 /* TestFrameworkLocalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE60AB0829AFB1C700A09A00 /* TestFrameworkLocalization.framework */; };
+		CE60AB0C29AFB61900A09A00 /* TestFrameworkLocalization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE60AB0829AFB1C700A09A00 /* TestFrameworkLocalization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +150,13 @@
 			remoteGlobalIDString = CE266CC229802E6200D6E038;
 			remoteInfo = iTunesSearch;
 		};
+		CE60AB0729AFB1C700A09A00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE60AB0329AFB1C700A09A00 /* TestFrameworkLocalization.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE60AAEB29AFAEEC00A09A00;
+			remoteInfo = TestFrameworkLocalization;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -157,6 +166,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CE60AB0C29AFB61900A09A00 /* TestFrameworkLocalization.framework in Embed Frameworks */,
 				CE25526529AE2F6F008944B7 /* Data_Layer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -273,6 +283,7 @@
 		CE4FC56E299290D2004F281C /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		CE60AAD729AF69C500A09A00 /* libStaticTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStaticTest.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE60AAD929AF69C500A09A00 /* StaticTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTest.swift; sourceTree = "<group>"; };
+		CE60AB0329AFB1C700A09A00 /* TestFrameworkLocalization.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TestFrameworkLocalization.xcodeproj; path = ../../TestFrameworkLocalization/TestFrameworkLocalization.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE25521D29ACB423008944B7 /* Presentation_Layer.framework in Frameworks */,
+				CE60AB0B29AFB61900A09A00 /* TestFrameworkLocalization.framework in Frameworks */,
 				CE25515F29ACAFEC008944B7 /* Domain_Layer.framework in Frameworks */,
 				CE25526429AE2F6F008944B7 /* Data_Layer.framework in Frameworks */,
 				CE25513E29ACAFD6008944B7 /* Infrastructure.framework in Frameworks */,
@@ -751,6 +763,7 @@
 		CE266CBA29802E6200D6E038 = {
 			isa = PBXGroup;
 			children = (
+				CE60AB0329AFB1C700A09A00 /* TestFrameworkLocalization.xcodeproj */,
 				CE266CC529802E6200D6E038 /* iTunesSearch */,
 				CE25521829ACB423008944B7 /* Presentation Layer */,
 				CE25515A29ACAFEC008944B7 /* Domain Layer */,
@@ -994,6 +1007,14 @@
 			path = StaticTest;
 			sourceTree = "<group>";
 		};
+		CE60AB0429AFB1C700A09A00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE60AB0829AFB1C700A09A00 /* TestFrameworkLocalization.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1228,6 +1249,12 @@
 			mainGroup = CE266CBA29802E6200D6E038;
 			productRefGroup = CE266CC429802E6200D6E038 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CE60AB0429AFB1C700A09A00 /* Products */;
+					ProjectRef = CE60AB0329AFB1C700A09A00 /* TestFrameworkLocalization.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CE266CC229802E6200D6E038 /* iTunesSearch */,
@@ -1241,6 +1268,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CE60AB0829AFB1C700A09A00 /* TestFrameworkLocalization.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TestFrameworkLocalization.framework;
+			remoteRef = CE60AB0729AFB1C700A09A00 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CE25513629ACAFD6008944B7 /* Resources */ = {
@@ -1884,7 +1921,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = YSQD9849J2;
-				FRAMEWORK_SEARCH_PATHS = "/Users/user/Desktop/CoreDataExample/iTunesSearch/Data\" \"Layer";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iTunesSearch/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1913,7 +1950,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YSQD9849J2;
-				FRAMEWORK_SEARCH_PATHS = "/Users/user/Desktop/CoreDataExample/iTunesSearch/Data\" \"Layer";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iTunesSearch/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

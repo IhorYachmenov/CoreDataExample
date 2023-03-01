@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+//import TestFrameworkLocalization
 
 final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSFetchedResultsControllerDelegate, QueryWorkerStoragable {
     private var fetchedResultsController: NSFetchedResultsController<Entity>!
@@ -64,6 +65,7 @@ final class QueryWorkerStorage<DataType, Entity: NSManagedObject>: NSObject, NSF
                     self?.coreDataManager.privateQueueManageObjectContext.reset()
                     
                     completion(nil)
+//                    completion(NSError.error(msg: LocalizationFramework.ErrorNotFount))
                 } catch {
                     completion(error)
                 }
