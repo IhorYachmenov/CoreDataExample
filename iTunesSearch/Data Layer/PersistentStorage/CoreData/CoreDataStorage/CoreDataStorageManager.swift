@@ -13,16 +13,19 @@ import CoreData
 
 final class CoreDataStorageManager {
     static let shared = CoreDataStorageManager()
-    
+//    com.example-itunes.presentation.domain.data.data-bundle
     init() {}
 
     private lazy var persistentContainer: NSPersistentContainer = {
 //        let bundle = Bundle.main//(identifier: "com.example-itunes.presentation.domain.data")!
-        let bundle = Bundle(for: CoreDataStorageManager.self)
-//        let path = bundle.urls(forResourcesWithExtension: "momd", subdirectory: "Frameworks")//path(forResource: "SingerTrackDataModel", ofType: nil)
-//        print(path)
+//        let bundle = Bundle(for: CoreDataStorageManager.self)
+
+//        let bundlePath = Bundle.main.path(forResource: "DataLayerResourcesBundle", ofType: "bundle")!
+        let bundle = Bundle.main
+        
         guard
-            let modelUrl = bundle.url(forResource: "SingerTrackDataModel", withExtension: "momd"),
+//            let modelUrl = bundle.url(forResource: "SingerTrackDataModel", withExtension: "momd"),
+            let modelUrl = bundle.url(forResource: "SingerTrackDataModelN", withExtension: "momd"),
             let model = NSManagedObjectModel(contentsOf: modelUrl)
         else {
             fatalError("No model")
