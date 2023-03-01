@@ -6,6 +6,7 @@
   
 */
 
+//MARK: View Layer
 // Track and Track detail screens text
 Download-Track = "Download 1 Track";
 Collection-name = "Collection name:";
@@ -25,3 +26,25 @@ Demo-URL-corrupted = "Demo URL corrupted";
 
 // Argument testing
 greeting = "Hi, %@ - %@!";
+
+//MARK: Presentaion Layer
+//MARK: Domain Layer
+Element-a-nil = "Data nil";
+
+//MARK: Data Layer
+Cant-save-data-to-data-base = "Can't save data to data base";
+Data-not-found = "Fetching data not found";
+
+//MARK: Infrastructure Layer
+Image-Client-Url-Empty = "Image URL is empty";
+Image-Client-Not-Valid-Url = "Image URL not valid";
+Image-Client-Downloading-Error = "Can't donwnload image";
+Image-Client-Data-Corrupted = "Image corrupted";
+Track-Downloader-Client-UrlEmpty = "Track URL is Empty";
+Track-Downloader-Client-Not-Valid-Url = "Track URL not valid";
+Track-Downloader-Client-File-System-Url-Not-Exist = "Track downloaded but can't be saved to File System";
+Rest-Api-Url-Responce-Nil = "Requests responce nil";
+Rest-Api-Request-Data-Nil = "Requests successfull but data nil";
+Rest-Api-Parsing-Problem = "Can't parce requests data";
+Rest-Api-Unknown = "HTTP client - unknown error";
+

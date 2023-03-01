@@ -17,9 +17,10 @@ final class CoreDataStorageManager {
     init() {}
 
     private lazy var persistentContainer: NSPersistentContainer = {
-        let bundle = Bundle.main//(identifier: "com.example-itunes.presentation.domain.data")!
-        let path = bundle.urls(forResourcesWithExtension: "momd", subdirectory: "Frameworks")//path(forResource: "SingerTrackDataModel", ofType: nil)
-        print(path)
+//        let bundle = Bundle.main//(identifier: "com.example-itunes.presentation.domain.data")!
+        let bundle = Bundle(for: CoreDataStorageManager.self)
+//        let path = bundle.urls(forResourcesWithExtension: "momd", subdirectory: "Frameworks")//path(forResource: "SingerTrackDataModel", ofType: nil)
+//        print(path)
         guard
             let modelUrl = bundle.url(forResource: "SingerTrackDataModel", withExtension: "momd"),
             let model = NSManagedObjectModel(contentsOf: modelUrl)

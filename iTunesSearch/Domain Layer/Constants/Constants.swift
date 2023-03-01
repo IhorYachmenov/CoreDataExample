@@ -10,7 +10,7 @@ import Foundation
 struct Constants {
     struct Error {
         struct DownloadSingerTrackUseCase {
-            static let nilData = "Element-a-nil"
+            static let nilData = "Element-a-nil".localized
         }
     }
 }

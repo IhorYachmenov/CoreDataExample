@@ -100,6 +100,9 @@
 		CE4FC5692992703F004F281C /* ConstantsSingerTrackDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC5682992703F004F281C /* ConstantsSingerTrackDetailsScreen.swift */; };
 		CE4FC56F299290D2004F281C /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC56E299290D2004F281C /* ProgressView.swift */; };
 		CE60AADA29AF69C500A09A00 /* StaticTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE60AAD929AF69C500A09A00 /* StaticTest.swift */; };
+		CE60AADE29AFA4DE00A09A00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE39D7D32993C85F009F4202 /* Localizable.strings */; };
+		CE60AADF29AFAB4D00A09A00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE39D7D32993C85F009F4202 /* Localizable.strings */; };
+		CE60AAE029AFAB4E00A09A00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE39D7D32993C85F009F4202 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1244,6 +1247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE60AADE29AFA4DE00A09A00 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1251,6 +1255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE60AADF29AFAB4D00A09A00 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1258,6 +1263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE60AAE029AFAB4E00A09A00 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1576,7 +1582,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
+				MACH_O_TYPE = mh_dylib;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example-itunes.presentation.domain.data";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1608,7 +1614,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
+				MACH_O_TYPE = mh_dylib;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Data-Layer";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
