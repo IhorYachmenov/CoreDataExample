@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import Data_Model_Layer
 
 extension SingerTrack {
     convenience init(query: DataModel.SingerTrack, insertInto context: NSManagedObjectContext) {

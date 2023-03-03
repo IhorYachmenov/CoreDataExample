@@ -5,9 +5,10 @@
 //  Created by user on 24.01.2023.
 //
 
+import Foundation
 import Data_Layer
 import Infrastructure
-import Foundation
+import Data_Model_Layer
 
 final class DownloadSingerTrackUseCase {
     init() {}

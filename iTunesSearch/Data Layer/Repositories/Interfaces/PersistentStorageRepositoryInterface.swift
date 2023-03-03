@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Data_Model_Layer
 
 public protocol PersistentStorageRepositoryInterface {
     func observeData(completion: @escaping ([DataModel.SingerTrack]) -> ())

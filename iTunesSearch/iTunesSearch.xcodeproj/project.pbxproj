@@ -10,7 +10,6 @@
 		CE25513E29ACAFD6008944B7 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25513829ACAFD6008944B7 /* Infrastructure.framework */; };
 		CE25515F29ACAFEC008944B7 /* Domain_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25515929ACAFEC008944B7 /* Domain_Layer.framework */; };
 		CE2551B429ACB12E008944B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25519629ACB12E008944B7 /* Constants.swift */; };
-		CE2551B529ACB12E008944B7 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25519829ACB12E008944B7 /* Optional.swift */; };
 		CE2551B629ACB12E008944B7 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25519929ACB12E008944B7 /* NSError.swift */; };
 		CE2551B729ACB12E008944B7 /* AudioClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25519C29ACB12E008944B7 /* AudioClient.swift */; };
 		CE2551B829ACB12E008944B7 /* AudioClientInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25519E29ACB12E008944B7 /* AudioClientInterface.swift */; };
@@ -59,7 +58,6 @@
 		CE25522D29ACB45E008944B7 /* SingerTracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25522829ACB45E008944B7 /* SingerTracksViewModel.swift */; };
 		CE25522E29ACB45E008944B7 /* SingerTracksViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25522A29ACB45E008944B7 /* SingerTracksViewModelInterface.swift */; };
 		CE25523129ACB4B5008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25523029ACB4B5008944B7 /* String.swift */; };
-		CE25523429ACDB0B008944B7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25523329ACDB0B008944B7 /* DataModel.swift */; };
 		CE25524A29AD1449008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25524929AD1449008944B7 /* String.swift */; };
 		CE25524C29AD14CD008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25524B29AD14CD008944B7 /* String.swift */; };
 		CE25524E29AD14F6008944B7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE25524D29AD14F6008944B7 /* String.swift */; };
@@ -95,6 +93,11 @@
 		CE45E09829B1155F00073E46 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E09729B1155F00073E46 /* NetworkModel.swift */; };
 		CE45E09C29B115C700073E46 /* MediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E09B29B115C700073E46 /* MediaModel.swift */; };
 		CE45E0A029B1163F00073E46 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E09F29B1163F00073E46 /* String.swift */; };
+		CE45E0A229B1FF6600073E46 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0A129B1FF6600073E46 /* Optional.swift */; };
+		CE45E0A329B205AD00073E46 /* Data_Model_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */; };
+		CE45E0A829B205B700073E46 /* Data_Model_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */; };
+		CE45E0AD29B205C100073E46 /* Data_Model_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */; };
+		CE45E0B229B205C800073E46 /* Data_Model_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */; };
 		CE4FC55429911681004F281C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55329911681004F281C /* Coordinator.swift */; };
 		CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55529911745004F281C /* AppCoordinator.swift */; };
 		CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */; };
@@ -106,7 +109,6 @@
 		CE60AADE29AFA4DE00A09A00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE39D7D32993C85F009F4202 /* Localizable.strings */; };
 		CE60AADF29AFAB4D00A09A00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE39D7D32993C85F009F4202 /* Localizable.strings */; };
 		CE60AAE029AFAB4E00A09A00 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE39D7D32993C85F009F4202 /* Localizable.strings */; };
-		CE67BB4229B0CD8D00D192D9 /* Data_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25514929ACAFE3008944B7 /* Data_Layer.framework */; };
 		CE67BB4729B0CDA700D192D9 /* Data_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25514929ACAFE3008944B7 /* Data_Layer.framework */; };
 		CE67BB4C29B0CDC100D192D9 /* Domain_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25515929ACAFEC008944B7 /* Domain_Layer.framework */; };
 		CE67BB5129B0CE0500D192D9 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25513829ACAFD6008944B7 /* Infrastructure.framework */; };
@@ -158,12 +160,33 @@
 			remoteGlobalIDString = CE266CC229802E6200D6E038;
 			remoteInfo = iTunesSearch;
 		};
-		CE67BB4429B0CD8D00D192D9 /* PBXContainerItemProxy */ = {
+		CE45E0A529B205AD00073E46 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CE266CBB29802E6200D6E038 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CE25514829ACAFE3008944B7;
-			remoteInfo = "Data Layer";
+			remoteGlobalIDString = CE67BB5C29B10FDD00D192D9;
+			remoteInfo = "Data Model Layer";
+		};
+		CE45E0AA29B205B700073E46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE266CBB29802E6200D6E038 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE67BB5C29B10FDD00D192D9;
+			remoteInfo = "Data Model Layer";
+		};
+		CE45E0AF29B205C100073E46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE266CBB29802E6200D6E038 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE67BB5C29B10FDD00D192D9;
+			remoteInfo = "Data Model Layer";
+		};
+		CE45E0B429B205C800073E46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE266CBB29802E6200D6E038 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE67BB5C29B10FDD00D192D9;
+			remoteInfo = "Data Model Layer";
 		};
 		CE67BB4929B0CDA700D192D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -214,7 +237,6 @@
 		CE25514929ACAFE3008944B7 /* Data_Layer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data_Layer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE25515929ACAFEC008944B7 /* Domain_Layer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain_Layer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE25519629ACB12E008944B7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CE25519829ACB12E008944B7 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		CE25519929ACB12E008944B7 /* NSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
 		CE25519C29ACB12E008944B7 /* AudioClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioClient.swift; sourceTree = "<group>"; };
 		CE25519E29ACB12E008944B7 /* AudioClientInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioClientInterface.swift; sourceTree = "<group>"; };
@@ -264,7 +286,6 @@
 		CE25522829ACB45E008944B7 /* SingerTracksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModel.swift; sourceTree = "<group>"; };
 		CE25522A29ACB45E008944B7 /* SingerTracksViewModelInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingerTracksViewModelInterface.swift; sourceTree = "<group>"; };
 		CE25523029ACB4B5008944B7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		CE25523329ACDB0B008944B7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		CE25524929AD1449008944B7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CE25524B29AD14CD008944B7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CE25524D29AD14F6008944B7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -305,6 +326,7 @@
 		CE45E09729B1155F00073E46 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		CE45E09B29B115C700073E46 /* MediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModel.swift; sourceTree = "<group>"; };
 		CE45E09F29B1163F00073E46 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CE45E0A129B1FF6600073E46 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		CE4FC55329911681004F281C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CE4FC55529911745004F281C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksCoordinator.swift; sourceTree = "<group>"; };
@@ -321,6 +343,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE45E0B229B205C800073E46 /* Data_Model_Layer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +351,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE45E0AD29B205C100073E46 /* Data_Model_Layer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE67BB4729B0CDA700D192D9 /* Data_Layer.framework in Frameworks */,
+				CE45E0A829B205B700073E46 /* Data_Model_Layer.framework in Frameworks */,
 				CE67BB5129B0CE0500D192D9 /* Infrastructure.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,8 +369,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE45E0A329B205AD00073E46 /* Data_Model_Layer.framework in Frameworks */,
 				CE67BB4C29B0CDC100D192D9 /* Domain_Layer.framework in Frameworks */,
-				CE67BB4229B0CD8D00D192D9 /* Data_Layer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +436,6 @@
 		CE25515A29ACAFEC008944B7 /* Domain Layer */ = {
 			isa = PBXGroup;
 			children = (
-				CE25523229ACDAEF008944B7 /* Entities */,
 				CE25520229ACB1C6008944B7 /* Common Use Cases */,
 				CE2551F029ACB1C5008944B7 /* Singer Track Details Screen */,
 				CE2551F929ACB1C6008944B7 /* Singer Tracks Screen */,
@@ -432,7 +456,6 @@
 		CE25519729ACB12E008944B7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				CE25519829ACB12E008944B7 /* Optional.swift */,
 				CE25519929ACB12E008944B7 /* NSError.swift */,
 				CE25524D29AD14F6008944B7 /* String.swift */,
 			);
@@ -786,14 +809,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		CE25523229ACDAEF008944B7 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				CE25523329ACDB0B008944B7 /* DataModel.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
 		CE266CBA29802E6200D6E038 = {
 			isa = PBXGroup;
 			children = (
@@ -1027,6 +1042,7 @@
 			isa = PBXGroup;
 			children = (
 				CE45E09F29B1163F00073E46 /* String.swift */,
+				CE45E0A129B1FF6600073E46 /* Optional.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1154,6 +1170,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				CE45E0B529B205C800073E46 /* PBXTargetDependency */,
 			);
 			name = Infrastructure;
 			productName = Infrastructure;
@@ -1172,6 +1189,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				CE45E0B029B205C100073E46 /* PBXTargetDependency */,
 			);
 			name = "Data Layer";
 			productName = "Data Layer";
@@ -1192,6 +1210,7 @@
 			dependencies = (
 				CE67BB4A29B0CDA700D192D9 /* PBXTargetDependency */,
 				CE67BB5429B0CE0500D192D9 /* PBXTargetDependency */,
+				CE45E0AB29B205B700073E46 /* PBXTargetDependency */,
 			);
 			name = "Domain Layer";
 			productName = "Domain Layer";
@@ -1210,8 +1229,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				CE67BB4529B0CD8D00D192D9 /* PBXTargetDependency */,
 				CE67BB4F29B0CDC100D192D9 /* PBXTargetDependency */,
+				CE45E0A629B205AD00073E46 /* PBXTargetDependency */,
 			);
 			name = "Presentation Layer";
 			productName = "Presentation Layer";
@@ -1444,7 +1463,6 @@
 				CE2551BC29ACB12E008944B7 /* ResponseHandler+Extension.swift in Sources */,
 				CE2551BE29ACB12E008944B7 /* APILoader.swift in Sources */,
 				CE2551BF29ACB12E008944B7 /* RequestHandler+Extension.swift in Sources */,
-				CE2551B529ACB12E008944B7 /* Optional.swift in Sources */,
 				CE2551BD29ACB12E008944B7 /* APIEnvironment.swift in Sources */,
 				CE2551B629ACB12E008944B7 /* NSError.swift in Sources */,
 				CE2551C229ACB12E008944B7 /* APIHandler.swift in Sources */,
@@ -1488,7 +1506,6 @@
 				CE25524C29AD14CD008944B7 /* String.swift in Sources */,
 				CE25520629ACB1C6008944B7 /* SingerTrackDetailsUseCase.swift in Sources */,
 				CE25520E29ACB1C6008944B7 /* DownloadSingerTrackUseCaseInterface.swift in Sources */,
-				CE25523429ACDB0B008944B7 /* DataModel.swift in Sources */,
 				CE25520D29ACB1C6008944B7 /* StorageSingerTracksUseCaseInterface.swift in Sources */,
 				CE25520829ACB1C6008944B7 /* Constants.swift in Sources */,
 				CE25520A29ACB1C6008944B7 /* DownloadSingerTrackUseCase.swift in Sources */,
@@ -1569,6 +1586,7 @@
 				CE45E0A029B1163F00073E46 /* String.swift in Sources */,
 				CE45E09829B1155F00073E46 /* NetworkModel.swift in Sources */,
 				CE45E09229B1139D00073E46 /* SingerTrackDetailScreenDataModel.swift in Sources */,
+				CE45E0A229B1FF6600073E46 /* Optional.swift in Sources */,
 				CE45E09029B1138C00073E46 /* SingerTrackScreenDataModel.swift in Sources */,
 				CE45E09C29B115C700073E46 /* MediaModel.swift in Sources */,
 				CE45E08D29B1130600073E46 /* DataModel.swift in Sources */,
@@ -1608,10 +1626,25 @@
 			target = CE266CC229802E6200D6E038 /* iTunesSearch */;
 			targetProxy = CE266CE429802E6400D6E038 /* PBXContainerItemProxy */;
 		};
-		CE67BB4529B0CD8D00D192D9 /* PBXTargetDependency */ = {
+		CE45E0A629B205AD00073E46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE25514829ACAFE3008944B7 /* Data Layer */;
-			targetProxy = CE67BB4429B0CD8D00D192D9 /* PBXContainerItemProxy */;
+			target = CE67BB5C29B10FDD00D192D9 /* Data Model Layer */;
+			targetProxy = CE45E0A529B205AD00073E46 /* PBXContainerItemProxy */;
+		};
+		CE45E0AB29B205B700073E46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE67BB5C29B10FDD00D192D9 /* Data Model Layer */;
+			targetProxy = CE45E0AA29B205B700073E46 /* PBXContainerItemProxy */;
+		};
+		CE45E0B029B205C100073E46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE67BB5C29B10FDD00D192D9 /* Data Model Layer */;
+			targetProxy = CE45E0AF29B205C100073E46 /* PBXContainerItemProxy */;
+		};
+		CE45E0B529B205C800073E46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE67BB5C29B10FDD00D192D9 /* Data Model Layer */;
+			targetProxy = CE45E0B429B205C800073E46 /* PBXContainerItemProxy */;
 		};
 		CE67BB4A29B0CDA700D192D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

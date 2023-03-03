@@ -5,7 +5,9 @@
 //  Created by user on 16.02.2023.
 //
 
+import Foundation
 import Infrastructure
+import Data_Model_Layer
 
 public final class AudioPlayerUseCase {
     private lazy var trackDownloaderClient: TrackDownloaderClientInterface = TrackDownloaderClient()

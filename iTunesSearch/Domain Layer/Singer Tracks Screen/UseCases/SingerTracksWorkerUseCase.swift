@@ -5,8 +5,10 @@
 //  Created by user on 30.01.2023.
 //
 
-import Data_Layer
+import Foundation
 import Infrastructure
+import Data_Layer
+import Data_Model_Layer
 
 public final class SingerTracksWorkerUseCase {
     private var download: DownloadSingerTrackUseCaseInterface

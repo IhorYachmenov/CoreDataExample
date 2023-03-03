@@ -5,8 +5,9 @@
 //  Created by user on 24.01.2023.
 //
 
-import Domain_Layer
 import Foundation
+import Domain_Layer
+import Data_Model_Layer
 
 public final class SingerTracksViewModel: SingerTracksViewModelInterface {
     /// Data Source

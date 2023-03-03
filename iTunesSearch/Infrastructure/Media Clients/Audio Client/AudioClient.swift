@@ -5,7 +5,9 @@
 //  Created by user on 15.02.2023.
 //
 
+import Foundation
 import AVFoundation
+import Data_Model_Layer
 
 public final class AudioClient: NSObject, AudioClientInterface {
     public var dataPublisher: ((MediaModel.AudioData) -> ())?

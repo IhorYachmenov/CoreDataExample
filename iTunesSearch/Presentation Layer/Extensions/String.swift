@@ -11,8 +11,4 @@ extension String {
     var localized: String {
         NSLocalizedString(self, comment: "")
     }
-    
-    var toDollars: String {
-        "$\(self)"
-    }
 }

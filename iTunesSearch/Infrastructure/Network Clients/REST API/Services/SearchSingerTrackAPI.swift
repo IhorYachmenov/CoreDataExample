@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Data_Model_Layer
 
 public struct SearchSingerTrackAPI: APIHandler {
     public func makeRequest(from param: [String: Any]) -> URLRequest? {

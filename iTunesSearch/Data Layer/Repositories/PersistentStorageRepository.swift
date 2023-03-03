@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import Data_Model_Layer
 
 public final class PersistentStorageRepository {
     private lazy var singerTracksQueryStorageGeneric = QueryWorkerStorage<DataModel.SingerTrack, SingerTrack>(

@@ -30,6 +30,11 @@ public extension PresentationModel {
             public let isPlaying: Bool
             public let progress: Float
         }
+        
+        public init(details: Details? = nil, track: Track? = nil) {
+            self.details = details
+            self.track = track
+        }
     }
 }
 

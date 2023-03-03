@@ -5,7 +5,9 @@
 //  Created by user on 25.01.2023.
 //
 
+import Foundation
 import Data_Layer
+import Data_Model_Layer
 
 final class StorageSingerTracksUseCase {
     private var repository: PersistentStorageRepositoryInterface
