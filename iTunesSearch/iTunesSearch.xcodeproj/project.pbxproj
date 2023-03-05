@@ -43,7 +43,6 @@
 		CE25520629ACB1C6008944B7 /* SingerTrackDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2551F229ACB1C5008944B7 /* SingerTrackDetailsUseCase.swift */; };
 		CE25520729ACB1C6008944B7 /* SingerTrackDetailsUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2551F429ACB1C5008944B7 /* SingerTrackDetailsUseCaseInterface.swift */; };
 		CE25520829ACB1C6008944B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2551F629ACB1C6008944B7 /* Constants.swift */; };
-		CE25520929ACB1C6008944B7 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2551F829ACB1C6008944B7 /* NSError.swift */; };
 		CE25520A29ACB1C6008944B7 /* DownloadSingerTrackUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2551FB29ACB1C6008944B7 /* DownloadSingerTrackUseCase.swift */; };
 		CE25520B29ACB1C6008944B7 /* SingerTracksWorkerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2551FC29ACB1C6008944B7 /* SingerTracksWorkerUseCase.swift */; };
 		CE25520C29ACB1C6008944B7 /* StorageSingerTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2551FD29ACB1C6008944B7 /* StorageSingerTracksUseCase.swift */; };
@@ -98,6 +97,7 @@
 		CE45E0A829B205B700073E46 /* Data_Model_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */; };
 		CE45E0AD29B205C100073E46 /* Data_Model_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */; };
 		CE45E0B229B205C800073E46 /* Data_Model_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */; };
+		CE45E0B829B4CDA900073E46 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0B729B4CDA900073E46 /* NSError.swift */; };
 		CE4FC55429911681004F281C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55329911681004F281C /* Coordinator.swift */; };
 		CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55529911745004F281C /* AppCoordinator.swift */; };
 		CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */; };
@@ -271,7 +271,6 @@
 		CE2551F229ACB1C5008944B7 /* SingerTrackDetailsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsUseCase.swift; sourceTree = "<group>"; };
 		CE2551F429ACB1C5008944B7 /* SingerTrackDetailsUseCaseInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsUseCaseInterface.swift; sourceTree = "<group>"; };
 		CE2551F629ACB1C6008944B7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CE2551F829ACB1C6008944B7 /* NSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
 		CE2551FB29ACB1C6008944B7 /* DownloadSingerTrackUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadSingerTrackUseCase.swift; sourceTree = "<group>"; };
 		CE2551FC29ACB1C6008944B7 /* SingerTracksWorkerUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingerTracksWorkerUseCase.swift; sourceTree = "<group>"; };
 		CE2551FD29ACB1C6008944B7 /* StorageSingerTracksUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageSingerTracksUseCase.swift; sourceTree = "<group>"; };
@@ -327,6 +326,7 @@
 		CE45E09B29B115C700073E46 /* MediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModel.swift; sourceTree = "<group>"; };
 		CE45E09F29B1163F00073E46 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CE45E0A129B1FF6600073E46 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		CE45E0B729B4CDA900073E46 /* NSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
 		CE4FC55329911681004F281C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CE4FC55529911745004F281C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksCoordinator.swift; sourceTree = "<group>"; };
@@ -697,8 +697,8 @@
 		CE2551F729ACB1C6008944B7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CE2551F829ACB1C6008944B7 /* NSError.swift */,
 				CE25524B29AD14CD008944B7 /* String.swift */,
+				CE45E0B729B4CDA900073E46 /* NSError.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1507,9 +1507,9 @@
 				CE25520629ACB1C6008944B7 /* SingerTrackDetailsUseCase.swift in Sources */,
 				CE25520E29ACB1C6008944B7 /* DownloadSingerTrackUseCaseInterface.swift in Sources */,
 				CE25520D29ACB1C6008944B7 /* StorageSingerTracksUseCaseInterface.swift in Sources */,
+				CE45E0B829B4CDA900073E46 /* NSError.swift in Sources */,
 				CE25520829ACB1C6008944B7 /* Constants.swift in Sources */,
 				CE25520A29ACB1C6008944B7 /* DownloadSingerTrackUseCase.swift in Sources */,
-				CE25520929ACB1C6008944B7 /* NSError.swift in Sources */,
 				CE25520C29ACB1C6008944B7 /* StorageSingerTracksUseCase.swift in Sources */,
 				CE25520F29ACB1C6008944B7 /* SingerTracksWorkerUseCaseInterface.swift in Sources */,
 			);

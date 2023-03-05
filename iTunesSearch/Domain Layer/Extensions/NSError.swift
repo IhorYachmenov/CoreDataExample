@@ -1,8 +1,8 @@
 //
 //  NSError.swift
-//  Data Layer
+//  Domain Layer
 //
-//  Created by user on 21.02.2023.
+//  Created by user on 05.03.2023.
 //
 
 import Foundation
