@@ -18,20 +18,32 @@ Play-demo = "Превʼю";
 Pause = "Пауза";
 Clips = "Кліпи";
 
-// Errors
+// Alert text
 Error = "Помилка";
 OK = "Гаразд";
-Server-error-while-downloading-image = "Помилка сервера підчас завантаження картинки";
-Download-was-successful-but-data-corrupted = "Завантаження пройшло успішно, але дані пошкоджено";
-Cant-save-data-to-data-base = "Не можемо зберегти дані до бази данної";
-Element-a-nil = "Елемент nil";
-Service-error = "Помика сервісу:";
-Unknown-error = "Невідома помилка";
-Data-not-found = "Data not found";
-
-// Alert text
 Demo-URL-unavailable = "URL Превʼю треку недоступне";
 Demo-URL-corrupted = "URL Превʼю треку пошкоджене";
 
 // Argument testing
 greeting = "Привіт, %@ - %@!";
+
+//MARK: Presentaion Layer
+//MARK: Domain Layer
+Element-a-nil = "Дані пусті";
+
+//MARK: Data Layer
+Cant-save-data-to-data-base = "Неможливо зберегти дані у базу даних";
+Data-not-found = "Дані не знайдено";
+
+//MARK: Infrastructure Layer
+Image-Client-Url-Empty = "URL картинки пуста";
+Image-Client-Not-Valid-Url = "Неможливо сформувати URL для завантаження картинки";
+Image-Client-Downloading-Error = "Збій при завантаженні картинки";
+Image-Client-Data-Corrupted = "Картинка пошкоджена";
+Track-Downloader-Client-UrlEmpty = "URL треку пошкоджена";
+Track-Downloader-Client-Not-Valid-Url = "Неможливо сформувати URL для завантаження картинки";
+Track-Downloader-Client-File-System-Url-Not-Exist = "Трек завантажена успішно, але неможливо зберегти у файлову систему";
+Rest-Api-Url-Responce-Nil = "Відпровідь сервера на запит пуста";
+Rest-Api-Request-Data-Nil = "Запит успішний, але дані сервера пусті";
+Rest-Api-Parsing-Problem = "Помилка парсингу даних від сервера";
+Rest-Api-Unknown = "HTTP клієнт - невідома помилка";

@@ -96,7 +96,7 @@ class SingerTrackListContentView: UIView, UIContentView {
         self.singerName.text = configurator.model.singerName
         self.trackName.text = configurator.model.trackName
         self.country.text = configurator.model.country
-        self.trackPrice.text = configurator.model.trackPrice.toDollars
+        self.trackPrice.text = configurator.model.trackPrice
     }
 }
 

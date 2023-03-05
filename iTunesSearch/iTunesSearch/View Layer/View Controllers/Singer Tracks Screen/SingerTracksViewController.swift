@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Presentation_Layer
+import Data_Model_Layer
 
 protocol SingerTracksDelegate: AnyObject {
     func coordinator(didSelect trackId: String)
@@ -68,7 +70,7 @@ class SingerTracksViewController: UIViewController {
         
         initUIComponents()
         
-        viewModel.dataSource = { [weak self] result in
+        viewModel.observeData = { [weak self] result in
             switch result {
             case .success(let success):
                 self?.data = success

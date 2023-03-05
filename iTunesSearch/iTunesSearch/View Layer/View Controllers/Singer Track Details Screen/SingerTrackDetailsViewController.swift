@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Presentation_Layer
 
 protocol SingerTrackDetailsDelegate: AnyObject {
     func dismissCoordinator()
@@ -214,7 +215,7 @@ class SingerTrackDetailsViewController: UIViewController {
         
         initUIComponents()
         
-        viewModel.dataSource = { [weak self] result in
+        viewModel.observeData = { [weak self] result in
             switch result {
             case .success(let success):
                 let details = success.details
