@@ -12,7 +12,7 @@
 		<key>Data Model Layer.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>DataLayerResourcesBundle.xcscheme_^#shared#^_</key>
 		<dict>
@@ -27,7 +27,7 @@
 		<key>Infrastructure.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>4</integer>
 		</dict>
 		<key>Presentation Layer.xcscheme_^#shared#^_</key>
 		<dict>
@@ -83,6 +83,11 @@
 			<true/>
 		</dict>
 		<key>CE266CE229802E6400D6E038</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE67BB5C29B10FDD00D192D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

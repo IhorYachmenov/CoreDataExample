@@ -8,7 +8,7 @@
 import Foundation
 import Data_Model_Layer
 
-/// **CoreData Entities**
+/// **CoreData**
 extension DataModel.SingerTrack {
     init(entity: SingerTrack) {
         self.init(
