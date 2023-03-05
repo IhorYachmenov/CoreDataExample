@@ -25,13 +25,9 @@ final class SingerTracksCoordinator: Coordinator {
         }
     }
 #warning("** Q: - coordinator -> router dependency, inside showDetailCoordinator")
-    
-#warning("Framework vc Static, what we can do in framework and static lib")
-    
+
 #warning("Documentation - Optional *")
-#warning("separate model module ?, data entities")
-    
-#warning("Full localization")
+
 #warning("move existing tests")
 
     
