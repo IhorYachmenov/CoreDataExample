@@ -11,7 +11,6 @@ import Infrastructure
 import Presentation_Layer
 
 final class ViewControllers {
-    
     class func configureSingerTracks(delegate: SingerTracksDelegate) -> SingerTracksViewController {
         let repository = PersistentStorageRepository()
         
@@ -45,6 +44,13 @@ final class ViewControllers {
     
     class func configureSingerTrackMedia(delegate: MediaContentDelegate) -> MediaContentViewController {
         let viewController = MediaContentViewController()
+        viewController.coodinatorDelegate = delegate
+        
+        return viewController
+    }
+    
+    class func configureSingerClip(delegate: SingerClipDelegate) -> SingerClipScreen {
+        let viewController = SingerClipScreen()
         viewController.coodinatorDelegate = delegate
         
         return viewController

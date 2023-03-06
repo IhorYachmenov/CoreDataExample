@@ -72,7 +72,7 @@
 		CE266D2B29807E4000D6E038 /* SingerTrackListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D2A29807E4000D6E038 /* SingerTrackListConfigurator.swift */; };
 		CE266D2D29807E8E00D6E038 /* SingerTrackListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE266D2C29807E8E00D6E038 /* SingerTrackListCell.swift */; };
 		CE39D7D12993C85F009F4202 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE39D7D32993C85F009F4202 /* Localizable.strings */; };
-		CE39D7E429941ABE009F4202 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7E329941ABE009F4202 /* Router.swift */; };
+		CE39D7E429941ABE009F4202 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7E329941ABE009F4202 /* RouterProtocol.swift */; };
 		CE39D7E929968358009F4202 /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7E829968358009F4202 /* ViewControllers.swift */; };
 		CE39D7ED299969B4009F4202 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7EC299969B4009F4202 /* AppRouter.swift */; };
 		CE39D7F0299984CF009F4202 /* RouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39D7EF299984CF009F4202 /* RouterMock.swift */; };
@@ -103,7 +103,7 @@
 		CE45E0C129B50EAF00073E46 /* ConstantMediaContentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0C029B50EAF00073E46 /* ConstantMediaContentScreen.swift */; };
 		CE45E0C429B52FE000073E46 /* SingerClipScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0C329B52FE000073E46 /* SingerClipScreen.swift */; };
 		CE45E0C629B605EC00073E46 /* ConstatCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0C529B605EC00073E46 /* ConstatCommon.swift */; };
-		CE4FC55429911681004F281C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55329911681004F281C /* Coordinator.swift */; };
+		CE4FC55429911681004F281C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55329911681004F281C /* CoordinatorProtocol.swift */; };
 		CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55529911745004F281C /* AppCoordinator.swift */; };
 		CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */; };
 		CE4FC55C29911A45004F281C /* SingerTrackDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55B29911A45004F281C /* SingerTrackDetailsViewController.swift */; };
@@ -310,7 +310,7 @@
 		CE39D7D22993C85F009F4202 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE39D7D62993C90E009F4202 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CE39D7D72993C90E009F4202 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
-		CE39D7E329941ABE009F4202 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		CE39D7E329941ABE009F4202 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		CE39D7E829968358009F4202 /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
 		CE39D7EC299969B4009F4202 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		CE39D7EF299984CF009F4202 /* RouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMock.swift; sourceTree = "<group>"; };
@@ -337,7 +337,7 @@
 		CE45E0C029B50EAF00073E46 /* ConstantMediaContentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantMediaContentScreen.swift; sourceTree = "<group>"; };
 		CE45E0C329B52FE000073E46 /* SingerClipScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerClipScreen.swift; sourceTree = "<group>"; };
 		CE45E0C529B605EC00073E46 /* ConstatCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstatCommon.swift; sourceTree = "<group>"; };
-		CE4FC55329911681004F281C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CE4FC55329911681004F281C /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		CE4FC55529911745004F281C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksCoordinator.swift; sourceTree = "<group>"; };
 		CE4FC55B29911A45004F281C /* SingerTrackDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsViewController.swift; sourceTree = "<group>"; };
@@ -982,7 +982,7 @@
 		CE39D7E229941AB3009F4202 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				CE39D7E329941ABE009F4202 /* Router.swift */,
+				CE39D7E329941ABE009F4202 /* RouterProtocol.swift */,
 				CE39D7EC299969B4009F4202 /* AppRouter.swift */,
 				CE45E0BC29B4D2B400073E46 /* MediaRouter.swift */,
 			);
@@ -1105,7 +1105,7 @@
 			isa = PBXGroup;
 			children = (
 				CE39D7E229941AB3009F4202 /* Router */,
-				CE4FC55329911681004F281C /* Coordinator.swift */,
+				CE4FC55329911681004F281C /* CoordinatorProtocol.swift */,
 				CE4FC55529911745004F281C /* AppCoordinator.swift */,
 				CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */,
 				CE4FC55D2991280D004F281C /* SingerTrackDetailsCoordinator.swift */,
@@ -1573,7 +1573,7 @@
 				CE266D2929807DFF00D6E038 /* SingerTrackListContentView.swift in Sources */,
 				CE39D801299BCBFC009F4202 /* UILabel.swift in Sources */,
 				CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */,
-				CE39D7E429941ABE009F4202 /* Router.swift in Sources */,
+				CE39D7E429941ABE009F4202 /* RouterProtocol.swift in Sources */,
 				CE4FC56F299290D2004F281C /* ProgressView.swift in Sources */,
 				CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */,
 				CE266D0A2980335800D6E038 /* ConstantsAlert.swift in Sources */,
@@ -1584,7 +1584,7 @@
 				CE39D830299ECD50009F4202 /* UIButton.swift in Sources */,
 				CE39D828299E60F3009F4202 /* Data.swift in Sources */,
 				CE39D7ED299969B4009F4202 /* AppRouter.swift in Sources */,
-				CE4FC55429911681004F281C /* Coordinator.swift in Sources */,
+				CE4FC55429911681004F281C /* CoordinatorProtocol.swift in Sources */,
 				CE4FC5692992703F004F281C /* ConstantsSingerTrackDetailsScreen.swift in Sources */,
 				CE266D2B29807E4000D6E038 /* SingerTrackListConfigurator.swift in Sources */,
 				CE4FC55E2991280D004F281C /* SingerTrackDetailsCoordinator.swift in Sources */,

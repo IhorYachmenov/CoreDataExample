@@ -46,7 +46,7 @@ class MediaContentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         initUIComponents()
     }
     
@@ -54,13 +54,22 @@ class MediaContentViewController: UIViewController {
         print("Media VC deinit")
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if let navigationController = parent as? UINavigationController, navigationController.viewControllers.count == 1 {
+            coodinatorDelegate?.dismissCoordinator()
+        }
+    }
+    
     private func initUIComponents() {
         view.backgroundColor = .systemBackground
-        isModalInPresentation = true
+        
+//        isModalInPresentation = true
+        
         title = Constants.MediaContentScreen.pageTitle
-        let backButton = UIBarButtonItem(title: Constants.Common.backButtonTitle, style: .plain, target: self, action: #selector(backButtonTapped))
-        navigationItem.leftBarButtonItem = backButton
         navigationController?.navigationBar.tintColor = .oppositeSystemBackgroundColor
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: Constants.Common.backButtonTitle, style: .plain, target: self, action: #selector(backButtonTapped))
         
         view.addSubview(openClipButton)
         openClipButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -72,3 +81,4 @@ class MediaContentViewController: UIViewController {
         coodinatorDelegate?.dismissCoordinator()
     }
 }
+

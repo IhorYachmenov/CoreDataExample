@@ -8,7 +8,6 @@
 #warning("Documentation - Optional *")
 #warning("move existing tests")
 
-#warning("Implement separate screen from detail screen for testing RouterBuilder")
 #warning("** Q: - coordinator -> router dependency, inside showDetailCoordinator")
 final class SingerTrackDetailsCoordinator: Coordinator {
     var children: [Coordinator] = []

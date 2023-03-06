@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 final class MediaContentCoordinator: Coordinator {
     var children: [Coordinator] = []
@@ -32,13 +31,21 @@ final class MediaContentCoordinator: Coordinator {
     }
 }
 
+// MARK: - MediaContentDelegate
 extension MediaContentCoordinator: MediaContentDelegate {
     func dismissCoordinator() {
-        print("Dismiss Media")
         stop()
     }
     
     func openClipCoordinator() {
-        mediaRouter.navigationController.pushViewController(SingerClipScreen(), animated: true)
+        mediaRouter.navigationController.pushViewController(ViewControllers.configureSingerClip(delegate: self), animated: true)
     }
+}
+
+// MARK: - MediaContentDelegate
+extension MediaContentCoordinator: SingerClipDelegate {
+    func clipScreenDidDismissed() {
+        stop()
+    }
+    
 }

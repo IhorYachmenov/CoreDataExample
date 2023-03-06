@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol SingerClipDelegate: AnyObject {
+    func clipScreenDidDismissed()
+}
+
 class SingerClipScreen: UIViewController {
+    /// Navigation
+    weak var coodinatorDelegate: SingerClipDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,5 +23,13 @@ class SingerClipScreen: UIViewController {
     
     private func initUIComponents() {
         view.backgroundColor = .systemGray
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if (isMovingFromParent == false) {
+            coodinatorDelegate?.clipScreenDidDismissed()
+        }
     }
 }
