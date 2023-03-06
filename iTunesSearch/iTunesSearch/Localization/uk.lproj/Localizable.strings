@@ -27,6 +27,12 @@ Demo-URL-corrupted = "URL Превʼю треку пошкоджене";
 // Argument testing
 greeting = "Привіт, %@ - %@!";
 
+// Media Content Screen
+Media-Content-Screen-Title = "Кліпи";
+
+// Common
+Back = "Назад";
+
 //MARK: Presentaion Layer
 //MARK: Domain Layer
 Element-a-nil = "Дані пусті";

@@ -11,7 +11,7 @@ import Presentation_Layer
 
 protocol SingerTrackDetailsDelegate: AnyObject {
     func dismissCoordinator()
-    func openClipsCoordinator()
+    func openMediaCoordinator()
 }
 
 class SingerTrackDetailsViewController: UIViewController {
@@ -203,7 +203,7 @@ class SingerTrackDetailsViewController: UIViewController {
         view.configuration = configuration
         
         view.addAction(UIAction(handler: { [weak self] _ in
-            self?.coodinatorDelegate?.openClipsCoordinator()
+            self?.coodinatorDelegate?.openMediaCoordinator()
         }), for: .touchUpInside)
         
         

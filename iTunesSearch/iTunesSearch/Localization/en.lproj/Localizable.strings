@@ -28,6 +28,12 @@ Demo-URL-corrupted = "Demo URL corrupted";
 // Argument testing
 greeting = "Hi, %@ - %@!";
 
+// Media Content Screen
+Media-Content-Screen-Title = "Clips";
+
+// Common
+Back = "Back";
+
 //MARK: Presentaion Layer
 //MARK: Domain Layer
 Element-a-nil = "Data nil";

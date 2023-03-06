@@ -4,7 +4,12 @@
 //
 //  Created by user on 06.02.2023.
 //
+
+#warning("Documentation - Optional *")
+#warning("move existing tests")
+
 #warning("Implement separate screen from detail screen for testing RouterBuilder")
+#warning("** Q: - coordinator -> router dependency, inside showDetailCoordinator")
 final class SingerTrackDetailsCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router
@@ -32,9 +37,19 @@ final class SingerTrackDetailsCoordinator: Coordinator {
 
 // MARK: - Delegate
 extension SingerTrackDetailsCoordinator: SingerTrackDetailsDelegate {
-    func openClipsCoordinator() {
-        print(trackId)
+    func openMediaCoordinator() {
+        let mediaCoordinator = MediaContentCoordinator(router: router)
+        
+        mediaCoordinator.didFinished = { [weak self, weak mediaCoordinator] in
+                guard let self = self else { return }
+                guard let index = self.children.firstIndex(where: { $0 === mediaCoordinator }) else { return }
+                self.children.remove(at: index)
+        }
+        
+        children.append(mediaCoordinator)
+        mediaCoordinator.start()
     }
+    
     func dismissCoordinator() {
         stop()
     }

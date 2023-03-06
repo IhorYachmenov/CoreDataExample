@@ -42,4 +42,11 @@ final class ViewControllers {
         
         return viewController
     }
+    
+    class func configureSingerTrackMedia(delegate: MediaContentDelegate) -> MediaContentViewController {
+        let viewController = MediaContentViewController()
+        viewController.coodinatorDelegate = delegate
+        
+        return viewController
+    }
 }
