@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+#warning("Як це буде використовуватися!")
 final class MediaContentCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router
@@ -18,6 +18,7 @@ final class MediaContentCoordinator: Coordinator {
     }
     
     func start() {
+        #warning("Naming, router api inside viewWill...")
         mediaRouter = MediaRouter(parentViewController: ViewControllers.configureSingerTrackMedia(delegate: self))
         router.present(mediaRouter.navigationController, animated: true)
     }
@@ -25,7 +26,7 @@ final class MediaContentCoordinator: Coordinator {
     func stop() {
         router.dismiss(animated: true) { [weak self] in
             guard let self = self else { return }
-            self.removeChild(self)
+//            self.removeChild(self)
             self.didFinished?()
         }
     }
@@ -38,11 +39,12 @@ extension MediaContentCoordinator: MediaContentDelegate {
     }
     
     func openClipCoordinator() {
+        // MARK: - API
         mediaRouter.navigationController.pushViewController(ViewControllers.configureSingerClip(delegate: self), animated: true)
     }
 }
 
-// MARK: - MediaContentDelegate
+// MARK: - SingerClipDelegate
 extension MediaContentCoordinator: SingerClipDelegate {
     func clipScreenDidDismissed() {
         stop()

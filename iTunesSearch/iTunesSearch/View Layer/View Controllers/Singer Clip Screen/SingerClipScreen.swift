@@ -28,8 +28,8 @@ class SingerClipScreen: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        if (isMovingFromParent == false) {
-            coodinatorDelegate?.clipScreenDidDismissed()
-        }
+//        if (isMovingFromParent == false) {
+//            coodinatorDelegate?.clipScreenDidDismissed()
+//        }
     }
 }
