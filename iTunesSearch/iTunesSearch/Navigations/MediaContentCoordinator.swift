@@ -7,6 +7,7 @@
 
 import Foundation
 #warning("Як це буде використовуватися!")
+
 final class MediaContentCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router
@@ -25,7 +26,6 @@ final class MediaContentCoordinator: Coordinator {
     func stop() {
         router.dismiss(animated: true) { [weak self] in
             guard let self = self else { return }
-//            self.removeChild(self)
             self.didFinished?()
         }
     }
@@ -38,8 +38,7 @@ extension MediaContentCoordinator: MediaContentDelegate {
     }
     
     func openClipCoordinator() {
-        // MARK: - API
-        router.pushToChildNavigationController(Configurator.initializeSingerClip(delegate: self))
+        router.push(Configurator.initializeSingerClip(delegate: self), animated: true)
     }
 }
 
@@ -47,6 +46,6 @@ extension MediaContentCoordinator: MediaContentDelegate {
 extension MediaContentCoordinator: SingerClipDelegate {
     func openClip() {
         print("Open Clip Screen")
+        router.pop(animated: true)
     }
-    
 }
