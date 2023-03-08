@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SingerClipDelegate: AnyObject {
-    func clipScreenDidDismissed()
+    func openClip()
 }
 
 class SingerClipScreen: UIViewController {
@@ -19,6 +19,7 @@ class SingerClipScreen: UIViewController {
         super.viewDidLoad()
         
         initUIComponents()
+        coodinatorDelegate?.openClip()
     }
     
     deinit {

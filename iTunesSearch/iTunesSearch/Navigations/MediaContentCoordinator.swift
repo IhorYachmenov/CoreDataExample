@@ -45,8 +45,8 @@ extension MediaContentCoordinator: MediaContentDelegate {
 
 // MARK: - SingerClipDelegate
 extension MediaContentCoordinator: SingerClipDelegate {
-    func clipScreenDidDismissed() {
-        stop()
+    func openClip() {
+        print("Open Clip Screen")
     }
     
 }
