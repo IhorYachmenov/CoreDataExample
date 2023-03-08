@@ -15,7 +15,7 @@ final class DownloadSingerTrackUseCase {
 }
 
 extension DownloadSingerTrackUseCase: DownloadSingerTrackUseCaseInterface {
-    func downloadSingerTrack(name: String, completion: @escaping (Result<DataModel.SingerTrack, Error>) -> ()) {
+    func downloadSingerTrack(name: String, completion: @escaping (Result<DTO.SingerTrack, Error>) -> ()) {
         let request = SearchSingerTrackAPI()
         let apiLoader = APILoader(apiHandler: request)
         
@@ -26,7 +26,7 @@ extension DownloadSingerTrackUseCase: DownloadSingerTrackUseCaseInterface {
                 completion(.failure(error))
             } else {
                 
-                let data = model?.results.map { $0.map { DataModel.SingerTrack(networkModel: $0) } }
+                let data = model?.results.map { $0.map { DTO.SingerTrack(networkModel: $0) } }
                 
                 if let dataModel = data?.last {
                     completion(.success(dataModel))

@@ -10,5 +10,5 @@ import Data_Model_Layer
 
 public protocol AudioPlayerUseCaseInterface {
     func playTrack(url: String?, completion: @escaping (Error?) -> ())
-    func observeData(completion: @escaping (MediaModel.AudioData) -> ())
+    func observeData(completion: @escaping (DTO.AudioData) -> ())
 }

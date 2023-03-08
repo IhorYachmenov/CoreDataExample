@@ -18,7 +18,7 @@ final class StorageSingerTracksUseCase {
 }
 
 extension StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
-    func saveSingerTrack(track: DataModel.SingerTrack, completion: @escaping (Error?) -> ()) {
+    func saveSingerTrack(track: DTO.SingerTrack, completion: @escaping (Error?) -> ()) {
         repository.saveSingerTrack(singerTrack: track, completion: { failure in
             if let failure = failure {
                 completion(failure)
@@ -26,7 +26,7 @@ extension StorageSingerTracksUseCase: StorageSingerTracksUseCaseInterface {
         })
     }
     
-    func observeStorageData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
+    func observeStorageData(completion: @escaping ([DTO.SingerTrack]) -> ()) {
         repository.observeData(completion: completion)
     }
 }

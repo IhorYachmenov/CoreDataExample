@@ -10,7 +10,7 @@ import CoreData
 import Data_Model_Layer
 
 extension SingerTrack {
-    convenience init(query: DataModel.SingerTrack, insertInto context: NSManagedObjectContext) {
+    convenience init(query: DTO.SingerTrack, insertInto context: NSManagedObjectContext) {
         self.init(context: context)
         
         trackName = query.trackName

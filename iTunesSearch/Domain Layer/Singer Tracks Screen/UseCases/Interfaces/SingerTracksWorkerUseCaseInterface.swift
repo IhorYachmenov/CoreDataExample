@@ -10,5 +10,5 @@ import Data_Model_Layer
 
 public protocol SingerTracksWorkerUseCaseInterface {
     func downloadTrack(name: String, completion: @escaping (Error?) -> ())
-    func observeData(completion: @escaping ([DataModel.SingerTrack]) -> ())
+    func observeData(completion: @escaping ([DTO.SingerTrack]) -> ())
 }

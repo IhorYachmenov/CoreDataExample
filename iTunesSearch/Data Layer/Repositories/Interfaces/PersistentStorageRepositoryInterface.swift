@@ -9,7 +9,7 @@ import Foundation
 import Data_Model_Layer
 
 public protocol PersistentStorageRepositoryInterface {
-    func observeData(completion: @escaping ([DataModel.SingerTrack]) -> ())
-    func saveSingerTrack(singerTrack: DataModel.SingerTrack, completion: @escaping (Error?) -> ())
+    func observeData(completion: @escaping ([DTO.SingerTrack]) -> ())
+    func saveSingerTrack(singerTrack: DTO.SingerTrack, completion: @escaping (Error?) -> ())
     func fetchTrackDetails(trackId: String, completion: @escaping (Error?) -> ())
 }

@@ -10,7 +10,7 @@ import CoreData
 import Data_Model_Layer
 
 public final class PersistentStorageRepository {
-    private lazy var singerTracksQueryStorageGeneric = QueryWorkerStorage<DataModel.SingerTrack, SingerTrack>(
+    private lazy var singerTracksQueryStorageGeneric = QueryWorkerStorage<DTO.SingerTrack, SingerTrack>(
         sortDescriptor: \.trackName
     )
     
@@ -18,13 +18,13 @@ public final class PersistentStorageRepository {
 }
 
 extension PersistentStorageRepository: PersistentStorageRepositoryInterface {
-    public func saveSingerTrack(singerTrack: DataModel.SingerTrack, completion: @escaping (Error?) -> ()) {
+    public func saveSingerTrack(singerTrack: DTO.SingerTrack, completion: @escaping (Error?) -> ()) {
         singerTracksQueryStorageGeneric.saveDataModel(data: singerTrack, completion: completion)
     }
     
-    public func observeData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
+    public func observeData(completion: @escaping ([DTO.SingerTrack]) -> ()) {
         singerTracksQueryStorageGeneric.dataPublisher = { data in
-            let dataModels = data.map { DataModel.SingerTrack(entity: $0) }
+            let dataModels = data.map { DTO.SingerTrack(entity: $0) }
             completion(dataModels)
         }
     }

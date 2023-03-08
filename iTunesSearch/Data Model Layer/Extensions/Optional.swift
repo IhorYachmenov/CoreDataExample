@@ -7,14 +7,14 @@
 
 import Foundation
 
-extension Optional where Wrapped == String {
+public extension Optional where Wrapped == String {
     func isNil() -> String {
         guard self != nil else { return "-" }
         return self!.isEmpty ? "-" : self!
     }
 }
 
-extension Optional where Wrapped == Float {
+public extension Optional where Wrapped == Float {
     func isNil() -> Float {
         guard self != nil else { return 0 }
         return self!
@@ -26,7 +26,7 @@ extension Optional where Wrapped == Float {
     }
 }
 
-extension Optional where Wrapped == Int {
+public extension Optional where Wrapped == Int {
     func isNil() -> Int {
         guard self != nil else { return 0 }
         return self!

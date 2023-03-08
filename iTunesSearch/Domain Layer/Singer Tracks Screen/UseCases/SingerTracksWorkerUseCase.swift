@@ -36,7 +36,7 @@ extension SingerTracksWorkerUseCase: SingerTracksWorkerUseCaseInterface {
         }
     }
     
-    public func observeData(completion: @escaping ([DataModel.SingerTrack]) -> ()) {
+    public func observeData(completion: @escaping ([DTO.SingerTrack]) -> ()) {
         storage.observeStorageData(completion: completion)
     }
 }

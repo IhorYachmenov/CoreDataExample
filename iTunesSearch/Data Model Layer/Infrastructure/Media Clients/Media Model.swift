@@ -7,8 +7,8 @@
 
 import Foundation
 
-public enum MediaModel {
-    public struct AudioData {
+public extension DTO {
+    struct AudioData {
         public let currentTime: String
         public let duration: String
         public var isPlaying: Bool

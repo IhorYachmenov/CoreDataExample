@@ -10,14 +10,14 @@ import AVFoundation
 import Data_Model_Layer
 
 public final class AudioClient: NSObject, AudioClientInterface {
-    public var dataPublisher: ((MediaModel.AudioData) -> ())?
+    public var dataPublisher: ((DTO.AudioData) -> ())?
     
-    private var model: MediaModel.AudioData!
+    private var model: DTO.AudioData!
     private var audioPlayer: AVAudioPlayer!
     private var timer: Timer?
     
     public override init() {
-        model = MediaModel.AudioData(currentTime: "00:00", duration: "00:00", isPlaying: false, progress: 0)
+        model = DTO.AudioData(currentTime: "00:00", duration: "00:00", isPlaying: false, progress: 0)
     }
    
     public func playTrack(url: URL, completion: @escaping (Error?) -> ()) {
@@ -75,7 +75,7 @@ public final class AudioClient: NSObject, AudioClientInterface {
             let currentTimeString = String(format: "%02d:%02d", Int(currentTime / 60), Int(currentTime.truncatingRemainder(dividingBy: 60)))
             let durationString = String(format: "%02d:%02d", Int(duration / 60), Int(duration.truncatingRemainder(dividingBy: 60)))
  
-            model = MediaModel.AudioData(currentTime: currentTimeString, duration: durationString, isPlaying: audioPlayer.isPlaying, progress: progress)
+            model = DTO.AudioData(currentTime: currentTimeString, duration: durationString, isPlaying: audioPlayer.isPlaying, progress: progress)
             pushUpdate()
         }
     }

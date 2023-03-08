@@ -11,5 +11,5 @@ import Data_Model_Layer
 public protocol SingerTrackDetailsUseCaseInterface {
     func downloadImage(url: String?, completion: @escaping (Result<Data, Error>) -> ())
     func fetchTrackDetails(trackId: String, completion: @escaping (Error?) -> ())
-    func observeData(completion: @escaping (DataModel.SingerTrack?) -> ())
+    func observeData(completion: @escaping (DTO.SingerTrack?) -> ())
 }

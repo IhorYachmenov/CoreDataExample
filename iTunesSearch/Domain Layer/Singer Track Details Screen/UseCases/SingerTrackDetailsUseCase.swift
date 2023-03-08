@@ -29,7 +29,7 @@ extension SingerTrackDetailsUseCase: SingerTrackDetailsUseCaseInterface {
         repository.fetchTrackDetails(trackId: trackId, completion: completion)
     }
     
-    public func observeData(completion: @escaping (DataModel.SingerTrack?) -> ()) {
+    public func observeData(completion: @escaping (DTO.SingerTrack?) -> ()) {
         repository.observeData { data in
             completion(data.first)
         }

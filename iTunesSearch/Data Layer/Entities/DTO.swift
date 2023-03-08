@@ -9,7 +9,7 @@ import Foundation
 import Data_Model_Layer
 
 /// **CoreData**
-extension DataModel.SingerTrack {
+extension DTO.SingerTrack {
     init(entity: SingerTrack) {
         self.init(
             trackName: entity.trackName.isNil(),

@@ -9,6 +9,6 @@ import Foundation
 import Data_Model_Layer
 
 protocol StorageSingerTracksUseCaseInterface {
-    func saveSingerTrack(track: DataModel.SingerTrack, completion: @escaping (Error?) -> ())
-    func observeStorageData(completion: @escaping ([DataModel.SingerTrack]) -> ())
+    func saveSingerTrack(track: DTO.SingerTrack, completion: @escaping (Error?) -> ())
+    func observeStorageData(completion: @escaping ([DTO.SingerTrack]) -> ())
 }

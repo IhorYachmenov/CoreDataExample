@@ -34,7 +34,7 @@ extension AudioPlayerUseCase: AudioPlayerUseCaseInterface {
         }
     }
     
-    public func observeData(completion: @escaping (MediaModel.AudioData) -> ()) {
+    public func observeData(completion: @escaping (DTO.AudioData) -> ()) {
         audioClient.dataPublisher = completion
     }
 }
