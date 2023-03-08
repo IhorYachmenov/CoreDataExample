@@ -18,8 +18,8 @@ final class MediaContentCoordinator: Coordinator {
     
     func start() {
         let viewController = Configurator.initializeSingerTrackMedia(delegate: self)
-        let mediaRouter = MediaRouter(parentViewController: viewController)
-        router.present(mediaRouter.navigationController, animated: true)
+        let navigationController = NavigationControllerFactory.navigationController(parentViewController: viewController)
+        router.present(navigationController, animated: true)
     }
     
     func stop() {

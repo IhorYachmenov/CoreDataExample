@@ -95,7 +95,7 @@
 		CE45E0B229B205C800073E46 /* Data_Transfer_Objects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Transfer_Objects.framework */; };
 		CE45E0B829B4CDA900073E46 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0B729B4CDA900073E46 /* NSError.swift */; };
 		CE45E0BB29B4D02900073E46 /* MediaContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0BA29B4D02900073E46 /* MediaContentViewController.swift */; };
-		CE45E0BD29B4D2B400073E46 /* MediaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0BC29B4D2B400073E46 /* MediaRouter.swift */; };
+		CE45E0BD29B4D2B400073E46 /* NavigationControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0BC29B4D2B400073E46 /* NavigationControllerFactory.swift */; };
 		CE45E0BF29B509EF00073E46 /* MediaContentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0BE29B509EF00073E46 /* MediaContentCoordinator.swift */; };
 		CE45E0C129B50EAF00073E46 /* ConstantMediaContentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0C029B50EAF00073E46 /* ConstantMediaContentScreen.swift */; };
 		CE45E0C429B52FE000073E46 /* SingerClipScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0C329B52FE000073E46 /* SingerClipScreen.swift */; };
@@ -326,7 +326,7 @@
 		CE45E0A129B1FF6600073E46 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		CE45E0B729B4CDA900073E46 /* NSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSError.swift; sourceTree = "<group>"; };
 		CE45E0BA29B4D02900073E46 /* MediaContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaContentViewController.swift; sourceTree = "<group>"; };
-		CE45E0BC29B4D2B400073E46 /* MediaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRouter.swift; sourceTree = "<group>"; };
+		CE45E0BC29B4D2B400073E46 /* NavigationControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerFactory.swift; sourceTree = "<group>"; };
 		CE45E0BE29B509EF00073E46 /* MediaContentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaContentCoordinator.swift; sourceTree = "<group>"; };
 		CE45E0C029B50EAF00073E46 /* ConstantMediaContentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantMediaContentScreen.swift; sourceTree = "<group>"; };
 		CE45E0C329B52FE000073E46 /* SingerClipScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerClipScreen.swift; sourceTree = "<group>"; };
@@ -978,7 +978,7 @@
 			children = (
 				CE39D7E329941ABE009F4202 /* RouterProtocol.swift */,
 				CE39D7EC299969B4009F4202 /* AppRouter.swift */,
-				CE45E0BC29B4D2B400073E46 /* MediaRouter.swift */,
+				CE45E0BC29B4D2B400073E46 /* NavigationControllerFactory.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1536,7 +1536,7 @@
 				CE39D832299ED251009F4202 /* UIColor.swift in Sources */,
 				CE39D7FF299BCAA0009F4202 /* UIViewController.swift in Sources */,
 				CE266CC729802E6200D6E038 /* AppDelegate.swift in Sources */,
-				CE45E0BD29B4D2B400073E46 /* MediaRouter.swift in Sources */,
+				CE45E0BD29B4D2B400073E46 /* NavigationControllerFactory.swift in Sources */,
 				CE266D2929807DFF00D6E038 /* SingerTrackListContentView.swift in Sources */,
 				CE39D801299BCBFC009F4202 /* UILabel.swift in Sources */,
 				CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */,
