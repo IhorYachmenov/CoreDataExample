@@ -23,4 +23,6 @@ final class NavigationControllerFactory {
         
         return navigationController
     }
+    
+    private init() {}
 }

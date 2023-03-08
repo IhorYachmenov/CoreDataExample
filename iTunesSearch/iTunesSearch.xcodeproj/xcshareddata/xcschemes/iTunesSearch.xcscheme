@@ -27,6 +27,12 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-XCUnitTests"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <Testables>
          <TestableReference
             skipped = "NO"
@@ -55,9 +61,9 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE057D3329A6410100C7CC7A"
-               BuildableName = "SomeLayerTests.xctest"
-               BlueprintName = "SomeLayerTests"
+               BlueprintIdentifier = "CE8B799329B91C86002D646B"
+               BuildableName = "Project Tests.xctest"
+               BlueprintName = "Project Tests"
                ReferencedContainer = "container:iTunesSearch.xcodeproj">
             </BuildableReference>
          </TestableReference>

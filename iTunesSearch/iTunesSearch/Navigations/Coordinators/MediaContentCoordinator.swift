@@ -46,6 +46,5 @@ extension MediaContentCoordinator: MediaContentDelegate {
 extension MediaContentCoordinator: SingerClipDelegate {
     func openClip() {
         print("Open Clip Screen")
-        router.pop(animated: true)
     }
 }
