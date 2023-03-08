@@ -8,7 +8,7 @@
 import Foundation
 import Infrastructure
 import Data_Layer
-import Data_Model_Layer
+import Data_Transfer_Objects
 
 public final class SingerTracksWorkerUseCase {
     private var download: DownloadSingerTrackUseCaseInterface

@@ -7,7 +7,7 @@
 
 import Foundation
 import AVFoundation
-import Data_Model_Layer
+import Data_Transfer_Objects
 
 public final class AudioClient: NSObject, AudioClientInterface {
     public var dataPublisher: ((DTO.AudioData) -> ())?

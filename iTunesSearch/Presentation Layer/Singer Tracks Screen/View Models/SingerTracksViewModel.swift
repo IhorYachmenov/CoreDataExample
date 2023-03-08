@@ -7,7 +7,7 @@
 
 import Foundation
 import Domain_Layer
-import Data_Model_Layer
+import Data_Transfer_Objects
 
 public final class SingerTracksViewModel: SingerTracksViewModelInterface {
     /// Data Source

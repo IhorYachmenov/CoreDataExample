@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Data_Model_Layer
+import Data_Transfer_Objects
 
 public protocol SingerTracksWorkerUseCaseInterface {
     func downloadTrack(name: String, completion: @escaping (Error?) -> ())

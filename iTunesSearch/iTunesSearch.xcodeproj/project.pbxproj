@@ -89,10 +89,10 @@
 		CE45E09C29B115C700073E46 /* Media Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E09B29B115C700073E46 /* Media Model.swift */; };
 		CE45E0A029B1163F00073E46 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E09F29B1163F00073E46 /* String.swift */; };
 		CE45E0A229B1FF6600073E46 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0A129B1FF6600073E46 /* Optional.swift */; };
-		CE45E0A329B205AD00073E46 /* Data_Model_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */; };
-		CE45E0A829B205B700073E46 /* Data_Model_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */; };
-		CE45E0AD29B205C100073E46 /* Data_Model_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */; };
-		CE45E0B229B205C800073E46 /* Data_Model_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */; };
+		CE45E0A329B205AD00073E46 /* Data_Transfer_Objects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Transfer_Objects.framework */; };
+		CE45E0A829B205B700073E46 /* Data_Transfer_Objects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Transfer_Objects.framework */; };
+		CE45E0AD29B205C100073E46 /* Data_Transfer_Objects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Transfer_Objects.framework */; };
+		CE45E0B229B205C800073E46 /* Data_Transfer_Objects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Transfer_Objects.framework */; };
 		CE45E0B829B4CDA900073E46 /* NSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0B729B4CDA900073E46 /* NSError.swift */; };
 		CE45E0BB29B4D02900073E46 /* MediaContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0BA29B4D02900073E46 /* MediaContentViewController.swift */; };
 		CE45E0BD29B4D2B400073E46 /* MediaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0BC29B4D2B400073E46 /* MediaRouter.swift */; };
@@ -116,7 +116,7 @@
 		CE67BB5129B0CE0500D192D9 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25513829ACAFD6008944B7 /* Infrastructure.framework */; };
 		CE67BB5629B1072D00D192D9 /* Data_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE25514929ACAFE3008944B7 /* Data_Layer.framework */; };
 		CE67BB5729B1072D00D192D9 /* Data_Layer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE25514929ACAFE3008944B7 /* Data_Layer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE67BB6329B10FDD00D192D9 /* Data_Model_Layer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */; };
+		CE67BB6329B10FDD00D192D9 /* Data_Transfer_Objects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE67BB5D29B10FDD00D192D9 /* Data_Transfer_Objects.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -339,7 +339,7 @@
 		CE4FC56629926F6C004F281C /* ConstantsSingerTracksScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsSingerTracksScreen.swift; sourceTree = "<group>"; };
 		CE4FC5682992703F004F281C /* ConstantsSingerTrackDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsSingerTrackDetailsScreen.swift; sourceTree = "<group>"; };
 		CE4FC56E299290D2004F281C /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
-		CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data_Model_Layer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE67BB5D29B10FDD00D192D9 /* Data_Transfer_Objects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data_Transfer_Objects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,7 +347,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE45E0B229B205C800073E46 /* Data_Model_Layer.framework in Frameworks */,
+				CE45E0B229B205C800073E46 /* Data_Transfer_Objects.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +355,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE45E0AD29B205C100073E46 /* Data_Model_Layer.framework in Frameworks */,
+				CE45E0AD29B205C100073E46 /* Data_Transfer_Objects.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE67BB4729B0CDA700D192D9 /* Data_Layer.framework in Frameworks */,
-				CE45E0A829B205B700073E46 /* Data_Model_Layer.framework in Frameworks */,
+				CE45E0A829B205B700073E46 /* Data_Transfer_Objects.framework in Frameworks */,
 				CE67BB5129B0CE0500D192D9 /* Infrastructure.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +373,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE45E0A329B205AD00073E46 /* Data_Model_Layer.framework in Frameworks */,
+				CE45E0A329B205AD00073E46 /* Data_Transfer_Objects.framework in Frameworks */,
 				CE67BB4C29B0CDC100D192D9 /* Domain_Layer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE25521D29ACB423008944B7 /* Presentation_Layer.framework in Frameworks */,
-				CE67BB6329B10FDD00D192D9 /* Data_Model_Layer.framework in Frameworks */,
+				CE67BB6329B10FDD00D192D9 /* Data_Transfer_Objects.framework in Frameworks */,
 				CE25515F29ACAFEC008944B7 /* Domain_Layer.framework in Frameworks */,
 				CE25513E29ACAFD6008944B7 /* Infrastructure.framework in Frameworks */,
 				CE67BB5629B1072D00D192D9 /* Data_Layer.framework in Frameworks */,
@@ -821,7 +821,7 @@
 				CE25515A29ACAFEC008944B7 /* Domain Layer */,
 				CE25514A29ACAFE3008944B7 /* Data Layer */,
 				CE25513929ACAFD6008944B7 /* Infrastructure */,
-				CE67BB5E29B10FDD00D192D9 /* Data Model Layer */,
+				CE67BB5E29B10FDD00D192D9 /* Data Transfer Objects */,
 				CE266CDC29802E6400D6E038 /* iTunesSearchTests */,
 				CE266CE629802E6400D6E038 /* iTunesSearchUITests */,
 				CE266CC429802E6200D6E038 /* Products */,
@@ -839,7 +839,7 @@
 				CE25514929ACAFE3008944B7 /* Data_Layer.framework */,
 				CE25515929ACAFEC008944B7 /* Domain_Layer.framework */,
 				CE25521729ACB423008944B7 /* Presentation_Layer.framework */,
-				CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */,
+				CE67BB5D29B10FDD00D192D9 /* Data_Transfer_Objects.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1105,14 +1105,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CE67BB5E29B10FDD00D192D9 /* Data Model Layer */ = {
+		CE67BB5E29B10FDD00D192D9 /* Data Transfer Objects */ = {
 			isa = PBXGroup;
 			children = (
 				CE45E09329B1145600073E46 /* Data Layer */,
 				CE45E09429B114F600073E46 /* Infrastructure */,
 				CE45E09529B1150600073E46 /* Extensions */,
 			);
-			path = "Data Model Layer";
+			path = "Data Transfer Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1294,9 +1294,9 @@
 			productReference = CE266CE329802E6400D6E038 /* iTunesSearchUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		CE67BB5C29B10FDD00D192D9 /* Data Model Layer */ = {
+		CE67BB5C29B10FDD00D192D9 /* Data Transfer Objects */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE67BB6729B10FDD00D192D9 /* Build configuration list for PBXNativeTarget "Data Model Layer" */;
+			buildConfigurationList = CE67BB6729B10FDD00D192D9 /* Build configuration list for PBXNativeTarget "Data Transfer Objects" */;
 			buildPhases = (
 				CE67BB5829B10FDD00D192D9 /* Headers */,
 				CE67BB5929B10FDD00D192D9 /* Sources */,
@@ -1307,9 +1307,9 @@
 			);
 			dependencies = (
 			);
-			name = "Data Model Layer";
+			name = "Data Transfer Objects";
 			productName = "Data Model Layer";
-			productReference = CE67BB5D29B10FDD00D192D9 /* Data_Model_Layer.framework */;
+			productReference = CE67BB5D29B10FDD00D192D9 /* Data_Transfer_Objects.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1375,7 +1375,7 @@
 				CE25515829ACAFEC008944B7 /* Domain Layer */,
 				CE25514829ACAFE3008944B7 /* Data Layer */,
 				CE25513729ACAFD6008944B7 /* Infrastructure */,
-				CE67BB5C29B10FDD00D192D9 /* Data Model Layer */,
+				CE67BB5C29B10FDD00D192D9 /* Data Transfer Objects */,
 			);
 		};
 /* End PBXProject section */
@@ -1628,22 +1628,22 @@
 		};
 		CE45E0A629B205AD00073E46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE67BB5C29B10FDD00D192D9 /* Data Model Layer */;
+			target = CE67BB5C29B10FDD00D192D9 /* Data Transfer Objects */;
 			targetProxy = CE45E0A529B205AD00073E46 /* PBXContainerItemProxy */;
 		};
 		CE45E0AB29B205B700073E46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE67BB5C29B10FDD00D192D9 /* Data Model Layer */;
+			target = CE67BB5C29B10FDD00D192D9 /* Data Transfer Objects */;
 			targetProxy = CE45E0AA29B205B700073E46 /* PBXContainerItemProxy */;
 		};
 		CE45E0B029B205C100073E46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE67BB5C29B10FDD00D192D9 /* Data Model Layer */;
+			target = CE67BB5C29B10FDD00D192D9 /* Data Transfer Objects */;
 			targetProxy = CE45E0AF29B205C100073E46 /* PBXContainerItemProxy */;
 		};
 		CE45E0B529B205C800073E46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE67BB5C29B10FDD00D192D9 /* Data Model Layer */;
+			target = CE67BB5C29B10FDD00D192D9 /* Data Transfer Objects */;
 			targetProxy = CE45E0B429B205C800073E46 /* PBXContainerItemProxy */;
 		};
 		CE67BB4A29B0CDA700D192D9 /* PBXTargetDependency */ = {
@@ -1663,7 +1663,7 @@
 		};
 		CE67BB6229B10FDD00D192D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE67BB5C29B10FDD00D192D9 /* Data Model Layer */;
+			target = CE67BB5C29B10FDD00D192D9 /* Data Transfer Objects */;
 			targetProxy = CE67BB6129B10FDD00D192D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2236,7 +2236,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.data-model-layer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.data-transfer-objects";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2269,7 +2269,7 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.data-model-layer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.data-transfer-objects";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -2355,7 +2355,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE67BB6729B10FDD00D192D9 /* Build configuration list for PBXNativeTarget "Data Model Layer" */ = {
+		CE67BB6729B10FDD00D192D9 /* Build configuration list for PBXNativeTarget "Data Transfer Objects" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CE67BB6529B10FDD00D192D9 /* Debug */,

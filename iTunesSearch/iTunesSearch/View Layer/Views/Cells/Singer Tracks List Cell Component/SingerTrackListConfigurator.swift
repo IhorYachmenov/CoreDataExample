@@ -7,7 +7,7 @@
 
 import UIKit
 import Presentation_Layer
-import Data_Model_Layer
+import Data_Transfer_Objects
 
 //protocol TrackListConfiguratorProtocol: AnyObject {
 //    func userPressButton(state: ButtonState, index: Int)

@@ -8,7 +8,7 @@
 import Foundation
 import Data_Layer
 import Infrastructure
-import Data_Model_Layer
+import Data_Transfer_Objects
 
 final class DownloadSingerTrackUseCase {
     init() {}

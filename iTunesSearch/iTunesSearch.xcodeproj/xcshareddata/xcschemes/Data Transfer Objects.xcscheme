@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE67BB5C29B10FDD00D192D9"
-               BuildableName = "Data_Model_Layer.framework"
-               BlueprintName = "Data Model Layer"
+               BuildableName = "Data_Transfer_Objects.framework"
+               BlueprintName = "Data Transfer Objects"
                ReferencedContainer = "container:iTunesSearch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -51,8 +51,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE67BB5C29B10FDD00D192D9"
-            BuildableName = "Data_Model_Layer.framework"
-            BlueprintName = "Data Model Layer"
+            BuildableName = "Data_Transfer_Objects.framework"
+            BlueprintName = "Data Transfer Objects"
             ReferencedContainer = "container:iTunesSearch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
