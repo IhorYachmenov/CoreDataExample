@@ -21,7 +21,7 @@ final class SingerTrackDetailsCoordinator: Coordinator {
     }
     
     func start() {
-        let singerTrackDetails = ViewControllers.configureSingerTrackDetails(delegate: self, trackId: trackId)
+        let singerTrackDetails = Configurator.initializeSingerTrackDetails(delegate: self, trackId: trackId)
         router.push(singerTrackDetails, animated: true)
     }
     
@@ -38,15 +38,12 @@ final class SingerTrackDetailsCoordinator: Coordinator {
 extension SingerTrackDetailsCoordinator: SingerTrackDetailsDelegate {
     func openMediaCoordinator() {
         let mediaCoordinator = MediaContentCoordinator(router: router)
+        coordinate(to: mediaCoordinator)
         
         mediaCoordinator.didFinished = { [weak self, weak mediaCoordinator] in
-                guard let self = self else { return }
-                guard let index = self.children.firstIndex(where: { $0 === mediaCoordinator }) else { return }
-                self.children.remove(at: index)
+            guard let self = self else { return }
+            self.children.removeAll(where: { $0 === mediaCoordinator})
         }
-        
-        children.append(mediaCoordinator)
-        mediaCoordinator.start()
     }
     
     func dismissCoordinator() {

@@ -57,9 +57,9 @@ class MediaContentViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        if let navigationController = parent as? UINavigationController, navigationController.viewControllers.count == 1 {
-            coodinatorDelegate?.dismissCoordinator()
-        }
+//        if let navigationController = parent as? UINavigationController, navigationController.viewControllers.count == 1 {
+//            coodinatorDelegate?.dismissCoordinator()
+//        }
     }
     
     private func initUIComponents() {

@@ -19,7 +19,7 @@ final class MediaContentCoordinator: Coordinator {
     
     func start() {
         #warning("Naming, router api inside viewWill...")
-        mediaRouter = MediaRouter(parentViewController: ViewControllers.configureSingerTrackMedia(delegate: self))
+        mediaRouter = MediaRouter(parentViewController: Configurator.initializeSingerTrackMedia(delegate: self))
         router.present(mediaRouter.navigationController, animated: true)
     }
     
@@ -40,7 +40,7 @@ extension MediaContentCoordinator: MediaContentDelegate {
     
     func openClipCoordinator() {
         // MARK: - API
-        mediaRouter.navigationController.pushViewController(ViewControllers.configureSingerClip(delegate: self), animated: true)
+        mediaRouter.navigationController.pushViewController(Configurator.initializeSingerClip(delegate: self), animated: true)
     }
 }
 

@@ -14,7 +14,7 @@ final class SingerTracksCoordinator: Coordinator {
     }
     
     func start() {
-        let singerTracks = ViewControllers.configureSingerTracks(delegate: self)
+        let singerTracks = Configurator.initializeSingerTracks(delegate: self)
         router.push(singerTracks, animated: true)
     }
     
@@ -24,15 +24,14 @@ final class SingerTracksCoordinator: Coordinator {
             self.removeChild(self)
         }
     }
-
+    
     private func showDetailCoordinator(trackId: String) {
         let detailCoordinator = SingerTrackDetailsCoordinator(router: router, trackId: trackId)
         coordinate(to: detailCoordinator)
         
         detailCoordinator.didFinished = { [weak self, weak detailCoordinator] in
             guard let self = self else { return }
-            guard let index = self.children.firstIndex(where: { $0 === detailCoordinator }) else { return }
-            self.children.remove(at: index)
+            self.children.removeAll(where: { $0 === detailCoordinator})
         }
     }
 }

@@ -10,8 +10,8 @@ import Domain_Layer
 import Infrastructure
 import Presentation_Layer
 
-final class ViewControllers {
-    class func configureSingerTracks(delegate: SingerTracksDelegate) -> SingerTracksViewController {
+final class Configurator {
+    class func initializeSingerTracks(delegate: SingerTracksDelegate) -> SingerTracksViewController {
         let repository = PersistentStorageRepository()
         
         let singerTrackWorkerUseCase = SingerTracksWorkerUseCase(storageRepository: repository)
@@ -25,7 +25,7 @@ final class ViewControllers {
         return viewController
     }
     
-    class func configureSingerTrackDetails(delegate: SingerTrackDetailsDelegate, trackId: String) -> SingerTrackDetailsViewController {
+    class func initializeSingerTrackDetails(delegate: SingerTrackDetailsDelegate, trackId: String) -> SingerTrackDetailsViewController {
         let repository = PersistentStorageRepository()
         let audioClient = AudioClient()
         let imageDownloaderClient = ImageDownloaderClient()
@@ -42,14 +42,14 @@ final class ViewControllers {
         return viewController
     }
     
-    class func configureSingerTrackMedia(delegate: MediaContentDelegate) -> MediaContentViewController {
+    class func initializeSingerTrackMedia(delegate: MediaContentDelegate) -> MediaContentViewController {
         let viewController = MediaContentViewController()
         viewController.coodinatorDelegate = delegate
         
         return viewController
     }
     
-    class func configureSingerClip(delegate: SingerClipDelegate) -> SingerClipScreen {
+    class func initializeSingerClip(delegate: SingerClipDelegate) -> SingerClipScreen {
         let viewController = SingerClipScreen()
         viewController.coodinatorDelegate = delegate
         
