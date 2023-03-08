@@ -14,6 +14,7 @@ protocol Router: AnyObject {
     func dismiss(animated: Bool, completion: (() -> Void)?)
     func push(_ viewController: UIViewController, animated: Bool)
     func pop(animated: Bool)
+    func pushToChildNavigationController(_ viewController: UIViewController)
 }
 
 extension Router {
@@ -33,6 +34,11 @@ extension Router {
 
     func pop(animated: Bool) {
         navigationController.popViewController(animated: animated)
+    }
+    
+    func pushToChildNavigationController(_ viewController: UIViewController) {
+        let childNavigationController = navigationController.presentedViewController as? UINavigationController
+        childNavigationController?.pushViewController(viewController, animated: true)
     }
 }
 

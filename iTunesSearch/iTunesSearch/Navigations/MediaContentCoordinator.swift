@@ -10,7 +10,6 @@ import Foundation
 final class MediaContentCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router
-    private var mediaRouter: Router!
     var didFinished: (() -> Void)?
     
     init(router: Router) {
@@ -18,8 +17,8 @@ final class MediaContentCoordinator: Coordinator {
     }
     
     func start() {
-        #warning("Naming, router api inside viewWill...")
-        mediaRouter = MediaRouter(parentViewController: Configurator.initializeSingerTrackMedia(delegate: self))
+        let viewController = Configurator.initializeSingerTrackMedia(delegate: self)
+        let mediaRouter = MediaRouter(parentViewController: viewController)
         router.present(mediaRouter.navigationController, animated: true)
     }
     
@@ -40,7 +39,7 @@ extension MediaContentCoordinator: MediaContentDelegate {
     
     func openClipCoordinator() {
         // MARK: - API
-        mediaRouter.navigationController.pushViewController(Configurator.initializeSingerClip(delegate: self), animated: true)
+        router.pushToChildNavigationController(Configurator.initializeSingerClip(delegate: self))
     }
 }
 

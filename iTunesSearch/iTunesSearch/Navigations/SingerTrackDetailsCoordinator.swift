@@ -8,7 +8,6 @@
 #warning("Documentation - Optional *")
 #warning("move existing tests")
 
-#warning("** Q: - coordinator -> router dependency, inside showDetailCoordinator")
 final class SingerTrackDetailsCoordinator: Coordinator {
     var children: [Coordinator] = []
     let router: Router
@@ -39,7 +38,7 @@ extension SingerTrackDetailsCoordinator: SingerTrackDetailsDelegate {
     func openMediaCoordinator() {
         let mediaCoordinator = MediaContentCoordinator(router: router)
         coordinate(to: mediaCoordinator)
-        
+
         mediaCoordinator.didFinished = { [weak self, weak mediaCoordinator] in
             guard let self = self else { return }
             self.children.removeAll(where: { $0 === mediaCoordinator})

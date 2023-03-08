@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import iTunesSearch
+import Data_Transfer_Objects
 import Data_Layer
 
 class PersistentStorageRepositoryTests: XCTestCase {
@@ -25,7 +26,7 @@ class PersistentStorageRepositoryTests: XCTestCase {
     }
     
     func testPersistentStorageRepository_saveAndFetch() {
-        let savingTestData = DataModel.SingerTrack(
+        let savingTestData = DTO.SingerTrack(
             trackName: "Rommance",
             singerName: "Lady Gaga",
             trackPrice: "9.99",

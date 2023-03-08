@@ -51,15 +51,8 @@ class MediaContentViewController: UIViewController {
     }
     
     deinit {
-        print("Media VC deinit")
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-
-//        if let navigationController = parent as? UINavigationController, navigationController.viewControllers.count == 1 {
-//            coodinatorDelegate?.dismissCoordinator()
-//        }
+        print("MediaContentViewController VC deinit")
+        coodinatorDelegate?.dismissCoordinator()
     }
     
     private func initUIComponents() {
@@ -78,7 +71,7 @@ class MediaContentViewController: UIViewController {
     }
     
     @objc private func backButtonTapped() {
-        coodinatorDelegate?.dismissCoordinator()
+        dismiss(animated: true)
     }
 }
 
