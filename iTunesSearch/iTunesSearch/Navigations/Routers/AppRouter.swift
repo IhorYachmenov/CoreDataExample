@@ -8,9 +8,9 @@
 import UIKit
 
 final class AppRouter: Router {
-    let coordinatorComponent: CoordinatorComponents
+    let routerComponents: RouterComponents
     
-    init(coordinatorComponents: CoordinatorComponents) {
-        self.coordinatorComponent = coordinatorComponents
+    init(routerComponents: RouterComponents) {
+        self.routerComponents = routerComponents
     }
 }

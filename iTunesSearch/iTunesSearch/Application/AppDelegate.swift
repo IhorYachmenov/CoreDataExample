@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         guard let window = window else { return false }
         
-        let coordinatorComponents = CoordinatorComponents()
-        let appRouter = AppRouter(coordinatorComponents: coordinatorComponents)
+        let routerComponents = RouterComponents()
+        let appRouter = AppRouter(routerComponents: routerComponents)
         appCoordinator = AppCoordinator(window: window, router: appRouter)
         appCoordinator!.start()
         

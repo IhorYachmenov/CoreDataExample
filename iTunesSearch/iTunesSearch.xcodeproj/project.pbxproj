@@ -100,7 +100,7 @@
 		CE45E0C429B52FE000073E46 /* SingerClipScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0C329B52FE000073E46 /* SingerClipScreen.swift */; };
 		CE45E0C629B605EC00073E46 /* ConstatCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45E0C529B605EC00073E46 /* ConstatCommon.swift */; };
 		CE4FC55429911681004F281C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55329911681004F281C /* Coordinator.swift */; };
-		CE4FC55629911745004F281C /* AppCoordinatorAndRouterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55529911745004F281C /* AppCoordinatorAndRouterExtensions.swift */; };
+		CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55529911745004F281C /* AppCoordinator.swift */; };
 		CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */; };
 		CE4FC55C29911A45004F281C /* SingerTrackDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55B29911A45004F281C /* SingerTrackDetailsViewController.swift */; };
 		CE4FC55E2991280D004F281C /* SingerTrackDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4FC55D2991280D004F281C /* SingerTrackDetailsCoordinator.swift */; };
@@ -332,7 +332,7 @@
 		CE45E0C329B52FE000073E46 /* SingerClipScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerClipScreen.swift; sourceTree = "<group>"; };
 		CE45E0C529B605EC00073E46 /* ConstatCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstatCommon.swift; sourceTree = "<group>"; };
 		CE4FC55329911681004F281C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		CE4FC55529911745004F281C /* AppCoordinatorAndRouterExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorAndRouterExtensions.swift; sourceTree = "<group>"; };
+		CE4FC55529911745004F281C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTracksCoordinator.swift; sourceTree = "<group>"; };
 		CE4FC55B29911A45004F281C /* SingerTrackDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsViewController.swift; sourceTree = "<group>"; };
 		CE4FC55D2991280D004F281C /* SingerTrackDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerTrackDetailsCoordinator.swift; sourceTree = "<group>"; };
@@ -1125,7 +1125,7 @@
 			isa = PBXGroup;
 			children = (
 				CE8B79A029B944A9002D646B /* Interface */,
-				CE4FC55529911745004F281C /* AppCoordinatorAndRouterExtensions.swift */,
+				CE4FC55529911745004F281C /* AppCoordinator.swift */,
 				CE4FC55729911830004F281C /* SingerTracksCoordinator.swift */,
 				CE4FC55D2991280D004F281C /* SingerTrackDetailsCoordinator.swift */,
 				CE45E0BE29B509EF00073E46 /* MediaContentCoordinator.swift */,
@@ -1572,7 +1572,7 @@
 				CE45E0BD29B4D2B400073E46 /* NavigationControllerFactory.swift in Sources */,
 				CE266D2929807DFF00D6E038 /* SingerTrackListContentView.swift in Sources */,
 				CE39D801299BCBFC009F4202 /* UILabel.swift in Sources */,
-				CE4FC55629911745004F281C /* AppCoordinatorAndRouterExtensions.swift in Sources */,
+				CE4FC55629911745004F281C /* AppCoordinator.swift in Sources */,
 				CE39D7E429941ABE009F4202 /* Router.swift in Sources */,
 				CE4FC56F299290D2004F281C /* ProgressView.swift in Sources */,
 				CE4FC55829911830004F281C /* SingerTracksCoordinator.swift in Sources */,
